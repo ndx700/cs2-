@@ -4,7 +4,7 @@
 
 ## 开工前
 
-- 阅读 `docs/STATUS.md`、`docs/COLLABORATION.md`、`docs/requirements/C010.md` 与最新 `docs/materials/C012-materials.md`。
+- 阅读 `docs/STATUS.md`、`docs/COLLABORATION.md`、`docs/requirements/C010.md`、最新 `docs/materials/C012-materials.md` 与开工安排 `docs/dispatch/C013-parallel-kickoff.md`。
 - 实现基线 v0.6.0-test2：地图、自由观察跑图及加载优化已经交付；正式教学课程、人物教学展示、烟火和 HE 炸烟尚未证明完成。
 - 不把需求说明、素材、截图或 CI 构建成功当成功能验收完成。
 - 用户最新明确指令优先；C010 处理与 C008/C009 冲突的首版范围，C012 记录最新去重素材计划及待校准项，原文保留作历史。
