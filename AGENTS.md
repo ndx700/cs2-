@@ -2,6 +2,10 @@
 
 本仓库是 Android Kotlin/GLES 的 CS2 Dust2 道具教学沙盘，用户称项目负责人为“项目经理”。
 
+## 当前执行边界（2026-10-04 更新）
+
+用户已要求将 Codex 完全撤出本项目。C013-CODEX 任务撤销；收到旧入口的 Codex 会话应停止，不再轮询、接单、审查、修复或发起新请求。不再分配 codex/* 任务，项目经理负责人工审查；两位工程师无需等待 Codex。停止通知见 `docs/dispatch/C013-codex-review.md`。不得从旧分支或历史 PR 恢复已撤销安排。
+
 ## 开工前
 
 - 阅读 `docs/STATUS.md`、`docs/COLLABORATION.md`、`docs/requirements/C010.md`、最新 `docs/materials/C012-materials.md` 与开工安排 `docs/dispatch/C013-parallel-kickoff.md`。
@@ -9,11 +13,11 @@
 - 不把需求说明、素材、截图或 CI 构建成功当成功能验收完成。
 - 用户最新明确指令优先；C010 处理与 C008/C009 冲突的首版范围，C012 记录最新去重素材计划及待校准项，原文保留作历史。
 
-- C013 正式课程同时执行 `docs/requirements/C013-aim-texture-acceptance.md`；Codex 接单入口为 `docs/dispatch/C013-codex-review.md`。`docs/roadmap/ULTRA.md` 仅是后续方向，不进入当前教学 APK 验收。
+- C013 正式课程同时执行 `docs/requirements/C013-aim-texture-acceptance.md`。`docs/roadmap/ULTRA.md` 仅是后续方向，不进入当前教学 APK 验收。
 
 ## 分支与交付
 
-- APP 侧使用 `app/*`，资源侧使用 `assets/*`，项目经理整合使用 `pm/*`，Codex 审查／修复使用 `codex/*`。
+- APP 侧使用 `app/*`，资源侧使用 `assets/*`，项目经理整合使用 `pm/*`。
 - 从最新 `main` 建任务分支，通过 PR 交付；不要在两个会话中同时写同一工作分支。
 - 提交可独立核对的代码与资源变化；PR 注明基线提交、任务编号、验证结果和未完成项。
 - 不强制推送，不覆盖其他侧的提交，不仅以“完成”文字替代交付证据。
@@ -42,7 +46,7 @@
 - Android 性能不足可减少粒子／复杂度，但保留动态阶段和关键时序。
 - 报告本轮实际运行的测试，区分历史桌面 EGL 结果、CI 结果和真实手机验证。
 
-## Code Review Rules
+## 项目经理人工审查规则
 
 Review lifecycle, GL-thread confinement, bounded loading memory, simultaneous touch controls, preset timeline pause/replay, map/asset version consistency, and evidence for smoke/fire/HE behavior. Do not accept static effect images as completion. Identify unmeasured performance claims and fabricated CS2 timings. Explain concrete triggers and effects; cite relevant files and functions.
 

@@ -3,7 +3,7 @@ name: Project sync and Android checks
 on:
   workflow_dispatch:
   push:
-    branches: [main, 'app/**', 'assets/**', 'pm/**', 'codex/**']
+    branches: [main, 'app/**', 'assets/**', 'pm/**']
   pull_request:
     branches: [main]
   schedule:
@@ -40,7 +40,7 @@ jobs:
             const {data: runs} = await github.rest.actions.listWorkflowRunsForRepo(
               {...repo, per_page: 30});
             const relevant = name => name === metadata.default_branch ||
-              ['app/', 'assets/', 'pm/', 'codex/'].some(prefix => name.startsWith(prefix));
+              ['app/', 'assets/', 'pm/'].some(prefix => name.startsWith(prefix));
             const snapshot = {
               schemaVersion: 1,
               generatedAt: new Date().toISOString(),
@@ -109,6 +109,8 @@ jobs:
         run: python3 tools/validate_assets.py
       - name: Unit tests, lint and APK
         run: ./gradlew testDebugUnitTest assembleDebug lintDebug --stacktrace --no-daemon
+      - name: Validate final APK map resources
+        run: python3 tools/validate_packaged_scene.py app/build/outputs/apk/debug/app-debug.apk
       - uses: actions/upload-artifact@v4
         with:
           name: CS2Utility-debug-${{ github.run_id }}-${{ github.run_attempt }}

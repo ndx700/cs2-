@@ -2,6 +2,8 @@
 
 日期：2026-10-04（北京时间）。进度特征：`[M1][GITHUB_BASELINE_IMPORT]`。
 
+最新更新：用户手机发现第二版地图加载失败；项目经理已修复 gzip／已解压分块兼容问题，回归与最终 APK 资源验证见 [修复记录](progress/PM-C013-MAPFIX.md)。手机显示效果仍待用户复测。Codex 已撤出项目；旧任务不再执行。
+
 实现基线：v0.6.0-test2 / versionCode 6；源码来源 `CS2Utility-v0.6.0-test2-source.zip`，117432135 字节，SHA-256 `d9eed64e1591fe8407c4062f3e57177141fa797c5724a5cacbc50e7e1b4192a1`。
 
 首版动态范围：`docs/requirements/C010.md`。用户最新去重素材计划：`docs/materials/C012-materials.md`，14 条（8 烟、5 火、1 HE），同目标／同用途优先简单投法，接续并更新 C010 的逐条用户筛选安排。C008/C009 与 C007 交付保留为历史。
@@ -15,14 +17,14 @@
 | 闪光致盲 | 首版延期；保留教学资料 |
 | 真实碰撞／地面行走 | 独立可选项；当前自由视角能穿墙／地面 |
 | 两个工程会话接入 GitHub | 用户已同意协作方式，两个会话仍需分别验证连接 |
-| Codex 接入／审查 | 用户计划接入；本次未替用户创建 Codex 环境或开启自动审查 |
+| Codex 接入／审查 | 用户已撤销，STOPPED / REMOVED；旧任务入口已替换为停止通知 |
 | 仓库名称 | 当前 cs2-；建议 cs2-dust2，改名待处理 |
 
 本次导入已有代码、全部移动资源和需求／协作约定，加入资源恢复流程，并修正旧资源校验脚本将移动分块 JSON 当成 C2M2 二进制读取的问题：新增 D2M1 格式、资源哈希、长度、索引、有限坐标及边界检查。不宣称新增烟火或 HE 功能。既有 Kotlin、Android 配置和教学数据内容保持源包基线。历史 19 项 JUnit、桌面 EGL 和 APK 验证记录在 docs 中保留，不能作为本次新运行或手机验证结果。
 
 本次迁移验证：来源 ZIP 哈希和 CRC、分卷哈希、空目录恢复及逐文件字节一致性、既有资源校验。CI 新运行结果以 GitHub Actions 实际状态为准；本次没有连接 Android 手机。
 
-工作流统一为 `Project sync and Android checks`：main、app/**、assets/**、pm/**、codex/** 提交和 PR 生成协作快照，每小时 07/22/37/52 分钟只读查询分支、PR 与近期 CI。main 提交、PR 与手动运行执行 SDK、资源还原／校验、单元测试、Lint 和 APK；定时快照不重复下载地图和编译。详见 docs/AUTOMATION.md。GitHub schedule 可能延迟，不能承诺准点启动，也不会自动唤醒三个独立 AI 会话。
+工作流统一为 `Project sync and Android checks`：main、app/**、assets/**、pm/** 提交和 PR 生成协作快照，每小时 07/22/37/52 分钟只读查询分支、PR 与近期 CI。main 提交、PR 与手动运行执行 SDK、资源还原／校验、单元测试、Lint 和 APK；定时快照不重复下载地图和编译。详见 docs/AUTOMATION.md。GitHub schedule 可能延迟，不能承诺准点启动，也不会自动唤醒三个独立 AI 会话。
 
 CI 运行 37166521336 已实际通过协作快照、SDK 安装、地图恢复／校验、单元测试、Lint、APK 构建及产物上传（检查提交 21d6145c89d5b510f1c8f418d66002dde0e0c456）。随后整合主分支需求／素材记录，不将该结果当作手机效果验收或定时事件已执行的证明。
 
@@ -32,10 +34,10 @@ CI 运行 37166521336 已实际通过协作快照、SDK 安装、地图恢复／
 
 用户已授权 APP 与资源工程师并行开发，不等待自动构建结束。开工安排见 [C013](dispatch/C013-parallel-kickoff.md)，首批按 C012 联调中门烟＋HE 炸烟，瀑布烟高目标验证保留。各侧连接与接单尚未在本轮确认；分别提交 `docs/progress/APP-C013.md`、`docs/progress/RES-C013.md` 记录实际状态。本次只发布任务，不宣称功能或新 APK 完成。
 
-## C013 瞄点补充与 Codex 审查安排 2026-10-04
+## C013 瞄点补充安排 2026-10-04
 
 - 用户两份原文保存在 docs/sources/，执行解释见 [瞄点精度验收](requirements/C013-aim-texture-acceptance.md) 和 [Ultra 后续规划](roadmap/ULTRA.md)。原始字节和 SHA-256 可核对。
 - 瞄点纹理一致性、手机可辨认性以及可隐藏辅助提示已加入 C013 正式课程验收；优先 D2-001、D2-014、D2-009、D2-010。新增要求尚待工程师实现／校准与手机验收。
 - 本次已观察到 [APP PR #5](https://github.com/ndx700/cs2-/pull/5) 和 [资源 PR #4](https://github.com/ndx700/cs2-/pull/4)。它们是候选交付，当前未因本次文档核对而标记 INTEGRATED 或 VERIFIED；详细功能与 CI 需针对最新 head 审查。
-- [Codex 具体任务](dispatch/C013-codex-review.md) 已定义：独立审查这两份 PR、核对构建和需求、反馈具体问题并交审查记录。根 AGENTS.md 保留并补充 Code Review Rules。
+- 旧 Codex 审查任务已按用户要求撤销；[入口](dispatch/C013-codex-review.md)现为停止通知。项目经理负责人工审查，不再等待 Codex。
 - 本次仅发布文档和职责，未开启 Codex 自动审查，未代其他会话确认已接单，未合并工程师功能 PR，未构建或交付新 APK。Ultra 继续为未来方向。
