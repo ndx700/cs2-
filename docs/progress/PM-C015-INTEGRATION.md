@@ -22,3 +22,12 @@ APP #12 原候选 CI 37228710475 已核对资源、单测、Lint、APK及最终�
 测试路径：地图浏览→挂门烟瞄点预览/蹲姿站位预览；地图名称长按→坐标采集/截图导出；烟/火/HE渲染试验→跟随、跳到落点效果、暂停、重播、点按右窗放大。
 
 旧 Codex 任务仍停止；本轮是用户直接授权的项目经理整合，不恢复独立任务或轮询。
+
+## 实际整合与安装包验证结果
+
+- 整合 PR #13 已合入 main，合并提交 40c58c781016b8c4470decb346f81e2c9d043650；工程内容来自 48a022213d3087066e5aece289c87eb0cb4ed387，树 94d060b5fa788708b225a8fbeff8a2cc1bf5ad7b。
+- PR CI [37232170498](https://github.com/ndx700/nade-atlas/actions/runs/37232170498) 实际通过资源恢复/校验、Android单元测试、Lint、APK构建及最终包地图校验。
+- CI 下载返回链接在本地取字节时403；未把不完整下载作为交付。本地使用已有Gradle8.7与SDK34离线 assembleDebug 成功，交付APK对应同一源树；本地wrapper仍因Java网络不能下载，实际构建使用已有Gradle分发。
+- 最终APK再验3661分块、291贴图及展开gz兼容；预览raw JSON与来源/地图散列字节核对通过。aapt2证实包名com.ali.cs2utility.dust2、版本code10/name0.6.4-c015-integration；apksigner v2通过，证书SHA256 c50bc89ee4cd661083508a64ca9cf9fea02503332005eb9238106e7c66bfb817，与既有debug签名相同。
+- 文件 NadeAtlas_v0.6.4_C015_Test.apk，116311133字节，SHA256 `edf0b7eda277aed514b57101642a31ed48dfdf91b830d1b7f3d7ec385df597d2`。与CI ZIP为不同交付文件，不混用ZIP散列作为APK散列。
+- 定位采集/程序效果框架及资源证据已INTEGRATED；正式课程校准、完整教学和手机结果仍未VERIFIED。安装包交给用户做手机联调。
