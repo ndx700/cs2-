@@ -7,7 +7,6 @@ import android.opengl.GLES20 as GL
 import android.opengl.GLUtils
 import android.os.SystemClock
 import org.json.JSONObject
-import java.io.DataInputStream
 import java.nio.ByteBuffer
 import java.nio.ByteOrder
 import java.util.LinkedHashMap
@@ -15,7 +14,6 @@ import java.util.concurrent.ConcurrentLinkedQueue
 import java.util.concurrent.Executors
 import java.util.concurrent.RejectedExecutionException
 import java.util.concurrent.atomic.AtomicInteger
-import java.util.zip.GZIPInputStream
 import kotlin.math.*
 
 data class MobileMaterial(val base: String,val layer: String,val blend: String,val alpha: String,val cutoff: Float,
@@ -139,7 +137,7 @@ class MobileSceneRenderer(private val context: Context,private val requestFrame:
             var result: Upload
             try {
                 require(ByteOrder.nativeOrder()==ByteOrder.LITTLE_ENDIAN)
-                val (v,i)=context.assets.open(p.asset).use { raw -> DataInputStream(GZIPInputStream(raw,65536).buffered(65536)).use { f ->
+                val (v,i)=SceneChunkInput.open(p.asset) { context.assets.open(it) }.use { f ->
                     require(f.readInt()==0x44324d31 && f.readInt()==p.vertices && f.readInt()==p.indices && f.readInt()==36)
                     val v=ByteArray(p.vertices*36);val i=ByteArray(p.indices*2);f.readFully(v);f.readFully(i);require(f.read()==-1)
                     val checked=ByteBuffer.wrap(v).order(ByteOrder.LITTLE_ENDIAN)
@@ -147,7 +145,7 @@ class MobileSceneRenderer(private val context: Context,private val requestFrame:
                     val ind=ByteBuffer.wrap(i).order(ByteOrder.LITTLE_ENDIAN)
                     while(ind.hasRemaining()) require((ind.short.toInt() and 65535)<p.vertices)
                     Pair(ByteBuffer.allocateDirect(v.size).apply { put(v);position(0) },ByteBuffer.allocateDirect(i.size).apply { put(i);position(0) })
-                } }
+                }
                 result=Upload(token,part=id,vb=v,ib=i,cost=cost)
             } catch(e: Exception) { result=Upload(token,part=id,error="${p.asset}: ${e.message}",cost=cost) }
             publish(result)
