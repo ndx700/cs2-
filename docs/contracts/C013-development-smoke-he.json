@@ -1,0 +1,139 @@
+{
+  "schema": "c013-course-fx-v1",
+  "mapId": "dust2",
+  "lessonId": "DEV-C013-SMOKE-HE",
+  "relatedIds": [
+    "D2-001",
+    "D2-014"
+  ],
+  "title": "开发样例：烟成型 → HE局部缺口 → 回填",
+  "mapVersion": "fc60c032290dffcb233e3de9da3c59694293362ec72643cc1ebde9c1b13a17d0",
+  "coordinateSpace": "display-m-y-up-v1",
+  "timeOrigin": "throw-release-seconds",
+  "status": "DEVELOPMENT",
+  "importable": true,
+  "evidence": {
+    "url": null,
+    "gameBuild": null,
+    "releaseVideoSeconds": null
+  },
+  "foot": [
+    -20.888075,
+    7.828009,
+    20.209309
+  ],
+  "eye": [
+    -20.888075,
+    9.478009,
+    20.209309
+  ],
+  "aim": [
+    -20.888075,
+    10.478009,
+    11.209309000000001
+  ],
+  "bodyYaw": 0,
+  "throwHint": "开发预设投掷 · 实战投法待校准",
+  "aimFov": 70,
+  "cameras": {
+    "stance": {
+      "position": [
+        -20.888075,
+        8.628009,
+        18.209309
+      ],
+      "yaw": 35,
+      "pitch": 24,
+      "distance": 8
+    },
+    "aim": {
+      "position": [
+        -20.888075,
+        9.478009,
+        20.209309
+      ],
+      "yaw": 0,
+      "pitch": -6.34019174590991,
+      "distance": 1
+    },
+    "overview": {
+      "position": [
+        -20.888075,
+        7.828009,
+        15.209309000000001
+      ],
+      "yaw": 20,
+      "pitch": 65,
+      "distance": 14
+    }
+  },
+  "begin": -6,
+  "aimAt": -3,
+  "throwAt": -1,
+  "duration": 16,
+  "path": [
+    {
+      "seconds": 0,
+      "position": [
+        -20.888075,
+        9.478009,
+        20.209309
+      ]
+    },
+    {
+      "seconds": 1,
+      "position": [
+        -20.888075,
+        11.828009,
+        17.209309
+      ]
+    },
+    {
+      "seconds": 2,
+      "position": [
+        -20.888075,
+        8.628009,
+        15.209309000000001
+      ],
+      "bounce": true
+    }
+  ],
+  "smoke": [
+    {
+      "id": "smoke-dev",
+      "center": [
+        -20.888075,
+        8.628009,
+        15.209309000000001
+      ],
+      "radius": [
+        2.8,
+        1.5,
+        2.2
+      ],
+      "start": 2,
+      "formed": 4,
+      "fade": 12,
+      "end": 16
+    }
+  ],
+  "fire": [],
+  "he": [
+    {
+      "id": "he-dev",
+      "center": [
+        -20.088075,
+        8.628009,
+        15.209309000000001
+      ],
+      "radius": 1.8,
+      "start": 7,
+      "open": 7.2,
+      "refill": 7.8,
+      "end": 9.5,
+      "smokeIds": [
+        "smoke-dev"
+      ]
+    }
+  ]
+}

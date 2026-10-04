@@ -15,6 +15,7 @@ import com.ali.cs2utility.domain.*
 import com.ali.cs2utility.domain.Filter
 import com.ali.cs2utility.presentation.ExplorerState
 import com.ali.cs2utility.scene.*
+import com.ali.cs2utility.tutorial.*
 import java.util.concurrent.Executors
 
 class MainActivity : Activity() {
@@ -37,6 +38,41 @@ class MainActivity : Activity() {
     private var sceneError: String?=null
     private var restored: Bundle?=null
     private var definition: SceneDefinition?=null
+    private var activeCourse: Course?=null
+    private var lessonStatus: TextView?=null
+    private var resumed=false
+    private val lessonRefresh=object : Runnable {
+        override fun run() {
+            if(!resumed || activeCourse==null)return
+            val p=scene.lessonSnapshot()
+            lessonStatus?.text="开发演示 · 未校准\n${activeCourse?.stage(p.seconds)} · ${"%.1f".format(p.seconds)} s · ${if(p.playing) "播放" else "暂停"}\n时间为实验参数，非 CS2 实测秒数"
+            scene.postDelayed(this,200)
+        }
+    }
+    private fun exitLesson() {
+        activeCourse=null;scene.removeCallbacks(lessonRefresh);lessonStatus=null;scene.endCourse();gestureHint.text="单指旋转 · 双指缩放/拖动"
+    }
+    private fun startDevelopmentLesson(fire: Boolean,saved: PlaybackSnapshot?=null) {
+        if(!loaded)return
+        activeCourse=DevelopmentCourses.make(fire);val c=requireNotNull(activeCourse)
+        scene.show(emptyList(),null);scene.targets(emptyList());scene.startCourse(c,saved)
+        gestureHint.text="开发样例 · 非实战教学 · 无地图碰撞约束"
+        details.removeAllViews();details.addView(text(c.title,18f,bold=true))
+        lessonStatus=text("开发演示 · 未校准",12f,Palette.accent);details.addView(lessonStatus)
+        details.addView(text("脚底圈＋简笔人物用于验证流程；站位、瞄点和投法均非正式课程。${c.throwHint}",12f,Palette.muted))
+        details.addView(row().apply {
+            addWeighted(button("站位") {scene.lessonCamera(LessonView.STANCE)})
+            addWeighted(button("瞄点") {scene.lessonCamera(LessonView.AIM)})
+            addWeighted(button("俯瞰") {scene.lessonCamera(LessonView.OVERVIEW)})
+        })
+        details.addView(row().apply {
+            addWeighted(button("播放") {scene.lessonPlay()})
+            addWeighted(button("暂停") {scene.lessonPause()})
+            addWeighted(button("重播") {scene.lessonReplay()})
+            addWeighted(button("退出") {exitLesson();refresh()})
+        })
+        scene.removeCallbacks(lessonRefresh);if(resumed)scene.post(lessonRefresh)
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         restored=savedInstanceState
@@ -114,7 +150,7 @@ class MainActivity : Activity() {
         mapPanel.addView(row().apply {
             setPadding(dp(12),dp(4),dp(6),dp(4))
             addWeighted(button("全图") { state.select(null);state.selectedGroupId=null;store.selectedId=null;refresh();scene.resetCamera() })
-            runButton=button("自由跑图") {scene.toggleFreeMode()};addWeighted(runButton)
+            runButton=button("自由跑图") {if(activeCourse!=null){exitLesson();refresh()};scene.toggleFreeMode()};addWeighted(runButton)
             scene.onModeChanged={free ->
                 runButton.text=if(free)"退出跑图" else "自由跑图";runButton.contentDescription=runButton.text
                 gestureHint.text=if(free)"左侧移动 · 空白处转头 · 右侧升降" else "单指旋转 · 双指缩放/拖动"
@@ -125,6 +161,7 @@ class MainActivity : Activity() {
                 if(labels.isNotEmpty()) {
                     AlertDialog.Builder(this@MainActivity).setTitle("浏览区域")
                         .setItems(labels.map {it.name}.toTypedArray()) { _,i ->
+                            if(activeCourse!=null){exitLesson();refresh()}
                             val p=labels[i].position;scene.flyTo(CameraState(38f,55f,35f,p.x,p.z,p.y))
                         }.show()
                     return@button
@@ -156,7 +193,7 @@ class MainActivity : Activity() {
     }
     private fun notifySelect() { Toast.makeText(this,"请先点击地图数字或下方道具卡片",Toast.LENGTH_SHORT).show() }
     private fun openMap(map: MapDefinition) {
-        val token=++requestToken
+        exitLesson();val token=++requestToken
         loaded=false; sceneError=null; definition=null; state.map=map; state.lineups=emptyList(); state.select(null)
         store.mapId=map.id; title.text=map.name; sceneHint.text="3D 地图加载中…"
         scene.show(emptyList(),null); scene.load(SceneDefinition(28f,emptyList(),emptyList(),null,true),floatArrayOf())
@@ -183,8 +220,12 @@ class MainActivity : Activity() {
                     savedCamera?.let { c ->
                         scene.restoreCamera(CameraState(c[0],c[1],c[2],c[3],c[4],c.getOrElse(5) { 0f },restored?.getBoolean("freeCamera") ?: false,restored?.getFloat("runSpeed",6f) ?: 6f))
                     }
+                    val savedLesson=restored?.getString("lessonId")
+                    val savedPlayback=savedLesson?.let { PlaybackSnapshot(it,restored?.getDouble("lessonSeconds") ?: -6.0,
+                        restored?.getBoolean("lessonPlaying") ?: false,runCatching {LessonView.valueOf(restored?.getString("lessonView") ?: "STANCE")}.getOrDefault(LessonView.STANCE)) }
                     restored=null; loaded=true; refresh()
-                    if(savedCamera==null) definition.targets.firstOrNull { it.id==state.selectedGroupId }?.let { t ->
+                    if(savedPlayback!=null && savedLesson in listOf("DEV-C013-FIRE","DEV-C013-SMOKE-HE")) startDevelopmentLesson(savedLesson=="DEV-C013-FIRE",savedPlayback)
+                    if(savedCamera==null && activeCourse==null) definition.targets.firstOrNull { it.id==state.selectedGroupId }?.let { t ->
                         scene.flyTo(CameraState(t.yaw,t.pitch,t.distance,t.focus.x,t.focus.z,t.focus.y))
                     }
                 }, { error ->
@@ -218,6 +259,7 @@ class MainActivity : Activity() {
         refresh(); detailsScroll.smoothScrollTo(0,0)
     }
     private fun refresh() {
+        if(activeCourse!=null)exitLesson()
         val group=state.selectedGroup
         scene.targets(if(group==null) definition?.targets?.filter { t -> state.groups.any { it.id==t.id } } ?: emptyList() else emptyList())
         scene.show(group?.items ?: emptyList(),state.selected)
@@ -227,6 +269,10 @@ class MainActivity : Activity() {
         if(state.lineups.isEmpty()) {
             details.addView(text("${state.map.name} · 地图浏览",20f,bold=true))
             details.addView(text(definition?.overviewText.orEmpty().ifBlank { state.map.description },14f,Palette.muted))
+            details.addView(row().apply {
+                addWeighted(button("烟＋HE 开发样例") {startDevelopmentLesson(false)})
+                addWeighted(button("延迟火开发样例") {startDevelopmentLesson(true)})
+            })
             details.addView(text("道具教学待接入",18f,bold=true))
             details.addView(text(definition?.emptyLineupsText.orEmpty().ifBlank { "这张地图暂未加入道具教学。可先单指旋转、双指缩放浏览地图。" },13f,Palette.muted))
             definition?.credits?.takeIf { it.isNotBlank() }?.let { details.addView(text(it,11f,Palette.muted)) }
@@ -331,21 +377,28 @@ class MainActivity : Activity() {
                 .onFailure { Toast.makeText(this,"未找到浏览器",Toast.LENGTH_SHORT).show() }
         })
     }
-    override fun onResume() { super.onResume(); if(::scene.isInitialized) scene.resume() }
-    override fun onPause() { if(::scene.isInitialized) scene.pause(); super.onPause() }
+    override fun onResume() { super.onResume();resumed=true; if(::scene.isInitialized) {scene.resume();scene.removeCallbacks(lessonRefresh);if(activeCourse!=null)scene.post(lessonRefresh)} }
+    override fun onPause() {resumed=false;if(::scene.isInitialized) {scene.removeCallbacks(lessonRefresh);scene.pause()};super.onPause() }
     override fun onSaveInstanceState(out: Bundle) {
         if(::state.isInitialized && ::scene.isInitialized && ::title.isInitialized) {
             out.putString("map",state.map.id); out.putString("selected",state.selectedId)
             out.putString("group",state.selectedGroupId)
             out.putString("query",state.filter.query); out.putString("type",state.filter.type?.name)
             out.putBoolean("favoritesOnly",state.filter.favoritesOnly)
+            if(activeCourse!=null) {
+                val c=requireNotNull(activeCourse)
+                val p=scene.lessonSnapshot().takeIf {it.lessonId==c.lessonId} ?: PlaybackSnapshot(c.lessonId,c.begin,false,LessonView.STANCE)
+                out.putString("lessonId",c.lessonId);out.putDouble("lessonSeconds",p.seconds)
+                out.putBoolean("lessonPlaying",p.playing);out.putString("lessonView",p.view.name)
+            }
             val c=scene.cameraState();out.putBoolean("freeCamera",c.free);out.putFloat("runSpeed",c.speed); out.putFloatArray("camera",floatArrayOf(c.yaw,c.pitch,c.distance,c.x,c.z,c.y))
         }
         super.onSaveInstanceState(out)
     }
     @Deprecated("Legacy Activity back handling for API 24+ skeleton")
     override fun onBackPressed() {
-        if(::state.isInitialized && state.selected!=null && ::details.isInitialized) {
+        if(activeCourse!=null) {exitLesson();refresh()}
+        else if(::state.isInitialized && state.selected!=null && ::details.isInitialized) {
             state.select(null); store.selectedId=null; refresh()
         } else if(::state.isInitialized && state.selectedGroupId!=null && ::details.isInitialized) {
             state.selectedGroupId=null;refresh();scene.resetCamera()
