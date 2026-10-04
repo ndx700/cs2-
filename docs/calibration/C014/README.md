@@ -1,5 +1,7 @@
 # C014-RES 三课资源交接
 
+**当前来源已更新**：用户上传三课视频，并把D2-001改为挂门烟。以[用户视频交接](USER-VIDEO-REVIEW.md)、`user-video-evidence.json`和重新生成的`three-lessons.json`为当前依据；下文GetReplay投法/旧命令说明保留为历史，不能继续用于当前三课坐标。新课仍待校准。
+
 执行范围：D2-001 中门烟、D2-010 Car 火、D2-014 中门炸烟 HE。已读 C014、最新 main AGENTS、C010、C012、C013 和瞄点精度要求；保留 main 地图加载兼容修复。旧 Codex 审查安排没有恢复，本轮按用户直接指令继续资源任务。
 
 交接入口 `three-lessons.json`，由 `tools/build_c014_resources.py` 从已有证据生成。它是资源侧交接索引，**不能直接交给 CourseJson 当可播放课程**。历史 APP v1 草稿保留在 `../C013/app-pending/`；本轮 C014 草稿在 `app-pending/`，明确列出 stance/aim/overview/follow/landing 五个镜头槽位，未知镜头全部 null，`importable=false`。正式三课仍为 PENDING_CALIBRATION。

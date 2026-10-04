@@ -2,7 +2,7 @@
   "schema": "c013-course-fx-v1",
   "mapId": "dust2",
   "lessonId": "D2-001",
-  "title": "T出生 → 中门烟",
+  "title": "中门挂门烟",
   "relatedIds": [
     "D2-014"
   ],
@@ -12,13 +12,13 @@
   "coordinateSpace": "display-m-y-up-v1",
   "timeOrigin": "throw-release-seconds",
   "evidence": {
-    "url": "https://getreplay.gg/en/utility/dust2/smoke/d2-mid-door-smoke",
+    "url": "https://b23.tv/efWPjTd",
     "gameBuild": null,
     "releaseVideoSeconds": null
   },
-  "teachingSource": "https://getreplay.gg/en/utility/dust2/smoke/d2-mid-door-smoke",
-  "effectSource": "https://www.youtube.com/watch?v=6aEaQjRaV1U",
-  "referenceSegment": "Nart 0:43–1:33",
+  "teachingSource": "https://b23.tv/efWPjTd",
+  "effectSource": "https://b23.tv/efWPjTd",
+  "referenceSegment": "user-selected video; encoded segment timestamps in user-video-evidence.json",
   "foot": null,
   "eye": null,
   "aim": null,
@@ -41,94 +41,32 @@
   "fire": null,
   "he": null,
   "resourceObservations": {
-    "sourceRecord": "docs/calibration/C013/calibration-records.json#D2-001",
-    "positionSemantics": "UNCONFIRMED_PLAYER_OR_EYE_POSITION_NOT_FEET",
-    "sourceConsolePosition": [
-      -452.229492,
-      -660.061768,
-      174.616058
-    ],
-    "displayConsolePosition": [
-      -11.4866290968,
-      4.4352478732,
-      16.7655689072
-    ],
-    "sourceAnglesPitchYawRoll": [
-      -9.96819,
-      88.599434,
-      0.0
-    ],
-    "sourceDeclaredThrowFlags": {
+    "sourceVideoEvidence": "docs/calibration/C014/user-video-evidence.json#D2-001",
+    "positionSemantics": "VIDEO_ONLY_NO_CERTIFIED_XYZ",
+    "sourceConsolePosition": null,
+    "displayConsolePosition": null,
+    "sourceAnglesPitchYawRoll": null,
+    "videoObservedThrowFlags": {
       "jump": true,
       "forward": false,
-      "standing": false,
+      "crouchAtRelease": false,
       "left_click": true,
-      "status": "SOURCE_DECLARED_NOT_GAME_VALIDATED"
+      "status": "VIDEO_OBSERVED_NOT_GAME_REPRODUCED"
     },
     "screenshotIds": [
-      "D2-001-image-02",
-      "D2-001-image-03",
-      "D2-001-image-04",
-      "D2-001-image-05",
-      "D2-001-image-06",
-      "D2-001-image-07",
-      "D2-001-image-08",
-      "D2-001-image-09"
+      "D2-001-user-012.0",
+      "D2-001-user-018.0",
+      "D2-001-user-020.0",
+      "D2-001-user-021.0",
+      "D2-001-user-022.9",
+      "D2-001-user-023.2",
+      "D2-001-user-027.0",
+      "D2-001-user-030.0",
+      "D2-001-user-040.0"
     ],
-    "coordinateAlias": "dust2_display_y_up_v1 -> display-m-y-up-v1; preserve numeric values; no second transform; physical-unit certification pending",
-    "effectStages": [
-      {
-        "event": "throw_release",
-        "ageSeconds": null,
-        "sourceClipTimeSeconds": null,
-        "measurementEvidence": null,
-        "status": "PENDING_CALIBRATION"
-      },
-      {
-        "event": "landing",
-        "ageSeconds": null,
-        "sourceClipTimeSeconds": null,
-        "measurementEvidence": null,
-        "status": "PENDING_CALIBRATION"
-      },
-      {
-        "event": "first_smoke",
-        "ageSeconds": null,
-        "sourceClipTimeSeconds": null,
-        "measurementEvidence": null,
-        "status": "PENDING_CALIBRATION"
-      },
-      {
-        "event": "basic_formed",
-        "ageSeconds": null,
-        "sourceClipTimeSeconds": null,
-        "measurementEvidence": null,
-        "status": "PENDING_CALIBRATION"
-      },
-      {
-        "event": "fully_formed",
-        "ageSeconds": null,
-        "sourceClipTimeSeconds": null,
-        "measurementEvidence": null,
-        "status": "PENDING_CALIBRATION"
-      },
-      {
-        "event": "dissipation_begin",
-        "ageSeconds": null,
-        "sourceClipTimeSeconds": null,
-        "measurementEvidence": null,
-        "status": "PENDING_CALIBRATION"
-      },
-      {
-        "event": "dissipation_end",
-        "ageSeconds": null,
-        "sourceClipTimeSeconds": null,
-        "measurementEvidence": null,
-        "status": "PENDING_CALIBRATION"
-      }
-    ]
+    "historicalC013ReferenceSuperseded": true
   },
-  "aimTextureAcceptance": "docs/calibration/C013/aim-texture-checks.json#D2-001",
+  "aimTextureAcceptance": "docs/calibration/C014/aim-texture-checks.json#D2-001",
   "missing": [
     "validated feet/eye/aim and camera FOV",
     "verified throw/path/landing",
@@ -137,5 +75,6 @@
     "APP phone screenshots with hints visible and hidden",
     "measured follow/landing orbit target, yaw/pitch/distance and obstruction check"
   ],
-  "observationContract": "docs/calibration/C014/app-observation-receipt.json"
+  "observationContract": "docs/calibration/C014/app-observation-receipt.json",
+  "referenceRevision": "user-selected-20261004-v2"
 }

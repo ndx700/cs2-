@@ -79,12 +79,33 @@ def build(root):
     pending_output = output / "app-pending"
     pending_output.mkdir(exist_ok=True)
     version = digest(root / "app/src/main/assets/maps/dust2/mobile/manifest.json")
+    video_path = output / "user-video-evidence.json"
+    video_package = load(video_path) if video_path.exists() else None
+    user_videos = {r["id"]: r for r in video_package["records"]} if video_package else {}
     lessons = []
     for course_id in IDS:
         r = records[course_id]
         title, hint, target = NOTES[course_id]
         draft_path = pending_output / (course_id + ".json")
         draft = observation_draft(load(folder / "app-pending" / (course_id + ".json")))
+        user_video = user_videos.get(course_id)
+        if user_video:
+            title, hint, target = user_video["title"], user_video["hintZh"], user_video["targetZh"]
+            draft["title"] = title
+            draft["teachingSource"] = draft["effectSource"] = user_video["sourceUrl"]
+            draft["evidence"]["url"] = user_video["sourceUrl"]
+            draft["referenceSegment"] = "user-selected video; encoded segment timestamps in user-video-evidence.json"
+            draft["referenceRevision"] = video_package["revision"]
+            draft["aimTextureAcceptance"] = "docs/calibration/C014/aim-texture-checks.json#" + course_id
+            draft["resourceObservations"] = {
+                "sourceVideoEvidence": "docs/calibration/C014/user-video-evidence.json#" + course_id,
+                "positionSemantics": "VIDEO_ONLY_NO_CERTIFIED_XYZ",
+                "sourceConsolePosition": None, "displayConsolePosition": None,
+                "sourceAnglesPitchYawRoll": None,
+                "videoObservedThrowFlags": user_video["throwFlags"],
+                "screenshotIds": [s["id"] for s in user_video["screenshots"]],
+                "historicalC013ReferenceSuperseded": True,
+            }
         validate_observation_draft(draft)
         draft_path.write_text(json.dumps(draft, ensure_ascii=False, indent=2) + "\n")
         lesson = {
@@ -141,6 +162,29 @@ def build(root):
                 "clockNote": "HE释放为本课零点；预先成型的烟需已存在，不能随HE释放才从零龄起烟。未测偏移不填数值。",
                 "parametersMustMatchSmokeLesson": True,
             }
+        if user_video:
+            lesson["referenceRevision"] = video_package["revision"]
+            lesson["sourceDeclaredTeaching"] = {
+                "url": user_video["sourceUrl"], "hintZh": hint, "targetZh": target,
+                "throwFlags": user_video["throwFlags"],
+                "status": "VIDEO_OBSERVED_NOT_GAME_REPRODUCED",
+                "selectedVariant": user_video["selectedVariant"],
+                "historicalNartAndGetReplaySuperseded": True,
+            }
+            lesson["screenshots"] = user_video["screenshots"]
+            lesson["clipEvidence"] = {**user_video, "courseId": course_id}
+            lesson["unconfirmedConsolePosition"] = {
+                "sourceXYZ": None, "displayXYZ": None,
+                "semantics": "NOT_PROVIDED_FOR_SELECTED_VIDEO_VARIANT",
+                "worldQuery": None, "usableAsFeetOrEye": False,
+            }
+            lesson["missing"] = [*user_video["missing"],
+                                 "游戏/地图版本与APP同视角/提示隐藏手机检查",
+                                 "跟随/落点镜头三维参数及遮挡检查"]
+            if course_id == "D2-014":
+                lesson["smokeDependency"]["sceneId"] = "dust2-mid-doors-hang-smoke-user-v2"
+                lesson["smokeDependency"]["sameVariantConfirmed"] = False
+                lesson["smokeDependency"]["compatibilityEvidence"] = "视频含挂门烟炸开示范；与D2-001所选墙缝投法是否同一落点/形态仍待配套验证。"
         lessons.append(lesson)
     bundle = {
         "schema": "c014-resource-handoff-v1", "owner": "C014-RES", "batch": "M1",
@@ -155,6 +199,11 @@ def build(root):
         "appCoordinateAlias": "display-m-y-up-v1; identical values, no second conversion",
         "pageRecheckedAt": "2026-10-04", "lessons": lessons,
     }
+    if video_package:
+        bundle["activeReferenceRevision"] = video_package["revision"]
+        bundle["userVideoEvidence"] = {"path": str(video_path.relative_to(root)), "sha256": digest(video_path)}
+        aim_path = output / "aim-texture-checks.json"
+        bundle["aimTextureAcceptance"] = {"path": str(aim_path.relative_to(root)), "sha256": digest(aim_path)}
     validate_bundle(bundle, root)
     (output / "three-lessons.json").write_text(json.dumps(bundle, ensure_ascii=False, indent=2) + "\n")
     print("PASS: C014 three-lesson evidence handoff; runtime import disabled")
@@ -167,6 +216,29 @@ def validate_bundle(bundle, root):
     if [r["id"] for r in lessons] != list(IDS):
         raise ValueError("C014 stable identities/order changed")
     actual_map = digest(root / "app/src/main/assets/maps/dust2/mobile/manifest.json")
+    video_info = bundle.get("userVideoEvidence")
+    active_videos = {}
+    if video_info:
+        video_path = (root / video_info["path"]).resolve()
+        if not video_path.is_relative_to(root.resolve()) or digest(video_path) != video_info["sha256"]:
+            raise ValueError("user video evidence path/hash mismatch")
+        video_package = load(video_path)
+        if bundle.get("activeReferenceRevision") != video_package["revision"] or video_package["allCalibrated"] is not False or [r["id"] for r in video_package["records"]] != list(IDS):
+            raise ValueError("user video revision/identity/status mismatch")
+        active_videos = {r["id"]: r for r in video_package["records"]}
+        aim_info = bundle["aimTextureAcceptance"]
+        aim_path = (root / aim_info["path"]).resolve()
+        if not aim_path.is_relative_to(root.resolve()) or digest(aim_path) != aim_info["sha256"]:
+            raise ValueError("active aim evidence path/hash mismatch")
+        aim = load(aim_path)
+        if aim["referenceRevision"] != video_package["revision"] or aim["allCoursesCalibrated"] is not False or [r["id"] for r in aim["records"]] != list(IDS):
+            raise ValueError("active aim revision/identity/status mismatch")
+        for row in aim["records"]:
+            if row["mapVersion"] != actual_map or any(v is not None for v in row["acceptance"].values()):
+                raise ValueError("active aim map or pending acceptance mismatch")
+            shots = {s["id"]: s for s in active_videos[row["id"]]["screenshots"]}
+            if any(shot != shots.get(shot["id"]) for shot in row["referenceImages"]):
+                raise ValueError("active aim reference must use selected video frames")
     receipt_info = bundle["appObservationReceipt"]
     receipt_path = (root / receipt_info["path"]).resolve()
     if not receipt_path.is_relative_to(root.resolve()) or digest(receipt_path) != receipt_info["sha256"]:
@@ -194,6 +266,19 @@ def validate_bundle(bundle, root):
                 raise ValueError("evidence path/hash mismatch")
         draft = load(root / lesson["appDraft"]["path"])
         validate_observation_draft(draft)
+        if active_videos:
+            selected = active_videos[lesson["id"]]
+            if lesson.get("referenceRevision") != bundle["activeReferenceRevision"] or lesson["sourceDeclaredTeaching"]["url"] != selected["sourceUrl"] or lesson["sourceDeclaredTeaching"]["selectedVariant"] != selected["selectedVariant"]:
+                raise ValueError("active video variant/source mismatch")
+            if any(lesson["unconfirmedConsolePosition"][key] is not None for key in ("sourceXYZ", "displayXYZ", "worldQuery")):
+                raise ValueError("superseded command cannot cross into selected video variant")
+            observations = draft["resourceObservations"]
+            if draft.get("referenceRevision") != bundle["activeReferenceRevision"] or draft["teachingSource"] != selected["sourceUrl"] or any(observations.get(k) is not None for k in ("sourceConsolePosition", "displayConsolePosition", "sourceAnglesPitchYawRoll")):
+                raise ValueError("APP draft still uses superseded reference")
+            if draft["aimTextureAcceptance"] != bundle["aimTextureAcceptance"]["path"] + "#" + lesson["id"]:
+                raise ValueError("APP draft uses superseded aiming evidence")
+            if lesson["sourceDeclaredTeaching"]["throwFlags"] != selected["throwFlags"]:
+                raise ValueError("selected video throw flags mismatch")
         if draft["lessonId"] != lesson["id"] or draft["mapVersion"] != actual_map or draft["importable"] is not False:
             raise ValueError("APP draft identity/version/import mismatch")
         if any(image["courseId"] != lesson["id"] for image in lesson["screenshots"]) or lesson["clipEvidence"]["courseId"] != lesson["id"]:

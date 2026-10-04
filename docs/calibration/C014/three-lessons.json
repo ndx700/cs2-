@@ -26,12 +26,12 @@
     {
       "id": "D2-001",
       "type": "SMOKE",
-      "title": "T出生中门烟",
+      "title": "中门挂门烟",
       "status": "PENDING_CALIBRATION",
       "importable": false,
       "appDraft": {
         "path": "docs/calibration/C014/app-pending/D2-001.json",
-        "sha256": "815f32e18999d3874e71a7d403efe29a3e0561052e50f79289723d4b0532dac1"
+        "sha256": "698ee2686d6265e0d4d716e5a26cd05d93bae1a3e58551156ac90bf835646414"
       },
       "mapVersion": "fc60c032290dffcb233e3de9da3c59694293362ec72643cc1ebde9c1b13a17d0",
       "versions": {
@@ -45,214 +45,303 @@
         "sourceMapBuild": null
       },
       "sourceDeclaredTeaching": {
-        "url": "https://getreplay.gg/en/utility/dust2/smoke/d2-mid-door-smoke",
-        "hintZh": "匪家参考点，左键跳投。",
-        "targetZh": "中门视线封锁",
+        "url": "https://b23.tv/efWPjTd",
+        "hintZh": "在矮墙旁蹲下对齐墙缝与墙边，站起后瞄墙面小污点，左键跳投；不要加入后段向前移动的满封烟站位。",
+        "targetZh": "中门挂门烟",
         "throwFlags": {
           "jump": true,
           "forward": false,
-          "standing": false,
+          "crouchAtRelease": false,
           "left_click": true,
-          "status": "SOURCE_DECLARED_NOT_GAME_VALIDATED"
+          "status": "VIDEO_OBSERVED_NOT_GAME_REPRODUCED"
         },
-        "status": "SOURCE_DECLARED_NOT_GAME_VALIDATED",
-        "matchToNartVariant": "UNCONFIRMED"
+        "status": "VIDEO_OBSERVED_NOT_GAME_REPRODUCED",
+        "selectedVariant": "hang-door-first-lineup-no-forward-adjustment",
+        "historicalNartAndGetReplaySuperseded": true
       },
       "screenshots": [
         {
-          "id": "D2-001-image-02",
+          "id": "D2-001-user-012.0",
           "courseId": "D2-001",
-          "role": "stand_reference",
-          "sourceUrl": "https://storage.getreplay.gg/2026/04/15/c5e86f434aff29e8a40db7d34cbda26b61fe58be.jpg",
-          "sourceSha256": "48f2631ee3d37e8313e31a2683eb4b4c3a1054af94b109740268ee2f21183db1",
-          "path": "docs/calibration/C013/screenshots/D2-001-02-stand_reference.jpg",
-          "sha256": "feac8163ace1e5ea150d2721d1aebfde50b5e3980e3704c7c95df5775453c785",
-          "width": 1280,
-          "height": 720,
-          "mapBuild": null,
-          "gameBuild": null,
-          "source": "GetReplay linked screenshot; not a calibrated world-space point"
+          "path": "docs/calibration/C014/user-video-frames/D2-001-012.0-stance-seam.jpg",
+          "role": "stance-seam",
+          "sourceVideoSeconds": 12,
+          "sha256": "d68078171fb9c34667cea40c39155a82f74ae5a98471ff49062370d1c02c95f6",
+          "size": [
+            1280,
+            720
+          ]
         },
         {
-          "id": "D2-001-image-03",
+          "id": "D2-001-user-018.0",
           "courseId": "D2-001",
-          "role": "aim_reference",
-          "sourceUrl": "https://storage.getreplay.gg/2026/04/15/f750e289813e827a37c0f2dc31215593bafe3bb7.jpg",
-          "sourceSha256": "b21019a5a930003e8312ffcd63a1505a95923c39600d9cddd434d2e3fc554a3e",
-          "path": "docs/calibration/C013/screenshots/D2-001-03-aim_reference.jpg",
-          "sha256": "40c2372ed4c8c418377930ab3bc9a8992158c5edcd22be3897af4a1ec1a75862",
-          "width": 1280,
-          "height": 720,
-          "mapBuild": null,
-          "gameBuild": null,
-          "source": "GetReplay linked screenshot; not a calibrated world-space point"
+          "path": "docs/calibration/C014/user-video-frames/D2-001-018.0-stance-wall-edge.jpg",
+          "role": "stance-wall-edge",
+          "sourceVideoSeconds": 18,
+          "sha256": "ad095c6dcc5c5d962efccd0b059aa8aec1979863b9f2bacee3ab3d2df54614e8",
+          "size": [
+            1280,
+            720
+          ]
         },
         {
-          "id": "D2-001-image-04",
+          "id": "D2-001-user-020.0",
           "courseId": "D2-001",
-          "role": "landing_reference",
-          "sourceUrl": "https://storage.getreplay.gg/2026/04/15/799c21f5809895b3e84b78c9dd0fed4d29f47033.jpg",
-          "sourceSha256": "a45e860b21eaad853464a754a8680864cff30a2109039213c3bb2735895a0948",
-          "path": "docs/calibration/C013/screenshots/D2-001-04-landing_reference.jpg",
-          "sha256": "cded342687e2751f4649a68fbcdc9780fe1534172790f576765ea194a6bfe390",
-          "width": 1280,
-          "height": 720,
-          "mapBuild": null,
-          "gameBuild": null,
-          "source": "GetReplay linked screenshot; not a calibrated world-space point"
+          "path": "docs/calibration/C014/user-video-frames/D2-001-020.0-stand-up.jpg",
+          "role": "stand-up",
+          "sourceVideoSeconds": 20,
+          "sha256": "eb7abaaa5c5fd722faef4fd498e2cb7e84cba7405a2bd5d19689a71d25937ce0",
+          "size": [
+            1280,
+            720
+          ]
         },
         {
-          "id": "D2-001-image-05",
+          "id": "D2-001-user-021.0",
           "courseId": "D2-001",
-          "role": "landing_reference",
-          "sourceUrl": "https://storage.getreplay.gg/2026/04/15/55f92bb29802c4e286069227ea7964b5a37d9e2f.jpg",
-          "sourceSha256": "9943335d8b209138e2a9230940012962791cb342011275fa4d4fab78344eeb79",
-          "path": "docs/calibration/C013/screenshots/D2-001-05-landing_reference.jpg",
-          "sha256": "25f20f306e0ce40da5d3d6f3f37bd8dd7ee8aaaf70a32d5d4e1dd28f1e767811",
-          "width": 1280,
-          "height": 720,
-          "mapBuild": null,
-          "gameBuild": null,
-          "source": "GetReplay linked screenshot; not a calibrated world-space point"
+          "path": "docs/calibration/C014/user-video-frames/D2-001-021.0-aim-mark.jpg",
+          "role": "aim-mark",
+          "sourceVideoSeconds": 21,
+          "sha256": "e1c57dae15fcaf9e8d0f38c460697085b8c5972e36bef20fbf76555492f7ad5d",
+          "size": [
+            1280,
+            720
+          ]
         },
         {
-          "id": "D2-001-image-06",
+          "id": "D2-001-user-022.9",
           "courseId": "D2-001",
-          "role": "coverage_reference",
-          "sourceUrl": "https://storage.getreplay.gg/2026/04/15/4b58a2d0a5a70f243ec67beb92c6c57247324d61.jpg",
-          "sourceSha256": "8334e3f728b5060001378460a499d38b97acc2d41ec251b163be8b43a0eaab8c",
-          "path": "docs/calibration/C013/screenshots/D2-001-06-coverage_reference.jpg",
-          "sha256": "ad97c69d083d74500e51913a2f673be4a20cfbf6758733c5b5174e5ca6e3c6e6",
-          "width": 1280,
-          "height": 720,
-          "mapBuild": null,
-          "gameBuild": null,
-          "source": "GetReplay linked screenshot; not a calibrated world-space point"
+          "path": "docs/calibration/C014/user-video-frames/D2-001-022.9-release-before.jpg",
+          "role": "release-before",
+          "sourceVideoSeconds": 22.9,
+          "sha256": "c8626e9887ecb0663e905d6aa6862774cf12546721bfec0f5a6532ab45273be6",
+          "size": [
+            1280,
+            720
+          ]
         },
         {
-          "id": "D2-001-image-07",
+          "id": "D2-001-user-023.2",
           "courseId": "D2-001",
-          "role": "coverage_reference",
-          "sourceUrl": "https://storage.getreplay.gg/2026/04/15/51c23d3e782d3b2d2036fa8d987e42185fe641d3.jpg",
-          "sourceSha256": "212b4e8502ac9dc839ddfcee186baed6e26667d7f83fa2c3c9ec4b5c1b537d71",
-          "path": "docs/calibration/C013/screenshots/D2-001-07-coverage_reference.jpg",
-          "sha256": "921f2c9b5c6f08cfbcbba2f8d5bf3b8930d5796edafd6b14b8eae0fb8cf47e11",
-          "width": 1280,
-          "height": 720,
-          "mapBuild": null,
-          "gameBuild": null,
-          "source": "GetReplay linked screenshot; not a calibrated world-space point"
+          "path": "docs/calibration/C014/user-video-frames/D2-001-023.2-release-after.jpg",
+          "role": "release-after",
+          "sourceVideoSeconds": 23.2,
+          "sha256": "96502b321a91c615456b7abf2eeeb873f680a6fc9e5acc4f0f210e8bf39dbd0a",
+          "size": [
+            1280,
+            720
+          ]
         },
         {
-          "id": "D2-001-image-08",
+          "id": "D2-001-user-027.0",
           "courseId": "D2-001",
-          "role": "coverage_reference",
-          "sourceUrl": "https://storage.getreplay.gg/2026/04/15/7e52220361415897a741d584295e7b68c77472ff.jpg",
-          "sourceSha256": "e3bd1d62008e430f58cee838384c117051e4e3817902aa8f1d9cb0a8f3ab8330",
-          "path": "docs/calibration/C013/screenshots/D2-001-08-coverage_reference.jpg",
-          "sha256": "16751c1f1b3a09929451e36a4654a5c35a9e9a9ac9a5fae59f190b9647613638",
-          "width": 1280,
-          "height": 720,
-          "mapBuild": null,
-          "gameBuild": null,
-          "source": "GetReplay linked screenshot; not a calibrated world-space point"
+          "path": "docs/calibration/C014/user-video-frames/D2-001-027.0-landing-view.jpg",
+          "role": "landing-view",
+          "sourceVideoSeconds": 27,
+          "sha256": "75a3bb294f41db801d428ca76efba9717290d8b4d62fdcff0d4f94c2f29b940d",
+          "size": [
+            1280,
+            720
+          ]
         },
         {
-          "id": "D2-001-image-09",
+          "id": "D2-001-user-030.0",
           "courseId": "D2-001",
-          "role": "coverage_reference",
-          "sourceUrl": "https://storage.getreplay.gg/2026/04/15/56010ff539e99435db671721573289df9e620c20.jpg",
-          "sourceSha256": "42091b4dd4c140d08ed6d031cdce0078fc77d15c031891708c235b4017496240",
-          "path": "docs/calibration/C013/screenshots/D2-001-09-coverage_reference.jpg",
-          "sha256": "1a2a287218b0acece1eae5b5165f2bbdcfb9a1c38ebd46ccbaa388406fca364e",
-          "width": 1280,
-          "height": 720,
-          "mapBuild": null,
-          "gameBuild": null,
-          "source": "GetReplay linked screenshot; not a calibrated world-space point"
+          "path": "docs/calibration/C014/user-video-frames/D2-001-030.0-excluded-forward-adjustment.jpg",
+          "role": "excluded-forward-adjustment",
+          "sourceVideoSeconds": 30,
+          "sha256": "b0a31643030344ec4516ad5fcce32520dc84b15844926c610c6e66f5bc022e88",
+          "size": [
+            1280,
+            720
+          ]
+        },
+        {
+          "id": "D2-001-user-040.0",
+          "courseId": "D2-001",
+          "path": "docs/calibration/C014/user-video-frames/D2-001-040.0-excluded-full-seal.jpg",
+          "role": "excluded-full-seal",
+          "sourceVideoSeconds": 40,
+          "sha256": "3ca0bd9ae72ba6db0d0aed4b4a2b6f9ea120904803636b5aa79a226f82c2a254",
+          "size": [
+            1280,
+            720
+          ]
         }
       ],
       "clipEvidence": {
-        "id": "D2-001-demo",
-        "courseId": "D2-001",
-        "sourceUrl": "https://storage.getreplay.gg/2026/04/15/b6786b3d546fa2ca95cf36bc81e76e3b397d2fc9.mp4",
-        "sourceSha256": "c660b080f140ecc6aa963dce2443d50f0df7935dc588241d334a3e2d732e3dc9",
-        "bytes": 5591183,
-        "encodedDurationSeconds": 14.4,
+        "id": "D2-001",
+        "title": "中门挂门烟",
+        "sourceName": "41124105311-1-192.mp4",
+        "sourceUrl": "https://b23.tv/efWPjTd",
+        "libraryId": "libfile_91eb381795d4819199aa9b53bf62f3b7",
+        "sourceSha256": "53897447f28b2c2f554df97500cd8d670d1e46d2cfffc1beeb36daa53b067a62",
+        "bytes": 13137747,
+        "encodedDurationSeconds": 57.539161,
         "video": {
-          "codec_type": "video",
-          "width": 1920,
-          "height": 1080,
-          "r_frame_rate": "30/1"
+          "width": 1280,
+          "height": 720,
+          "r_frame_rate": "30/1",
+          "codec_name": "h264"
         },
-        "clock": "ENCODED_CLIP_SECONDS_NOT_CERTIFIED_GAME_TIME",
-        "fullLifecycleObserved": false,
-        "videoNotBundledInAPK": true,
-        "sampleTimesSeconds": [
-          3.5,
-          4.0,
-          8.0,
-          12.5,
-          14.0
+        "clock": "ENCODED_VIDEO_SECONDS_NOT_CERTIFIED_GAME_TIME",
+        "selectedVariant": "hang-door-first-lineup-no-forward-adjustment",
+        "hintZh": "在矮墙旁蹲下对齐墙缝与墙边，站起后瞄墙面小污点，左键跳投；不要加入后段向前移动的满封烟站位。",
+        "targetZh": "中门挂门烟",
+        "throwFlags": {
+          "jump": true,
+          "forward": false,
+          "crouchAtRelease": false,
+          "left_click": true,
+          "status": "VIDEO_OBSERVED_NOT_GAME_REPRODUCED"
+        },
+        "segments": [
+          {
+            "start": 11,
+            "end": 27.5,
+            "role": "selected-hang-door-recipe"
+          },
+          {
+            "start": 28,
+            "end": 44,
+            "role": "excluded-full-seal-variant"
+          }
         ],
-        "observation": "Clip contains throw and multiple camera cuts; full smoke lifespan is not shown. No release-to-effect age is measured across a cut.",
-        "observationStrip": "docs/calibration/C013/screenshots/D2-001-observations.jpg",
-        "observationStripSha256": "a0a282b804a0f4b634abcef9ff3858b65d644360f2e33ced353c3e8fd648c1e8",
-        "mapBuild": null,
-        "gameBuild": null,
-        "matchToC012NartVariant": "UNCONFIRMED"
-      },
-      "unconfirmedConsolePosition": {
-        "sourceXYZ": [
-          -452.229492,
-          -660.061768,
-          174.616058
-        ],
-        "displayXYZ": [
-          -11.4866290968,
-          4.4352478732,
-          16.7655689072
-        ],
-        "semantics": "UNCONFIRMED_PLAYER_OR_EYE_POSITION_NOT_FEET",
-        "worldQuery": {
-          "id": "D2-001",
-          "commandPositionDisplay": [
-            -11.4866290968,
-            4.4352478732,
-            16.7655689072
-          ],
-          "queryStartDisplay": [
-            -11.4866290968,
-            4.5352478731999994,
-            16.7655689072
-          ],
-          "queryLayers": [
-            0,
-            1,
-            2
-          ],
-          "maxDropDisplayUnits": 5,
-          "hit": {
-            "triangle": 253771,
-            "shape": 10093,
-            "layer": 0,
-            "surfaceIndex": 27,
-            "surfaceHash": 1690327349,
-            "fraction": 0.3472923390508805,
-            "distanceDisplayUnits": 1.7364616952544027,
-            "positionDisplay": [
-              -11.4866290968,
-              2.7987861779455967,
-              16.7655689072
-            ],
-            "normalAgainstSegment": [
-              0.18166405714472345,
-              0.964075222103999,
-              0.19379663688218085
+        "screenshots": [
+          {
+            "id": "D2-001-user-012.0",
+            "courseId": "D2-001",
+            "path": "docs/calibration/C014/user-video-frames/D2-001-012.0-stance-seam.jpg",
+            "role": "stance-seam",
+            "sourceVideoSeconds": 12,
+            "sha256": "d68078171fb9c34667cea40c39155a82f74ae5a98471ff49062370d1c02c95f6",
+            "size": [
+              1280,
+              720
             ]
           },
-          "status": "OFFLINE_WORLD_QUERY_NOT_STAND_OR_LINEUP_VALIDATION"
-        },
+          {
+            "id": "D2-001-user-018.0",
+            "courseId": "D2-001",
+            "path": "docs/calibration/C014/user-video-frames/D2-001-018.0-stance-wall-edge.jpg",
+            "role": "stance-wall-edge",
+            "sourceVideoSeconds": 18,
+            "sha256": "ad095c6dcc5c5d962efccd0b059aa8aec1979863b9f2bacee3ab3d2df54614e8",
+            "size": [
+              1280,
+              720
+            ]
+          },
+          {
+            "id": "D2-001-user-020.0",
+            "courseId": "D2-001",
+            "path": "docs/calibration/C014/user-video-frames/D2-001-020.0-stand-up.jpg",
+            "role": "stand-up",
+            "sourceVideoSeconds": 20,
+            "sha256": "eb7abaaa5c5fd722faef4fd498e2cb7e84cba7405a2bd5d19689a71d25937ce0",
+            "size": [
+              1280,
+              720
+            ]
+          },
+          {
+            "id": "D2-001-user-021.0",
+            "courseId": "D2-001",
+            "path": "docs/calibration/C014/user-video-frames/D2-001-021.0-aim-mark.jpg",
+            "role": "aim-mark",
+            "sourceVideoSeconds": 21,
+            "sha256": "e1c57dae15fcaf9e8d0f38c460697085b8c5972e36bef20fbf76555492f7ad5d",
+            "size": [
+              1280,
+              720
+            ]
+          },
+          {
+            "id": "D2-001-user-022.9",
+            "courseId": "D2-001",
+            "path": "docs/calibration/C014/user-video-frames/D2-001-022.9-release-before.jpg",
+            "role": "release-before",
+            "sourceVideoSeconds": 22.9,
+            "sha256": "c8626e9887ecb0663e905d6aa6862774cf12546721bfec0f5a6532ab45273be6",
+            "size": [
+              1280,
+              720
+            ]
+          },
+          {
+            "id": "D2-001-user-023.2",
+            "courseId": "D2-001",
+            "path": "docs/calibration/C014/user-video-frames/D2-001-023.2-release-after.jpg",
+            "role": "release-after",
+            "sourceVideoSeconds": 23.2,
+            "sha256": "96502b321a91c615456b7abf2eeeb873f680a6fc9e5acc4f0f210e8bf39dbd0a",
+            "size": [
+              1280,
+              720
+            ]
+          },
+          {
+            "id": "D2-001-user-027.0",
+            "courseId": "D2-001",
+            "path": "docs/calibration/C014/user-video-frames/D2-001-027.0-landing-view.jpg",
+            "role": "landing-view",
+            "sourceVideoSeconds": 27,
+            "sha256": "75a3bb294f41db801d428ca76efba9717290d8b4d62fdcff0d4f94c2f29b940d",
+            "size": [
+              1280,
+              720
+            ]
+          },
+          {
+            "id": "D2-001-user-030.0",
+            "courseId": "D2-001",
+            "path": "docs/calibration/C014/user-video-frames/D2-001-030.0-excluded-forward-adjustment.jpg",
+            "role": "excluded-forward-adjustment",
+            "sourceVideoSeconds": 30,
+            "sha256": "b0a31643030344ec4516ad5fcce32520dc84b15844926c610c6e66f5bc022e88",
+            "size": [
+              1280,
+              720
+            ]
+          },
+          {
+            "id": "D2-001-user-040.0",
+            "courseId": "D2-001",
+            "path": "docs/calibration/C014/user-video-frames/D2-001-040.0-excluded-full-seal.jpg",
+            "role": "excluded-full-seal",
+            "sourceVideoSeconds": 40,
+            "sha256": "3ca0bd9ae72ba6db0d0aed4b4a2b6f9ea120904803636b5aa79a226f82c2a254",
+            "size": [
+              1280,
+              720
+            ]
+          }
+        ],
+        "observationStrip": "docs/calibration/C014/user-video-frames/D2-001-review.jpg",
+        "observationStripSha256": "df6f11d3c6fecee21159498bd54a347b57155048bddc4983c855e4a269c68e8c",
+        "releaseAnimationVideoIntervalSeconds": [
+          22.9,
+          23.2
+        ],
+        "releaseGameTimeSeconds": null,
+        "sourceGameBuild": null,
+        "sourceMapBuild": null,
+        "fullLifecycleObserved": false,
+        "formalImportAllowed": false,
+        "observation": "前段演示墙缝/墙边对齐、站起、污点瞄准及左键跳投；后段向前调整产生满封烟，必须独立保存。录像存在运镜/剪切和明显HUD时钟跳变，没有烟完整消散过程。",
+        "missing": [
+          "精确脚底/眼位/朝向/FOV及瞄点坐标",
+          "第一种挂门烟的完整连续效果与结束过程",
+          "轨迹/落点/门洞覆盖的三维标定"
+        ],
+        "videoNotBundledInAPK": true,
+        "courseId": "D2-001"
+      },
+      "unconfirmedConsolePosition": {
+        "sourceXYZ": null,
+        "displayXYZ": null,
+        "semantics": "NOT_PROVIDED_FOR_SELECTED_VIDEO_VARIANT",
+        "worldQuery": null,
         "usableAsFeetOrEye": false
       },
       "measuredRuntime": {
@@ -317,23 +406,23 @@
         "landingTarget": "fixed independently measured effect target"
       },
       "missing": [
-        "实机确认脚底/眼位/瞄点、朝向和FOV",
-        "带时间的轨迹、反弹点和落点/爆点",
-        "连续实机阶段时间、效果范围和结束过程",
-        "跟随及落点镜头位置、墙体遮挡检查",
-        "当前CS2地图/游戏版本、手机显示提示及隐藏提示对照",
-        "参考站位图脚部在空中，尚不能证明落地站位"
-      ]
+        "精确脚底/眼位/朝向/FOV及瞄点坐标",
+        "第一种挂门烟的完整连续效果与结束过程",
+        "轨迹/落点/门洞覆盖的三维标定",
+        "游戏/地图版本与APP同视角/提示隐藏手机检查",
+        "跟随/落点镜头三维参数及遮挡检查"
+      ],
+      "referenceRevision": "user-selected-20261004-v2"
     },
     {
       "id": "D2-010",
       "type": "MOLOTOV",
-      "title": "A大Car火",
+      "title": "蓝车满烧火",
       "status": "PENDING_CALIBRATION",
       "importable": false,
       "appDraft": {
         "path": "docs/calibration/C014/app-pending/D2-010.json",
-        "sha256": "647a7b675f2b5614cd6d6f32127bb366227c7c9c7154596329aba6a53e4e3fa5"
+        "sha256": "02e7b74590dfc5b48bf9e673c3dff2a30009805db50d0de7e30aff2dec59e22b"
       },
       "mapVersion": "fc60c032290dffcb233e3de9da3c59694293362ec72643cc1ebde9c1b13a17d0",
       "versions": {
@@ -347,83 +436,303 @@
         "sourceMapBuild": null
       },
       "sourceDeclaredTeaching": {
-        "url": "https://getreplay.gg/en/utility/dust2/molotov/d2-car-molotov",
-        "hintZh": "A大坑口桶上，按住W向前并左键跳投。",
-        "targetZh": "车位及车后火区",
+        "url": "https://b23.tv/NwO4dLO",
+        "hintZh": "跳上蓝色油桶并抵住墙，瞄门锁最上沿，W向前跳投。",
+        "targetZh": "蓝车及车后地面火区",
         "throwFlags": {
           "jump": true,
           "forward": true,
-          "standing": false,
-          "left_click": true,
-          "status": "SOURCE_DECLARED_NOT_GAME_VALIDATED"
+          "crouchAtRelease": false,
+          "left_click": null,
+          "status": "VIDEO_OBSERVED_NOT_GAME_REPRODUCED"
         },
-        "status": "SOURCE_DECLARED_NOT_GAME_VALIDATED",
-        "matchToNartVariant": "UNCONFIRMED"
+        "status": "VIDEO_OBSERVED_NOT_GAME_REPRODUCED",
+        "selectedVariant": "barrel-wall-door-lock-w-jumpthrow",
+        "historicalNartAndGetReplaySuperseded": true
       },
       "screenshots": [
         {
-          "id": "D2-010-image-01",
+          "id": "D2-010-user-011.0",
           "courseId": "D2-010",
-          "role": "aim_reference",
-          "sourceUrl": "https://storage.getreplay.gg/2026/05/20/ce1cd83d9dedd46f521f1358f6a042eae838e6c9.webp",
-          "sourceSha256": "040bb5f2b77d5cb06ea8928ac5a1feb0e964b4a930bacaac7e4fe8f67b2bd948",
-          "path": "docs/calibration/C013/screenshots/D2-010-01-aim_reference.jpg",
-          "sha256": "e44a96add576e920bcaa54e5d119ee6d94c77805ddf3c430b71d80aabca888c9",
-          "width": 1280,
-          "height": 720,
-          "mapBuild": null,
-          "gameBuild": null,
-          "source": "GetReplay linked screenshot; not a calibrated world-space point"
+          "path": "docs/calibration/C014/user-video-frames/D2-010-011.0-stance-barrel.jpg",
+          "role": "stance-barrel",
+          "sourceVideoSeconds": 11,
+          "sha256": "86b4496c9e9a1d10fc4dcec8ba6ad3f3a30270a0e03acf19f347c1e568938aed",
+          "size": [
+            1280,
+            720
+          ]
         },
         {
-          "id": "D2-010-image-02",
+          "id": "D2-010-user-013.0",
           "courseId": "D2-010",
-          "role": "coverage_reference",
-          "sourceUrl": "https://storage.getreplay.gg/2026/05/20/83295cfe13f700085c38a607fc75991372fa4900.webp",
-          "sourceSha256": "8b0dcecf9b13688d1f4bd0439e6fdbe1e94f4a55efce440da29a7a8d92911220",
-          "path": "docs/calibration/C013/screenshots/D2-010-02-coverage_reference.jpg",
-          "sha256": "5fe2273ffa45249fcd2b88dffd30d55a8052ac0f7e38abd5ef83d66f54eb4f1f",
-          "width": 1280,
-          "height": 720,
-          "mapBuild": null,
-          "gameBuild": null,
-          "source": "GetReplay linked screenshot; not a calibrated world-space point"
+          "path": "docs/calibration/C014/user-video-frames/D2-010-013.0-stance-wall.jpg",
+          "role": "stance-wall",
+          "sourceVideoSeconds": 13,
+          "sha256": "744c65c7af12bd65f338d0357ce19077e86d8960b0a42eb42ea7f6f50f9e5f16",
+          "size": [
+            1280,
+            720
+          ]
+        },
+        {
+          "id": "D2-010-user-018.0",
+          "courseId": "D2-010",
+          "path": "docs/calibration/C014/user-video-frames/D2-010-018.0-aim-door-lock.jpg",
+          "role": "aim-door-lock",
+          "sourceVideoSeconds": 18,
+          "sha256": "d7fb94975c688b5170ceeaed6da34a9f3a0979539d5e63b14d9515f39efff327",
+          "size": [
+            1280,
+            720
+          ]
+        },
+        {
+          "id": "D2-010-user-021.9",
+          "courseId": "D2-010",
+          "path": "docs/calibration/C014/user-video-frames/D2-010-021.9-release-before.jpg",
+          "role": "release-before",
+          "sourceVideoSeconds": 21.9,
+          "sha256": "df5968bf008e49dc78edda220f50ac24f410634672375ea4268dfaa47bd8ceee",
+          "size": [
+            1280,
+            720
+          ]
+        },
+        {
+          "id": "D2-010-user-022.1",
+          "courseId": "D2-010",
+          "path": "docs/calibration/C014/user-video-frames/D2-010-022.1-release-after.jpg",
+          "role": "release-after",
+          "sourceVideoSeconds": 22.1,
+          "sha256": "5276bc1f8770cb66e08f5c5ff5a4a4fd2bc49ddc550ee79aa10315fe285ea0f0",
+          "size": [
+            1280,
+            720
+          ]
+        },
+        {
+          "id": "D2-010-user-024.0",
+          "courseId": "D2-010",
+          "path": "docs/calibration/C014/user-video-frames/D2-010-024.0-flight-reference.jpg",
+          "role": "flight-reference",
+          "sourceVideoSeconds": 24,
+          "sha256": "21deb4ebe4406a04a8bd645f0b64f304de014448629477dc59de8db2f11e2d37",
+          "size": [
+            1280,
+            720
+          ]
+        },
+        {
+          "id": "D2-010-user-025.0",
+          "courseId": "D2-010",
+          "path": "docs/calibration/C014/user-video-frames/D2-010-025.0-first-visible-fire.jpg",
+          "role": "first-visible-fire",
+          "sourceVideoSeconds": 25,
+          "sha256": "d8ad8a8e43a254f5ea8b8984117fc635fa9d6eb0eff87a319a81ac233cdd0c25",
+          "size": [
+            1280,
+            720
+          ]
+        },
+        {
+          "id": "D2-010-user-026.0",
+          "courseId": "D2-010",
+          "path": "docs/calibration/C014/user-video-frames/D2-010-026.0-initial-coverage.jpg",
+          "role": "initial-coverage",
+          "sourceVideoSeconds": 26,
+          "sha256": "dbe0a3ac1c03b7ead78e2a372fa9b955447a7dfc78f805035b28870f135c60e2",
+          "size": [
+            1280,
+            720
+          ]
+        },
+        {
+          "id": "D2-010-user-029.0",
+          "courseId": "D2-010",
+          "path": "docs/calibration/C014/user-video-frames/D2-010-029.0-later-coverage.jpg",
+          "role": "later-coverage",
+          "sourceVideoSeconds": 29,
+          "sha256": "69080172454306d6ecdef875af4cf3b6d3ca723c5a6a7bf11debbb039146ecb0",
+          "size": [
+            1280,
+            720
+          ]
         }
       ],
       "clipEvidence": {
-        "id": "D2-010-demo",
-        "courseId": "D2-010",
-        "sourceUrl": "https://storage.getreplay.gg/2026/05/20/b42d8ddae55b7eab90e9a3519d5ee477e11e3861.mp4",
-        "sourceSha256": "6c0c626b4979ef3525b195343b595199adf8aed99952b97b1f66844731deed78",
-        "bytes": 2618132,
-        "encodedDurationSeconds": 8.966667,
+        "id": "D2-010",
+        "title": "蓝车满烧火",
+        "sourceName": "沙二蓝车满烧火.mp4",
+        "sourceUrl": "https://b23.tv/NwO4dLO",
+        "libraryId": "libfile_006bbb82134c8191a3eec00f302eba82",
+        "sourceSha256": "6ef813b55497257fbd22769c3371b7f4a9d9923935ab0796112f4937da9dc5bc",
+        "bytes": 7519116,
+        "encodedDurationSeconds": 29.790794,
         "video": {
-          "codec_type": "video",
           "width": 1280,
           "height": 720,
-          "r_frame_rate": "30/1"
+          "r_frame_rate": "30/1",
+          "codec_name": "h264"
         },
-        "clock": "ENCODED_CLIP_SECONDS_NOT_CERTIFIED_GAME_TIME",
-        "fullLifecycleObserved": false,
-        "videoNotBundledInAPK": true,
-        "sampleTimesSeconds": [
-          5.0,
-          5.5,
-          6.5,
-          7.5,
-          8.5
+        "clock": "ENCODED_VIDEO_SECONDS_NOT_CERTIFIED_GAME_TIME",
+        "selectedVariant": "barrel-wall-door-lock-w-jumpthrow",
+        "hintZh": "跳上蓝色油桶并抵住墙，瞄门锁最上沿，W向前跳投。",
+        "targetZh": "蓝车及车后地面火区",
+        "throwFlags": {
+          "jump": true,
+          "forward": true,
+          "crouchAtRelease": false,
+          "left_click": null,
+          "status": "VIDEO_OBSERVED_NOT_GAME_REPRODUCED"
+        },
+        "segments": [
+          {
+            "start": 0,
+            "end": 7,
+            "role": "intro-effect-separate-trial"
+          },
+          {
+            "start": 9,
+            "end": 29.7,
+            "role": "teaching-and-effect-with-moving-camera"
+          }
         ],
-        "observation": "Overview samples at clip 5.5 and 7.5 seconds show a larger later fire footprint around car; extinction is not shown. World-space regions and game-clock delay remain unmeasured.",
-        "observationStrip": "docs/calibration/C013/screenshots/D2-010-observations.jpg",
-        "observationStripSha256": "d4b2e552468a58b2be8aeb0eff3d4995819ef9abf8e1f996c14429d9e5e10fa3",
-        "mapBuild": null,
-        "gameBuild": null,
-        "matchToC012NartVariant": "UNCONFIRMED"
+        "screenshots": [
+          {
+            "id": "D2-010-user-011.0",
+            "courseId": "D2-010",
+            "path": "docs/calibration/C014/user-video-frames/D2-010-011.0-stance-barrel.jpg",
+            "role": "stance-barrel",
+            "sourceVideoSeconds": 11,
+            "sha256": "86b4496c9e9a1d10fc4dcec8ba6ad3f3a30270a0e03acf19f347c1e568938aed",
+            "size": [
+              1280,
+              720
+            ]
+          },
+          {
+            "id": "D2-010-user-013.0",
+            "courseId": "D2-010",
+            "path": "docs/calibration/C014/user-video-frames/D2-010-013.0-stance-wall.jpg",
+            "role": "stance-wall",
+            "sourceVideoSeconds": 13,
+            "sha256": "744c65c7af12bd65f338d0357ce19077e86d8960b0a42eb42ea7f6f50f9e5f16",
+            "size": [
+              1280,
+              720
+            ]
+          },
+          {
+            "id": "D2-010-user-018.0",
+            "courseId": "D2-010",
+            "path": "docs/calibration/C014/user-video-frames/D2-010-018.0-aim-door-lock.jpg",
+            "role": "aim-door-lock",
+            "sourceVideoSeconds": 18,
+            "sha256": "d7fb94975c688b5170ceeaed6da34a9f3a0979539d5e63b14d9515f39efff327",
+            "size": [
+              1280,
+              720
+            ]
+          },
+          {
+            "id": "D2-010-user-021.9",
+            "courseId": "D2-010",
+            "path": "docs/calibration/C014/user-video-frames/D2-010-021.9-release-before.jpg",
+            "role": "release-before",
+            "sourceVideoSeconds": 21.9,
+            "sha256": "df5968bf008e49dc78edda220f50ac24f410634672375ea4268dfaa47bd8ceee",
+            "size": [
+              1280,
+              720
+            ]
+          },
+          {
+            "id": "D2-010-user-022.1",
+            "courseId": "D2-010",
+            "path": "docs/calibration/C014/user-video-frames/D2-010-022.1-release-after.jpg",
+            "role": "release-after",
+            "sourceVideoSeconds": 22.1,
+            "sha256": "5276bc1f8770cb66e08f5c5ff5a4a4fd2bc49ddc550ee79aa10315fe285ea0f0",
+            "size": [
+              1280,
+              720
+            ]
+          },
+          {
+            "id": "D2-010-user-024.0",
+            "courseId": "D2-010",
+            "path": "docs/calibration/C014/user-video-frames/D2-010-024.0-flight-reference.jpg",
+            "role": "flight-reference",
+            "sourceVideoSeconds": 24,
+            "sha256": "21deb4ebe4406a04a8bd645f0b64f304de014448629477dc59de8db2f11e2d37",
+            "size": [
+              1280,
+              720
+            ]
+          },
+          {
+            "id": "D2-010-user-025.0",
+            "courseId": "D2-010",
+            "path": "docs/calibration/C014/user-video-frames/D2-010-025.0-first-visible-fire.jpg",
+            "role": "first-visible-fire",
+            "sourceVideoSeconds": 25,
+            "sha256": "d8ad8a8e43a254f5ea8b8984117fc635fa9d6eb0eff87a319a81ac233cdd0c25",
+            "size": [
+              1280,
+              720
+            ]
+          },
+          {
+            "id": "D2-010-user-026.0",
+            "courseId": "D2-010",
+            "path": "docs/calibration/C014/user-video-frames/D2-010-026.0-initial-coverage.jpg",
+            "role": "initial-coverage",
+            "sourceVideoSeconds": 26,
+            "sha256": "dbe0a3ac1c03b7ead78e2a372fa9b955447a7dfc78f805035b28870f135c60e2",
+            "size": [
+              1280,
+              720
+            ]
+          },
+          {
+            "id": "D2-010-user-029.0",
+            "courseId": "D2-010",
+            "path": "docs/calibration/C014/user-video-frames/D2-010-029.0-later-coverage.jpg",
+            "role": "later-coverage",
+            "sourceVideoSeconds": 29,
+            "sha256": "69080172454306d6ecdef875af4cf3b6d3ca723c5a6a7bf11debbb039146ecb0",
+            "size": [
+              1280,
+              720
+            ]
+          }
+        ],
+        "observationStrip": "docs/calibration/C014/user-video-frames/D2-010-review.jpg",
+        "observationStripSha256": "a72ffe78ad03674e906eed06e3e47c7aa6c0a1f5d18abfeebe46a6c0918b04fe",
+        "releaseAnimationVideoIntervalSeconds": [
+          21.9,
+          22.1
+        ],
+        "releaseGameTimeSeconds": null,
+        "sourceGameBuild": null,
+        "sourceMapBuild": null,
+        "fullLifecycleObserved": false,
+        "formalImportAllowed": false,
+        "observation": "字幕明确桶上靠墙、门锁上沿和W跳投；25～29秒取样可见蓝车火区扩大。手部动画符合普通持瓶投掷，但画面无按键记录，因此鼠标按钮不认证。录像止于燃烧阶段，未展示熄灭。",
+        "missing": [
+          "桶顶脚底/眼位/角度和门锁瞄点三维坐标",
+          "鼠标按钮实机确认",
+          "轨迹反弹/落点及地面覆盖标定",
+          "完整熄灭和游戏时钟速率"
+        ],
+        "videoNotBundledInAPK": true,
+        "courseId": "D2-010"
       },
       "unconfirmedConsolePosition": {
         "sourceXYZ": null,
         "displayXYZ": null,
-        "semantics": "UNCONFIRMED_PLAYER_OR_EYE_POSITION_NOT_FEET",
+        "semantics": "NOT_PROVIDED_FOR_SELECTED_VIDEO_VARIANT",
         "worldQuery": null,
         "usableAsFeetOrEye": false
       },
@@ -489,23 +798,24 @@
         "landingTarget": "fixed independently measured effect target"
       },
       "missing": [
-        "实机确认脚底/眼位/瞄点、朝向和FOV",
-        "带时间的轨迹、反弹点和落点/爆点",
-        "连续实机阶段时间、效果范围和结束过程",
-        "跟随及落点镜头位置、墙体遮挡检查",
-        "当前CS2地图/游戏版本、手机显示提示及隐藏提示对照",
-        "缺独立脚底接触图与数值站位；短片没有熄灭过程"
-      ]
+        "桶顶脚底/眼位/角度和门锁瞄点三维坐标",
+        "鼠标按钮实机确认",
+        "轨迹反弹/落点及地面覆盖标定",
+        "完整熄灭和游戏时钟速率",
+        "游戏/地图版本与APP同视角/提示隐藏手机检查",
+        "跟随/落点镜头三维参数及遮挡检查"
+      ],
+      "referenceRevision": "user-selected-20261004-v2"
     },
     {
       "id": "D2-014",
       "type": "HE",
-      "title": "CT中门炸烟HE",
+      "title": "中门炸烟雷",
       "status": "PENDING_CALIBRATION",
       "importable": false,
       "appDraft": {
         "path": "docs/calibration/C014/app-pending/D2-014.json",
-        "sha256": "106b8c7f6a858621c8cb7790c11e203639fe084b555a8ee2791f1515a31d44c9"
+        "sha256": "0153a5a436f4747aaf67f403a9c33ee4d53158aeec699e880efcdd8a34700ab8"
       },
       "mapVersion": "fc60c032290dffcb233e3de9da3c59694293362ec72643cc1ebde9c1b13a17d0",
       "versions": {
@@ -519,83 +829,342 @@
         "sourceMapBuild": null
       },
       "sourceDeclaredTeaching": {
-        "url": "https://getreplay.gg/en/utility/dust2/reveal/d2-mid-door-reveal",
-        "hintZh": "CT中路参考角落，瞄门框上方，左键普通投掷。",
-        "targetZh": "中门烟内局部缺口",
+        "url": "https://b23.tv/IwqgfkC",
+        "hintZh": "卡住沙堆与蓝卡车车头角落，蹲下瞄左门右下角，保持蹲姿按空格加左键；不可站起再跳投。",
+        "targetZh": "中门烟内局部冲烟区",
         "throwFlags": {
-          "jump": false,
+          "jump": true,
           "forward": false,
-          "standing": true,
+          "crouchAtRelease": true,
           "left_click": true,
-          "status": "SOURCE_DECLARED_NOT_GAME_VALIDATED"
+          "status": "VIDEO_OBSERVED_NOT_GAME_REPRODUCED"
         },
-        "status": "SOURCE_DECLARED_NOT_GAME_VALIDATED",
-        "matchToNartVariant": "UNCONFIRMED"
+        "status": "VIDEO_OBSERVED_NOT_GAME_REPRODUCED",
+        "selectedVariant": "truck-sand-corner-crouch-jumpthrow",
+        "historicalNartAndGetReplaySuperseded": true
       },
       "screenshots": [
         {
-          "id": "D2-014-image-01",
+          "id": "D2-014-user-005.0",
           "courseId": "D2-014",
-          "role": "aim_reference",
-          "sourceUrl": "https://storage.getreplay.gg/2026/05/20/ad1c2639f6c20cddb16e2bcb3097a02b43ece0a8.webp",
-          "sourceSha256": "0883d3229d2a476ddaa2aa802279bd149eabeff08b51834d2e490fc3b1f71d03",
-          "path": "docs/calibration/C013/screenshots/D2-014-01-aim_reference.jpg",
-          "sha256": "54709bae3b9b97b4687d311f87cb4dfe5530da441187cda4717297c88bb9b1d4",
-          "width": 1280,
-          "height": 720,
-          "mapBuild": null,
-          "gameBuild": null,
-          "source": "GetReplay linked screenshot; not a calibrated world-space point"
+          "path": "docs/calibration/C014/user-video-frames/D2-014-005.0-stance-sand-truck-corner.jpg",
+          "role": "stance-sand-truck-corner",
+          "sourceVideoSeconds": 5,
+          "sha256": "6690b4868b2268e1756776a4904da937ca6a65f78d47e22315845660bfead6b7",
+          "size": [
+            1280,
+            720
+          ]
         },
         {
-          "id": "D2-014-image-02",
+          "id": "D2-014-user-009.0",
           "courseId": "D2-014",
-          "role": "coverage_reference",
-          "sourceUrl": "https://storage.getreplay.gg/2026/05/20/519810e1f8e56579d1e1e8ab9c26205d04672dd9.webp",
-          "sourceSha256": "79316e47b4c312a33375fb84a0d50e49daa8a8d5853924119c4d8976707d23f9",
-          "path": "docs/calibration/C013/screenshots/D2-014-02-coverage_reference.jpg",
-          "sha256": "bb1ba6a810c2acf60d67467265b0fd2bda6751c90084854ca7e244aef9078f3e",
-          "width": 1280,
-          "height": 720,
-          "mapBuild": null,
-          "gameBuild": null,
-          "source": "GetReplay linked screenshot; not a calibrated world-space point"
+          "path": "docs/calibration/C014/user-video-frames/D2-014-009.0-aim-left-door-bottom-right.jpg",
+          "role": "aim-left-door-bottom-right",
+          "sourceVideoSeconds": 9,
+          "sha256": "c9c7ede3076f5741459405078b1b0fb2d702df3a272adbf881a9003929f118e1",
+          "size": [
+            1280,
+            720
+          ]
+        },
+        {
+          "id": "D2-014-user-010.5",
+          "courseId": "D2-014",
+          "path": "docs/calibration/C014/user-video-frames/D2-014-010.5-release-before.jpg",
+          "role": "release-before",
+          "sourceVideoSeconds": 10.5,
+          "sha256": "8b2a40f37c5075a1889842966ed87d8bd7cdf2619c13712bd2d33e5e8c4313a0",
+          "size": [
+            1280,
+            720
+          ]
+        },
+        {
+          "id": "D2-014-user-010.7",
+          "courseId": "D2-014",
+          "path": "docs/calibration/C014/user-video-frames/D2-014-010.7-release-after.jpg",
+          "role": "release-after",
+          "sourceVideoSeconds": 10.7,
+          "sha256": "b19f55866dda7e7915647a8ed750253373d41dbff91b1464e3240af263440563",
+          "size": [
+            1280,
+            720
+          ]
+        },
+        {
+          "id": "D2-014-user-017.0",
+          "courseId": "D2-014",
+          "path": "docs/calibration/C014/user-video-frames/D2-014-017.0-excluded-stand-up-failure.jpg",
+          "role": "excluded-stand-up-failure",
+          "sourceVideoSeconds": 17,
+          "sha256": "3ad712975991034760d848ea19c9a1fdb8b336b6b0be5a05bc60a0fc5f99a136",
+          "size": [
+            1280,
+            720
+          ]
+        },
+        {
+          "id": "D2-014-user-022.0",
+          "courseId": "D2-014",
+          "path": "docs/calibration/C014/user-video-frames/D2-014-022.0-crouch-instruction.jpg",
+          "role": "crouch-instruction",
+          "sourceVideoSeconds": 22,
+          "sha256": "4916191d41be3d78e3d2a84f6c45e3acc66d9d5d8ae3f46915fbe6f346157d9a",
+          "size": [
+            1280,
+            720
+          ]
+        },
+        {
+          "id": "D2-014-user-032.0",
+          "courseId": "D2-014",
+          "path": "docs/calibration/C014/user-video-frames/D2-014-032.0-hang-smoke-present.jpg",
+          "role": "hang-smoke-present",
+          "sourceVideoSeconds": 32,
+          "sha256": "44d70ecad3c4aaa10f765024da61948585340d32343b8cfd8419937dd16fc878",
+          "size": [
+            1280,
+            720
+          ]
+        },
+        {
+          "id": "D2-014-user-035.0",
+          "courseId": "D2-014",
+          "path": "docs/calibration/C014/user-video-frames/D2-014-035.0-hang-smoke-before-he.jpg",
+          "role": "hang-smoke-before-he",
+          "sourceVideoSeconds": 35,
+          "sha256": "d2ce3e666759b11af8a214f4e5ce6a7edd41d00a310acaa350bc4f084ad72c52",
+          "size": [
+            1280,
+            720
+          ]
+        },
+        {
+          "id": "D2-014-user-037.0",
+          "courseId": "D2-014",
+          "path": "docs/calibration/C014/user-video-frames/D2-014-037.0-he-flight-at-hang-smoke.jpg",
+          "role": "he-flight-at-hang-smoke",
+          "sourceVideoSeconds": 37,
+          "sha256": "cc44067e3551bd6e3e5c3c147fbd5bcec6ffe4bb1ba2267a081e50e0645173aa",
+          "size": [
+            1280,
+            720
+          ]
+        },
+        {
+          "id": "D2-014-user-038.0",
+          "courseId": "D2-014",
+          "path": "docs/calibration/C014/user-video-frames/D2-014-038.0-clear-doorway-after-cut.jpg",
+          "role": "clear-doorway-after-cut",
+          "sourceVideoSeconds": 38,
+          "sha256": "692897da73097d4918478f4a7cf202673e1baffa4c6c421eb7b6b7c6211180c3",
+          "size": [
+            1280,
+            720
+          ]
         }
       ],
       "clipEvidence": {
-        "id": "D2-014-demo",
-        "courseId": "D2-014",
-        "sourceUrl": "https://storage.getreplay.gg/2026/05/20/e44ca1d93078be6637ebeecbeae9a7fccc86e60b.mp4",
-        "sourceSha256": "f2c9ed11e6827a5f544baa35cc881f03b152c56055de20f20f611ae20fc63abe",
-        "bytes": 2383240,
-        "encodedDurationSeconds": 9.166667,
+        "id": "D2-014",
+        "title": "中门炸烟雷",
+        "sourceName": "刷到的永远更好用！2000h道具手自研无敌中门炸烟雷.mp4",
+        "sourceUrl": "https://b23.tv/IwqgfkC",
+        "libraryId": "libfile_d6c7eaeca9b0819197c7312cce120c70",
+        "sourceSha256": "276cab1c44837e67ee034b874d3e6b7ee23f8df73aa5c31fbec10ef8d698e809",
+        "bytes": 9984606,
+        "encodedDurationSeconds": 98.499938,
         "video": {
-          "codec_type": "video",
           "width": 1280,
           "height": 720,
-          "r_frame_rate": "30/1"
+          "r_frame_rate": "30/1",
+          "codec_name": "h264"
         },
-        "clock": "ENCODED_CLIP_SECONDS_NOT_CERTIFIED_GAME_TIME",
-        "fullLifecycleObserved": false,
-        "videoNotBundledInAPK": true,
-        "sampleTimesSeconds": [
-          2.0,
-          5.5,
-          6.0,
-          7.0,
-          8.5
+        "clock": "ENCODED_VIDEO_SECONDS_NOT_CERTIFIED_GAME_TIME",
+        "selectedVariant": "truck-sand-corner-crouch-jumpthrow",
+        "hintZh": "卡住沙堆与蓝卡车车头角落，蹲下瞄左门右下角，保持蹲姿按空格加左键；不可站起再跳投。",
+        "targetZh": "中门烟内局部冲烟区",
+        "throwFlags": {
+          "jump": true,
+          "forward": false,
+          "crouchAtRelease": true,
+          "left_click": true,
+          "status": "VIDEO_OBSERVED_NOT_GAME_REPRODUCED"
+        },
+        "segments": [
+          {
+            "start": 3,
+            "end": 14.5,
+            "role": "selected-crouch-jumpthrow"
+          },
+          {
+            "start": 15,
+            "end": 20.5,
+            "role": "excluded-stand-up-before-jump-failure"
+          },
+          {
+            "start": 21,
+            "end": 27.5,
+            "role": "crouch-correction-and-throw"
+          },
+          {
+            "start": 31.5,
+            "end": 38.5,
+            "role": "hang-smoke-interaction-with-camera-cut"
+          },
+          {
+            "start": 39,
+            "end": 86,
+            "role": "other-smokes-and-alternative-aim"
+          }
         ],
-        "observation": "Clip shows HE throw and a camera cut. Continuous already-formed-smoke, hole-opening and refill evidence is insufficient.",
-        "observationStrip": "docs/calibration/C013/screenshots/D2-014-observations.jpg",
-        "observationStripSha256": "4382395efdc441923cd93725eec8fc3bf1562dcdf9e91acc64f864fbe9640e14",
-        "mapBuild": null,
-        "gameBuild": null,
-        "matchToC012NartVariant": "UNCONFIRMED"
+        "screenshots": [
+          {
+            "id": "D2-014-user-005.0",
+            "courseId": "D2-014",
+            "path": "docs/calibration/C014/user-video-frames/D2-014-005.0-stance-sand-truck-corner.jpg",
+            "role": "stance-sand-truck-corner",
+            "sourceVideoSeconds": 5,
+            "sha256": "6690b4868b2268e1756776a4904da937ca6a65f78d47e22315845660bfead6b7",
+            "size": [
+              1280,
+              720
+            ]
+          },
+          {
+            "id": "D2-014-user-009.0",
+            "courseId": "D2-014",
+            "path": "docs/calibration/C014/user-video-frames/D2-014-009.0-aim-left-door-bottom-right.jpg",
+            "role": "aim-left-door-bottom-right",
+            "sourceVideoSeconds": 9,
+            "sha256": "c9c7ede3076f5741459405078b1b0fb2d702df3a272adbf881a9003929f118e1",
+            "size": [
+              1280,
+              720
+            ]
+          },
+          {
+            "id": "D2-014-user-010.5",
+            "courseId": "D2-014",
+            "path": "docs/calibration/C014/user-video-frames/D2-014-010.5-release-before.jpg",
+            "role": "release-before",
+            "sourceVideoSeconds": 10.5,
+            "sha256": "8b2a40f37c5075a1889842966ed87d8bd7cdf2619c13712bd2d33e5e8c4313a0",
+            "size": [
+              1280,
+              720
+            ]
+          },
+          {
+            "id": "D2-014-user-010.7",
+            "courseId": "D2-014",
+            "path": "docs/calibration/C014/user-video-frames/D2-014-010.7-release-after.jpg",
+            "role": "release-after",
+            "sourceVideoSeconds": 10.7,
+            "sha256": "b19f55866dda7e7915647a8ed750253373d41dbff91b1464e3240af263440563",
+            "size": [
+              1280,
+              720
+            ]
+          },
+          {
+            "id": "D2-014-user-017.0",
+            "courseId": "D2-014",
+            "path": "docs/calibration/C014/user-video-frames/D2-014-017.0-excluded-stand-up-failure.jpg",
+            "role": "excluded-stand-up-failure",
+            "sourceVideoSeconds": 17,
+            "sha256": "3ad712975991034760d848ea19c9a1fdb8b336b6b0be5a05bc60a0fc5f99a136",
+            "size": [
+              1280,
+              720
+            ]
+          },
+          {
+            "id": "D2-014-user-022.0",
+            "courseId": "D2-014",
+            "path": "docs/calibration/C014/user-video-frames/D2-014-022.0-crouch-instruction.jpg",
+            "role": "crouch-instruction",
+            "sourceVideoSeconds": 22,
+            "sha256": "4916191d41be3d78e3d2a84f6c45e3acc66d9d5d8ae3f46915fbe6f346157d9a",
+            "size": [
+              1280,
+              720
+            ]
+          },
+          {
+            "id": "D2-014-user-032.0",
+            "courseId": "D2-014",
+            "path": "docs/calibration/C014/user-video-frames/D2-014-032.0-hang-smoke-present.jpg",
+            "role": "hang-smoke-present",
+            "sourceVideoSeconds": 32,
+            "sha256": "44d70ecad3c4aaa10f765024da61948585340d32343b8cfd8419937dd16fc878",
+            "size": [
+              1280,
+              720
+            ]
+          },
+          {
+            "id": "D2-014-user-035.0",
+            "courseId": "D2-014",
+            "path": "docs/calibration/C014/user-video-frames/D2-014-035.0-hang-smoke-before-he.jpg",
+            "role": "hang-smoke-before-he",
+            "sourceVideoSeconds": 35,
+            "sha256": "d2ce3e666759b11af8a214f4e5ce6a7edd41d00a310acaa350bc4f084ad72c52",
+            "size": [
+              1280,
+              720
+            ]
+          },
+          {
+            "id": "D2-014-user-037.0",
+            "courseId": "D2-014",
+            "path": "docs/calibration/C014/user-video-frames/D2-014-037.0-he-flight-at-hang-smoke.jpg",
+            "role": "he-flight-at-hang-smoke",
+            "sourceVideoSeconds": 37,
+            "sha256": "cc44067e3551bd6e3e5c3c147fbd5bcec6ffe4bb1ba2267a081e50e0645173aa",
+            "size": [
+              1280,
+              720
+            ]
+          },
+          {
+            "id": "D2-014-user-038.0",
+            "courseId": "D2-014",
+            "path": "docs/calibration/C014/user-video-frames/D2-014-038.0-clear-doorway-after-cut.jpg",
+            "role": "clear-doorway-after-cut",
+            "sourceVideoSeconds": 38,
+            "sha256": "692897da73097d4918478f4a7cf202673e1baffa4c6c421eb7b6b7c6211180c3",
+            "size": [
+              1280,
+              720
+            ]
+          }
+        ],
+        "observationStrip": "docs/calibration/C014/user-video-frames/D2-014-review.jpg",
+        "observationStripSha256": "70e53fe83c4ea5b3f314d399dc25d6ebdff564c0069f662799858096a6499fd9",
+        "releaseAnimationVideoIntervalSeconds": [
+          10.5,
+          10.7
+        ],
+        "releaseGameTimeSeconds": null,
+        "sourceGameBuild": null,
+        "sourceMapBuild": null,
+        "fullLifecycleObserved": false,
+        "formalImportAllowed": false,
+        "observation": "画面/字幕确认沙堆卡车角落蹲姿瞄点，保持蹲姿空格加左键；站起再跳是失败示范。32～37秒显示挂门烟及HE飞行，38秒门洞打开，但37～38秒HUD时钟从55:00跳到54:47，不能测真实炸开延迟或用后续别颗烟作为回填。",
+        "missing": [
+          "卡车/沙堆脚底眼位、瞄点和爆点三维坐标",
+          "与新D2-001同投法同落点的配套实机确认",
+          "无剪切的缺口形成至回填及范围",
+          "烟预置年龄和HE释放相对偏移"
+        ],
+        "videoNotBundledInAPK": true,
+        "courseId": "D2-014"
       },
       "unconfirmedConsolePosition": {
         "sourceXYZ": null,
         "displayXYZ": null,
-        "semantics": "UNCONFIRMED_PLAYER_OR_EYE_POSITION_NOT_FEET",
+        "semantics": "NOT_PROVIDED_FOR_SELECTED_VIDEO_VARIANT",
         "worldQuery": null,
         "usableAsFeetOrEye": false
       },
@@ -655,22 +1224,34 @@
         "landingTarget": "fixed independently measured effect target"
       },
       "missing": [
-        "实机确认脚底/眼位/瞄点、朝向和FOV",
-        "带时间的轨迹、反弹点和落点/爆点",
-        "连续实机阶段时间、效果范围和结束过程",
-        "跟随及落点镜头位置、墙体遮挡检查",
-        "当前CS2地图/游戏版本、手机显示提示及隐藏提示对照",
-        "缺独立站位图和连续成型烟→缺口→回填录像"
+        "卡车/沙堆脚底眼位、瞄点和爆点三维坐标",
+        "与新D2-001同投法同落点的配套实机确认",
+        "无剪切的缺口形成至回填及范围",
+        "烟预置年龄和HE释放相对偏移",
+        "游戏/地图版本与APP同视角/提示隐藏手机检查",
+        "跟随/落点镜头三维参数及遮挡检查"
       ],
       "smokeDependency": {
         "lessonId": "D2-001",
-        "sceneId": "dust2-mid-doors-smoke",
+        "sceneId": "dust2-mid-doors-hang-smoke-user-v2",
         "requiredStateBeforeHERelease": "fully-formed",
         "smokeReleaseRelativeToHEReleaseSeconds": null,
         "smokeAgeAtHEReleaseSeconds": null,
         "clockNote": "HE释放为本课零点；预先成型的烟需已存在，不能随HE释放才从零龄起烟。未测偏移不填数值。",
-        "parametersMustMatchSmokeLesson": true
-      }
+        "parametersMustMatchSmokeLesson": true,
+        "sameVariantConfirmed": false,
+        "compatibilityEvidence": "视频含挂门烟炸开示范；与D2-001所选墙缝投法是否同一落点/形态仍待配套验证。"
+      },
+      "referenceRevision": "user-selected-20261004-v2"
     }
-  ]
+  ],
+  "activeReferenceRevision": "user-selected-20261004-v2",
+  "userVideoEvidence": {
+    "path": "docs/calibration/C014/user-video-evidence.json",
+    "sha256": "320721baff0db7831e6d982d3a319b9e9f25c9de5c2f3066182be3008678adc2"
+  },
+  "aimTextureAcceptance": {
+    "path": "docs/calibration/C014/aim-texture-checks.json",
+    "sha256": "c71a01437bd96c07cbd9784f7a7a105b1bb1641627eb19fc4374d89eea0346c3"
+  }
 }

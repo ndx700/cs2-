@@ -20,7 +20,7 @@ class HandoffTests(unittest.TestCase):
 
     def test_source_console_position_cannot_be_promoted_to_eye(self):
         smoke = self.data["lessons"][0]
-        smoke["measuredRuntime"]["eye"] = smoke["unconfirmedConsolePosition"]["displayXYZ"]
+        smoke["measuredRuntime"]["eye"] = [-11.4866290968, 4.4352478732, 16.7655689072]
         with self.assertRaisesRegex(ValueError, "runtime coordinates"):
             validate_bundle(self.data, self.root)
 
@@ -48,6 +48,28 @@ class HandoffTests(unittest.TestCase):
     def test_wrong_map_bundle_is_rejected(self):
         self.data["mapVersion"] = "0" * 64
         with self.assertRaisesRegex(ValueError, "map version"):
+            validate_bundle(self.data, self.root)
+
+    def test_old_smoke_command_cannot_follow_replaced_lineup(self):
+        self.data["lessons"][0]["unconfirmedConsolePosition"]["displayXYZ"] = [-11.4866, 4.4352, 16.7656]
+        with self.assertRaisesRegex(ValueError, "superseded command"):
+            validate_bundle(self.data, self.root)
+
+    def test_hang_door_cannot_silently_switch_to_full_seal(self):
+        self.data["lessons"][0]["sourceDeclaredTeaching"]["selectedVariant"] = "full-seal-forward-adjustment"
+        with self.assertRaisesRegex(ValueError, "variant/source mismatch"):
+            validate_bundle(self.data, self.root)
+
+    def test_he_cannot_use_the_old_plain_throw_flags(self):
+        flags = self.data["lessons"][2]["sourceDeclaredTeaching"]["throwFlags"]
+        flags["jump"] = False
+        flags["crouchAtRelease"] = False
+        with self.assertRaisesRegex(ValueError, "throw flags mismatch"):
+            validate_bundle(self.data, self.root)
+
+    def test_old_webpage_cannot_remain_the_active_smoke_source(self):
+        self.data["lessons"][0]["sourceDeclaredTeaching"]["url"] = "https://getreplay.gg/en/utility/dust2/smoke/d2-mid-door-smoke"
+        with self.assertRaisesRegex(ValueError, "variant/source mismatch"):
             validate_bundle(self.data, self.root)
 
     def draft(self):
