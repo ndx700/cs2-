@@ -1,0 +1,39 @@
+{
+  "task": "C014-APP",
+  "status": "IN_PROGRESS",
+  "mainBaseline": "aec0b1936f4de5053ba35100a30367e25915f505",
+  "branch": "app/c014-follow-landing",
+  "candidateVersion": {
+    "code": 8,
+    "name": "0.6.2-c014-dev"
+  },
+  "mapManifestSha256": "fc60c032290dffcb233e3de9da3c59694293362ec72643cc1ebde9c1b13a17d0",
+  "checks": {
+    "android34ResourceIds": "PASS (temporary build-only raw ID placeholder; no APK assembled)",
+    "allMainKotlin": "PASS (official Kotlin 1.9.24/JDK17/Android34)",
+    "allTestKotlin": "PASS (test friend module visibility)",
+    "junit": {
+      "result": "PASS",
+      "tests": 75,
+      "failures": 0,
+      "newTests": 14,
+      "cwd": "repository root"
+    },
+    "desktopEgl": "PASS; see APP-C014-egl.json; empty desktop scene only",
+    "gradleTestAssembleLint": "BLOCKED: Gradle wrapper download java.net.SocketException Network is unreachable",
+    "newPrCI": "PENDING"
+  },
+  "calibratedCourseCount": 0,
+  "phoneRecordings": null,
+  "phonePerformance": null,
+  "fullPackagedMapValidation": "PENDING CI",
+  "apkDelivery": null,
+  "resourceContractAcknowledged": false,
+  "limitations": [
+    "DEV entries use synthetic space and timings",
+    "No calibrated D2-001/D2-010/D2-014 data",
+    "No Android device or full-map visual verification",
+    "No map collision constraints for smoke/fire/follow camera",
+    "HE density mask samples billboard centers; not exact volumetric pixels"
+  ]
+}

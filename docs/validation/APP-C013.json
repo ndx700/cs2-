@@ -1,0 +1,25 @@
+{
+  "task": "C013-APP",
+  "batch": "M1-first-code-slice",
+  "baselineCommit": "b3290464d18d92aa1eb21d219d77b07b8f9d6612",
+  "mapManifestSha256": "fc60c032290dffcb233e3de9da3c59694293362ec72643cc1ebde9c1b13a17d0",
+  "assetRestore": {"result": "PASS", "files": 3960, "bytes": 132056609},
+  "assetValidation": {"result": "PASS", "parts": 3661, "triangles": 4610873, "textures": 291},
+  "fallbackCompilation": {
+    "result": "PASS",
+    "tools": ["JDK 17", "Kotlin compiler 1.9.24", "Android platform 34", "Android build-tools 34.0.0 aapt2", "org.json 20240303"],
+    "scope": ["all Android resource compile/link and generated R", "all main Kotlin", "all test Kotlin"],
+    "limitations": "Not Gradle execution, Lint, D8/APK assembly or Android runtime"
+  },
+  "junit": {"result": "PASS", "total": 41, "baseline": 19, "new": 22},
+  "desktopGles": {
+    "result": "PASS",
+    "renderer": "Mesa llvmpipe LLVM 20.1.2",
+    "scope": "Exact CourseFxRenderer shader strings compile/link; three soft point sprites produce pixels; no GL errors",
+    "limitations": "Not full-map course playback, Android, lifecycle or phone performance evidence"
+  },
+  "gradle": {"result": "BLOCKED_ENVIRONMENT", "command": "./gradlew testDebugUnitTest assembleDebug lintDebug --no-daemon", "reason": "Java dependency transport unavailable; com.android.application 8.5.2 resolution did not complete", "ci": "pending PR run"},
+  "androidDevice": {"result": "NOT_RUN", "reason": "No connected device in this session"},
+  "formalCalibration": "pending",
+  "releaseApk": "not delivered"
+}

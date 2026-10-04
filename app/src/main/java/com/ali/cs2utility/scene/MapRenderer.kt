@@ -7,6 +7,7 @@ import android.opengl.GLES20 as GL
 import android.opengl.GLSurfaceView
 import android.opengl.Matrix
 import com.ali.cs2utility.domain.*
+import com.ali.cs2utility.tutorial.*
 import java.nio.ByteBuffer
 import java.nio.ByteOrder
 import java.nio.FloatBuffer
@@ -18,9 +19,40 @@ data class ScreenMarker(val id: String?, val label: String, val x: Float, val y:
 
 /** Every mutable field below belongs to the GL thread; callers use GLSurfaceView.queueEvent. */
 class MapRenderer(private val context: Context, private val requestFrame: () -> Unit, private val onProjection: (List<ScreenMarker>) -> Unit,
-    private val onStatus: (String,Boolean) -> Unit = { _,_ -> }) : GLSurfaceView.Renderer {
+    private val onStatus: (String,Boolean) -> Unit = { _,_ -> },
+    private val onAimHint: (ProjectedAimHint?) -> Unit = {},
+    private val onLanding: (ScreenMarker?) -> Unit = {}) : GLSurfaceView.Renderer {
+    private val coursePlayer=CoursePlayer()
+    private val courseFx=CourseFxRenderer()
+    // Mannequin plus <=256 path keys: reuse storage instead of allocating a direct buffer per frame.
+    private val courseLines=ByteBuffer.allocateDirect(4096*6*4).order(ByteOrder.nativeOrder()).asFloatBuffer()
+    private var insetExpanded=false
+    private var landingMarkers=true
+    private val density=context.resources.displayMetrics.density
+    @Volatile var savedBrowseCamera: CameraState?=null
+        private set
+    @Volatile var playback=coursePlayer.snapshot()
+        private set
+    fun startCourse(value: Course,saved: PlaybackSnapshot?=null) {
+        value.validate(loadedMapVersion)
+        if(savedBrowseCamera==null)savedBrowseCamera=camera
+        coursePlayer.load(value,loadedMapVersion)
+        saved?.takeIf {it.lessonId==value.lessonId}?.let(coursePlayer::restore)
+        stopMovement();flight=null;setLessonView(coursePlayer.view,false)
+        playback=coursePlayer.snapshot()
+    }
+    fun setLessonView(value: LessonView,manual: Boolean=true) {coursePlayer.setView(value,manual);coursePlayer.course?.let {restore(it.camera(value))};playback=coursePlayer.snapshot()}
+    fun coursePlay() {coursePlayer.play();playback=coursePlayer.snapshot()}
+    fun coursePause() {coursePlayer.tick(android.os.SystemClock.uptimeMillis());coursePlayer.pause();playback=coursePlayer.snapshot()}
+    fun courseReplay() {coursePlayer.replay();setLessonView(coursePlayer.view,false);playback=coursePlayer.snapshot()}
+    fun courseEffect() {coursePlayer.jumpToEffect();setLessonView(coursePlayer.view,false)}
+    fun courseAutoCamera() {coursePlayer.setAutomaticCamera();setLessonView(coursePlayer.view,false)}
+    fun courseWindow(expanded: Boolean,markers: Boolean) {insetExpanded=expanded;landingMarkers=markers}
+    fun courseAimHint(value: Boolean) {coursePlayer.setAimHint(value);playback=coursePlayer.snapshot()}
+    fun endCourse() {coursePlayer.clear();playback=coursePlayer.snapshot();savedBrowseCamera?.let(::restore);savedBrowseCamera=null}
     private val mobile=MobileSceneRenderer(context,requestFrame,onStatus)
     private var hasMobile=false
+    private var loadedMapVersion=""
     private var program = 0
     private var position = 0; private var color = 0; private var uniform = 0
     private var mesh: FloatBuffer? = null; private var count = 0
@@ -48,15 +80,15 @@ class MapRenderer(private val context: Context, private val requestFrame: () -> 
         private set
     private fun buffer(data: FloatArray) = ByteBuffer.allocateDirect(data.size*4).order(ByteOrder.nativeOrder()).asFloatBuffer().apply { put(data); position(0) }
     fun setScene(definition: SceneDefinition, vertices: FloatArray) {
-        scene = definition; mesh = buffer(vertices); count = vertices.size/6
+        endCourse(); scene = definition; mesh = buffer(vertices); count = vertices.size/6
         reset()
     }
     fun setDetailed(value: TexturedMesh?) {
         if(textures.isNotEmpty()) GL.glDeleteTextures(textures.size,textures.values.toIntArray(),0)
         textures.clear();detailed=value;texturesDirty=true
     }
-    fun setMobile(value: MobileScene?) { hasMobile=value!=null;mobile.setScene(value) }
-    fun dispose() {mobile.dispose();setDetailed(null)}
+    fun setMobile(value: MobileScene?) { hasMobile=value!=null;loadedMapVersion=value?.manifestSha256.orEmpty();mobile.setScene(value) }
+    fun dispose() {endCourse();courseFx.dispose();mobile.dispose();setDetailed(null)}
     fun shutdownWorkers() {mobile.shutdownWorkers()}
     fun pan(dx: Float,dy: Float) {
         if(free)return
@@ -87,7 +119,8 @@ class MapRenderer(private val context: Context, private val requestFrame: () -> 
     fun stopMovement() {strafe=0f;forward=0f;vertical=0f;lastFrame=0L}
     fun setSpeed(value: Float) {speed=value.coerceIn(3f,12f);publishCamera()}
     fun pauseMovement() {paused=true}
-    fun resumeMovement() {paused=false;lastFrame=0L;stopMovement()}
+    fun resumeMovement() {paused=false;lastFrame=0L;stopMovement();coursePlayer.resume()}
+    fun suspendCourse() {coursePlayer.suspend();playback=coursePlayer.snapshot()}
     fun setLineups(items: List<Lineup>, item: Lineup?) {
         lineups = items; selected = item
         path = item?.takeIf { it.landing!=null }?.let { lineup ->
@@ -147,7 +180,7 @@ class MapRenderer(private val context: Context, private val requestFrame: () -> 
         textureEnabled=GL.glGetUniformLocation(textureProgram,"uTextured")
         textureColor=GL.glGetUniformLocation(textureProgram,"uColor")
         GL.glDeleteShader(tv);GL.glDeleteShader(tf);textures.clear();texturesDirty=true
-        mobile.contextCreated()
+        mobile.contextCreated();courseFx.contextCreated()
     }
     private fun shader(type: Int, source: String): Int {
         val id=GL.glCreateShader(type); GL.glShaderSource(id,source); GL.glCompileShader(id)
@@ -161,7 +194,12 @@ class MapRenderer(private val context: Context, private val requestFrame: () -> 
     }
     override fun onDrawFrame(gl: GL10?) {
         val tick=android.os.SystemClock.uptimeMillis()
-        if(paused)stopMovement()
+        if(paused) {stopMovement();coursePlayer.suspend()}
+        val oldView=coursePlayer.view
+        coursePlayer.tick(tick)
+        if(oldView!=coursePlayer.view)setLessonView(coursePlayer.view,false)
+        if(coursePlayer.view==LessonView.FOLLOW)coursePlayer.course?.let {restore(LessonObservation.following(it,coursePlayer.seconds))}
+        playback=coursePlayer.snapshot()
         if(free && lastFrame!=0L && !paused) {
             val c=FreeCamera.advance(CameraState(yaw,pitch,distance,targetX,targetZ,targetY,true,speed),strafe,forward,vertical,(tick-lastFrame)/1000f)
             targetX=c.x;targetY=c.y;targetZ=c.z
@@ -172,12 +210,38 @@ class MapRenderer(private val context: Context, private val requestFrame: () -> 
             yaw=c.yaw;pitch=c.pitch;distance=c.distance;targetX=c.x;targetY=c.y;targetZ=c.z
             if(f.finished(now)) flight=null
         }
+        publishCamera()
         GL.glClear(GL.GL_COLOR_BUFFER_BIT or GL.GL_DEPTH_BUFFER_BIT)
+        GL.glViewport(0,0,width,height)
+        val mainFov=if(coursePlayer.course!=null && coursePlayer.view==LessonView.AIM)coursePlayer.course!!.aimFov else if(free)70f else 45f
+        renderWorld(camera,width,height,mainFov,true)
+        val markers=ArrayList<ScreenMarker>()
+        scene?.labels?.forEach {project(it.position)?.let {xy->markers.add(ScreenMarker(null,it.name,xy[0],xy[1],0xffe5dac8.toInt(),false))}}
+        targets.forEach {t->project(t.position)?.let {xy->markers.add(ScreenMarker("target:${t.id}",t.label,xy[0],xy[1],0xff85baff.toInt(),false,true))}}
+        lineups.forEach {l->l.modelStand?.let(::project)?.let {xy->markers.add(ScreenMarker(l.id,"${l.spawnNumber}",xy[0],xy[1],l.type.color,false))}}
+        selected?.landing?.let(::project)?.let {xy->markers.add(ScreenMarker(selected?.id,"落点",xy[0],xy[1],0xffff9173.toInt(),true))}
+        onProjection(markers)
+        onAimHint(coursePlayer.course?.let {c->AimGuidance.project(c.lessonId,c.aim,vp,width,height,coursePlayer.aimHintAlpha())})
+        coursePlayer.course?.let {c->
+            val r=LessonObservation.viewport(width,height,density,insetExpanded)
+            GL.glEnable(GL.GL_SCISSOR_TEST);GL.glScissor(r.x,height-r.top-r.height,r.width,r.height)
+            GL.glViewport(r.x,height-r.top-r.height,r.width,r.height)
+            GL.glClear(GL.GL_COLOR_BUFFER_BIT or GL.GL_DEPTH_BUFFER_BIT)
+            // Same renderer, caches, bounded worker queue and course clock; upload budget only once per frame.
+            renderWorld(LessonObservation.landing(c),r.width,r.height,45f,false)
+            val target=AimGuidance.project(c.lessonId,c.path.last().position,vp,r.width,r.height,1f)
+            onLanding(target?.takeIf {landingMarkers}?.let {ScreenMarker(c.lessonId,if(c.evidence.calibrated)"落点" else "目标 · 未校准",r.x+it.x,r.top+it.y,0xffffcc66.toInt(),true)})
+            GL.glDisable(GL.GL_SCISSOR_TEST);GL.glViewport(0,0,width,height)
+        } ?: onLanding(null)
+        publishCamera()
+        if((coursePlayer.course!=null && coursePlayer.playing && !paused) || flight!=null || (free && !paused && (strafe!=0f || forward!=0f || vertical!=0f))) requestFrame()
+    }
+    private fun renderWorld(capture: CameraState,viewWidth: Int,viewHeight: Int,fov: Float,primary: Boolean) {
         val e=scene?.extent ?: 28f
-        Matrix.perspectiveM(projection,0,if(free)70f else 45f,width.toFloat()/height,if(free).05f else .1f,e*10f)
-        val y=Math.toRadians(yaw.toDouble()); val p=Math.toRadians(pitch.toDouble())
-        val eye=if(free)floatArrayOf(targetX,targetY,targetZ) else floatArrayOf(targetX+(distance*cos(p)*sin(y)).toFloat(),targetY+(distance*sin(p)).toFloat(),targetZ+(distance*cos(p)*cos(y)).toFloat())
-        val look=if(free)FreeCamera.forward(CameraState(yaw,pitch,distance,targetX,targetZ,targetY,true)) else floatArrayOf(targetX-eye[0],targetY-eye[1],targetZ-eye[2])
+        Matrix.perspectiveM(projection,0,fov,viewWidth.toFloat()/viewHeight,if(capture.free).05f else .1f,e*10f)
+        val y=Math.toRadians(capture.yaw.toDouble()); val p=Math.toRadians(capture.pitch.toDouble())
+        val eye=if(capture.free)floatArrayOf(capture.x,capture.y,capture.z) else floatArrayOf(capture.x+(capture.distance*cos(p)*sin(y)).toFloat(),capture.y+(capture.distance*sin(p)).toFloat(),capture.z+(capture.distance*cos(p)*cos(y)).toFloat())
+        val look=if(capture.free)FreeCamera.forward(capture) else floatArrayOf(capture.x-eye[0],capture.y-eye[1],capture.z-eye[2])
         Matrix.setLookAtM(view,0,eye[0],eye[1],eye[2],eye[0]+look[0],eye[1]+look[1],eye[2]+look[2],0f,1f,0f)
         Matrix.multiplyMM(vp,0,projection,0,view,0)
         for(axis in 0..2) for(signIndex in 0..1) {
@@ -187,25 +251,47 @@ class MapRenderer(private val context: Context, private val requestFrame: () -> 
             if(length>0f) for(i in 0..3) plane[i]/=length
         }
         GL.glUseProgram(program); GL.glUniformMatrix4fv(uniform,1,false,vp,0)
-        if(hasMobile) mobile.draw(vp,frustum,eye,flight!=null || (free && (strafe!=0f || forward!=0f || vertical!=0f)))
+        if(hasMobile) mobile.draw(vp,frustum,eye,flight!=null || (free && (strafe!=0f || forward!=0f || vertical!=0f)),primary)
         else {
             mesh?.let { draw(it,count,GL.GL_TRIANGLES) }
             detailed?.let { drawDetailed(it) }
         }
         GL.glUseProgram(program); GL.glUniformMatrix4fv(uniform,1,false,vp,0)
-        path?.let { GL.glLineWidth(2f); draw(it,pathCount,GL.GL_LINE_STRIP) }
-        val markers=ArrayList<ScreenMarker>()
-        scene?.labels?.forEach { project(it.position)?.let { xy -> markers.add(ScreenMarker(null,it.name,xy[0],xy[1],0xffe5dac8.toInt(),false)) } }
-        targets.forEach { target ->
-            project(target.position)?.let { xy -> markers.add(ScreenMarker("target:${target.id}",target.label,xy[0],xy[1],0xff85baff.toInt(),false,true)) }
+        if(coursePlayer.course==null)path?.let { GL.glLineWidth(2f); draw(it,pathCount,GL.GL_LINE_STRIP) }
+        coursePlayer.course?.let {c ->
+            // Simple teaching mannequin/foot circle; resource-side rig and final poses remain pending.
+            val lines=ArrayList<Float>()
+            fun vertex(p: Vec3) {lines.addAll(listOf(p.x,p.y,p.z,.3f,.9f,.8f))}
+            fun at(x: Float,y: Float,z: Float=0f): Vec3 {
+                val r=Math.toRadians(c.bodyYaw.toDouble())
+                return Vec3(c.foot.x+(x*cos(r)-z*sin(r)).toFloat(),c.foot.y+y,c.foot.z+(x*sin(r)+z*cos(r)).toFloat())
+            }
+            fun line(a: Vec3,b: Vec3) {vertex(a);vertex(b)}
+            if(!primary || coursePlayer.view!=LessonView.AIM) {
+                line(at(0f,.1f),at(0f,1.75f));line(at(0f,.8f),at(-.25f,0f));line(at(0f,.8f),at(.25f,0f))
+                val arm=if(coursePlayer.seconds in c.throwAt..0.0)1.7f else 1.1f
+                line(at(0f,1.4f),at(.4f,arm));line(at(0f,1.4f),at(-.4f,1.1f))
+                for(i in 0..31) {val a=i*2*PI/32;val b=(i+1)*2*PI/32;line(at(cos(a).toFloat()*.35f,.03f,sin(a).toFloat()*.35f),at(cos(b).toFloat()*.35f,.03f,sin(b).toFloat()*.35f))}
+            }
+            if(coursePlayer.seconds>=0) {
+                val trail=c.path.filter {it.seconds<=coursePlayer.seconds}.map {it.position}+listOfNotNull(c.grenade(coursePlayer.seconds))
+                trail.zipWithNext().forEach {(a,b)->line(a,b)}
+            }
+            if(landingMarkers) {
+                val target=c.path.last().position
+                line(Vec3(target.x-.35f,target.y,target.z),Vec3(target.x+.35f,target.y,target.z))
+                line(Vec3(target.x,target.y,target.z-.35f),Vec3(target.x,target.y,target.z+.35f))
+                c.smoke.forEach {s->for(i in 0 until 16) {val a=i*2*PI/16;val b=(i+1)*2*PI/16
+                    line(Vec3(s.center.x+cos(a).toFloat()*s.radius.x,s.center.y,s.center.z+sin(a).toFloat()*s.radius.z),Vec3(s.center.x+cos(b).toFloat()*s.radius.x,s.center.y,s.center.z+sin(b).toFloat()*s.radius.z))}}
+                c.fire.forEach {f->for(i in 0 until 16) {val a=i*2*PI/16;val b=(i+1)*2*PI/16
+                    line(Vec3(f.center.x+cos(a).toFloat()*f.radius,f.center.y+.03f,f.center.z+sin(a).toFloat()*f.radius),Vec3(f.center.x+cos(b).toFloat()*f.radius,f.center.y+.03f,f.center.z+sin(b).toFloat()*f.radius))}}
+            }
+            if(lines.isNotEmpty()) {
+                check(lines.size<=courseLines.capacity());courseLines.clear();courseLines.put(lines.toFloatArray());courseLines.flip()
+                GL.glLineWidth(2f);draw(courseLines,lines.size/6,GL.GL_LINES)
+            }
+            courseFx.draw(c,coursePlayer.seconds,vp,eye,view)
         }
-        lineups.forEach { lineup ->
-            lineup.modelStand?.let(::project)?.let { xy -> markers.add(ScreenMarker(lineup.id,"${lineup.spawnNumber}",xy[0],xy[1],lineup.type.color,false)) }
-        }
-        selected?.let { lineup -> lineup.landing?.let(::project)?.let { xy -> markers.add(ScreenMarker(lineup.id,"落点",xy[0],xy[1],0xffff9173.toInt(),true)) } }
-        publishCamera()
-        onProjection(markers)
-        if(flight!=null || (free && !paused && (strafe!=0f || forward!=0f || vertical!=0f))) requestFrame()
     }
     private fun drawDetailed(value: TexturedMesh) {
         if(texturesDirty) {

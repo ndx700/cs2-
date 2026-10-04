@@ -23,7 +23,7 @@ data class MobileMaterial(val base: String,val layer: String,val blend: String,v
     val texturePaths=listOf(base,layer,blend).filter {it.isNotEmpty()}.distinct()
 }
 data class MobilePart(val asset: String,val material: Int,val vertices: Int,val indices: Int,val bytes: Int,val center: FloatArray,val radius: Float)
-data class MobileScene(val parts: List<MobilePart>,val materials: List<MobileMaterial>)
+data class MobileScene(val parts: List<MobilePart>,val materials: List<MobileMaterial>,val manifestSha256: String="")
 
 object MobileSceneLoader {
     private fun path(s: String): String {
@@ -35,7 +35,9 @@ object MobileSceneLoader {
         return FloatArray(n) { a.getDouble(it).toFloat().also { f -> require(f.isFinite()) } }
     }
     fun load(context: Context,asset: String): MobileScene {
-        val j=context.assets.open(asset).bufferedReader().use { JSONObject(it.readText()) }
+        val manifestBytes=context.assets.open(asset).use {it.readBytes()}
+        val hash=java.security.MessageDigest.getInstance("SHA-256").digest(manifestBytes).joinToString("") {"%02x".format(it.toInt() and 255)}
+        val j=JSONObject(manifestBytes.toString(Charsets.UTF_8))
         require(j.getString("schema")=="dust2-mobile-d2m1-v1" && j.getInt("stride")==36)
         val ma=j.getJSONArray("materials");require(ma.length() in 1..1024)
         val materials=(0 until ma.length()).map { i ->
@@ -56,7 +58,7 @@ object MobileSceneLoader {
             MobilePart(path(p.getString("asset")),mi,nv,ni,bytes,floats(p,"center",3),r)
         }
         require(parts.sumOf { it.bytes.toLong() }<=192L*1024*1024) { "Scene exceeds mobile geometry budget" }
-        return MobileScene(parts,materials)
+        return MobileScene(parts,materials,hash)
     }
 }
 
@@ -137,7 +139,7 @@ class MobileSceneRenderer(private val context: Context,private val requestFrame:
             var result: Upload
             try {
                 require(ByteOrder.nativeOrder()==ByteOrder.LITTLE_ENDIAN)
-                val (v,i)=SceneChunkInput.open(p.asset) { context.assets.open(it) }.use { f ->
+                val (v,i)=SceneChunkInput.open(p.asset) {context.assets.open(it)}.use { f ->
                     require(f.readInt()==0x44324d31 && f.readInt()==p.vertices && f.readInt()==p.indices && f.readInt()==36)
                     val v=ByteArray(p.vertices*36);val i=ByteArray(p.indices*2);f.readFully(v);f.readFully(i);require(f.read()==-1)
                     val checked=ByteBuffer.wrap(v).order(ByteOrder.LITTLE_ENDIAN)
@@ -200,9 +202,9 @@ class MobileSceneRenderer(private val context: Context,private val requestFrame:
     private fun bindTexture(unit: Int,path: String) {
         GL.glActiveTexture(GL.GL_TEXTURE0+unit);GL.glBindTexture(GL.GL_TEXTURE_2D,textures[path]?.id ?: 0)
     }
-    fun draw(vp: FloatArray,frustum: Array<FloatArray>,eye: FloatArray,moving: Boolean=false) {
+    fun draw(vp: FloatArray,frustum: Array<FloatArray>,eye: FloatArray,moving: Boolean=false,upload: Boolean=true) {
         val s=scene ?: return;if(failed || program==0)return
-        takeUploads(moving);if(failed)return
+        if(upload)takeUploads(moving);if(failed)return
         val visible=s.parts.indices.filter { i -> val p=s.parts[i];s.materials[p.material].enabled && frustum.none { f -> f[0]*p.center[0]+f[1]*p.center[1]+f[2]*p.center[2]+f[3]<-p.radius } }
         fun dist(i: Int): Float {val p=s.parts[i];val x=p.center[0]-eye[0];val y=p.center[1]-eye[1];val z=p.center[2]-eye[2];return x*x+y*y+z*z}
         val priority=visible.sortedBy {SceneLoadPolicy.priority(dist(it),s.parts[it].radius)}

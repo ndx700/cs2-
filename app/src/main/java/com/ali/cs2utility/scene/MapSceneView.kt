@@ -7,20 +7,39 @@ import android.view.*
 import android.widget.FrameLayout
 import com.ali.cs2utility.domain.*
 import kotlin.math.hypot
+import com.ali.cs2utility.tutorial.*
 
 class MapSceneView(context: Context, private val onSelect: (String) -> Unit) : FrameLayout(context) {
     private val density=resources.displayMetrics.density
     private val overlay=MarkerOverlay(context)
     private val gl=GLSurfaceView(context)
     private val controls=RunControls(context)
+    var lessonActive=false
+        private set
+    private var lessonView=LessonView.STANCE
+    private var lessonId: String?=null
+    var aimHintEnabled=true
+        private set
+    var landingExpanded=false
+        private set
+    var landingMarkers=true
+        private set
+    private var landingTouch=false
     var freeMode=false
         private set
     var onModeChanged: (Boolean) -> Unit = {}
     private val roles=HashMap<Int,String>()
     private val pointerPositions=HashMap<Int,Pair<Float,Float>>()
     var onStatus: (String,Boolean) -> Unit = { _,_ -> }
-    private val renderer=MapRenderer(context,{ gl.requestRender() },{ markers -> post { overlay.markers=markers; overlay.invalidate() } },{ message,error -> post { onStatus(message,error) } })
+    private val renderer: MapRenderer=MapRenderer(context,{ gl.requestRender() },{ markers -> post {
+        overlay.markers=markers
+        syncLessonView()
+        overlay.invalidate()
+    } },{ message,error -> post { onStatus(message,error) } },{ hint -> post {
+        overlay.aimHint=hint?.takeIf {lessonActive && lessonView==LessonView.AIM && aimHintEnabled && it.lessonId==lessonId};overlay.invalidate()
+    } },{ marker -> post {overlay.landingMarker=marker?.takeIf {lessonActive && landingMarkers && it.id==lessonId};overlay.invalidate()} })
     private var selectedId: String? = null
+    private fun syncLessonView() {if(lessonActive){lessonView=renderer.playback.view;overlay.crosshair=lessonView==LessonView.AIM}}
     private var moved=false; private var multitouch=false; private var lastX=0f; private var lastY=0f
     private var downX=0f; private var downY=0f
     private var centroidX=0f;private var centroidY=0f
@@ -39,8 +58,28 @@ class MapSceneView(context: Context, private val onSelect: (String) -> Unit) : F
         controls.visibility=View.GONE
         contentDescription="沙二 3D 地图。单指旋转，双指缩放和拖动，点击全图复位。"
     }
+    fun startCourse(c: Course,saved: PlaybackSnapshot?=null) {
+        cancelInput();updateMode(false);lessonActive=true;lessonView=saved?.view ?: LessonView.STANCE
+        lessonId=c.lessonId;aimHintEnabled=saved?.aimHintEnabled ?: true;overlay.aimHint=null
+        overlay.showLanding=true;landingWindow(false,true)
+        overlay.crosshair=lessonView==LessonView.AIM;overlay.invalidate()
+        gl.queueEvent {renderer.startCourse(c,saved)};gl.requestRender()
+    }
+    fun lessonCamera(value: LessonView) {if(!lessonActive)return;cancelInput();lessonView=value;overlay.crosshair=value==LessonView.AIM;overlay.invalidate();gl.queueEvent {renderer.setLessonView(value)};gl.requestRender()}
+    fun lessonPlay() {gl.queueEvent {renderer.coursePlay()};gl.requestRender()}
+    fun lessonPause() {gl.queueEvent {renderer.coursePause()};gl.requestRender()}
+    fun lessonReplay() {gl.queueEvent {renderer.courseReplay()};gl.requestRender()}
+    fun lessonEffect() {gl.queueEvent {renderer.courseEffect()};gl.requestRender()}
+    fun lessonAutoCamera() {gl.queueEvent {renderer.courseAutoCamera()};gl.requestRender()}
+    fun landingWindow(expanded: Boolean=landingExpanded,markers: Boolean=landingMarkers) {
+        landingExpanded=expanded;landingMarkers=markers;overlay.landingExpanded=expanded;overlay.landingMarker=null
+        overlay.invalidate();gl.queueEvent {renderer.courseWindow(expanded,markers)};gl.requestRender()
+    }
+    fun lessonAimHint(value: Boolean) {if(!lessonActive)return;aimHintEnabled=value;overlay.aimHint=null;overlay.invalidate();gl.queueEvent {renderer.courseAimHint(value)};gl.requestRender()}
+    fun lessonSnapshot()=renderer.playback
+    fun endCourse() {if(!lessonActive)return;lessonActive=false;lessonId=null;overlay.aimHint=null;overlay.showLanding=false;overlay.landingMarker=null;landingTouch=false;landingWindow(false,true);updateMode(renderer.savedBrowseCamera?.free ?: false);overlay.crosshair=false;overlay.invalidate();gl.queueEvent {renderer.endCourse()};gl.requestRender()}
     fun load(scene: SceneDefinition, mesh: FloatArray, detailed: TexturedMesh? = null,mobile: MobileScene?=null) {
-        cancelInput();updateMode(false)
+        endCourse();cancelInput();updateMode(false)
         gl.queueEvent { renderer.setScene(scene,mesh);renderer.setDetailed(detailed);renderer.setMobile(mobile) }; gl.requestRender()
     }
     fun show(items: List<Lineup>, selected: Lineup?) {
@@ -49,19 +88,26 @@ class MapSceneView(context: Context, private val onSelect: (String) -> Unit) : F
     }
     fun focus(point: Vec3) { gl.queueEvent { renderer.focus(point) }; gl.requestRender() }
     fun targets(items: List<TargetMarker>) { gl.queueEvent { renderer.setTargets(items) };gl.requestRender() }
-    fun flyTo(c: CameraState) { cancelInput();gl.queueEvent { renderer.flyTo(c) };gl.requestRender() }
-    fun resetCamera() { cancelInput();updateMode(false);gl.queueEvent { renderer.reset() }; gl.requestRender() }
-    fun cameraState()=renderer.camera
+    fun flyTo(c: CameraState) { endCourse();cancelInput();gl.queueEvent { renderer.flyTo(c) };gl.requestRender() }
+    fun resetCamera() { endCourse();cancelInput();updateMode(false);gl.queueEvent { renderer.reset() }; gl.requestRender() }
+    fun cameraState()=renderer.savedBrowseCamera ?: renderer.camera
     fun restoreCamera(c: CameraState) { cancelInput();controls.speed=c.speed;updateMode(c.free);gl.queueEvent { renderer.restore(c) }; gl.requestRender() }
     private fun updateMode(value: Boolean) {freeMode=value;controls.visibility=if(value)View.VISIBLE else View.GONE;onModeChanged(value)}
-    fun toggleFreeMode() {cancelInput();updateMode(!freeMode);val value=freeMode;gl.queueEvent {renderer.setFreeMode(value)};gl.requestRender()}
+    fun toggleFreeMode() {endCourse();cancelInput();updateMode(!freeMode);val value=freeMode;gl.queueEvent {renderer.setFreeMode(value)};gl.requestRender()}
     private fun cancelInput() {roles.clear();pointerPositions.clear();controls.clear();gl.queueEvent {renderer.stopMovement()};gl.requestRender()}
     fun resume() {gl.onResume();gl.queueEvent {renderer.resumeMovement()};gl.requestRender()}
-    fun pause() {renderer.pauseMovement();cancelInput();gl.onPause()}
+    fun pause() {renderer.pauseMovement();cancelInput();gl.queueEvent {renderer.suspendCourse()};gl.onPause()}
     override fun onWindowFocusChanged(hasWindowFocus: Boolean) {super.onWindowFocusChanged(hasWindowFocus);if(!hasWindowFocus)cancelInput()}
     fun dispose() {renderer.shutdownWorkers();gl.queueEvent {renderer.dispose()};gl.requestRender()}
     override fun onInterceptTouchEvent(event: MotionEvent)=true
     override fun onTouchEvent(event: MotionEvent): Boolean {
+        if(lessonActive && (landingTouch || (event.actionMasked==MotionEvent.ACTION_DOWN && LessonObservation.viewport(width.coerceAtLeast(1),height.coerceAtLeast(1),density,landingExpanded).contains(event.x,event.y)))) {
+            if(event.actionMasked==MotionEvent.ACTION_DOWN) {landingTouch=true;cancelInput()}
+            if(event.actionMasked==MotionEvent.ACTION_UP) {landingTouch=false;landingWindow(!landingExpanded)}
+            if(event.actionMasked==MotionEvent.ACTION_CANCEL)landingTouch=false
+            return true
+        }
+        if(lessonActive && lessonView in listOf(LessonView.AIM,LessonView.FOLLOW))return true
         if(freeMode)return runTouch(event)
         scale.onTouchEvent(event)
         when (event.actionMasked) {
@@ -144,11 +190,29 @@ class MapSceneView(context: Context, private val onSelect: (String) -> Unit) : F
     }
     override fun performClick(): Boolean { super.performClick(); return true }
     private class MarkerOverlay(context: Context) : View(context) {
+        var crosshair=false
+        var aimHint: ProjectedAimHint?=null
+        var showLanding=false
+        var landingExpanded=false
+        var landingMarker: ScreenMarker?=null
         var markers=emptyList<ScreenMarker>(); var selectedId: String?=null
         private val d=resources.displayMetrics.density
         private val paint=Paint(Paint.ANTI_ALIAS_FLAG)
         override fun onDraw(c: Canvas) {
-            markers.sortedBy { if(it.id==selectedId) 1 else 0 }.forEach { m ->
+            if(crosshair && !landingExpanded) {
+                aimHint?.let {h->
+                    paint.style=Paint.Style.STROKE;paint.strokeWidth=2*d
+                    paint.color=Color.argb((h.alpha*255).toInt(),255,204,102)
+                    c.drawCircle(h.x,h.y,17*d,paint)
+                    paint.style=Paint.Style.FILL
+                }
+                paint.color=Color.WHITE;paint.strokeWidth=2*d
+                val x=width/2f;val y=height/2f
+                c.drawLine(x-10*d,y,x-3*d,y,paint);c.drawLine(x+3*d,y,x+10*d,y,paint)
+                c.drawLine(x,y-10*d,x,y-3*d,paint);c.drawLine(x,y+3*d,x,y+10*d,paint)
+                drawLanding(c);return
+            }
+            if(!landingExpanded)markers.sortedBy { if(it.id==selectedId) 1 else 0 }.forEach { m ->
                 if(m.target) {
                     paint.style=Paint.Style.FILL;paint.color=0xff142a42.toInt()
                     c.drawRoundRect(m.x-55*d,m.y-22*d,m.x+55*d,m.y+22*d,14*d,14*d,paint)
@@ -176,6 +240,25 @@ class MapSceneView(context: Context, private val onSelect: (String) -> Unit) : F
                     c.drawText(m.label,m.x,m.y-(paint.ascent()+paint.descent())/2,paint)
                 }
             }
+            drawLanding(c)
+        }
+        private fun drawLanding(c: Canvas) {
+            if(!showLanding || width==0 || height==0)return
+            val r=LessonObservation.viewport(width,height,d,landingExpanded)
+            val save=c.save();c.clipRect(r.x,r.top,r.x+r.width,r.top+r.height)
+            paint.style=Paint.Style.STROKE;paint.strokeWidth=2*d;paint.color=Color.WHITE
+            c.drawRect(r.x.toFloat()+d,r.top.toFloat()+d,(r.x+r.width).toFloat()-d,(r.top+r.height).toFloat()-d,paint)
+            paint.style=Paint.Style.FILL;paint.color=0xdd10151d.toInt()
+            c.drawRect(r.x.toFloat(),r.top.toFloat(),(r.x+r.width).toFloat(),r.top+25*d,paint)
+            paint.color=Color.WHITE;paint.textSize=minOf(12*d,(r.width-12*d)/8);paint.textAlign=Paint.Align.LEFT;paint.typeface=Typeface.DEFAULT
+            c.drawText("落点实时演示",r.x+6*d,r.top+17*d,paint)
+            landingMarker?.let {m->
+                paint.color=m.color;paint.style=Paint.Style.STROKE;paint.strokeWidth=2*d
+                c.drawCircle(m.x,m.y,10*d,paint);paint.style=Paint.Style.FILL
+                c.drawText(m.label,m.x+12*d,m.y,paint)
+            }
+            paint.color=Color.WHITE;c.drawText(if(landingExpanded)"点按返回" else "点按放大",r.x+6*d,r.top+r.height-7*d,paint)
+            c.restoreToCount(save)
         }
     }
 }
