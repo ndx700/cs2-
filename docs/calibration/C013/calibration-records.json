@@ -1,0 +1,463 @@
+{
+  "schema": "c013-resource-measurements-v1",
+  "owner": "C013-RES",
+  "appContractAdapter": {
+    "status": "PENDING_RUNTIME_MEASUREMENTS",
+    "path": "app-adapter-report.json",
+    "appHeadSha": "516f2ce41ccd55a7aac441a2ee52d80d550e71a1",
+    "reason": "APP v1 contract read from PR #5; four pending drafts exported without guessing runtime values"
+  },
+  "coordinateSpace": "dust2_display_y_up_v1",
+  "lengthUnit": "display_unit",
+  "sourceToDisplay": "[x*0.0254, z*0.0254, -y*0.0254]; apply once",
+  "worldCollisionIncludesEntityPhysics": false,
+  "records": [
+    {
+      "id": "D2-001",
+      "type": "SMOKE",
+      "purpose": "T出生 → 中门烟",
+      "status": "PENDING_CALIBRATION",
+      "formalImportAllowed": false,
+      "sourcePageFetched": true,
+      "teachingSource": "https://getreplay.gg/en/utility/dust2/smoke/d2-mid-door-smoke",
+      "effectSourceInC012": "https://www.youtube.com/watch?v=6aEaQjRaV1U",
+      "C012Segment": "Nart 0:43–1:33",
+      "versions": {
+        "appBaseline": "v0.6.0-test2",
+        "mobileSchema": "dust2-mobile-d2m1-v1",
+        "mobileManifestSha256": "fc60c032290dffcb233e3de9da3c59694293362ec72643cc1ebde9c1b13a17d0",
+        "assetPackVersion": "v0.6.0-test2",
+        "assetPackManifestSha256": "e41718a3acde7df2f2f9cf9a98b5e5b967e406353d30b6983f9e18f5a37a2fa3",
+        "worldCollisionResource": "R002",
+        "sourceGameBuild": null,
+        "sourceMapBuild": null
+      },
+      "consolePositionSource": [
+        -452.229492,
+        -660.061768,
+        174.616058
+      ],
+      "consolePositionDisplay": [
+        -11.4866290968,
+        4.4352478732,
+        16.7655689072
+      ],
+      "consolePositionSemantics": "UNCONFIRMED_PLAYER_OR_EYE_POSITION_NOT_FEET",
+      "anglesSourcePitchYawRollDegrees": [
+        -9.96819,
+        88.599434,
+        0.0
+      ],
+      "commandStatus": "SOURCE_DECLARED_NOT_GAME_VALIDATED",
+      "throwFlagsSourceDeclared": {
+        "jump": true,
+        "forward": false,
+        "standing": false,
+        "left_click": true,
+        "status": "SOURCE_DECLARED_NOT_GAME_VALIDATED"
+      },
+      "standingFeetDisplay": null,
+      "eyeDisplay": null,
+      "aimPointDisplay": null,
+      "landingDisplay": null,
+      "trajectory": null,
+      "coverageDisplay": null,
+      "effectTimeZero": {
+        "event": "throw_release",
+        "clipTimeSeconds": null,
+        "status": "PENDING_CONTINUITY_AND_GAME_CLOCK_CHECK"
+      },
+      "effectStages": [
+        {
+          "event": "throw_release",
+          "ageSeconds": null,
+          "sourceClipTimeSeconds": null,
+          "measurementEvidence": null,
+          "status": "PENDING_CALIBRATION"
+        },
+        {
+          "event": "landing",
+          "ageSeconds": null,
+          "sourceClipTimeSeconds": null,
+          "measurementEvidence": null,
+          "status": "PENDING_CALIBRATION"
+        },
+        {
+          "event": "first_smoke",
+          "ageSeconds": null,
+          "sourceClipTimeSeconds": null,
+          "measurementEvidence": null,
+          "status": "PENDING_CALIBRATION"
+        },
+        {
+          "event": "basic_formed",
+          "ageSeconds": null,
+          "sourceClipTimeSeconds": null,
+          "measurementEvidence": null,
+          "status": "PENDING_CALIBRATION"
+        },
+        {
+          "event": "fully_formed",
+          "ageSeconds": null,
+          "sourceClipTimeSeconds": null,
+          "measurementEvidence": null,
+          "status": "PENDING_CALIBRATION"
+        },
+        {
+          "event": "dissipation_begin",
+          "ageSeconds": null,
+          "sourceClipTimeSeconds": null,
+          "measurementEvidence": null,
+          "status": "PENDING_CALIBRATION"
+        },
+        {
+          "event": "dissipation_end",
+          "ageSeconds": null,
+          "sourceClipTimeSeconds": null,
+          "measurementEvidence": null,
+          "status": "PENDING_CALIBRATION"
+        }
+      ],
+      "fireRegions": null,
+      "lateIgnitionAcceptancePointDisplay": null,
+      "heHole": null,
+      "screenshots": [
+        "D2-001-image-02",
+        "D2-001-image-03",
+        "D2-001-image-04",
+        "D2-001-image-05",
+        "D2-001-image-06",
+        "D2-001-image-07",
+        "D2-001-image-08",
+        "D2-001-image-09"
+      ],
+      "clipObservationId": "D2-001-demo"
+    },
+    {
+      "id": "D2-014",
+      "type": "HE",
+      "purpose": "CT 炸中门烟",
+      "status": "PENDING_CALIBRATION",
+      "formalImportAllowed": false,
+      "sourcePageFetched": true,
+      "teachingSource": "https://getreplay.gg/en/utility/dust2/reveal/d2-mid-door-reveal",
+      "effectSourceInC012": "https://www.youtube.com/watch?v=6aEaQjRaV1U",
+      "C012Segment": "Nart 15:43–16:07",
+      "versions": {
+        "appBaseline": "v0.6.0-test2",
+        "mobileSchema": "dust2-mobile-d2m1-v1",
+        "mobileManifestSha256": "fc60c032290dffcb233e3de9da3c59694293362ec72643cc1ebde9c1b13a17d0",
+        "assetPackVersion": "v0.6.0-test2",
+        "assetPackManifestSha256": "e41718a3acde7df2f2f9cf9a98b5e5b967e406353d30b6983f9e18f5a37a2fa3",
+        "worldCollisionResource": "R002",
+        "sourceGameBuild": null,
+        "sourceMapBuild": null
+      },
+      "consolePositionSource": null,
+      "consolePositionDisplay": null,
+      "consolePositionSemantics": "UNCONFIRMED_PLAYER_OR_EYE_POSITION_NOT_FEET",
+      "anglesSourcePitchYawRollDegrees": null,
+      "commandStatus": "NOT_AVAILABLE_ON_PAGE",
+      "throwFlagsSourceDeclared": {
+        "jump": false,
+        "forward": false,
+        "standing": true,
+        "left_click": true,
+        "status": "SOURCE_DECLARED_NOT_GAME_VALIDATED"
+      },
+      "standingFeetDisplay": null,
+      "eyeDisplay": null,
+      "aimPointDisplay": null,
+      "landingDisplay": null,
+      "trajectory": null,
+      "coverageDisplay": null,
+      "effectTimeZero": {
+        "event": "throw_release",
+        "clipTimeSeconds": null,
+        "status": "PENDING_CONTINUITY_AND_GAME_CLOCK_CHECK"
+      },
+      "effectStages": [
+        {
+          "event": "smoke_fully_formed",
+          "ageSeconds": null,
+          "sourceClipTimeSeconds": null,
+          "measurementEvidence": null,
+          "status": "PENDING_CALIBRATION"
+        },
+        {
+          "event": "he_release",
+          "ageSeconds": null,
+          "sourceClipTimeSeconds": null,
+          "measurementEvidence": null,
+          "status": "PENDING_CALIBRATION"
+        },
+        {
+          "event": "explosion",
+          "ageSeconds": null,
+          "sourceClipTimeSeconds": null,
+          "measurementEvidence": null,
+          "status": "PENDING_CALIBRATION"
+        },
+        {
+          "event": "hole_open",
+          "ageSeconds": null,
+          "sourceClipTimeSeconds": null,
+          "measurementEvidence": null,
+          "status": "PENDING_CALIBRATION"
+        },
+        {
+          "event": "refill_begin",
+          "ageSeconds": null,
+          "sourceClipTimeSeconds": null,
+          "measurementEvidence": null,
+          "status": "PENDING_CALIBRATION"
+        },
+        {
+          "event": "refill_end",
+          "ageSeconds": null,
+          "sourceClipTimeSeconds": null,
+          "measurementEvidence": null,
+          "status": "PENDING_CALIBRATION"
+        }
+      ],
+      "fireRegions": null,
+      "lateIgnitionAcceptancePointDisplay": null,
+      "heHole": null,
+      "screenshots": [
+        "D2-014-image-01",
+        "D2-014-image-02"
+      ],
+      "clipObservationId": "D2-014-demo"
+    },
+    {
+      "id": "D2-009",
+      "type": "MOLOTOV",
+      "purpose": "B包点 Fence / Close Left 火",
+      "status": "PENDING_CALIBRATION",
+      "formalImportAllowed": false,
+      "sourcePageFetched": true,
+      "teachingSource": "https://getreplay.gg/en/utility/dust2/molotov/dust2-b-site-close-fence-molotov",
+      "effectSourceInC012": "https://www.youtube.com/watch?v=6aEaQjRaV1U",
+      "C012Segment": "Nart 7:58–8:30",
+      "versions": {
+        "appBaseline": "v0.6.0-test2",
+        "mobileSchema": "dust2-mobile-d2m1-v1",
+        "mobileManifestSha256": "fc60c032290dffcb233e3de9da3c59694293362ec72643cc1ebde9c1b13a17d0",
+        "assetPackVersion": "v0.6.0-test2",
+        "assetPackManifestSha256": "e41718a3acde7df2f2f9cf9a98b5e5b967e406353d30b6983f9e18f5a37a2fa3",
+        "worldCollisionResource": "R002",
+        "sourceGameBuild": null,
+        "sourceMapBuild": null
+      },
+      "consolePositionSource": [
+        -1837.968018,
+        990.979187,
+        103.416237
+      ],
+      "consolePositionDisplay": [
+        -46.6843876572,
+        2.6267724198,
+        -25.1708713498
+      ],
+      "consolePositionSemantics": "UNCONFIRMED_PLAYER_OR_EYE_POSITION_NOT_FEET",
+      "anglesSourcePitchYawRollDegrees": [
+        -6.208987,
+        103.978676,
+        0.0
+      ],
+      "commandStatus": "SOURCE_DECLARED_NOT_GAME_VALIDATED",
+      "throwFlagsSourceDeclared": {
+        "jump": false,
+        "forward": false,
+        "standing": true,
+        "left_click": true,
+        "status": "SOURCE_DECLARED_NOT_GAME_VALIDATED"
+      },
+      "standingFeetDisplay": null,
+      "eyeDisplay": null,
+      "aimPointDisplay": null,
+      "landingDisplay": null,
+      "trajectory": null,
+      "coverageDisplay": null,
+      "effectTimeZero": {
+        "event": "throw_release",
+        "clipTimeSeconds": null,
+        "status": "PENDING_CONTINUITY_AND_GAME_CLOCK_CHECK"
+      },
+      "effectStages": [
+        {
+          "event": "throw_release",
+          "ageSeconds": null,
+          "sourceClipTimeSeconds": null,
+          "measurementEvidence": null,
+          "status": "PENDING_CALIBRATION"
+        },
+        {
+          "event": "impact",
+          "ageSeconds": null,
+          "sourceClipTimeSeconds": null,
+          "measurementEvidence": null,
+          "status": "PENDING_CALIBRATION"
+        },
+        {
+          "event": "first_ignition",
+          "ageSeconds": null,
+          "sourceClipTimeSeconds": null,
+          "measurementEvidence": null,
+          "status": "PENDING_CALIBRATION"
+        },
+        {
+          "event": "late_region_ignition",
+          "ageSeconds": null,
+          "sourceClipTimeSeconds": null,
+          "measurementEvidence": null,
+          "status": "PENDING_CALIBRATION"
+        },
+        {
+          "event": "final_coverage",
+          "ageSeconds": null,
+          "sourceClipTimeSeconds": null,
+          "measurementEvidence": null,
+          "status": "PENDING_CALIBRATION"
+        },
+        {
+          "event": "extinguish_begin",
+          "ageSeconds": null,
+          "sourceClipTimeSeconds": null,
+          "measurementEvidence": null,
+          "status": "PENDING_CALIBRATION"
+        },
+        {
+          "event": "extinguish_end",
+          "ageSeconds": null,
+          "sourceClipTimeSeconds": null,
+          "measurementEvidence": null,
+          "status": "PENDING_CALIBRATION"
+        }
+      ],
+      "fireRegions": null,
+      "lateIgnitionAcceptancePointDisplay": null,
+      "heHole": null,
+      "screenshots": [
+        "D2-009-image-01",
+        "D2-009-image-02",
+        "D2-009-image-03"
+      ],
+      "clipObservationId": "D2-009-demo"
+    },
+    {
+      "id": "D2-010",
+      "type": "MOLOTOV",
+      "purpose": "A大 Car 火",
+      "status": "PENDING_CALIBRATION",
+      "formalImportAllowed": false,
+      "sourcePageFetched": true,
+      "teachingSource": "https://getreplay.gg/en/utility/dust2/molotov/d2-car-molotov",
+      "effectSourceInC012": "https://www.youtube.com/watch?v=6aEaQjRaV1U",
+      "C012Segment": "Nart 14:23–14:52",
+      "versions": {
+        "appBaseline": "v0.6.0-test2",
+        "mobileSchema": "dust2-mobile-d2m1-v1",
+        "mobileManifestSha256": "fc60c032290dffcb233e3de9da3c59694293362ec72643cc1ebde9c1b13a17d0",
+        "assetPackVersion": "v0.6.0-test2",
+        "assetPackManifestSha256": "e41718a3acde7df2f2f9cf9a98b5e5b967e406353d30b6983f9e18f5a37a2fa3",
+        "worldCollisionResource": "R002",
+        "sourceGameBuild": null,
+        "sourceMapBuild": null
+      },
+      "consolePositionSource": null,
+      "consolePositionDisplay": null,
+      "consolePositionSemantics": "UNCONFIRMED_PLAYER_OR_EYE_POSITION_NOT_FEET",
+      "anglesSourcePitchYawRollDegrees": null,
+      "commandStatus": "NOT_AVAILABLE_ON_PAGE",
+      "throwFlagsSourceDeclared": {
+        "jump": true,
+        "forward": true,
+        "standing": false,
+        "left_click": true,
+        "status": "SOURCE_DECLARED_NOT_GAME_VALIDATED"
+      },
+      "standingFeetDisplay": null,
+      "eyeDisplay": null,
+      "aimPointDisplay": null,
+      "landingDisplay": null,
+      "trajectory": null,
+      "coverageDisplay": null,
+      "effectTimeZero": {
+        "event": "throw_release",
+        "clipTimeSeconds": null,
+        "status": "PENDING_CONTINUITY_AND_GAME_CLOCK_CHECK"
+      },
+      "effectStages": [
+        {
+          "event": "throw_release",
+          "ageSeconds": null,
+          "sourceClipTimeSeconds": null,
+          "measurementEvidence": null,
+          "status": "PENDING_CALIBRATION"
+        },
+        {
+          "event": "impact",
+          "ageSeconds": null,
+          "sourceClipTimeSeconds": null,
+          "measurementEvidence": null,
+          "status": "PENDING_CALIBRATION"
+        },
+        {
+          "event": "first_ignition",
+          "ageSeconds": null,
+          "sourceClipTimeSeconds": null,
+          "measurementEvidence": null,
+          "status": "PENDING_CALIBRATION"
+        },
+        {
+          "event": "late_region_ignition",
+          "ageSeconds": null,
+          "sourceClipTimeSeconds": null,
+          "measurementEvidence": null,
+          "status": "PENDING_CALIBRATION"
+        },
+        {
+          "event": "final_coverage",
+          "ageSeconds": null,
+          "sourceClipTimeSeconds": null,
+          "measurementEvidence": null,
+          "status": "PENDING_CALIBRATION"
+        },
+        {
+          "event": "extinguish_begin",
+          "ageSeconds": null,
+          "sourceClipTimeSeconds": null,
+          "measurementEvidence": null,
+          "status": "PENDING_CALIBRATION"
+        },
+        {
+          "event": "extinguish_end",
+          "ageSeconds": null,
+          "sourceClipTimeSeconds": null,
+          "measurementEvidence": null,
+          "status": "PENDING_CALIBRATION"
+        }
+      ],
+      "fireRegions": null,
+      "lateIgnitionAcceptancePointDisplay": null,
+      "heHole": null,
+      "screenshots": [
+        "D2-010-image-01",
+        "D2-010-image-02"
+      ],
+      "clipObservationId": "D2-010-demo"
+    }
+  ],
+  "interaction": {
+    "id": "D2-001-D2-014",
+    "smokeId": "D2-001",
+    "heId": "D2-014",
+    "status": "PENDING_CONTINUOUS_REFERENCE",
+    "smokeReleaseCourseSeconds": null,
+    "heReleaseCourseSeconds": null,
+    "heExplosionCourseSeconds": null,
+    "holeOpenCourseSeconds": null,
+    "refillCompleteCourseSeconds": null
+  }
+}

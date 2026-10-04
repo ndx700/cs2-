@@ -1,0 +1,43 @@
+{
+  "task": "C015-APP",
+  "mainBaseline": "b329ef098bfff85f0cf593b8d0f8bd98b0973335",
+  "branch": "app/c015-coordinate-capture",
+  "status": "IN_PROGRESS",
+  "candidateVersion": {
+    "code": 9,
+    "name": "0.6.3-c015-dev"
+  },
+  "checks": {
+    "restoreAssets": {
+      "result": "PASS",
+      "files": 3960,
+      "bytes": 132056609
+    },
+    "validateAssets": {
+      "result": "PASS",
+      "parts": 3661,
+      "triangles": 4610873,
+      "textures": 291
+    },
+    "allMainAndTestKotlin": "PASS",
+    "junit": {
+      "result": "PASS",
+      "tests": 85,
+      "failures": 0,
+      "newTests": 10
+    },
+    "pythonCaptureTests": {
+      "result": "PASS",
+      "tests": 6
+    },
+    "fullMapEgl": "PASS: repository GLES shaders and full restored map; generic probe only",
+    "actualKotlinVsOfflineMeshQuery": "PASS: box and ground ray match; APP-C015-receipt.json",
+    "gradleTestAssembleLint": "BLOCKED: wrapper JVM network unreachable",
+    "newPrCI": "PENDING"
+  },
+  "calibratedCourses": 0,
+  "selectedHangSmokeStanceAimComparison": "NOT_COMPLETED: no fitted/certified spatial candidate at checked resource commit",
+  "phoneCaptureUIAndExport": null,
+  "phoneDynamicLessonsAndPerformance": null,
+  "newApkDelivery": null
+}

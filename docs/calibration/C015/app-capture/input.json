@@ -1,0 +1,21 @@
+{
+  "camera": {
+    "position": [
+      -8.706360613139768,
+      3.8806021257020986,
+      17.337658293798334
+    ],
+    "yaw": 3.026422099871036,
+    "pitch": -13.71763749083024,
+    "distance": 1,
+    "free": true
+  },
+  "field": "aim",
+  "pixel": [
+    640,
+    360
+  ],
+  "viewportWidth": 1280,
+  "viewportHeight": 720,
+  "scope": "D2-001 resource image-fit candidate from 81dfcb1; APP actual free FOV70, normal aspect; pending real game/phone verification."
+}

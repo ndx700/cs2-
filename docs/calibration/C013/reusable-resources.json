@@ -1,0 +1,187 @@
+{
+  "schema": "c013-reusable-resource-audit-v1",
+  "versions": {
+    "appBaseline": "v0.6.0-test2",
+    "mobileSchema": "dust2-mobile-d2m1-v1",
+    "mobileManifestSha256": "fc60c032290dffcb233e3de9da3c59694293362ec72643cc1ebde9c1b13a17d0",
+    "assetPackVersion": "v0.6.0-test2",
+    "assetPackManifestSha256": "e41718a3acde7df2f2f9cf9a98b5e5b967e406353d30b6983f9e18f5a37a2fa3",
+    "worldCollisionResource": "R002",
+    "sourceGameBuild": null,
+    "sourceMapBuild": null
+  },
+  "ambientEffectMaterials": [
+    {
+      "materialId": 14,
+      "source": "materials/effects/smoke/dust_001b.vmat_c",
+      "shader": "csgo_effects.vfx",
+      "enabledInPreview": false,
+      "baseTexture": {
+        "source": "materials/effects/smoke/dust_001b_vmat_g_tcolor_37c55b5d.vtex_c",
+        "sourcePNG": {
+          "path": "materials/effects/smoke/dust_001b_vmat_g_tcolor_37c55b5d.png",
+          "bytes": 86,
+          "sha256": "ebd3c78be259dd40dc054514fbd1fea79ab6ca5b0d0c480e4bf283e1195cdff3",
+          "width": 1,
+          "height": 1,
+          "mode": "RGBA"
+        },
+        "asset": "maps/dust2/mobile/textures/t113.png",
+        "width": 1,
+        "height": 1,
+        "sha256": "0cc4acc2e9abb600ff3fa032daa5e68cd6a0be87ec7c9de61dbf366fc87de0fc",
+        "bytes": 70
+      },
+      "sourceTextureDependencies": [
+        {
+          "parameter": "g_tColor",
+          "path": "materials/effects/smoke/dust_001b_vmat_g_tcolor_37c55b5d.vtex"
+        },
+        {
+          "parameter": "g_tMask1",
+          "path": "materials/effects/smoke/dust_001_mask_psd_1b6f7fa5.vtex"
+        },
+        {
+          "parameter": "g_tMask2",
+          "path": "materials/effects/smoke/dust_002_mask_psd_d8512b51.vtex"
+        },
+        {
+          "parameter": "g_tMask3",
+          "path": "materials/default/default_mask_tga_344101f8.vtex"
+        }
+      ],
+      "reuseStatus": "AMBIENT_VISUAL_CANDIDATE_NOT_GRENADE_SMOKE_LOGIC"
+    },
+    {
+      "materialId": 16,
+      "source": "materials/effects/smoke/dust_001.vmat_c",
+      "shader": "csgo_effects.vfx",
+      "enabledInPreview": false,
+      "baseTexture": {
+        "source": "materials/effects/smoke/dust_001_vmat_g_tcolor_37c55b5d.vtex_c",
+        "sourcePNG": {
+          "path": "materials/effects/smoke/dust_001_vmat_g_tcolor_37c55b5d.png",
+          "bytes": 86,
+          "sha256": "ebd3c78be259dd40dc054514fbd1fea79ab6ca5b0d0c480e4bf283e1195cdff3",
+          "width": 1,
+          "height": 1,
+          "mode": "RGBA"
+        },
+        "asset": "maps/dust2/mobile/textures/t112.png",
+        "width": 1,
+        "height": 1,
+        "sha256": "0cc4acc2e9abb600ff3fa032daa5e68cd6a0be87ec7c9de61dbf366fc87de0fc",
+        "bytes": 70
+      },
+      "sourceTextureDependencies": [
+        {
+          "parameter": "g_tColor",
+          "path": "materials/effects/smoke/dust_001_vmat_g_tcolor_37c55b5d.vtex"
+        },
+        {
+          "parameter": "g_tMask1",
+          "path": "materials/effects/smoke/dust_001_mask_psd_1b6f7fa5.vtex"
+        },
+        {
+          "parameter": "g_tMask2",
+          "path": "materials/effects/smoke/dust_003_mask_psd_d0ea3d5c.vtex"
+        },
+        {
+          "parameter": "g_tMask3",
+          "path": "materials/effects/smoke/dust_001_vmat_g_tmask3_2b2ebb3f.vtex"
+        }
+      ],
+      "reuseStatus": "AMBIENT_VISUAL_CANDIDATE_NOT_GRENADE_SMOKE_LOGIC"
+    },
+    {
+      "materialId": 17,
+      "source": "materials/effects/smoke/steam_001.vmat_c",
+      "shader": "csgo_effects.vfx",
+      "enabledInPreview": false,
+      "baseTexture": {
+        "source": "materials/effects/smoke/steam_001_vmat_g_tcolor_37c55b5d.vtex_c",
+        "sourcePNG": {
+          "path": "materials/effects/smoke/steam_001_vmat_g_tcolor_37c55b5d.png",
+          "bytes": 86,
+          "sha256": "ebd3c78be259dd40dc054514fbd1fea79ab6ca5b0d0c480e4bf283e1195cdff3",
+          "width": 1,
+          "height": 1,
+          "mode": "RGBA"
+        },
+        "asset": "maps/dust2/mobile/textures/t115.png",
+        "width": 1,
+        "height": 1,
+        "sha256": "0cc4acc2e9abb600ff3fa032daa5e68cd6a0be87ec7c9de61dbf366fc87de0fc",
+        "bytes": 70
+      },
+      "sourceTextureDependencies": [
+        {
+          "parameter": "g_tColor",
+          "path": "materials/effects/smoke/steam_001_vmat_g_tcolor_37c55b5d.vtex"
+        },
+        {
+          "parameter": "g_tMask1",
+          "path": "materials/effects/smoke/dust_002_mask_psd_d8512b51.vtex"
+        },
+        {
+          "parameter": "g_tMask2",
+          "path": "materials/effects/smoke/dust_002_mask_psd_d8512b51.vtex"
+        },
+        {
+          "parameter": "g_tMask3",
+          "path": "materials/effects/smoke/dust_002_mask_psd_d8512b51.vtex"
+        }
+      ],
+      "reuseStatus": "AMBIENT_VISUAL_CANDIDATE_NOT_GRENADE_SMOKE_LOGIC"
+    },
+    {
+      "materialId": 18,
+      "source": "materials/effects/smoke/lightshaft_001.vmat_c",
+      "shader": "csgo_effects.vfx",
+      "enabledInPreview": false,
+      "baseTexture": {
+        "source": "materials/effects/smoke/smoke_shaft_002_mask_psd_8bf92c64.vtex_c",
+        "sourcePNG": {
+          "path": "materials/effects/smoke/smoke_shaft_002_mask_psd_8bf92c64.png",
+          "bytes": 17768,
+          "sha256": "93d4271c3b1e4dabf5eb5e02b2dcec596f166eff82c7d7e5b317468b74f5a945",
+          "width": 256,
+          "height": 512,
+          "mode": "RGBA"
+        },
+        "asset": "maps/dust2/mobile/textures/t114.png",
+        "width": 128,
+        "height": 256,
+        "sha256": "e3332d6d8e930a974e32056d226ad7cf3b56c8f0e1b79eef824ff25e62ba14dd",
+        "bytes": 7202
+      },
+      "sourceTextureDependencies": [
+        {
+          "parameter": "g_tColor",
+          "path": "materials/effects/smoke/smoke_shaft_002_mask_psd_8bf92c64.vtex"
+        },
+        {
+          "parameter": "g_tMask1",
+          "path": "materials/effects/smoke/lightshaft_001_vmat_g_tmask1_2b2ebb3f.vtex"
+        },
+        {
+          "parameter": "g_tMask2",
+          "path": "materials/effects/smoke/dust_004_mask_psd_bbe62bc8.vtex"
+        },
+        {
+          "parameter": "g_tMask3",
+          "path": "materials/effects/smoke/dust_004_mask_psd_bbe62bc8.vtex"
+        }
+      ],
+      "reuseStatus": "AMBIENT_VISUAL_CANDIDATE_NOT_GRENADE_SMOKE_LOGIC"
+    }
+  ],
+  "ambientEffectParts": 47,
+  "ambientEffectTriangles": 852,
+  "runtimeParticleDefinitionsAvailableInMobileBundle": false,
+  "sourceSmokeFireHeRuntimeLogicAvailable": false,
+  "characterPoseResource": null,
+  "grenadeModelsResource": null,
+  "characterAndGrenadeCoverageStatus": "NOT_DELIVERED_BY_CURRENT_MOBILE_BUNDLE; exact VPK dependency extraction remains separate",
+  "warning": "Static dust/steam/lightshaft textures do not implement dynamic grenade effects"
+}

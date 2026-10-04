@@ -1,0 +1,3153 @@
+{
+  "schema": "c013-local-texture-inventory-v1",
+  "mapVersion": "fc60c032290dffcb233e3de9da3c59694293362ec72643cc1ebde9c1b13a17d0",
+  "coordinateSpace": "dust2_display_y_up_v1",
+  "selection": "conservative manifest sphere overlap; not precise proximity or line of sight",
+  "assetChanges": [],
+  "formalAcceptancePassed": false,
+  "records": [
+    {
+      "id": "D2-001",
+      "status": "CANDIDATES_ONLY_NOT_VISUALLY_VERIFIED",
+      "center": [
+        -11.4866290968,
+        4.4352478732,
+        16.7655689072
+      ],
+      "centerSemantics": "UNCONFIRMED_PLAYER_OR_EYE_POSITION_NOT_FEET",
+      "searchRadiusDisplayUnits": 3.0,
+      "candidateParts": [
+        {
+          "asset": "maps/dust2/mobile/chunks/p00018.d2m.gz",
+          "sha256": "6cfdd2ed4f88bc7efcf55ab25e83a16716100267c82a3bcef4682ad7da2303b0",
+          "material": 7
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p00019.d2m.gz",
+          "sha256": "0a8dc9a2fcffd7ae9985683af215d5bf66fc1c405e0f6f9f38b6bea24b0decab",
+          "material": 7
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p00055.d2m.gz",
+          "sha256": "bd80337d591dbb941b83562e7c42e362310157fea289f48cfcaf19d6e925dc50",
+          "material": 13
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p00062.d2m.gz",
+          "sha256": "b5e7aaf40562f59e21c2d78a87934bdb8e8f505a190148dc60877f95c0cb1304",
+          "material": 17
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p00074.d2m.gz",
+          "sha256": "3550dd0d94367c9281aefe3728b46bf6a55093dcd7ae92031953b3b373c2aafa",
+          "material": 17
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p00471.d2m.gz",
+          "sha256": "f2a28002d5a355fdc5d2d328890739daee68b2369d7303a684341dac3d879cbc",
+          "material": 20
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p00515.d2m.gz",
+          "sha256": "1a6284c8f4899c2604d3bc5e2ff6f1cf4b9109c82786cf55e5f58e654f2fb5bb",
+          "material": 20
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p00535.d2m.gz",
+          "sha256": "7ac34dffa5326d961420f43326518bff30fe8aa36162de2bbe316f65982450db",
+          "material": 61
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p00538.d2m.gz",
+          "sha256": "7f36ed616e6e2e717685594453dd2287d9b879bef14ff5a533a10fe375badd58",
+          "material": 61
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p00546.d2m.gz",
+          "sha256": "306f89e7ee9b3849e5c018c512059bab17616168f925785c1e602509857ac0d5",
+          "material": 62
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p00550.d2m.gz",
+          "sha256": "8221f399ee061ad4a1c446ebf9db5fc9066b38d57323fd8ed12599056634e663",
+          "material": 62
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p00551.d2m.gz",
+          "sha256": "878d59e33deac141e592e795a48430aa908967c3936359a0d78a99d2acf6ce30",
+          "material": 62
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p00742.d2m.gz",
+          "sha256": "11abe103cc45f078164d919a5b70f088648f2e74fe3d84071ab0bab3eb787fe6",
+          "material": 37
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p00774.d2m.gz",
+          "sha256": "3ef9cdeb8c9adfc332bd51fdb8d572898187881959b1b34d690f9dac5983b64c",
+          "material": 37
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p00916.d2m.gz",
+          "sha256": "3f3396b2e9b97326f4372f1b7c2f75431d188043cc318ddd414041e51c78ae4c",
+          "material": 77
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p00923.d2m.gz",
+          "sha256": "f37b5b7f7b8335eb2e1390863f5666468f098b68a763ea68c78a9c7b8cda437a",
+          "material": 77
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p00972.d2m.gz",
+          "sha256": "426bad10cffdfa03b1727253001ae39ecfb9542d96af6e465a90ff6b608ac2d4",
+          "material": 83
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p00979.d2m.gz",
+          "sha256": "38a8b159cdc2708cf4f12232505a441bd54cc90c6a9891c1ead8d2ac3e667096",
+          "material": 83
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p01010.d2m.gz",
+          "sha256": "7513401c453d7fa368b49fbc447172891ecde03ab8cb192c8af92a2b88a0de70",
+          "material": 84
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p01011.d2m.gz",
+          "sha256": "16aefe3c7624b67fc1a8264ee59f1cc501994eacbe87bac9e802c399e11c5419",
+          "material": 84
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p01070.d2m.gz",
+          "sha256": "573c5e7bed6c891870fd7278b2b0e4e0e1962432b5eadf44f722336adda395f1",
+          "material": 22
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p01091.d2m.gz",
+          "sha256": "a843de80bf3bd5bd7a94e647db1c37c6235ff6e890df710c7f7c1163735a0e00",
+          "material": 23
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p01413.d2m.gz",
+          "sha256": "a8d9541d5c42f12b472dee6024d963c5ea7d611a75b2548e74911aed97a7afab",
+          "material": 109
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p01631.d2m.gz",
+          "sha256": "382e1f1b87fab3738c877a1cda691819e0e4aadf09f75c2a67f8c40b0262cccd",
+          "material": 137
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p01634.d2m.gz",
+          "sha256": "b9c587c524095d2175e56aa757829d82809659dd07d29c7e7b259a2b85df21a8",
+          "material": 137
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p01643.d2m.gz",
+          "sha256": "a6c861716d0651ea36da905da7d830c71c666869b703ee27824373371cb10f50",
+          "material": 137
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p01650.d2m.gz",
+          "sha256": "371adda1d39e7ecbf820f85f074b32bfa81bcee506852bb4b7e0259091550786",
+          "material": 138
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p01703.d2m.gz",
+          "sha256": "a4b4e78f43728fe3a45b8060cbecd3250e6017275dfbd4e4e67108d183816c98",
+          "material": 143
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p01739.d2m.gz",
+          "sha256": "7bb873bdf43f3c5582e757893971406d485d24cb318ce4e45235d08559e1b20d",
+          "material": 150
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p01763.d2m.gz",
+          "sha256": "73e47ed3859087fda5a84ad92688f531ed752ebdebebe01671690011ef1d59b3",
+          "material": 154
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p02289.d2m.gz",
+          "sha256": "6ec7c692de21eaf1062b32ab12ff029eeb0b7c069cf936ff554c3e42c77ad90c",
+          "material": 53
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p02461.d2m.gz",
+          "sha256": "4fce69d05f42825deb93307508816a723be9eaa88c048e5af67fe8b8e326b60e",
+          "material": 54
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p02692.d2m.gz",
+          "sha256": "390b6c4a33a79f7a6c21a4b7e7c66d2a82f70ff029c04e2ab77bdbeb8cc7dddf",
+          "material": 236
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p02728.d2m.gz",
+          "sha256": "cf877c0ded183cb0cb42aff2d1a2ddc89a66135c0753aefad434819776f1c43f",
+          "material": 239
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p02764.d2m.gz",
+          "sha256": "47efe68ad14eca31dfcf173aa1205e33061898860bbfd40355f50348e12f6859",
+          "material": 240
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p02963.d2m.gz",
+          "sha256": "204cc6e170a73bb69f2bfad4f6bea631d8773e6e28114afdce0205f209944790",
+          "material": 159
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p03166.d2m.gz",
+          "sha256": "43e518724a6143203663e94adafa926fbaefc57dd68da54c36eb7e3c7e04a5db",
+          "material": 260
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p03197.d2m.gz",
+          "sha256": "f2e7c8682e040fdff4d681be67bff14418640f070ec8506c8452cd98a72c3268",
+          "material": 263
+        }
+      ],
+      "materials": [
+        {
+          "materialId": 7,
+          "source": "materials/de_dust/hr_dust/hr_dust_decal_road_striping.vmat_c",
+          "uvScale": [
+            1,
+            1
+          ],
+          "uvOffset": [
+            0,
+            0
+          ],
+          "uvRotation": 0,
+          "textures": [
+            {
+              "slot": "base",
+              "asset": "maps/dust2/mobile/textures/t015.png",
+              "sha256": "5b15095f726545f5ba85259857d50817cf4d774aefb304a1d87badd147c836d4",
+              "source": "materials/de_dust/hr_dust/hr_dust_decal_road_striping_color_psd_3c1a7134.vtex_c",
+              "sourcePNG": {
+                "path": "materials/de_dust/hr_dust/hr_dust_decal_road_striping_color_psd_3c1a7134.png",
+                "bytes": 2151444,
+                "sha256": "3aec8213da449ce287fcb317c287500242aceee70e0f908718d45976adac6a52",
+                "width": 1024,
+                "height": 1024,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                256,
+                256
+              ],
+              "sourceToMobileScale": [
+                4.0,
+                4.0
+              ]
+            }
+          ]
+        },
+        {
+          "materialId": 13,
+          "source": "materials/models/props/de_dust/hr_dust/dust_electric_panel/dust_electric_panel_cover_color.vmat_c",
+          "uvScale": [
+            1,
+            1
+          ],
+          "uvOffset": [
+            0,
+            0
+          ],
+          "uvRotation": 0,
+          "textures": [
+            {
+              "slot": "base",
+              "asset": "maps/dust2/mobile/textures/t170.png",
+              "sha256": "658ead8efc7b8387392a86c486962d545ae12c75d72f430ac8b8e44e8303db71",
+              "source": "materials/models/props/de_dust/hr_dust/dust_electric_panel/dust_electric_panel_cover_color_tga_b372de09.vtex_c",
+              "sourcePNG": {
+                "path": "materials/models/props/de_dust/hr_dust/dust_electric_panel/dust_electric_panel_cover_color_tga_b372de09.png",
+                "bytes": 7551,
+                "sha256": "6d90a53d0c94928e592548fe4c4a7b6d7d3983082511bcc641d8fcf0f1fa8f33",
+                "width": 64,
+                "height": 128,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                64,
+                128
+              ],
+              "sourceToMobileScale": [
+                1.0,
+                1.0
+              ]
+            }
+          ]
+        },
+        {
+          "materialId": 17,
+          "source": "materials/effects/smoke/steam_001.vmat_c",
+          "uvScale": [
+            1,
+            1
+          ],
+          "uvOffset": [
+            0,
+            0
+          ],
+          "uvRotation": 0,
+          "textures": [
+            {
+              "slot": "base",
+              "asset": "maps/dust2/mobile/textures/t115.png",
+              "sha256": "0cc4acc2e9abb600ff3fa032daa5e68cd6a0be87ec7c9de61dbf366fc87de0fc",
+              "source": "materials/effects/smoke/steam_001_vmat_g_tcolor_37c55b5d.vtex_c",
+              "sourcePNG": {
+                "path": "materials/effects/smoke/steam_001_vmat_g_tcolor_37c55b5d.png",
+                "bytes": 86,
+                "sha256": "ebd3c78be259dd40dc054514fbd1fea79ab6ca5b0d0c480e4bf283e1195cdff3",
+                "width": 1,
+                "height": 1,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                1,
+                1
+              ],
+              "sourceToMobileScale": [
+                1.0,
+                1.0
+              ]
+            }
+          ]
+        },
+        {
+          "materialId": 20,
+          "source": "materials/de_dust/hr_dust/hr_dust_blend_asphalt_06.vmat_c",
+          "uvScale": [
+            1,
+            1
+          ],
+          "uvOffset": [
+            0,
+            0
+          ],
+          "uvRotation": 0,
+          "textures": [
+            {
+              "slot": "base",
+              "asset": "maps/dust2/mobile/textures/t003.png",
+              "sha256": "2dd6fd98eba2ffd1246cf62f0507766fcf27718ba05df0eefac616623882361e",
+              "source": "materials/de_dust/hr_dust/hr_dust_asphalt_06_color_psd_153a7cd9.vtex_c",
+              "sourcePNG": {
+                "path": "materials/de_dust/hr_dust/hr_dust_asphalt_06_color_psd_153a7cd9.png",
+                "bytes": 5320923,
+                "sha256": "b424c43c828888b2e7d026f59b68143bd40b0e5d106ed2d297bf5f6f67404d1c",
+                "width": 2048,
+                "height": 2048,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                256,
+                256
+              ],
+              "sourceToMobileScale": [
+                8.0,
+                8.0
+              ]
+            },
+            {
+              "slot": "layer",
+              "asset": "maps/dust2/mobile/textures/t088.png",
+              "sha256": "a0298b363956acd356044891c936e5cfaaaf39b4f2acc6abf168a396fe5bf8a4",
+              "source": "materials/de_dust/hr_dust/hr_dust_sand_02_color_psd_755e7eb9.vtex_c",
+              "sourcePNG": {
+                "path": "materials/de_dust/hr_dust/hr_dust_sand_02_color_psd_755e7eb9.png",
+                "bytes": 8406145,
+                "sha256": "3d5163deda1b11ff6b4a773e115d4d3cfb0a79dc25c1d24d03f5271775a9a46d",
+                "width": 2048,
+                "height": 2048,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                512,
+                512
+              ],
+              "sourceToMobileScale": [
+                4.0,
+                4.0
+              ]
+            },
+            {
+              "slot": "blend",
+              "asset": "maps/dust2/mobile/textures/t002.png",
+              "sha256": "e3d085c1da36ff29bd31221a3863dc5b4fd2e8c8a936419675638bc829baeef5",
+              "source": "materials/de_dust/hr_dust/hr_dust_asphalt_06_blendmod_blend_psd_51fcbb8.vtex_c",
+              "sourcePNG": {
+                "path": "materials/de_dust/hr_dust/hr_dust_asphalt_06_blendmod_blend_psd_51fcbb8.png",
+                "bytes": 1750853,
+                "sha256": "187855fb337b1edb693f99cdc3269f6a2528a29421bbba28af1a443a99ef00a8",
+                "width": 1024,
+                "height": 1024,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                256,
+                256
+              ],
+              "sourceToMobileScale": [
+                4.0,
+                4.0
+              ]
+            }
+          ]
+        },
+        {
+          "materialId": 22,
+          "source": "materials/de_dust/hr_dust/hr_dust_plaster_09.vmat_c",
+          "uvScale": [
+            1,
+            1
+          ],
+          "uvOffset": [
+            0,
+            0
+          ],
+          "uvRotation": 0,
+          "textures": [
+            {
+              "slot": "base",
+              "asset": "maps/dust2/mobile/textures/t051.png",
+              "sha256": "c6f29c9ad04d2a9b013a7e8e9764417b8a36d32a303e8489ebcb7dbdf50d5cfb",
+              "source": "materials/de_dust/hr_dust/hr_dust_plaster_09_color_psd_99a0efd0.vtex_c",
+              "sourcePNG": {
+                "path": "materials/de_dust/hr_dust/hr_dust_plaster_09_color_psd_99a0efd0.png",
+                "bytes": 4976711,
+                "sha256": "2ef215e2773356dcd08d259155f84d4bc8014bdb54433fec2dd6308d1c578b1b",
+                "width": 2048,
+                "height": 2048,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                256,
+                256
+              ],
+              "sourceToMobileScale": [
+                8.0,
+                8.0
+              ]
+            },
+            {
+              "slot": "layer",
+              "asset": "maps/dust2/mobile/textures/t040.png",
+              "sha256": "503de212eabd6049f17cf6303ab7afd02690ff31c59c472fcd131aae2bb18901",
+              "source": "materials/de_dust/hr_dust/hr_dust_plaster_04_color_psd_8a2507ab.vtex_c",
+              "sourcePNG": {
+                "path": "materials/de_dust/hr_dust/hr_dust_plaster_04_color_psd_8a2507ab.png",
+                "bytes": 7996701,
+                "sha256": "92043f760a504a6626cb326e6b8e31605a62d77011d30a13a1826d618841fe4e",
+                "width": 2048,
+                "height": 2048,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                512,
+                512
+              ],
+              "sourceToMobileScale": [
+                4.0,
+                4.0
+              ]
+            },
+            {
+              "slot": "blend",
+              "asset": "maps/dust2/mobile/textures/t039.png",
+              "sha256": "76fee8ee49c1100d322b6a454fa3bd50fa5924ce3ed2d5caef1d4be9ae16d3fb",
+              "source": "materials/de_dust/hr_dust/hr_dust_plaster_04_blendmod_blend_psd_7f0859b0.vtex_c",
+              "sourcePNG": {
+                "path": "materials/de_dust/hr_dust/hr_dust_plaster_04_blendmod_blend_psd_7f0859b0.png",
+                "bytes": 2958440,
+                "sha256": "988ccecd54b39af47ee0c730e1f4a2be3435eda06f8fab4284202eedb8414331",
+                "width": 1024,
+                "height": 1024,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                512,
+                512
+              ],
+              "sourceToMobileScale": [
+                2.0,
+                2.0
+              ]
+            }
+          ]
+        },
+        {
+          "materialId": 23,
+          "source": "materials/de_dust/hr_dust/hr_dust_plaster_09b.vmat_c",
+          "uvScale": [
+            1,
+            1
+          ],
+          "uvOffset": [
+            0,
+            0
+          ],
+          "uvRotation": 0,
+          "textures": [
+            {
+              "slot": "base",
+              "asset": "maps/dust2/mobile/textures/t052.png",
+              "sha256": "fd6524a4b8f9d3989ea177c18f832c84c2f921ac6d5b8ebc870d1038e60ddccf",
+              "source": "materials/de_dust/hr_dust/hr_dust_plaster_09b_color_psd_4b94e860.vtex_c",
+              "sourcePNG": {
+                "path": "materials/de_dust/hr_dust/hr_dust_plaster_09b_color_psd_4b94e860.png",
+                "bytes": 5971622,
+                "sha256": "382cfe490dc1a538581870e621a95216ed926d7c252269e8ee2e1359f6e079ee",
+                "width": 2048,
+                "height": 2048,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                256,
+                256
+              ],
+              "sourceToMobileScale": [
+                8.0,
+                8.0
+              ]
+            },
+            {
+              "slot": "layer",
+              "asset": "maps/dust2/mobile/textures/t040.png",
+              "sha256": "503de212eabd6049f17cf6303ab7afd02690ff31c59c472fcd131aae2bb18901",
+              "source": "materials/de_dust/hr_dust/hr_dust_plaster_04_color_psd_8a2507ab.vtex_c",
+              "sourcePNG": {
+                "path": "materials/de_dust/hr_dust/hr_dust_plaster_04_color_psd_8a2507ab.png",
+                "bytes": 7996701,
+                "sha256": "92043f760a504a6626cb326e6b8e31605a62d77011d30a13a1826d618841fe4e",
+                "width": 2048,
+                "height": 2048,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                512,
+                512
+              ],
+              "sourceToMobileScale": [
+                4.0,
+                4.0
+              ]
+            },
+            {
+              "slot": "blend",
+              "asset": "maps/dust2/mobile/textures/t039.png",
+              "sha256": "76fee8ee49c1100d322b6a454fa3bd50fa5924ce3ed2d5caef1d4be9ae16d3fb",
+              "source": "materials/de_dust/hr_dust/hr_dust_plaster_04_blendmod_blend_psd_7f0859b0.vtex_c",
+              "sourcePNG": {
+                "path": "materials/de_dust/hr_dust/hr_dust_plaster_04_blendmod_blend_psd_7f0859b0.png",
+                "bytes": 2958440,
+                "sha256": "988ccecd54b39af47ee0c730e1f4a2be3435eda06f8fab4284202eedb8414331",
+                "width": 1024,
+                "height": 1024,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                512,
+                512
+              ],
+              "sourceToMobileScale": [
+                2.0,
+                2.0
+              ]
+            }
+          ]
+        },
+        {
+          "materialId": 37,
+          "source": "materials/de_dust/hr_dust/hr_dust_blend_plaster_white_01b2.vmat_c",
+          "uvScale": [
+            1,
+            1
+          ],
+          "uvOffset": [
+            0,
+            0
+          ],
+          "uvRotation": 0,
+          "textures": [
+            {
+              "slot": "base",
+              "asset": "maps/dust2/mobile/textures/t043.png",
+              "sha256": "c77623764a24d8149003280362f1426f28e4e2a19e1d6f98f930cd26117ea3c5",
+              "source": "materials/de_dust/hr_dust/hr_dust_plaster_05b_color_psd_8b443cbf.vtex_c",
+              "sourcePNG": {
+                "path": "materials/de_dust/hr_dust/hr_dust_plaster_05b_color_psd_8b443cbf.png",
+                "bytes": 5232854,
+                "sha256": "a8f351606e1f6b5c7c5661d2ec86637a96c6cab6525443a27422db0764d474c1",
+                "width": 2048,
+                "height": 2048,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                256,
+                256
+              ],
+              "sourceToMobileScale": [
+                8.0,
+                8.0
+              ]
+            },
+            {
+              "slot": "layer",
+              "asset": "maps/dust2/mobile/textures/t040.png",
+              "sha256": "503de212eabd6049f17cf6303ab7afd02690ff31c59c472fcd131aae2bb18901",
+              "source": "materials/de_dust/hr_dust/hr_dust_plaster_04_color_psd_8a2507ab.vtex_c",
+              "sourcePNG": {
+                "path": "materials/de_dust/hr_dust/hr_dust_plaster_04_color_psd_8a2507ab.png",
+                "bytes": 7996701,
+                "sha256": "92043f760a504a6626cb326e6b8e31605a62d77011d30a13a1826d618841fe4e",
+                "width": 2048,
+                "height": 2048,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                512,
+                512
+              ],
+              "sourceToMobileScale": [
+                4.0,
+                4.0
+              ]
+            },
+            {
+              "slot": "blend",
+              "asset": "maps/dust2/mobile/textures/t045.png",
+              "sha256": "1a0fedd3714a3488bff965739a18ce35b1bc18ddc1c37e142ee5a766c70aa9b7",
+              "source": "materials/de_dust/hr_dust/hr_dust_plaster_06_blendmod_blend_psd_2caff036.vtex_c",
+              "sourcePNG": {
+                "path": "materials/de_dust/hr_dust/hr_dust_plaster_06_blendmod_blend_psd_2caff036.png",
+                "bytes": 1529378,
+                "sha256": "38ec8a15aecb893f0240147cdeb475e7d5ee6f660627480967ec7227d4573372",
+                "width": 1024,
+                "height": 1024,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                512,
+                512
+              ],
+              "sourceToMobileScale": [
+                2.0,
+                2.0
+              ]
+            }
+          ]
+        },
+        {
+          "materialId": 53,
+          "source": "materials/models/props/de_dust/hr_dust/dust_trims/hr_dust_roof_trim001_color.vmat_c",
+          "uvScale": [
+            1.0,
+            1.0
+          ],
+          "uvOffset": [
+            0.0,
+            0.0
+          ],
+          "uvRotation": 0.0,
+          "textures": [
+            {
+              "slot": "base",
+              "asset": "maps/dust2/mobile/textures/t247.png",
+              "sha256": "77b516c9101199e0624ed8905aba9185c673b02428c0c8ac73abc4b9cb1e4c5e",
+              "source": "materials/models/props/de_dust/hr_dust/dust_trims/hr_dust_roof_trim001_color_psd_2c339568.vtex_c",
+              "sourcePNG": {
+                "path": "materials/models/props/de_dust/hr_dust/dust_trims/hr_dust_roof_trim001_color_psd_2c339568.png",
+                "bytes": 4914601,
+                "sha256": "554f9537ba0b972246a462aeda3318d229ec400e420081353e8b4a80af5554e0",
+                "width": 2048,
+                "height": 2048,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                256,
+                256
+              ],
+              "sourceToMobileScale": [
+                8.0,
+                8.0
+              ]
+            }
+          ]
+        },
+        {
+          "materialId": 54,
+          "source": "materials/models/props/de_dust/hr_dust/dust_trims/hr_dust_wall_trim001_color.vmat_c",
+          "uvScale": [
+            1.0,
+            1.0
+          ],
+          "uvOffset": [
+            0.0,
+            0.0
+          ],
+          "uvRotation": 0.0,
+          "textures": [
+            {
+              "slot": "base",
+              "asset": "maps/dust2/mobile/textures/t252.png",
+              "sha256": "e32e248b5e0f6e8df932a5f61c850d3d20cba279a69f2aa89b74c6ba018a10a9",
+              "source": "materials/models/props/de_dust/hr_dust/dust_trims/hr_dust_wall_trim001_color_psd_47637529.vtex_c",
+              "sourcePNG": {
+                "path": "materials/models/props/de_dust/hr_dust/dust_trims/hr_dust_wall_trim001_color_psd_47637529.png",
+                "bytes": 6356690,
+                "sha256": "484fe86209a0092765eb1f0ceff763807ea5543fdea830463950500c49980fd1",
+                "width": 2048,
+                "height": 2048,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                256,
+                256
+              ],
+              "sourceToMobileScale": [
+                8.0,
+                8.0
+              ]
+            }
+          ]
+        },
+        {
+          "materialId": 61,
+          "source": "materials/de_dust/hr_dust/hr_dust_blend_asphalt_07.vmat_c",
+          "uvScale": [
+            1,
+            1
+          ],
+          "uvOffset": [
+            0,
+            0
+          ],
+          "uvRotation": 0,
+          "textures": [
+            {
+              "slot": "base",
+              "asset": "maps/dust2/mobile/textures/t003.png",
+              "sha256": "2dd6fd98eba2ffd1246cf62f0507766fcf27718ba05df0eefac616623882361e",
+              "source": "materials/de_dust/hr_dust/hr_dust_asphalt_06_color_psd_153a7cd9.vtex_c",
+              "sourcePNG": {
+                "path": "materials/de_dust/hr_dust/hr_dust_asphalt_06_color_psd_153a7cd9.png",
+                "bytes": 5320923,
+                "sha256": "b424c43c828888b2e7d026f59b68143bd40b0e5d106ed2d297bf5f6f67404d1c",
+                "width": 2048,
+                "height": 2048,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                256,
+                256
+              ],
+              "sourceToMobileScale": [
+                8.0,
+                8.0
+              ]
+            },
+            {
+              "slot": "layer",
+              "asset": "maps/dust2/mobile/textures/t001.png",
+              "sha256": "81d06a24ade97777e67dca3fde6f9c42b5cfe98e1b85e3d831562d6910b74abf",
+              "source": "materials/de_dust/hr_dust/hr_dust_asphalt_05_color_psd_d881e2cd.vtex_c",
+              "sourcePNG": {
+                "path": "materials/de_dust/hr_dust/hr_dust_asphalt_05_color_psd_d881e2cd.png",
+                "bytes": 1604250,
+                "sha256": "53b126b00a3978e8005d3faf8d224d91e6f7d7ef475acdd341b00e183f1d0c7b",
+                "width": 1024,
+                "height": 1024,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                256,
+                256
+              ],
+              "sourceToMobileScale": [
+                4.0,
+                4.0
+              ]
+            },
+            {
+              "slot": "blend",
+              "asset": "maps/dust2/mobile/textures/t002.png",
+              "sha256": "e3d085c1da36ff29bd31221a3863dc5b4fd2e8c8a936419675638bc829baeef5",
+              "source": "materials/de_dust/hr_dust/hr_dust_asphalt_06_blendmod_blend_psd_51fcbb8.vtex_c",
+              "sourcePNG": {
+                "path": "materials/de_dust/hr_dust/hr_dust_asphalt_06_blendmod_blend_psd_51fcbb8.png",
+                "bytes": 1750853,
+                "sha256": "187855fb337b1edb693f99cdc3269f6a2528a29421bbba28af1a443a99ef00a8",
+                "width": 1024,
+                "height": 1024,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                256,
+                256
+              ],
+              "sourceToMobileScale": [
+                4.0,
+                4.0
+              ]
+            }
+          ]
+        },
+        {
+          "materialId": 62,
+          "source": "materials/de_dust/hr_dust/hr_dust_blend_floortile_01.vmat_c",
+          "uvScale": [
+            1,
+            1
+          ],
+          "uvOffset": [
+            0,
+            0
+          ],
+          "uvRotation": 0,
+          "textures": [
+            {
+              "slot": "base",
+              "asset": "maps/dust2/mobile/textures/t091.png",
+              "sha256": "a2242482ee26d9ca06db79387c4307cb5f899d13ce9da184e4244c0c009b379d",
+              "source": "materials/de_dust/hr_dust/hr_dust_sidewalk01_color_psd_d0d4ec5a.vtex_c",
+              "sourcePNG": {
+                "path": "materials/de_dust/hr_dust/hr_dust_sidewalk01_color_psd_d0d4ec5a.png",
+                "bytes": 7034571,
+                "sha256": "2398ba9ed464905df7afbe375c8809426598bea1aeb55fb95426e27da1a2cbd0",
+                "width": 2048,
+                "height": 2048,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                256,
+                256
+              ],
+              "sourceToMobileScale": [
+                8.0,
+                8.0
+              ]
+            },
+            {
+              "slot": "layer",
+              "asset": "maps/dust2/mobile/textures/t088.png",
+              "sha256": "a0298b363956acd356044891c936e5cfaaaf39b4f2acc6abf168a396fe5bf8a4",
+              "source": "materials/de_dust/hr_dust/hr_dust_sand_02_color_psd_755e7eb9.vtex_c",
+              "sourcePNG": {
+                "path": "materials/de_dust/hr_dust/hr_dust_sand_02_color_psd_755e7eb9.png",
+                "bytes": 8406145,
+                "sha256": "3d5163deda1b11ff6b4a773e115d4d3cfb0a79dc25c1d24d03f5271775a9a46d",
+                "width": 2048,
+                "height": 2048,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                512,
+                512
+              ],
+              "sourceToMobileScale": [
+                4.0,
+                4.0
+              ]
+            },
+            {
+              "slot": "blend",
+              "asset": "maps/dust2/mobile/textures/t090.png",
+              "sha256": "4f29ca51037c843590c6287269ca064afbd5f1c19b54dc70b08bd5d27636a215",
+              "source": "materials/de_dust/hr_dust/hr_dust_sidewalk01_blendmod_blend_psd_827ccf50.vtex_c",
+              "sourcePNG": {
+                "path": "materials/de_dust/hr_dust/hr_dust_sidewalk01_blendmod_blend_psd_827ccf50.png",
+                "bytes": 1426374,
+                "sha256": "63b102e6e5b359d8b5f4be3fe9163db0bab715a9c2e6f056f18aaacd1f9408bb",
+                "width": 1024,
+                "height": 1024,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                256,
+                256
+              ],
+              "sourceToMobileScale": [
+                4.0,
+                4.0
+              ]
+            }
+          ]
+        },
+        {
+          "materialId": 77,
+          "source": "materials/de_dust/hr_dust/hr_dust_brick_ground_02.vmat_c",
+          "uvScale": [
+            1,
+            1
+          ],
+          "uvOffset": [
+            0,
+            0
+          ],
+          "uvRotation": 0,
+          "textures": [
+            {
+              "slot": "base",
+              "asset": "maps/dust2/mobile/textures/t007.png",
+              "sha256": "9ce4b4d17d8609d5c65e390b8e031eb00ceb012ffe39fb62a1d5fb95787c40d9",
+              "source": "materials/de_dust/hr_dust/hr_dust_brick_ground_02_color_psd_ad854784.vtex_c",
+              "sourcePNG": {
+                "path": "materials/de_dust/hr_dust/hr_dust_brick_ground_02_color_psd_ad854784.png",
+                "bytes": 1627126,
+                "sha256": "92871bd91de1bfe300aba15e46bf8aba89c5348272b39892781f17faf8020b7f",
+                "width": 1024,
+                "height": 1024,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                256,
+                256
+              ],
+              "sourceToMobileScale": [
+                4.0,
+                4.0
+              ]
+            },
+            {
+              "slot": "layer",
+              "asset": "maps/dust2/mobile/textures/t088.png",
+              "sha256": "a0298b363956acd356044891c936e5cfaaaf39b4f2acc6abf168a396fe5bf8a4",
+              "source": "materials/de_dust/hr_dust/hr_dust_sand_02_color_psd_755e7eb9.vtex_c",
+              "sourcePNG": {
+                "path": "materials/de_dust/hr_dust/hr_dust_sand_02_color_psd_755e7eb9.png",
+                "bytes": 8406145,
+                "sha256": "3d5163deda1b11ff6b4a773e115d4d3cfb0a79dc25c1d24d03f5271775a9a46d",
+                "width": 2048,
+                "height": 2048,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                512,
+                512
+              ],
+              "sourceToMobileScale": [
+                4.0,
+                4.0
+              ]
+            },
+            {
+              "slot": "blend",
+              "asset": "maps/dust2/mobile/textures/t006.png",
+              "sha256": "ef122e6769621b558b27078a7f67f1ae67435772ca4acf1026712a443a756d9b",
+              "source": "materials/de_dust/hr_dust/hr_dust_brick_ground_02_blendmod_blend_psd_7d977400.vtex_c",
+              "sourcePNG": {
+                "path": "materials/de_dust/hr_dust/hr_dust_brick_ground_02_blendmod_blend_psd_7d977400.png",
+                "bytes": 2974065,
+                "sha256": "cbffb0b75324988c4c4b45d99d1b84131cf6fa1780d9468ece52303944ae5805",
+                "width": 2048,
+                "height": 2048,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                256,
+                256
+              ],
+              "sourceToMobileScale": [
+                8.0,
+                8.0
+              ]
+            }
+          ]
+        },
+        {
+          "materialId": 83,
+          "source": "materials/de_dust/hr_dust/hr_dust_plaster_06.vmat_c",
+          "uvScale": [
+            1,
+            1
+          ],
+          "uvOffset": [
+            0,
+            0
+          ],
+          "uvRotation": 0,
+          "textures": [
+            {
+              "slot": "base",
+              "asset": "maps/dust2/mobile/textures/t046.png",
+              "sha256": "893aac2bd59075a90960553604247534838bf62ef1e427c27aa43305f92c9e22",
+              "source": "materials/de_dust/hr_dust/hr_dust_plaster_06_color_psd_3b670aaf.vtex_c",
+              "sourcePNG": {
+                "path": "materials/de_dust/hr_dust/hr_dust_plaster_06_color_psd_3b670aaf.png",
+                "bytes": 6367725,
+                "sha256": "6535710fcabff6c7eb7b93b7335b454ca76498220db1085217c2fd74f5fba81a",
+                "width": 2048,
+                "height": 2048,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                256,
+                256
+              ],
+              "sourceToMobileScale": [
+                8.0,
+                8.0
+              ]
+            },
+            {
+              "slot": "layer",
+              "asset": "maps/dust2/mobile/textures/t064.png",
+              "sha256": "ea62edab5df5681b2ac537a6a4dafd154dca4d50bd7da686b77930c569f5a7fc",
+              "source": "materials/de_dust/hr_dust/hr_dust_plaster_16_color_psd_c2c1a93e.vtex_c",
+              "sourcePNG": {
+                "path": "materials/de_dust/hr_dust/hr_dust_plaster_16_color_psd_c2c1a93e.png",
+                "bytes": 7541665,
+                "sha256": "71d89a971fda1115843fb71c2748f42dc695679e92c2c5c0251fd174251f8f9e",
+                "width": 2048,
+                "height": 2048,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                512,
+                512
+              ],
+              "sourceToMobileScale": [
+                4.0,
+                4.0
+              ]
+            },
+            {
+              "slot": "blend",
+              "asset": "maps/dust2/mobile/textures/t045.png",
+              "sha256": "1a0fedd3714a3488bff965739a18ce35b1bc18ddc1c37e142ee5a766c70aa9b7",
+              "source": "materials/de_dust/hr_dust/hr_dust_plaster_06_blendmod_blend_psd_2caff036.vtex_c",
+              "sourcePNG": {
+                "path": "materials/de_dust/hr_dust/hr_dust_plaster_06_blendmod_blend_psd_2caff036.png",
+                "bytes": 1529378,
+                "sha256": "38ec8a15aecb893f0240147cdeb475e7d5ee6f660627480967ec7227d4573372",
+                "width": 1024,
+                "height": 1024,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                512,
+                512
+              ],
+              "sourceToMobileScale": [
+                2.0,
+                2.0
+              ]
+            }
+          ]
+        },
+        {
+          "materialId": 84,
+          "source": "materials/de_dust/hr_dust/hr_dust_plaster_06b.vmat_c",
+          "uvScale": [
+            1,
+            1
+          ],
+          "uvOffset": [
+            0,
+            0
+          ],
+          "uvRotation": 0,
+          "textures": [
+            {
+              "slot": "base",
+              "asset": "maps/dust2/mobile/textures/t047.png",
+              "sha256": "59643dfd926f55097087a424d750866b154bfb2e371a2185d2d6220e5b0c4876",
+              "source": "materials/de_dust/hr_dust/hr_dust_plaster_06b_color_psd_d0ddc2ff.vtex_c",
+              "sourcePNG": {
+                "path": "materials/de_dust/hr_dust/hr_dust_plaster_06b_color_psd_d0ddc2ff.png",
+                "bytes": 5685723,
+                "sha256": "852f0fb653fce854a95f48ae6924943a9621bb575e25ee46c5527b63360c4314",
+                "width": 2048,
+                "height": 2048,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                256,
+                256
+              ],
+              "sourceToMobileScale": [
+                8.0,
+                8.0
+              ]
+            },
+            {
+              "slot": "layer",
+              "asset": "maps/dust2/mobile/textures/t064.png",
+              "sha256": "ea62edab5df5681b2ac537a6a4dafd154dca4d50bd7da686b77930c569f5a7fc",
+              "source": "materials/de_dust/hr_dust/hr_dust_plaster_16_color_psd_c2c1a93e.vtex_c",
+              "sourcePNG": {
+                "path": "materials/de_dust/hr_dust/hr_dust_plaster_16_color_psd_c2c1a93e.png",
+                "bytes": 7541665,
+                "sha256": "71d89a971fda1115843fb71c2748f42dc695679e92c2c5c0251fd174251f8f9e",
+                "width": 2048,
+                "height": 2048,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                512,
+                512
+              ],
+              "sourceToMobileScale": [
+                4.0,
+                4.0
+              ]
+            },
+            {
+              "slot": "blend",
+              "asset": "maps/dust2/mobile/textures/t045.png",
+              "sha256": "1a0fedd3714a3488bff965739a18ce35b1bc18ddc1c37e142ee5a766c70aa9b7",
+              "source": "materials/de_dust/hr_dust/hr_dust_plaster_06_blendmod_blend_psd_2caff036.vtex_c",
+              "sourcePNG": {
+                "path": "materials/de_dust/hr_dust/hr_dust_plaster_06_blendmod_blend_psd_2caff036.png",
+                "bytes": 1529378,
+                "sha256": "38ec8a15aecb893f0240147cdeb475e7d5ee6f660627480967ec7227d4573372",
+                "width": 1024,
+                "height": 1024,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                512,
+                512
+              ],
+              "sourceToMobileScale": [
+                2.0,
+                2.0
+              ]
+            }
+          ]
+        },
+        {
+          "materialId": 109,
+          "source": "materials/de_dust/hr_dust/hr_dust_tile_03.vmat_c",
+          "uvScale": [
+            1,
+            1
+          ],
+          "uvOffset": [
+            0,
+            0
+          ],
+          "uvRotation": 0,
+          "textures": [
+            {
+              "slot": "base",
+              "asset": "maps/dust2/mobile/textures/t105.png",
+              "sha256": "07279d681c7bfdadf06c9b91b0af0e9c00b380219016623ae078d00b63ef9df1",
+              "source": "materials/de_dust/hr_dust/hr_dust_tile_03_color_psd_e0078021.vtex_c",
+              "sourcePNG": {
+                "path": "materials/de_dust/hr_dust/hr_dust_tile_03_color_psd_e0078021.png",
+                "bytes": 7831802,
+                "sha256": "3bac39d19403dfe1559463e786fd74844f0174d8bc357375c39e6f614619c96f",
+                "width": 2048,
+                "height": 2048,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                256,
+                256
+              ],
+              "sourceToMobileScale": [
+                8.0,
+                8.0
+              ]
+            },
+            {
+              "slot": "layer",
+              "asset": "maps/dust2/mobile/textures/t088.png",
+              "sha256": "a0298b363956acd356044891c936e5cfaaaf39b4f2acc6abf168a396fe5bf8a4",
+              "source": "materials/de_dust/hr_dust/hr_dust_sand_02_color_psd_755e7eb9.vtex_c",
+              "sourcePNG": {
+                "path": "materials/de_dust/hr_dust/hr_dust_sand_02_color_psd_755e7eb9.png",
+                "bytes": 8406145,
+                "sha256": "3d5163deda1b11ff6b4a773e115d4d3cfb0a79dc25c1d24d03f5271775a9a46d",
+                "width": 2048,
+                "height": 2048,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                512,
+                512
+              ],
+              "sourceToMobileScale": [
+                4.0,
+                4.0
+              ]
+            },
+            {
+              "slot": "blend",
+              "asset": "maps/dust2/mobile/textures/t104.png",
+              "sha256": "4c580762aa2c97301945514ccfecd19ba7fbcdccff512c13d81ce8f4992a9302",
+              "source": "materials/de_dust/hr_dust/hr_dust_tile_03_blendmod_blend_psd_29efa0a8.vtex_c",
+              "sourcePNG": {
+                "path": "materials/de_dust/hr_dust/hr_dust_tile_03_blendmod_blend_psd_29efa0a8.png",
+                "bytes": 2265156,
+                "sha256": "2a16b4740d6ebfa09409559dc6e0abd119771713ef27901c657fb38b995a866d",
+                "width": 1024,
+                "height": 1024,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                256,
+                256
+              ],
+              "sourceToMobileScale": [
+                4.0,
+                4.0
+              ]
+            }
+          ]
+        },
+        {
+          "materialId": 137,
+          "source": "materials/models/props/de_dust/hr_dust/dust_curbs_001/dust_curbs_001_painted.vmat_c",
+          "uvScale": [
+            1.0,
+            1.0
+          ],
+          "uvOffset": [
+            0.0,
+            0.0
+          ],
+          "uvRotation": 0.0,
+          "textures": [
+            {
+              "slot": "base",
+              "asset": "maps/dust2/mobile/textures/t146.png",
+              "sha256": "6fb7848a91cd85fafde7bb4729c10da76fd0e7d8ce66a80a68d318a1d51fc500",
+              "source": "materials/models/props/de_dust/hr_dust/dust_curbs_001/dust_curbs_001_painted_color_psd_eadf6b61.vtex_c",
+              "sourcePNG": {
+                "path": "materials/models/props/de_dust/hr_dust/dust_curbs_001/dust_curbs_001_painted_color_psd_eadf6b61.png",
+                "bytes": 1664940,
+                "sha256": "6d6a4c6135e1272477cd288895bf9720cc5d19d6df0fbbb4233370d3f63ff60c",
+                "width": 2048,
+                "height": 512,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                512,
+                128
+              ],
+              "sourceToMobileScale": [
+                4.0,
+                4.0
+              ]
+            }
+          ]
+        },
+        {
+          "materialId": 138,
+          "source": "materials/models/props/de_dust/hr_dust/dust_curbs_001/dust_curbs_001_painted_notint.vmat_c",
+          "uvScale": [
+            1,
+            1
+          ],
+          "uvOffset": [
+            0,
+            0
+          ],
+          "uvRotation": 0,
+          "textures": [
+            {
+              "slot": "base",
+              "asset": "maps/dust2/mobile/textures/t146.png",
+              "sha256": "6fb7848a91cd85fafde7bb4729c10da76fd0e7d8ce66a80a68d318a1d51fc500",
+              "source": "materials/models/props/de_dust/hr_dust/dust_curbs_001/dust_curbs_001_painted_color_psd_eadf6b61.vtex_c",
+              "sourcePNG": {
+                "path": "materials/models/props/de_dust/hr_dust/dust_curbs_001/dust_curbs_001_painted_color_psd_eadf6b61.png",
+                "bytes": 1664940,
+                "sha256": "6d6a4c6135e1272477cd288895bf9720cc5d19d6df0fbbb4233370d3f63ff60c",
+                "width": 2048,
+                "height": 512,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                512,
+                128
+              ],
+              "sourceToMobileScale": [
+                4.0,
+                4.0
+              ]
+            }
+          ]
+        },
+        {
+          "materialId": 143,
+          "source": "materials/models/props/de_dust/hr_dust/dust_doorframes/dust_doorframes_03.vmat_c",
+          "uvScale": [
+            1.0,
+            1.0
+          ],
+          "uvOffset": [
+            0.0,
+            0.0
+          ],
+          "uvRotation": 0.0,
+          "textures": [
+            {
+              "slot": "base",
+              "asset": "maps/dust2/mobile/textures/t151.png",
+              "sha256": "b32f62230da37d1400c1f928431b65e6f14ace2f9d51f1d0e811f04b2b1e0fd8",
+              "source": "materials/models/props/de_dust/hr_dust/dust_doorframes/dust_doorframes_03_color_psd_9a98f63.vtex_c",
+              "sourcePNG": {
+                "path": "materials/models/props/de_dust/hr_dust/dust_doorframes/dust_doorframes_03_color_psd_9a98f63.png",
+                "bytes": 1727041,
+                "sha256": "1c4fa3f4ecd062ab4aee9a5b784cbd629394d94f83de4f00028dc72e4f152186",
+                "width": 1024,
+                "height": 1024,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                256,
+                256
+              ],
+              "sourceToMobileScale": [
+                4.0,
+                4.0
+              ]
+            }
+          ]
+        },
+        {
+          "materialId": 150,
+          "source": "materials/models/props/de_dust/hr_dust/dust_doors/dust_door_46x106_06b.vmat_c",
+          "uvScale": [
+            1.0,
+            1.0
+          ],
+          "uvOffset": [
+            0.0,
+            0.0
+          ],
+          "uvRotation": 0.0,
+          "textures": [
+            {
+              "slot": "base",
+              "asset": "maps/dust2/mobile/textures/t158.png",
+              "sha256": "e1e39936a76adb758330a5b0ccf4bbab46ed466a14dc2ffe2a15cf5abf3e21c5",
+              "source": "materials/models/props/de_dust/hr_dust/dust_doors/dust_door_46x106_06_colorb_color_psd_df303f3f.vtex_c",
+              "sourcePNG": {
+                "path": "materials/models/props/de_dust/hr_dust/dust_doors/dust_door_46x106_06_colorb_color_psd_df303f3f.png",
+                "bytes": 3344846,
+                "sha256": "162c0d739554ec35bd82f67d0d07c27e48af949d45dae8a839a5dce41d7574e1",
+                "width": 1024,
+                "height": 2048,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                128,
+                256
+              ],
+              "sourceToMobileScale": [
+                8.0,
+                8.0
+              ]
+            }
+          ]
+        },
+        {
+          "materialId": 154,
+          "source": "materials/models/props/de_dust/hr_dust/dust_doors/dust_door_80x128_03.vmat_c",
+          "uvScale": [
+            1.0,
+            1.0
+          ],
+          "uvOffset": [
+            0.0,
+            0.0
+          ],
+          "uvRotation": 0.0,
+          "textures": [
+            {
+              "slot": "base",
+              "asset": "maps/dust2/mobile/textures/t163.png",
+              "sha256": "2081a8e78f60414ca5f25c09eded4cb8504cfc4ea113645554c437737c8929c2",
+              "source": "materials/models/props/de_dust/hr_dust/dust_doors/dust_door_80x128_03_color_psd_628c05bb.vtex_c",
+              "sourcePNG": {
+                "path": "materials/models/props/de_dust/hr_dust/dust_doors/dust_door_80x128_03_color_psd_628c05bb.png",
+                "bytes": 1384852,
+                "sha256": "d07d183ee125155a939734b1c93a8523c197362b5a1fab450bfacefde01f9420",
+                "width": 1024,
+                "height": 1024,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                256,
+                256
+              ],
+              "sourceToMobileScale": [
+                4.0,
+                4.0
+              ]
+            }
+          ]
+        },
+        {
+          "materialId": 159,
+          "source": "materials/models/props/de_dust/hr_dust/dust_electric_panel/dust_electric_panel_color.vmat_c",
+          "uvScale": [
+            1.0,
+            1.0
+          ],
+          "uvOffset": [
+            0.0,
+            0.0
+          ],
+          "uvRotation": 0.0,
+          "textures": [
+            {
+              "slot": "base",
+              "asset": "maps/dust2/mobile/textures/t169.png",
+              "sha256": "3e6a068acd08901f9298e49c970ef9c932ecfef1a087836b6800f9812093c879",
+              "source": "materials/models/props/de_dust/hr_dust/dust_electric_panel/dust_electric_panel_color_psd_9bd01950.vtex_c",
+              "sourcePNG": {
+                "path": "materials/models/props/de_dust/hr_dust/dust_electric_panel/dust_electric_panel_color_psd_9bd01950.png",
+                "bytes": 111651,
+                "sha256": "80434fab4d3ecca9b3a9605833abc0c45e2b5a8fc1f26539f59885525a491640",
+                "width": 256,
+                "height": 512,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                128,
+                256
+              ],
+              "sourceToMobileScale": [
+                2.0,
+                2.0
+              ]
+            }
+          ]
+        },
+        {
+          "materialId": 236,
+          "source": "materials/models/props/de_dust/hr_dust/foliage/dust_weeds_01.vmat_c",
+          "uvScale": [
+            1,
+            1
+          ],
+          "uvOffset": [
+            0,
+            0
+          ],
+          "uvRotation": 0,
+          "textures": [
+            {
+              "slot": "base",
+              "asset": "maps/dust2/mobile/textures/t275.png",
+              "sha256": "82c753a203e19d4d4dfe5c6b2541c75dea618f154d1ec16d89a221ced5d4f801",
+              "source": "materials/models/props/de_dust/hr_dust/foliage/dust_weeds_01_color_psd_75512acc.vtex_c",
+              "sourcePNG": {
+                "path": "materials/models/props/de_dust/hr_dust/foliage/dust_weeds_01_color_psd_75512acc.png",
+                "bytes": 1316652,
+                "sha256": "e06699a3476f0e29f43cb1dc4b5ba54908c4fbf70cf852b5d9cd752729f052d4",
+                "width": 1024,
+                "height": 1024,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                256,
+                256
+              ],
+              "sourceToMobileScale": [
+                4.0,
+                4.0
+              ]
+            }
+          ]
+        },
+        {
+          "materialId": 239,
+          "source": "materials/models/props/de_dust/hr_dust/foliage/olive_branch_01.vmat_c",
+          "uvScale": [
+            1,
+            1
+          ],
+          "uvOffset": [
+            0,
+            0
+          ],
+          "uvRotation": 0,
+          "textures": [
+            {
+              "slot": "base",
+              "asset": "maps/dust2/mobile/textures/t278.png",
+              "sha256": "2d06c03de97057c224ca71d5366000766d9e218b88abf0c21e10e5fac6f277b7",
+              "source": "materials/models/props/de_dust/hr_dust/foliage/olive_branch_01_color_psd_203a55d5.vtex_c",
+              "sourcePNG": {
+                "path": "materials/models/props/de_dust/hr_dust/foliage/olive_branch_01_color_psd_203a55d5.png",
+                "bytes": 1639040,
+                "sha256": "58417c75cb604836772a6e7c8d2b3706091b3bbfab3dc90f3720c5d6d963522c",
+                "width": 1024,
+                "height": 1024,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                256,
+                256
+              ],
+              "sourceToMobileScale": [
+                4.0,
+                4.0
+              ]
+            }
+          ]
+        },
+        {
+          "materialId": 240,
+          "source": "materials/models/props/de_dust/hr_dust/foliage/sagebrush_01.vmat_c",
+          "uvScale": [
+            1,
+            1
+          ],
+          "uvOffset": [
+            0,
+            0
+          ],
+          "uvRotation": 0,
+          "textures": [
+            {
+              "slot": "base",
+              "asset": "maps/dust2/mobile/textures/t281.png",
+              "sha256": "48cff9f07867c3194198999631b8828d72dac57148b8431350130ea2ea33aeeb",
+              "source": "materials/models/props/de_dust/hr_dust/foliage/sagebrush_01_color_psd_d5b0e1d7.vtex_c",
+              "sourcePNG": {
+                "path": "materials/models/props/de_dust/hr_dust/foliage/sagebrush_01_color_psd_d5b0e1d7.png",
+                "bytes": 381587,
+                "sha256": "19581c9f1061da7633881f8011c642c72430dfd4b4fecdc78abf8eb3c2452af8",
+                "width": 512,
+                "height": 512,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                256,
+                256
+              ],
+              "sourceToMobileScale": [
+                2.0,
+                2.0
+              ]
+            }
+          ]
+        },
+        {
+          "materialId": 260,
+          "source": "materials/models/props/de_dust/hr_dust/dust_lights/street_lamp_03/street_lamp_03_color.vmat_c",
+          "uvScale": [
+            1.0,
+            1.0
+          ],
+          "uvOffset": [
+            0.0,
+            0.0
+          ],
+          "uvRotation": 0.0,
+          "textures": [
+            {
+              "slot": "base",
+              "asset": "maps/dust2/mobile/textures/t208.png",
+              "sha256": "d2b92cb450fd737c8f1dc42c16c0fe16101562ba95970ea584beb1352b31260b",
+              "source": "materials/models/props/de_dust/hr_dust/dust_lights/street_lamp_03/street_lamp_03_color_psd_579002cb.vtex_c",
+              "sourcePNG": {
+                "path": "materials/models/props/de_dust/hr_dust/dust_lights/street_lamp_03/street_lamp_03_color_psd_579002cb.png",
+                "bytes": 204077,
+                "sha256": "90925188acc5257b22bf88458926e94728f14522ee1bc58ab6a88362aa65b7d6",
+                "width": 256,
+                "height": 1024,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                128,
+                512
+              ],
+              "sourceToMobileScale": [
+                2.0,
+                2.0
+              ]
+            }
+          ]
+        },
+        {
+          "materialId": 263,
+          "source": "materials/models/props/de_dust/hr_dust/dust_lights/street_lantern_03/street_lantern_03_color.vmat_c",
+          "uvScale": [
+            1.0,
+            1.0
+          ],
+          "uvOffset": [
+            0.0,
+            0.0
+          ],
+          "uvRotation": 0.0,
+          "textures": [
+            {
+              "slot": "base",
+              "asset": "maps/dust2/mobile/textures/t211.png",
+              "sha256": "51bbe3e2895a46374e16d71901c86217eb7e6ba2c778e6091675c371e3411e97",
+              "source": "materials/models/props/de_dust/hr_dust/dust_lights/street_lantern_03/street_lantern_03_color_psd_cf9c90d0.vtex_c",
+              "sourcePNG": {
+                "path": "materials/models/props/de_dust/hr_dust/dust_lights/street_lantern_03/street_lantern_03_color_psd_cf9c90d0.png",
+                "bytes": 190665,
+                "sha256": "2a5fa0ad9325264d28218b34611b164ca1419448c21aac939d91f2440b1d2e60",
+                "width": 512,
+                "height": 256,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                256,
+                128
+              ],
+              "sourceToMobileScale": [
+                2.0,
+                2.0
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "D2-014",
+      "status": "PENDING_SOURCE_POSITION",
+      "center": null,
+      "candidateParts": [],
+      "materials": []
+    },
+    {
+      "id": "D2-009",
+      "status": "CANDIDATES_ONLY_NOT_VISUALLY_VERIFIED",
+      "center": [
+        -46.6843876572,
+        2.6267724198,
+        -25.1708713498
+      ],
+      "centerSemantics": "UNCONFIRMED_PLAYER_OR_EYE_POSITION_NOT_FEET",
+      "searchRadiusDisplayUnits": 3.0,
+      "candidateParts": [
+        {
+          "asset": "maps/dust2/mobile/chunks/p00066.d2m.gz",
+          "sha256": "2385c4cae4e350441b9ae5dd38a8da8989e2f6889cd1707119e227d1a61b774b",
+          "material": 18
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p00470.d2m.gz",
+          "sha256": "6201aa62ec7b87a2da67fc54021d79e1ca1f9847122b51f217f17388fad5805b",
+          "material": 20
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p00477.d2m.gz",
+          "sha256": "cec56e722e327c84bc14688de89dc55956123554040a034d6546a1b1077fa2f4",
+          "material": 20
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p00498.d2m.gz",
+          "sha256": "5d36eafa7d511b2b301f368c6c5e78e2f463c699a6653af65ffe462092354647",
+          "material": 20
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p00511.d2m.gz",
+          "sha256": "3bcbf7fd05b667bef23e31024625ad5d18f099da28fe065592fd97788b437cf2",
+          "material": 20
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p01046.d2m.gz",
+          "sha256": "3f5107bf4d281a1205bc817421fc7f88bc61139417b3d924e624988e0d520292",
+          "material": 85
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p01207.d2m.gz",
+          "sha256": "c04b6c39bb92a870660ed123a3dcd757a2beb5badbe356bb2b3fe0014bd5a99d",
+          "material": 27
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p01209.d2m.gz",
+          "sha256": "e495635cd7a99ff48234d344c6b2f8136c0234a2d139de916dbdbe141d2a409a",
+          "material": 27
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p01210.d2m.gz",
+          "sha256": "1968cfba9f9ce79d7af45bb7cb3cf1e306e96ab92b2937ebc6ac0325eb6b430c",
+          "material": 27
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p01213.d2m.gz",
+          "sha256": "21deabd8f48cc13264ac6b9378b303640a3b0759b9748c7394ce48674252c4d0",
+          "material": 96
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p01215.d2m.gz",
+          "sha256": "491646876ebfd9fff631e834ce1d002ff38bce4857436058c481b38ea2b94ac6",
+          "material": 96
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p01216.d2m.gz",
+          "sha256": "a4c27ba388d11302ee0e5f6425b5e20b20c113607a59e4688de8f1bc7490095b",
+          "material": 96
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p01220.d2m.gz",
+          "sha256": "9adadd4e3f1548d516d841987c4833ce09ff3b13bcc835bfea71253c4fa07025",
+          "material": 34
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p01230.d2m.gz",
+          "sha256": "35d728dae4de36d0ae0f9da7db36d359c2a794f3362db1cc179940e87dd636c0",
+          "material": 34
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p01241.d2m.gz",
+          "sha256": "c960fb692e8fc828462d5946fc4c5cb34197129f71374ce1b2cd3b41427c2630",
+          "material": 34
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p01249.d2m.gz",
+          "sha256": "f69eb2a4071647727692f01d69d7692f86f78725deea7ef2155c6b7c251581ed",
+          "material": 97
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p01252.d2m.gz",
+          "sha256": "75e8b7c22d1b7740236d6f22395109cecadb53cc40b5654c3d5932713e824143",
+          "material": 97
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p01253.d2m.gz",
+          "sha256": "2aef677275023f16705e76bae85b5090aa121f0abe2229208ee75a599147c5fb",
+          "material": 97
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p01282.d2m.gz",
+          "sha256": "31393907e4469ca76797c9433a5a3408ed415d61713684082877fadb76b9ed48",
+          "material": 28
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p01283.d2m.gz",
+          "sha256": "34a2a5df06ffef9344d8f2681d407f7d7b4dd34376ffbb2bf82743e2fca6c58d",
+          "material": 28
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p01290.d2m.gz",
+          "sha256": "f5741926b6f7c74279e57b77c44671f0b10da8753514a25bfb6022255410504a",
+          "material": 28
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p01291.d2m.gz",
+          "sha256": "a6950e4318aea1d9f9790516000b9f2251e8c440cbc72f28051305181f0e99bb",
+          "material": 28
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p01300.d2m.gz",
+          "sha256": "b52373e799cc76c8536e03f44fa9fb04ac4802e0db920177622f134938309e55",
+          "material": 98
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p01304.d2m.gz",
+          "sha256": "223a20505854aaaa3683e98e753b50893f6e0d43d3fe14f61a5fcbe43407d338",
+          "material": 98
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p01377.d2m.gz",
+          "sha256": "7c552419945936f88fb997cff2f56599663a69b0686cb89cea3d16f5caedcf05",
+          "material": 106
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p01378.d2m.gz",
+          "sha256": "e81e7fbaf5f6a8db8d37c3315e8437c8b2b84d71db933ef89447a94b44200533",
+          "material": 106
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p01379.d2m.gz",
+          "sha256": "2c171655387c9d8d892a4d0ddfeb124450b9806f868b8f4a401380e64ad16dc5",
+          "material": 106
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p01994.d2m.gz",
+          "sha256": "90056dfc834533bb609d7debd907d0916efc58d17d2ed5f43ab58d0beb6b4198",
+          "material": 29
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p01997.d2m.gz",
+          "sha256": "993d9baf19e159093afb569ac2b0ebcf50540d5b9cc857ae447c72190e0bc1b2",
+          "material": 29
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p02000.d2m.gz",
+          "sha256": "04f783f7150e13335901a9237add4cae642840b87161f8f481f1d1d67de79a71",
+          "material": 29
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p02011.d2m.gz",
+          "sha256": "4929e418359b8561d4c68da174bfe1fe0c4acd132dc26258f591c651534d7141",
+          "material": 174
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p02138.d2m.gz",
+          "sha256": "730186fb08e22a2b1e6679e5d741a76bd35cd789b5763ebead354479e7ca8f48",
+          "material": 185
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p02220.d2m.gz",
+          "sha256": "a075afa16b665d8f2c9a05d01fe3110a800c2ef63b011a3906fab668f76477f8",
+          "material": 204
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p02234.d2m.gz",
+          "sha256": "554cb31ee044f4cd7891df0c7b79bb416f5bbe8af1b2fd2ff637077837a8e058",
+          "material": 204
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p02245.d2m.gz",
+          "sha256": "8f40ee61de4716bc4dd6cd125731582a9cc1045467efe9fc803c0fa08379e366",
+          "material": 205
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p02246.d2m.gz",
+          "sha256": "fc1c93905c2d2ac1bf80f56a6cb5e9b2d37b4d40a94d59965d1432a0cb0155f6",
+          "material": 205
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p02247.d2m.gz",
+          "sha256": "0ce8e8b970349ad006a7c6e93a9a6dbb6b06698e4ed7e786aac19d344e563fbf",
+          "material": 205
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p02257.d2m.gz",
+          "sha256": "2ca2c9da448523a61918de23999de0612953e996210e0dc5e42d76d13f466425",
+          "material": 206
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p02260.d2m.gz",
+          "sha256": "f61f48d6fc4246b1bcc59294d1a1a3abf338584e74e430fac47f02d7c2a19a8c",
+          "material": 206
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p02282.d2m.gz",
+          "sha256": "b3ba45625f46ab8dd7ad00cd744b85fd1c54c82314745ebd4ad9ae0f7c01b468",
+          "material": 209
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p02519.d2m.gz",
+          "sha256": "5b0ce31d32bf6c3f1c4e91da698851eca49b64029a652fc9eab8ac033fa96dc7",
+          "material": 230
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p02529.d2m.gz",
+          "sha256": "fde1dcb6e7084aef6e608d74ef1d75b8fe6858750b429816d16cc61573d54dac",
+          "material": 230
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p02710.d2m.gz",
+          "sha256": "69b231bc3f24fdcc920d9188f90f94b60428b547da4e7d16486d5acfaf0f064c",
+          "material": 236
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p02714.d2m.gz",
+          "sha256": "dc32243b5194b9221fccb7bca8242eb3be19645c521e07e1390c5f52439ba748",
+          "material": 237
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p02715.d2m.gz",
+          "sha256": "119f3d64688d5b04aedc5bcf4d8c845e6f87489ccdf9c86ba7c0d61a6a137bc3",
+          "material": 237
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p02763.d2m.gz",
+          "sha256": "3384814ed092a5b70c273a2c8b7f9cd0a78521020cb717007df3ea3fa44831d1",
+          "material": 240
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p02788.d2m.gz",
+          "sha256": "19f20f8c376426d99baff4c388879ad6562ec212c5992435c4a96e9884bb6ca2",
+          "material": 242
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p02867.d2m.gz",
+          "sha256": "cbf8035665d3f8ff9ac8b0d4a449ab30d3325984e458dfe95388d2749d36261a",
+          "material": 123
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p03066.d2m.gz",
+          "sha256": "5b2aba7d135a8b42a1db5ef9680abc0f3953a8530d2cfefebd39f058c114edcd",
+          "material": 29
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p03077.d2m.gz",
+          "sha256": "a7c54e47bed231e2cb39cd0a0c5240767dd66354172d43f7d63163963fae620e",
+          "material": 29
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p03082.d2m.gz",
+          "sha256": "4b8b50d661e075dd9305bb8f9cf79e791330faa251d40dbac058efd38d9f6206",
+          "material": 29
+        },
+        {
+          "asset": "maps/dust2/mobile/chunks/p03561.d2m.gz",
+          "sha256": "7c4785ee89aa9b862134e63da6ab45fbec0cc2c8627e05d38f84df7a4004c9f3",
+          "material": 237
+        }
+      ],
+      "materials": [
+        {
+          "materialId": 18,
+          "source": "materials/effects/smoke/lightshaft_001.vmat_c",
+          "uvScale": [
+            1,
+            1
+          ],
+          "uvOffset": [
+            0,
+            0
+          ],
+          "uvRotation": 0,
+          "textures": [
+            {
+              "slot": "base",
+              "asset": "maps/dust2/mobile/textures/t114.png",
+              "sha256": "e3332d6d8e930a974e32056d226ad7cf3b56c8f0e1b79eef824ff25e62ba14dd",
+              "source": "materials/effects/smoke/smoke_shaft_002_mask_psd_8bf92c64.vtex_c",
+              "sourcePNG": {
+                "path": "materials/effects/smoke/smoke_shaft_002_mask_psd_8bf92c64.png",
+                "bytes": 17768,
+                "sha256": "93d4271c3b1e4dabf5eb5e02b2dcec596f166eff82c7d7e5b317468b74f5a945",
+                "width": 256,
+                "height": 512,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                128,
+                256
+              ],
+              "sourceToMobileScale": [
+                2.0,
+                2.0
+              ]
+            }
+          ]
+        },
+        {
+          "materialId": 20,
+          "source": "materials/de_dust/hr_dust/hr_dust_blend_asphalt_06.vmat_c",
+          "uvScale": [
+            1,
+            1
+          ],
+          "uvOffset": [
+            0,
+            0
+          ],
+          "uvRotation": 0,
+          "textures": [
+            {
+              "slot": "base",
+              "asset": "maps/dust2/mobile/textures/t003.png",
+              "sha256": "2dd6fd98eba2ffd1246cf62f0507766fcf27718ba05df0eefac616623882361e",
+              "source": "materials/de_dust/hr_dust/hr_dust_asphalt_06_color_psd_153a7cd9.vtex_c",
+              "sourcePNG": {
+                "path": "materials/de_dust/hr_dust/hr_dust_asphalt_06_color_psd_153a7cd9.png",
+                "bytes": 5320923,
+                "sha256": "b424c43c828888b2e7d026f59b68143bd40b0e5d106ed2d297bf5f6f67404d1c",
+                "width": 2048,
+                "height": 2048,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                256,
+                256
+              ],
+              "sourceToMobileScale": [
+                8.0,
+                8.0
+              ]
+            },
+            {
+              "slot": "layer",
+              "asset": "maps/dust2/mobile/textures/t088.png",
+              "sha256": "a0298b363956acd356044891c936e5cfaaaf39b4f2acc6abf168a396fe5bf8a4",
+              "source": "materials/de_dust/hr_dust/hr_dust_sand_02_color_psd_755e7eb9.vtex_c",
+              "sourcePNG": {
+                "path": "materials/de_dust/hr_dust/hr_dust_sand_02_color_psd_755e7eb9.png",
+                "bytes": 8406145,
+                "sha256": "3d5163deda1b11ff6b4a773e115d4d3cfb0a79dc25c1d24d03f5271775a9a46d",
+                "width": 2048,
+                "height": 2048,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                512,
+                512
+              ],
+              "sourceToMobileScale": [
+                4.0,
+                4.0
+              ]
+            },
+            {
+              "slot": "blend",
+              "asset": "maps/dust2/mobile/textures/t002.png",
+              "sha256": "e3d085c1da36ff29bd31221a3863dc5b4fd2e8c8a936419675638bc829baeef5",
+              "source": "materials/de_dust/hr_dust/hr_dust_asphalt_06_blendmod_blend_psd_51fcbb8.vtex_c",
+              "sourcePNG": {
+                "path": "materials/de_dust/hr_dust/hr_dust_asphalt_06_blendmod_blend_psd_51fcbb8.png",
+                "bytes": 1750853,
+                "sha256": "187855fb337b1edb693f99cdc3269f6a2528a29421bbba28af1a443a99ef00a8",
+                "width": 1024,
+                "height": 1024,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                256,
+                256
+              ],
+              "sourceToMobileScale": [
+                4.0,
+                4.0
+              ]
+            }
+          ]
+        },
+        {
+          "materialId": 27,
+          "source": "materials/de_dust/hr_dust/hr_dust_plaster_18.vmat_c",
+          "uvScale": [
+            1,
+            1
+          ],
+          "uvOffset": [
+            0,
+            0
+          ],
+          "uvRotation": 0,
+          "textures": [
+            {
+              "slot": "base",
+              "asset": "maps/dust2/mobile/textures/t070.png",
+              "sha256": "cb649d20238875a5765abaef90c2f7588815f1de7da6f3c5a7d40ec59133ec45",
+              "source": "materials/de_dust/hr_dust/hr_dust_plaster_18_color_psd_4100325a.vtex_c",
+              "sourcePNG": {
+                "path": "materials/de_dust/hr_dust/hr_dust_plaster_18_color_psd_4100325a.png",
+                "bytes": 5258213,
+                "sha256": "c7a65325fcb5e9c69b57699e0f962162659d5659ee01c6594fb4a222e06321f2",
+                "width": 2048,
+                "height": 2048,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                256,
+                256
+              ],
+              "sourceToMobileScale": [
+                8.0,
+                8.0
+              ]
+            },
+            {
+              "slot": "layer",
+              "asset": "maps/dust2/mobile/textures/t092.png",
+              "sha256": "dfa17a27a9e0a2d4fda898d416d825f96a48fe5a11e2b7e2be4b0edd2b44b08f",
+              "source": "materials/de_dust/hr_dust/hr_dust_stone_01_color_psd_f6c390bd.vtex_c",
+              "sourcePNG": {
+                "path": "materials/de_dust/hr_dust/hr_dust_stone_01_color_psd_f6c390bd.png",
+                "bytes": 7083054,
+                "sha256": "3cff27d65fa827ed73021a3f0ea2367fa0a236138083729b11cbf828cc875bc3",
+                "width": 2048,
+                "height": 2048,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                256,
+                256
+              ],
+              "sourceToMobileScale": [
+                8.0,
+                8.0
+              ]
+            },
+            {
+              "slot": "blend",
+              "asset": "maps/dust2/mobile/textures/t069.png",
+              "sha256": "e08f5d57eb89b2c011efcbd523d3195adc0a2b22a0a4863fa9b046e3fa413f94",
+              "source": "materials/de_dust/hr_dust/hr_dust_plaster_18_blendmod_blend_tga_6d3920de.vtex_c",
+              "sourcePNG": {
+                "path": "materials/de_dust/hr_dust/hr_dust_plaster_18_blendmod_blend_tga_6d3920de.png",
+                "bytes": 209986,
+                "sha256": "599a18cb3b965b9acd6f6d5d003eaa94f1446990155927e9bb946dc9e1ccc41e",
+                "width": 512,
+                "height": 512,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                512,
+                512
+              ],
+              "sourceToMobileScale": [
+                1.0,
+                1.0
+              ]
+            }
+          ]
+        },
+        {
+          "materialId": 28,
+          "source": "materials/de_dust/hr_dust/hr_dust_plaster_18c.vmat_c",
+          "uvScale": [
+            1,
+            1
+          ],
+          "uvOffset": [
+            0,
+            0
+          ],
+          "uvRotation": 0,
+          "textures": [
+            {
+              "slot": "base",
+              "asset": "maps/dust2/mobile/textures/t072.png",
+              "sha256": "b867c440ba58f98960af51f00052d1e9b4981229b2fb6bd53e1501e6f63bb922",
+              "source": "materials/de_dust/hr_dust/hr_dust_plaster_18c_color_psd_c838b784.vtex_c",
+              "sourcePNG": {
+                "path": "materials/de_dust/hr_dust/hr_dust_plaster_18c_color_psd_c838b784.png",
+                "bytes": 5472000,
+                "sha256": "4bbe153014e5e04644c5d372710326c9337417dd8a9a0bd1dc5dbd10c5deab06",
+                "width": 2048,
+                "height": 2048,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                256,
+                256
+              ],
+              "sourceToMobileScale": [
+                8.0,
+                8.0
+              ]
+            },
+            {
+              "slot": "layer",
+              "asset": "maps/dust2/mobile/textures/t094.png",
+              "sha256": "c0dd06767f569565b7f9dc728bac076b66cae8267e8cd0d9390c2ee8603e229b",
+              "source": "materials/de_dust/hr_dust/hr_dust_stone_01c_color_psd_323d29ff.vtex_c",
+              "sourcePNG": {
+                "path": "materials/de_dust/hr_dust/hr_dust_stone_01c_color_psd_323d29ff.png",
+                "bytes": 7065911,
+                "sha256": "7fad01ab2d94c0ebf31dd7624aa9c66eb45c39c6e09b9030f4e1e0f1f55c0480",
+                "width": 2048,
+                "height": 2048,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                256,
+                256
+              ],
+              "sourceToMobileScale": [
+                8.0,
+                8.0
+              ]
+            },
+            {
+              "slot": "blend",
+              "asset": "maps/dust2/mobile/textures/t069.png",
+              "sha256": "e08f5d57eb89b2c011efcbd523d3195adc0a2b22a0a4863fa9b046e3fa413f94",
+              "source": "materials/de_dust/hr_dust/hr_dust_plaster_18_blendmod_blend_tga_6d3920de.vtex_c",
+              "sourcePNG": {
+                "path": "materials/de_dust/hr_dust/hr_dust_plaster_18_blendmod_blend_tga_6d3920de.png",
+                "bytes": 209986,
+                "sha256": "599a18cb3b965b9acd6f6d5d003eaa94f1446990155927e9bb946dc9e1ccc41e",
+                "width": 512,
+                "height": 512,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                512,
+                512
+              ],
+              "sourceToMobileScale": [
+                1.0,
+                1.0
+              ]
+            }
+          ]
+        },
+        {
+          "materialId": 29,
+          "source": "materials/models/props/de_dust/hr_dust/dust_kasbah/dust_kasbah_wood_planks.vmat_c",
+          "uvScale": [
+            1.0,
+            1.0
+          ],
+          "uvOffset": [
+            0.0,
+            0.0
+          ],
+          "uvRotation": 0.0,
+          "textures": [
+            {
+              "slot": "base",
+              "asset": "maps/dust2/mobile/textures/t193.png",
+              "sha256": "eba76744281345e3888a6953334ad3aaaa16cf6e203ce9492060544066297137",
+              "source": "materials/models/props/de_dust/hr_dust/dust_kasbah/dust_kasbah_wood_planks_color_psd_9108b195.vtex_c",
+              "sourcePNG": {
+                "path": "materials/models/props/de_dust/hr_dust/dust_kasbah/dust_kasbah_wood_planks_color_psd_9108b195.png",
+                "bytes": 3735596,
+                "sha256": "e76b928fbddb2cac8ff5196eec2b0403e931a1e142e042a7a6ec32f04ae4dbfb",
+                "width": 1024,
+                "height": 2048,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                256,
+                512
+              ],
+              "sourceToMobileScale": [
+                4.0,
+                4.0
+              ]
+            }
+          ]
+        },
+        {
+          "materialId": 34,
+          "source": "materials/de_dust/hr_dust/hr_dust_plaster_18b.vmat_c",
+          "uvScale": [
+            1,
+            1
+          ],
+          "uvOffset": [
+            0,
+            0
+          ],
+          "uvRotation": 0,
+          "textures": [
+            {
+              "slot": "base",
+              "asset": "maps/dust2/mobile/textures/t071.png",
+              "sha256": "ea06b4067c3db7e8c460a6a3fcb0b5ac16ee674ca096c0a96c0066230304420c",
+              "source": "materials/de_dust/hr_dust/hr_dust_plaster_18b_color_psd_5b3997de.vtex_c",
+              "sourcePNG": {
+                "path": "materials/de_dust/hr_dust/hr_dust_plaster_18b_color_psd_5b3997de.png",
+                "bytes": 6315084,
+                "sha256": "57fb3f294607d357ff82f2391b75df24ac162cd3a2d78d262dffa5661a22023f",
+                "width": 2048,
+                "height": 2048,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                256,
+                256
+              ],
+              "sourceToMobileScale": [
+                8.0,
+                8.0
+              ]
+            },
+            {
+              "slot": "layer",
+              "asset": "maps/dust2/mobile/textures/t093.png",
+              "sha256": "9ba7c5c64b42c7d3410e41870bfc40117daac130faf5615a299343d01a21cf50",
+              "source": "materials/de_dust/hr_dust/hr_dust_stone_01b_color_psd_685ce900.vtex_c",
+              "sourcePNG": {
+                "path": "materials/de_dust/hr_dust/hr_dust_stone_01b_color_psd_685ce900.png",
+                "bytes": 6048759,
+                "sha256": "399977ee7118045eab7f682d2804bfdabd23f599a42c1bca43ea2a6aa9f4408c",
+                "width": 2048,
+                "height": 2048,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                256,
+                256
+              ],
+              "sourceToMobileScale": [
+                8.0,
+                8.0
+              ]
+            },
+            {
+              "slot": "blend",
+              "asset": "maps/dust2/mobile/textures/t069.png",
+              "sha256": "e08f5d57eb89b2c011efcbd523d3195adc0a2b22a0a4863fa9b046e3fa413f94",
+              "source": "materials/de_dust/hr_dust/hr_dust_plaster_18_blendmod_blend_tga_6d3920de.vtex_c",
+              "sourcePNG": {
+                "path": "materials/de_dust/hr_dust/hr_dust_plaster_18_blendmod_blend_tga_6d3920de.png",
+                "bytes": 209986,
+                "sha256": "599a18cb3b965b9acd6f6d5d003eaa94f1446990155927e9bb946dc9e1ccc41e",
+                "width": 512,
+                "height": 512,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                512,
+                512
+              ],
+              "sourceToMobileScale": [
+                1.0,
+                1.0
+              ]
+            }
+          ]
+        },
+        {
+          "materialId": 85,
+          "source": "materials/de_dust/hr_dust/hr_dust_plaster_06c.vmat_c",
+          "uvScale": [
+            1,
+            1
+          ],
+          "uvOffset": [
+            0,
+            0
+          ],
+          "uvRotation": 0,
+          "textures": [
+            {
+              "slot": "base",
+              "asset": "maps/dust2/mobile/textures/t048.png",
+              "sha256": "bd857ff713ea02529ef57b189c9b2c48dec69d7a465114f59589022e4953bfcb",
+              "source": "materials/de_dust/hr_dust/hr_dust_plaster_06c_color_psd_570be460.vtex_c",
+              "sourcePNG": {
+                "path": "materials/de_dust/hr_dust/hr_dust_plaster_06c_color_psd_570be460.png",
+                "bytes": 6427719,
+                "sha256": "05d03da912b26ce5510347cf76529758be3fdfd083d5113c0a73ca7f42575a2d",
+                "width": 2048,
+                "height": 2048,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                256,
+                256
+              ],
+              "sourceToMobileScale": [
+                8.0,
+                8.0
+              ]
+            },
+            {
+              "slot": "layer",
+              "asset": "maps/dust2/mobile/textures/t064.png",
+              "sha256": "ea62edab5df5681b2ac537a6a4dafd154dca4d50bd7da686b77930c569f5a7fc",
+              "source": "materials/de_dust/hr_dust/hr_dust_plaster_16_color_psd_c2c1a93e.vtex_c",
+              "sourcePNG": {
+                "path": "materials/de_dust/hr_dust/hr_dust_plaster_16_color_psd_c2c1a93e.png",
+                "bytes": 7541665,
+                "sha256": "71d89a971fda1115843fb71c2748f42dc695679e92c2c5c0251fd174251f8f9e",
+                "width": 2048,
+                "height": 2048,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                512,
+                512
+              ],
+              "sourceToMobileScale": [
+                4.0,
+                4.0
+              ]
+            },
+            {
+              "slot": "blend",
+              "asset": "maps/dust2/mobile/textures/t045.png",
+              "sha256": "1a0fedd3714a3488bff965739a18ce35b1bc18ddc1c37e142ee5a766c70aa9b7",
+              "source": "materials/de_dust/hr_dust/hr_dust_plaster_06_blendmod_blend_psd_2caff036.vtex_c",
+              "sourcePNG": {
+                "path": "materials/de_dust/hr_dust/hr_dust_plaster_06_blendmod_blend_psd_2caff036.png",
+                "bytes": 1529378,
+                "sha256": "38ec8a15aecb893f0240147cdeb475e7d5ee6f660627480967ec7227d4573372",
+                "width": 1024,
+                "height": 1024,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                512,
+                512
+              ],
+              "sourceToMobileScale": [
+                2.0,
+                2.0
+              ]
+            }
+          ]
+        },
+        {
+          "materialId": 96,
+          "source": "materials/de_dust/hr_dust/hr_dust_plaster_18_bounce.vmat_c",
+          "uvScale": [
+            1,
+            1
+          ],
+          "uvOffset": [
+            0,
+            0
+          ],
+          "uvRotation": 0,
+          "textures": [
+            {
+              "slot": "base",
+              "asset": "maps/dust2/mobile/textures/t070.png",
+              "sha256": "cb649d20238875a5765abaef90c2f7588815f1de7da6f3c5a7d40ec59133ec45",
+              "source": "materials/de_dust/hr_dust/hr_dust_plaster_18_color_psd_4100325a.vtex_c",
+              "sourcePNG": {
+                "path": "materials/de_dust/hr_dust/hr_dust_plaster_18_color_psd_4100325a.png",
+                "bytes": 5258213,
+                "sha256": "c7a65325fcb5e9c69b57699e0f962162659d5659ee01c6594fb4a222e06321f2",
+                "width": 2048,
+                "height": 2048,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                256,
+                256
+              ],
+              "sourceToMobileScale": [
+                8.0,
+                8.0
+              ]
+            },
+            {
+              "slot": "layer",
+              "asset": "maps/dust2/mobile/textures/t092.png",
+              "sha256": "dfa17a27a9e0a2d4fda898d416d825f96a48fe5a11e2b7e2be4b0edd2b44b08f",
+              "source": "materials/de_dust/hr_dust/hr_dust_stone_01_color_psd_f6c390bd.vtex_c",
+              "sourcePNG": {
+                "path": "materials/de_dust/hr_dust/hr_dust_stone_01_color_psd_f6c390bd.png",
+                "bytes": 7083054,
+                "sha256": "3cff27d65fa827ed73021a3f0ea2367fa0a236138083729b11cbf828cc875bc3",
+                "width": 2048,
+                "height": 2048,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                256,
+                256
+              ],
+              "sourceToMobileScale": [
+                8.0,
+                8.0
+              ]
+            },
+            {
+              "slot": "blend",
+              "asset": "maps/dust2/mobile/textures/t069.png",
+              "sha256": "e08f5d57eb89b2c011efcbd523d3195adc0a2b22a0a4863fa9b046e3fa413f94",
+              "source": "materials/de_dust/hr_dust/hr_dust_plaster_18_blendmod_blend_tga_6d3920de.vtex_c",
+              "sourcePNG": {
+                "path": "materials/de_dust/hr_dust/hr_dust_plaster_18_blendmod_blend_tga_6d3920de.png",
+                "bytes": 209986,
+                "sha256": "599a18cb3b965b9acd6f6d5d003eaa94f1446990155927e9bb946dc9e1ccc41e",
+                "width": 512,
+                "height": 512,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                512,
+                512
+              ],
+              "sourceToMobileScale": [
+                1.0,
+                1.0
+              ]
+            }
+          ]
+        },
+        {
+          "materialId": 97,
+          "source": "materials/de_dust/hr_dust/hr_dust_plaster_18b_bounce.vmat_c",
+          "uvScale": [
+            1,
+            1
+          ],
+          "uvOffset": [
+            0,
+            0
+          ],
+          "uvRotation": 0,
+          "textures": [
+            {
+              "slot": "base",
+              "asset": "maps/dust2/mobile/textures/t071.png",
+              "sha256": "ea06b4067c3db7e8c460a6a3fcb0b5ac16ee674ca096c0a96c0066230304420c",
+              "source": "materials/de_dust/hr_dust/hr_dust_plaster_18b_color_psd_5b3997de.vtex_c",
+              "sourcePNG": {
+                "path": "materials/de_dust/hr_dust/hr_dust_plaster_18b_color_psd_5b3997de.png",
+                "bytes": 6315084,
+                "sha256": "57fb3f294607d357ff82f2391b75df24ac162cd3a2d78d262dffa5661a22023f",
+                "width": 2048,
+                "height": 2048,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                256,
+                256
+              ],
+              "sourceToMobileScale": [
+                8.0,
+                8.0
+              ]
+            },
+            {
+              "slot": "layer",
+              "asset": "maps/dust2/mobile/textures/t093.png",
+              "sha256": "9ba7c5c64b42c7d3410e41870bfc40117daac130faf5615a299343d01a21cf50",
+              "source": "materials/de_dust/hr_dust/hr_dust_stone_01b_color_psd_685ce900.vtex_c",
+              "sourcePNG": {
+                "path": "materials/de_dust/hr_dust/hr_dust_stone_01b_color_psd_685ce900.png",
+                "bytes": 6048759,
+                "sha256": "399977ee7118045eab7f682d2804bfdabd23f599a42c1bca43ea2a6aa9f4408c",
+                "width": 2048,
+                "height": 2048,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                256,
+                256
+              ],
+              "sourceToMobileScale": [
+                8.0,
+                8.0
+              ]
+            },
+            {
+              "slot": "blend",
+              "asset": "maps/dust2/mobile/textures/t069.png",
+              "sha256": "e08f5d57eb89b2c011efcbd523d3195adc0a2b22a0a4863fa9b046e3fa413f94",
+              "source": "materials/de_dust/hr_dust/hr_dust_plaster_18_blendmod_blend_tga_6d3920de.vtex_c",
+              "sourcePNG": {
+                "path": "materials/de_dust/hr_dust/hr_dust_plaster_18_blendmod_blend_tga_6d3920de.png",
+                "bytes": 209986,
+                "sha256": "599a18cb3b965b9acd6f6d5d003eaa94f1446990155927e9bb946dc9e1ccc41e",
+                "width": 512,
+                "height": 512,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                512,
+                512
+              ],
+              "sourceToMobileScale": [
+                1.0,
+                1.0
+              ]
+            }
+          ]
+        },
+        {
+          "materialId": 98,
+          "source": "materials/de_dust/hr_dust/hr_dust_plaster_18c_bounce.vmat_c",
+          "uvScale": [
+            1,
+            1
+          ],
+          "uvOffset": [
+            0,
+            0
+          ],
+          "uvRotation": 0,
+          "textures": [
+            {
+              "slot": "base",
+              "asset": "maps/dust2/mobile/textures/t072.png",
+              "sha256": "b867c440ba58f98960af51f00052d1e9b4981229b2fb6bd53e1501e6f63bb922",
+              "source": "materials/de_dust/hr_dust/hr_dust_plaster_18c_color_psd_c838b784.vtex_c",
+              "sourcePNG": {
+                "path": "materials/de_dust/hr_dust/hr_dust_plaster_18c_color_psd_c838b784.png",
+                "bytes": 5472000,
+                "sha256": "4bbe153014e5e04644c5d372710326c9337417dd8a9a0bd1dc5dbd10c5deab06",
+                "width": 2048,
+                "height": 2048,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                256,
+                256
+              ],
+              "sourceToMobileScale": [
+                8.0,
+                8.0
+              ]
+            },
+            {
+              "slot": "layer",
+              "asset": "maps/dust2/mobile/textures/t094.png",
+              "sha256": "c0dd06767f569565b7f9dc728bac076b66cae8267e8cd0d9390c2ee8603e229b",
+              "source": "materials/de_dust/hr_dust/hr_dust_stone_01c_color_psd_323d29ff.vtex_c",
+              "sourcePNG": {
+                "path": "materials/de_dust/hr_dust/hr_dust_stone_01c_color_psd_323d29ff.png",
+                "bytes": 7065911,
+                "sha256": "7fad01ab2d94c0ebf31dd7624aa9c66eb45c39c6e09b9030f4e1e0f1f55c0480",
+                "width": 2048,
+                "height": 2048,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                256,
+                256
+              ],
+              "sourceToMobileScale": [
+                8.0,
+                8.0
+              ]
+            },
+            {
+              "slot": "blend",
+              "asset": "maps/dust2/mobile/textures/t069.png",
+              "sha256": "e08f5d57eb89b2c011efcbd523d3195adc0a2b22a0a4863fa9b046e3fa413f94",
+              "source": "materials/de_dust/hr_dust/hr_dust_plaster_18_blendmod_blend_tga_6d3920de.vtex_c",
+              "sourcePNG": {
+                "path": "materials/de_dust/hr_dust/hr_dust_plaster_18_blendmod_blend_tga_6d3920de.png",
+                "bytes": 209986,
+                "sha256": "599a18cb3b965b9acd6f6d5d003eaa94f1446990155927e9bb946dc9e1ccc41e",
+                "width": 512,
+                "height": 512,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                512,
+                512
+              ],
+              "sourceToMobileScale": [
+                1.0,
+                1.0
+              ]
+            }
+          ]
+        },
+        {
+          "materialId": 106,
+          "source": "materials/de_dust/hr_dust/hr_dust_stone_ground_01.vmat_c",
+          "uvScale": [
+            1,
+            1
+          ],
+          "uvOffset": [
+            0,
+            0
+          ],
+          "uvRotation": 0,
+          "textures": [
+            {
+              "slot": "base",
+              "asset": "maps/dust2/mobile/textures/t099.png",
+              "sha256": "893b1c9b57d35590acda2cd1fcf29dbdb4eb47d60ee5aee3af7426eb347d3f63",
+              "source": "materials/de_dust/hr_dust/hr_dust_stone_ground_01_color_psd_60cf381d.vtex_c",
+              "sourcePNG": {
+                "path": "materials/de_dust/hr_dust/hr_dust_stone_ground_01_color_psd_60cf381d.png",
+                "bytes": 6860929,
+                "sha256": "41a41bcae57cab40ade3a05961ce07a89dcde42617d6c81c380e736f8e0f64ce",
+                "width": 2048,
+                "height": 2048,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                256,
+                256
+              ],
+              "sourceToMobileScale": [
+                8.0,
+                8.0
+              ]
+            },
+            {
+              "slot": "layer",
+              "asset": "maps/dust2/mobile/textures/t088.png",
+              "sha256": "a0298b363956acd356044891c936e5cfaaaf39b4f2acc6abf168a396fe5bf8a4",
+              "source": "materials/de_dust/hr_dust/hr_dust_sand_02_color_psd_755e7eb9.vtex_c",
+              "sourcePNG": {
+                "path": "materials/de_dust/hr_dust/hr_dust_sand_02_color_psd_755e7eb9.png",
+                "bytes": 8406145,
+                "sha256": "3d5163deda1b11ff6b4a773e115d4d3cfb0a79dc25c1d24d03f5271775a9a46d",
+                "width": 2048,
+                "height": 2048,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                512,
+                512
+              ],
+              "sourceToMobileScale": [
+                4.0,
+                4.0
+              ]
+            },
+            {
+              "slot": "blend",
+              "asset": "maps/dust2/mobile/textures/t098.png",
+              "sha256": "1b23e7cd981faaf56b756f8c9ef046fcbe6900cded4f30d3d66fb5db4403d430",
+              "source": "materials/de_dust/hr_dust/hr_dust_stone_ground_01_blendmod_blend_psd_45e21045.vtex_c",
+              "sourcePNG": {
+                "path": "materials/de_dust/hr_dust/hr_dust_stone_ground_01_blendmod_blend_psd_45e21045.png",
+                "bytes": 758452,
+                "sha256": "85c314f2bc76a3341930179eac2cdbcf30922e529db33f1f01a2d8db9018b3ef",
+                "width": 1024,
+                "height": 1024,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                256,
+                256
+              ],
+              "sourceToMobileScale": [
+                4.0,
+                4.0
+              ]
+            }
+          ]
+        },
+        {
+          "materialId": 123,
+          "source": "materials/models/props/de_dust/hr_dust/dust_cart/dust_cart_color.vmat_c",
+          "uvScale": [
+            1.0,
+            1.0
+          ],
+          "uvOffset": [
+            0.0,
+            0.0
+          ],
+          "uvRotation": 0.0,
+          "textures": [
+            {
+              "slot": "base",
+              "asset": "maps/dust2/mobile/textures/t135.png",
+              "sha256": "d5bec1e3e956e377dac22ea429a1ae24f34c5ca205782559d39de418e581df4b",
+              "source": "materials/models/props/de_dust/hr_dust/dust_cart/dust_cart_color_psd_847804a8.vtex_c",
+              "sourcePNG": {
+                "path": "materials/models/props/de_dust/hr_dust/dust_cart/dust_cart_color_psd_847804a8.png",
+                "bytes": 592106,
+                "sha256": "5cd8c9faa3a74816c6ee909d12b91c92036fdfe4f155eaca6a1f61166511e18b",
+                "width": 1024,
+                "height": 512,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                256,
+                128
+              ],
+              "sourceToMobileScale": [
+                4.0,
+                4.0
+              ]
+            }
+          ]
+        },
+        {
+          "materialId": 174,
+          "source": "materials/models/props/de_dust/hr_dust/dust_kasbah/dust_kasbah_wood_platform.vmat_c",
+          "uvScale": [
+            1.0,
+            1.0
+          ],
+          "uvOffset": [
+            0.0,
+            0.0
+          ],
+          "uvRotation": 0.0,
+          "textures": [
+            {
+              "slot": "base",
+              "asset": "maps/dust2/mobile/textures/t194.png",
+              "sha256": "4138871643fbdd907239325e5da2f21a62b44088d1139b16a84097f3be1ca38d",
+              "source": "materials/models/props/de_dust/hr_dust/dust_kasbah/dust_kasbah_wood_platform_color_psd_2bda54d1.vtex_c",
+              "sourcePNG": {
+                "path": "materials/models/props/de_dust/hr_dust/dust_kasbah/dust_kasbah_wood_platform_color_psd_2bda54d1.png",
+                "bytes": 1493826,
+                "sha256": "a6ff806beb44618c17ff035552bfcfef15cf96682a4278e25d47a6208fcaa0b7",
+                "width": 1024,
+                "height": 1024,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                256,
+                256
+              ],
+              "sourceToMobileScale": [
+                4.0,
+                4.0
+              ]
+            }
+          ]
+        },
+        {
+          "materialId": 185,
+          "source": "materials/models/props/de_dust/hr_dust/dust_metal_panels/dust_metal_panels_rusty_alpha_01.vmat_c",
+          "uvScale": [
+            1.0,
+            1.0
+          ],
+          "uvOffset": [
+            0.0,
+            0.0
+          ],
+          "uvRotation": 0.0,
+          "textures": [
+            {
+              "slot": "base",
+              "asset": "maps/dust2/mobile/textures/t213.png",
+              "sha256": "5ee2bd1598928912e20282eb51da4a445e44bfc3c3674ad6e583e5a12933849b",
+              "source": "materials/models/props/de_dust/hr_dust/dust_metal_panels/dust_metal_panels_01_rusty_alpha_color_psd_5817110d.vtex_c",
+              "sourcePNG": {
+                "path": "materials/models/props/de_dust/hr_dust/dust_metal_panels/dust_metal_panels_01_rusty_alpha_color_psd_5817110d.png",
+                "bytes": 972441,
+                "sha256": "f412d7dbfd0625e415ee487f1d1e7a90576382f5a6b9441c7d1eb73b09c7eab4",
+                "width": 512,
+                "height": 1024,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                128,
+                256
+              ],
+              "sourceToMobileScale": [
+                4.0,
+                4.0
+              ]
+            }
+          ]
+        },
+        {
+          "materialId": 204,
+          "source": "materials/models/props/de_dust/hr_dust/dust_trims/hr_dust_kasbah_arch002_color.vmat_c",
+          "uvScale": [
+            1.0,
+            1.0
+          ],
+          "uvOffset": [
+            0.0,
+            0.0
+          ],
+          "uvRotation": 0.0,
+          "textures": [
+            {
+              "slot": "base",
+              "asset": "maps/dust2/mobile/textures/t238.png",
+              "sha256": "5e0e2b34835916af751c1327ecd9aeb311688ec97564bfbaf66bb457601a7334",
+              "source": "materials/models/props/de_dust/hr_dust/dust_trims/hr_dust_kasbah_arch002_color_psd_22d37ba0.vtex_c",
+              "sourcePNG": {
+                "path": "materials/models/props/de_dust/hr_dust/dust_trims/hr_dust_kasbah_arch002_color_psd_22d37ba0.png",
+                "bytes": 7115613,
+                "sha256": "6979e6621c65d7fb49097a6fea31e3338bcd8ca826723f27f6bfcd44fe8042e9",
+                "width": 2048,
+                "height": 2048,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                256,
+                256
+              ],
+              "sourceToMobileScale": [
+                8.0,
+                8.0
+              ]
+            }
+          ]
+        },
+        {
+          "materialId": 205,
+          "source": "materials/models/props/de_dust/hr_dust/dust_trims/hr_dust_kasbah_arch003_color.vmat_c",
+          "uvScale": [
+            1.0,
+            1.0
+          ],
+          "uvOffset": [
+            0.0,
+            0.0
+          ],
+          "uvRotation": 0.0,
+          "textures": [
+            {
+              "slot": "base",
+              "asset": "maps/dust2/mobile/textures/t239.png",
+              "sha256": "ffeab42afa61b36c06a67f8703be85784dc290b9a65946e4bb7cf9bf7119f2aa",
+              "source": "materials/models/props/de_dust/hr_dust/dust_trims/hr_dust_kasbah_arch003_color_psd_e77ad3a9.vtex_c",
+              "sourcePNG": {
+                "path": "materials/models/props/de_dust/hr_dust/dust_trims/hr_dust_kasbah_arch003_color_psd_e77ad3a9.png",
+                "bytes": 6769069,
+                "sha256": "d131d51beabc8e4a72359f31bd0dee0fa535f4d92335014a5f2382f4daa70f32",
+                "width": 2048,
+                "height": 2048,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                256,
+                256
+              ],
+              "sourceToMobileScale": [
+                8.0,
+                8.0
+              ]
+            }
+          ]
+        },
+        {
+          "materialId": 206,
+          "source": "materials/models/props/de_dust/hr_dust/dust_trims/hr_dust_kasbah_column001_color.vmat_c",
+          "uvScale": [
+            1.0,
+            1.0
+          ],
+          "uvOffset": [
+            0.0,
+            0.0
+          ],
+          "uvRotation": 0.0,
+          "textures": [
+            {
+              "slot": "base",
+              "asset": "maps/dust2/mobile/textures/t240.png",
+              "sha256": "5a9776b7dd0e69b6677a0e7cbf72d058e938a674dd88a8ec16f28cfaa77de5ba",
+              "source": "materials/models/props/de_dust/hr_dust/dust_trims/hr_dust_kasbah_column001_color_psd_3516e5a3.vtex_c",
+              "sourcePNG": {
+                "path": "materials/models/props/de_dust/hr_dust/dust_trims/hr_dust_kasbah_column001_color_psd_3516e5a3.png",
+                "bytes": 6959146,
+                "sha256": "8f85454a72be073b76dbccbe57a4d90c48bf16db7ed62bb538fb32637b3022f7",
+                "width": 2048,
+                "height": 2048,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                256,
+                256
+              ],
+              "sourceToMobileScale": [
+                8.0,
+                8.0
+              ]
+            }
+          ]
+        },
+        {
+          "materialId": 209,
+          "source": "materials/models/props/de_dust/hr_dust/dust_trims/hr_dust_kasbah_niche001_color.vmat_c",
+          "uvScale": [
+            1.0,
+            1.0
+          ],
+          "uvOffset": [
+            0.0,
+            0.0
+          ],
+          "uvRotation": 0.0,
+          "textures": [
+            {
+              "slot": "base",
+              "asset": "maps/dust2/mobile/textures/t244.png",
+              "sha256": "a23cd6260d09afb5a19f5cf0f6e869abac47509ea5ed1d5707f39fdbc3f32c19",
+              "source": "materials/models/props/de_dust/hr_dust/dust_trims/hr_dust_kasbah_niche001_color_psd_409f1687.vtex_c",
+              "sourcePNG": {
+                "path": "materials/models/props/de_dust/hr_dust/dust_trims/hr_dust_kasbah_niche001_color_psd_409f1687.png",
+                "bytes": 5371727,
+                "sha256": "f5fa1dcd2be93d538ea3673976d36193adcda14e00a8ed8bf8fb59899894a02d",
+                "width": 2048,
+                "height": 2048,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                256,
+                256
+              ],
+              "sourceToMobileScale": [
+                8.0,
+                8.0
+              ]
+            }
+          ]
+        },
+        {
+          "materialId": 230,
+          "source": "materials/models/props/de_dust/hr_dust/dust_windows/dust_window_frame_plaster_01.vmat_c",
+          "uvScale": [
+            1,
+            1
+          ],
+          "uvOffset": [
+            0,
+            0
+          ],
+          "uvRotation": 0,
+          "textures": [
+            {
+              "slot": "base",
+              "asset": "maps/dust2/mobile/textures/t267.png",
+              "sha256": "213e1c4794bcc474e76be1b7f7ef99d81ba1de32b2ca2e864caa336d05b4cde1",
+              "source": "materials/models/props/de_dust/hr_dust/dust_windows/dust_window_frame_stone_01_color_tga_576f2bb7.vtex_c",
+              "sourcePNG": {
+                "path": "materials/models/props/de_dust/hr_dust/dust_windows/dust_window_frame_stone_01_color_tga_576f2bb7.png",
+                "bytes": 2380691,
+                "sha256": "7f466893256521053dde1406ec2f79162c5fcbea11128fb66dde6511e68a524a",
+                "width": 1024,
+                "height": 1024,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                256,
+                256
+              ],
+              "sourceToMobileScale": [
+                4.0,
+                4.0
+              ]
+            }
+          ]
+        },
+        {
+          "materialId": 236,
+          "source": "materials/models/props/de_dust/hr_dust/foliage/dust_weeds_01.vmat_c",
+          "uvScale": [
+            1,
+            1
+          ],
+          "uvOffset": [
+            0,
+            0
+          ],
+          "uvRotation": 0,
+          "textures": [
+            {
+              "slot": "base",
+              "asset": "maps/dust2/mobile/textures/t275.png",
+              "sha256": "82c753a203e19d4d4dfe5c6b2541c75dea618f154d1ec16d89a221ced5d4f801",
+              "source": "materials/models/props/de_dust/hr_dust/foliage/dust_weeds_01_color_psd_75512acc.vtex_c",
+              "sourcePNG": {
+                "path": "materials/models/props/de_dust/hr_dust/foliage/dust_weeds_01_color_psd_75512acc.png",
+                "bytes": 1316652,
+                "sha256": "e06699a3476f0e29f43cb1dc4b5ba54908c4fbf70cf852b5d9cd752729f052d4",
+                "width": 1024,
+                "height": 1024,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                256,
+                256
+              ],
+              "sourceToMobileScale": [
+                4.0,
+                4.0
+              ]
+            }
+          ]
+        },
+        {
+          "materialId": 237,
+          "source": "materials/models/props/de_dust/hr_dust/foliage/grape_leaves_01.vmat_c",
+          "uvScale": [
+            1,
+            1
+          ],
+          "uvOffset": [
+            0,
+            0
+          ],
+          "uvRotation": 0,
+          "textures": [
+            {
+              "slot": "base",
+              "asset": "maps/dust2/mobile/textures/t276.png",
+              "sha256": "1cb56c0a76b2843b94d6604ce2afcc74ee29cb6b46f7e448f5690b7deff82e9b",
+              "source": "materials/models/props/de_dust/hr_dust/foliage/grape_leaves_01_color_psd_660252bb.vtex_c",
+              "sourcePNG": {
+                "path": "materials/models/props/de_dust/hr_dust/foliage/grape_leaves_01_color_psd_660252bb.png",
+                "bytes": 4183413,
+                "sha256": "9b6357360f0ef6543947ed1e8ce0231c5751d19dfa615516bc734b6c349fe5c8",
+                "width": 2048,
+                "height": 2048,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                256,
+                256
+              ],
+              "sourceToMobileScale": [
+                8.0,
+                8.0
+              ]
+            }
+          ]
+        },
+        {
+          "materialId": 240,
+          "source": "materials/models/props/de_dust/hr_dust/foliage/sagebrush_01.vmat_c",
+          "uvScale": [
+            1,
+            1
+          ],
+          "uvOffset": [
+            0,
+            0
+          ],
+          "uvRotation": 0,
+          "textures": [
+            {
+              "slot": "base",
+              "asset": "maps/dust2/mobile/textures/t281.png",
+              "sha256": "48cff9f07867c3194198999631b8828d72dac57148b8431350130ea2ea33aeeb",
+              "source": "materials/models/props/de_dust/hr_dust/foliage/sagebrush_01_color_psd_d5b0e1d7.vtex_c",
+              "sourcePNG": {
+                "path": "materials/models/props/de_dust/hr_dust/foliage/sagebrush_01_color_psd_d5b0e1d7.png",
+                "bytes": 381587,
+                "sha256": "19581c9f1061da7633881f8011c642c72430dfd4b4fecdc78abf8eb3c2452af8",
+                "width": 512,
+                "height": 512,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                256,
+                256
+              ],
+              "sourceToMobileScale": [
+                2.0,
+                2.0
+              ]
+            }
+          ]
+        },
+        {
+          "materialId": 242,
+          "source": "materials/models/props/de_dust/hr_dust/foliage/weeds_cressa_01.vmat_c",
+          "uvScale": [
+            1,
+            1
+          ],
+          "uvOffset": [
+            0,
+            0
+          ],
+          "uvRotation": 0,
+          "textures": [
+            {
+              "slot": "base",
+              "asset": "maps/dust2/mobile/textures/t283.png",
+              "sha256": "4cd18acf173bc6bddcf68996d6228b3bfa51a2e553ded6fa1d4636acb04f2601",
+              "source": "materials/models/props/de_dust/hr_dust/foliage/weeds_cressa_01_color_psd_6657f607.vtex_c",
+              "sourcePNG": {
+                "path": "materials/models/props/de_dust/hr_dust/foliage/weeds_cressa_01_color_psd_6657f607.png",
+                "bytes": 1764751,
+                "sha256": "7357dcc2721977970ad361743eef7f968e0a026fd67f4e162845a590cb4a73a2",
+                "width": 1024,
+                "height": 1024,
+                "mode": "RGBA"
+              },
+              "mobileSize": [
+                256,
+                256
+              ],
+              "sourceToMobileScale": [
+                4.0,
+                4.0
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "D2-010",
+      "status": "PENDING_SOURCE_POSITION",
+      "center": null,
+      "candidateParts": [],
+      "materials": []
+    }
+  ]
+}

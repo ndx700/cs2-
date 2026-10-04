@@ -1,0 +1,1654 @@
+{
+  "schema": "c015-spatial-evidence-v1",
+  "lessonId": "D2-001",
+  "referenceRevision": "user-selected-20261004-v2",
+  "status": "PENDING_CALIBRATION",
+  "importable": false,
+  "mapVersion": "fc60c032290dffcb233e3de9da3c59694293362ec72643cc1ebde9c1b13a17d0",
+  "coordinateSpace": "display-m-y-up-v1",
+  "inputSha256": "b1c67301659e0813a90b9200829fceba66b2cc40145dc1b6d6e43614ecb5a522",
+  "candidateValues": {
+    "foot": [
+      -8.706360613139768,
+      2.1673688838951835,
+      17.337658293798334
+    ],
+    "eye": [
+      -8.706360613139768,
+      3.8806021257020986,
+      17.337658293798334
+    ],
+    "aim": [
+      -9.092647773666378,
+      5.666567067239684,
+      10.031329028793515
+    ],
+    "bodyYaw": 3.026422099871036,
+    "aimFov": 67.85847637962364,
+    "cameras": {
+      "stance": null,
+      "aim": {
+        "position": [
+          -8.706360613139768,
+          3.8806021257020986,
+          17.337658293798334
+        ],
+        "yaw": 3.026422099871036,
+        "pitch": -13.71763749083024,
+        "distance": 1
+      },
+      "overview": null,
+      "follow": null,
+      "landing": null
+    }
+  },
+  "verifiedRuntimeValues": {
+    "foot": null,
+    "eye": null,
+    "aim": null,
+    "bodyYaw": null,
+    "aimFov": null
+  },
+  "sourceSpaceCandidates": {
+    "foot": [
+      -342.77010287951845,
+      -682.5849721967849,
+      85.32948361792062
+    ],
+    "eye": [
+      -342.77010287951845,
+      -682.5849721967849,
+      152.77961124811412
+    ],
+    "aim": [
+      -357.97825880576295,
+      -394.9342137320281,
+      223.0931916236096
+    ],
+    "semantics": "computed inverse of display convention; not console measurement"
+  },
+  "fit": {
+    "standing": {
+      "camera": {
+        "name": "D2-001-aim-fit-video-aspect",
+        "eye": [
+          -8.706360613139768,
+          3.8806021257020986,
+          17.337658293798334
+        ],
+        "target": [
+          -8.757651126743738,
+          4.117739334728844,
+          16.367537050185327
+        ],
+        "verticalFovDegrees": 67.85847637962364,
+        "horizontalStretch": 1.2799267637167655
+      },
+      "landmarks": [
+        {
+          "name": "left-cross-tl",
+          "seedPixel": [
+            905,
+            239
+          ],
+          "referencePixel": [
+            871,
+            238
+          ],
+          "meshHit": {
+            "position": [
+              -6.856510755076903,
+              6.804241692695275,
+              11.384560585021973
+            ],
+            "distance": 8.34131215751531,
+            "part": "maps/dust2/mobile/chunks/p02520.d2m.gz",
+            "partSha256": "c25d3bf2feae514d46403c7db498a28dbaa37390d36dac3aa20c276a422b436e",
+            "materialId": 230,
+            "materialSource": "materials/models/props/de_dust/hr_dust/dust_windows/dust_window_frame_plaster_01.vmat_c",
+            "triangleInPart": 918,
+            "vertices": [
+              [
+                -6.904279708862305,
+                6.765737533569336,
+                11.384560585021973
+              ],
+              [
+                -6.78236198425293,
+                6.766451358795166,
+                11.384560585021973
+              ],
+              [
+                -6.904279708862305,
+                6.8426289558410645,
+                11.384560585021973
+              ]
+            ],
+            "vertexIndices": [
+              848,
+              847,
+              850
+            ],
+            "uv": [
+              0.021818065464978866,
+              0.1822081170085731
+            ],
+            "limitations": "Opaque/mask geometry intersection; alpha texels and original shader semantics not evaluated"
+          },
+          "worldCandidate": [
+            -6.856510755076903,
+            6.804241692695275,
+            11.384560585021973
+          ],
+          "residualPixels": [
+            1.2946893277539857,
+            -0.053844331711729865
+          ]
+        },
+        {
+          "name": "left-cross-tr",
+          "seedPixel": [
+            960,
+            236
+          ],
+          "referencePixel": [
+            943,
+            233
+          ],
+          "meshHit": {
+            "position": [
+              -6.204394219163259,
+              6.839715152650735,
+              11.384560585021974
+            ],
+            "distance": 8.61373190997747,
+            "part": "maps/dust2/mobile/chunks/p02520.d2m.gz",
+            "partSha256": "c25d3bf2feae514d46403c7db498a28dbaa37390d36dac3aa20c276a422b436e",
+            "materialId": 230,
+            "materialSource": "materials/models/props/de_dust/hr_dust/dust_windows/dust_window_frame_plaster_01.vmat_c",
+            "triangleInPart": 926,
+            "vertices": [
+              [
+                -6.238797664642334,
+                6.766451358795166,
+                11.384560585021973
+              ],
+              [
+                -6.116879463195801,
+                6.8426289558410645,
+                11.384560585021973
+              ],
+              [
+                -6.238797664642334,
+                6.8426289558410645,
+                11.384560585021973
+              ]
+            ],
+            "vertexIndices": [
+              857,
+              859,
+              860
+            ],
+            "uv": [
+              0.3751283677222544,
+              0.17277859489820957
+            ],
+            "limitations": "Opaque/mask geometry intersection; alpha texels and original shader semantics not evaluated"
+          },
+          "worldCandidate": [
+            -6.204394219163259,
+            6.839715152650735,
+            11.384560585021974
+          ],
+          "residualPixels": [
+            0.46905503739174037,
+            0.8717436151193851
+          ]
+        },
+        {
+          "name": "left-cross-br",
+          "seedPixel": [
+            962,
+            297
+          ],
+          "referencePixel": [
+            953,
+            288
+          ],
+          "meshHit": {
+            "position": [
+              -6.174405943483277,
+              6.117296355206118,
+              11.38456058502197
+            ],
+            "distance": 8.544655765951472,
+            "part": "maps/dust2/mobile/chunks/p02520.d2m.gz",
+            "partSha256": "c25d3bf2feae514d46403c7db498a28dbaa37390d36dac3aa20c276a422b436e",
+            "materialId": 230,
+            "materialSource": "materials/models/props/de_dust/hr_dust/dust_windows/dust_window_frame_plaster_01.vmat_c",
+            "triangleInPart": 755,
+            "vertices": [
+              [
+                -6.116879463195801,
+                6.129046440124512,
+                11.384560585021973
+              ],
+              [
+                -6.238797664642334,
+                6.131407260894775,
+                11.384560585021973
+              ],
+              [
+                -6.238797664642334,
+                6.055229187011719,
+                11.384560585021973
+              ]
+            ],
+            "vertexIndices": [
+              700,
+              701,
+              702
+            ],
+            "uv": [
+              0.3853841166717499,
+              0.8114113629990732
+            ],
+            "limitations": "Opaque/mask geometry intersection; alpha texels and original shader semantics not evaluated"
+          },
+          "worldCandidate": [
+            -6.174405943483277,
+            6.117296355206118,
+            11.38456058502197
+          ],
+          "residualPixels": [
+            2.2840361225407833,
+            3.1229961613552177
+          ]
+        },
+        {
+          "name": "left-cross-bl",
+          "seedPixel": [
+            904,
+            303
+          ],
+          "referencePixel": [
+            880,
+            297
+          ],
+          "meshHit": {
+            "position": [
+              -6.860772928732207,
+              6.046495260308969,
+              11.379198074340819
+            ],
+            "distance": 8.260146830695652,
+            "part": "maps/dust2/mobile/chunks/p00817.d2m.gz",
+            "partSha256": "0115c83871a0e1dec2037b3fcad718daf2d492d47e73ec138ee4f81aea694ef9",
+            "materialId": 38,
+            "materialSource": "materials/de_dust/hr_dust/hr_dust_blend_plaster_white_01c.vmat_c",
+            "triangleInPart": 537,
+            "vertices": [
+              [
+                -7.036591529846191,
+                5.5879974365234375,
+                11.37919807434082
+              ],
+              [
+                -6.807197570800781,
+                6.095997333526611,
+                11.37919807434082
+              ],
+              [
+                -7.036591053009033,
+                6.095997333526611,
+                11.37919807434082
+              ]
+            ],
+            "vertexIndices": [
+              356,
+              357,
+              358
+            ],
+            "uv": [
+              0.18205169405259938,
+              -0.610375491709291
+            ],
+            "limitations": "Opaque/mask geometry intersection; alpha texels and original shader semantics not evaluated"
+          },
+          "worldCandidate": [
+            -6.860772928732207,
+            6.046495260308969,
+            11.379198074340819
+          ],
+          "residualPixels": [
+            -1.6143183326312283,
+            1.174203514623514
+          ]
+        },
+        {
+          "name": "right-cross-tl",
+          "seedPixel": [
+            990,
+            240
+          ],
+          "referencePixel": [
+            987,
+            237
+          ],
+          "meshHit": {
+            "position": [
+              -5.848110264940857,
+              6.792415935959141,
+              11.384560585021973
+            ],
+            "distance": 8.769460918825711,
+            "part": "maps/dust2/mobile/chunks/p02520.d2m.gz",
+            "partSha256": "c25d3bf2feae514d46403c7db498a28dbaa37390d36dac3aa20c276a422b436e",
+            "materialId": 230,
+            "materialSource": "materials/models/props/de_dust/hr_dust/dust_windows/dust_window_frame_plaster_01.vmat_c",
+            "triangleInPart": 713,
+            "vertices": [
+              [
+                -5.862879753112793,
+                6.765737533569336,
+                11.384560585021973
+              ],
+              [
+                -5.740962028503418,
+                6.766451358795166,
+                11.384560585021973
+              ],
+              [
+                -5.862879753112793,
+                6.8426289558410645,
+                11.384560585021973
+              ]
+            ],
+            "vertexIndices": [
+              657,
+              656,
+              658
+            ],
+            "uv": [
+              0.009823900673621615,
+              0.18527842523430862
+            ],
+            "limitations": "Opaque/mask geometry intersection; alpha texels and original shader semantics not evaluated"
+          },
+          "worldCandidate": [
+            -5.848110264940857,
+            6.792415935959141,
+            11.384560585021973
+          ],
+          "residualPixels": [
+            -3.549914572366106,
+            -0.20327486559352792
+          ]
+        },
+        {
+          "name": "right-cross-tr",
+          "seedPixel": [
+            1044,
+            239
+          ],
+          "referencePixel": [
+            1056,
+            236
+          ],
+          "meshHit": {
+            "position": [
+              -5.207661679437997,
+              6.804241692695274,
+              11.384560585021974
+            ],
+            "distance": 9.091890367513926,
+            "part": "maps/dust2/mobile/chunks/p02520.d2m.gz",
+            "partSha256": "c25d3bf2feae514d46403c7db498a28dbaa37390d36dac3aa20c276a422b436e",
+            "materialId": 230,
+            "materialSource": "materials/models/props/de_dust/hr_dust/dust_windows/dust_window_frame_plaster_01.vmat_c",
+            "triangleInPart": 682,
+            "vertices": [
+              [
+                -5.4621148109436035,
+                6.8426289558410645,
+                11.384560585021973
+              ],
+              [
+                -5.197397708892822,
+                6.766451358795166,
+                11.384560585021973
+              ],
+              [
+                -5.197397708892822,
+                6.8426289558410645,
+                11.384560585021973
+              ]
+            ],
+            "vertexIndices": [
+              634,
+              633,
+              635
+            ],
+            "uv": [
+              0.2620982674692964,
+              0.8099886042746318
+            ],
+            "limitations": "Opaque/mask geometry intersection; alpha texels and original shader semantics not evaluated"
+          },
+          "worldCandidate": [
+            -5.207661679437997,
+            6.804241692695274,
+            11.384560585021974
+          ],
+          "residualPixels": [
+            -1.2547325129644378,
+            -1.4517152047081083
+          ]
+        },
+        {
+          "name": "right-cross-br",
+          "seedPixel": [
+            1045,
+            295
+          ],
+          "referencePixel": [
+            1063,
+            287
+          ],
+          "meshHit": {
+            "position": [
+              -5.188450025450777,
+              6.141035038082664,
+              11.384379540016472
+            ],
+            "distance": 9.031036156950872,
+            "part": "maps/dust2/mobile/chunks/p02520.d2m.gz",
+            "partSha256": "c25d3bf2feae514d46403c7db498a28dbaa37390d36dac3aa20c276a422b436e",
+            "materialId": 230,
+            "materialSource": "materials/models/props/de_dust/hr_dust/dust_windows/dust_window_frame_plaster_01.vmat_c",
+            "triangleInPart": 621,
+            "vertices": [
+              [
+                -5.197397708892822,
+                6.131407260894775,
+                11.384560585021973
+              ],
+              [
+                -5.151674747467041,
+                6.177147388458252,
+                11.384560585021973
+              ],
+              [
+                -5.197397708892822,
+                6.1441121101379395,
+                11.3811616897583
+              ]
+            ],
+            "vertexIndices": [
+              577,
+              573,
+              580
+            ],
+            "uv": [
+              0.36523493885258346,
+              0.8045000373943083
+            ],
+            "limitations": "Opaque/mask geometry intersection; alpha texels and original shader semantics not evaluated"
+          },
+          "worldCandidate": [
+            -5.188450025450777,
+            6.141035038082664,
+            11.384379540016472
+          ],
+          "residualPixels": [
+            4.583371745025033,
+            0.5334335679877427
+          ]
+        },
+        {
+          "name": "right-cross-bl",
+          "seedPixel": [
+            990,
+            297
+          ],
+          "referencePixel": [
+            995,
+            295
+          ],
+          "meshHit": {
+            "position": [
+              -5.8417455907426925,
+              6.117296355206118,
+              11.384560585021973
+            ],
+            "distance": 8.69868104976033,
+            "part": "maps/dust2/mobile/chunks/p02520.d2m.gz",
+            "partSha256": "c25d3bf2feae514d46403c7db498a28dbaa37390d36dac3aa20c276a422b436e",
+            "materialId": 230,
+            "materialSource": "materials/models/props/de_dust/hr_dust/dust_windows/dust_window_frame_plaster_01.vmat_c",
+            "triangleInPart": 747,
+            "vertices": [
+              [
+                -5.740962028503418,
+                6.055229187011719,
+                11.384560585021973
+              ],
+              [
+                -5.862879753112793,
+                6.131382942199707,
+                11.384560585021973
+              ],
+              [
+                -5.862879753112793,
+                6.055229187011719,
+                11.384560585021973
+              ]
+            ],
+            "vertexIndices": [
+              691,
+              689,
+              692
+            ],
+            "uv": [
+              0.01213723968553946,
+              0.8117127042107963
+            ],
+            "limitations": "Opaque/mask geometry intersection; alpha texels and original shader semantics not evaluated"
+          },
+          "worldCandidate": [
+            -5.8417455907426925,
+            6.117296355206118,
+            11.384560585021973
+          ],
+          "residualPixels": [
+            -1.8968282236071445,
+            -4.429723884349755
+          ]
+        },
+        {
+          "name": "back-small-tl",
+          "seedPixel": [
+            481,
+            326
+          ],
+          "referencePixel": [
+            378,
+            365
+          ],
+          "meshHit": {
+            "position": [
+              -12.446722712877987,
+              5.85334527610381,
+              9.143999099731445
+            ],
+            "distance": 10.161302016176492,
+            "part": "maps/dust2/mobile/chunks/p00786.d2m.gz",
+            "partSha256": "c74a69212631cea1769aeec2ef4d8b3b94cbc6a12077adb0c7ebf60a3672dac9",
+            "materialId": 38,
+            "materialSource": "materials/de_dust/hr_dust/hr_dust_blend_plaster_white_01c.vmat_c",
+            "triangleInPart": 155,
+            "vertices": [
+              [
+                -12.395195960998535,
+                5.791197299957275,
+                9.143999099731445
+              ],
+              [
+                -12.395195960998535,
+                5.968997478485107,
+                9.143999099731445
+              ],
+              [
+                -12.7507963180542,
+                5.791197299957275,
+                9.143999099731445
+              ]
+            ],
+            "vertexIndices": [
+              115,
+              114,
+              116
+            ],
+            "uv": [
+              -0.5148525726351574,
+              0.17209861725115708
+            ],
+            "limitations": "Opaque/mask geometry intersection; alpha texels and original shader semantics not evaluated"
+          },
+          "worldCandidate": [
+            -12.446722712877987,
+            5.85334527610381,
+            9.143999099731445
+          ],
+          "residualPixels": [
+            -0.7723119080537231,
+            -0.6069352214228729
+          ]
+        },
+        {
+          "name": "back-small-tr",
+          "seedPixel": [
+            534,
+            325
+          ],
+          "referencePixel": [
+            434,
+            363
+          ],
+          "meshHit": {
+            "position": [
+              -11.631104574074778,
+              5.868721258457379,
+              9.143999099731445
+            ],
+            "distance": 9.996860069246774,
+            "part": "maps/dust2/mobile/chunks/p00786.d2m.gz",
+            "partSha256": "c74a69212631cea1769aeec2ef4d8b3b94cbc6a12077adb0c7ebf60a3672dac9",
+            "materialId": 38,
+            "materialSource": "materials/de_dust/hr_dust/hr_dust_blend_plaster_white_01c.vmat_c",
+            "triangleInPart": 145,
+            "vertices": [
+              [
+                -11.429996490478516,
+                5.791197299957275,
+                9.143999099731445
+              ],
+              [
+                -11.683996200561523,
+                5.968997478485107,
+                9.143999099731445
+              ],
+              [
+                -11.683996200561523,
+                5.791197299957275,
+                9.143999099731445
+              ]
+            ],
+            "vertexIndices": [
+              94,
+              109,
+              108
+            ],
+            "uv": [
+              -0.3138372871180399,
+              0.1680216326438339
+            ],
+            "limitations": "Opaque/mask geometry intersection; alpha texels and original shader semantics not evaluated"
+          },
+          "worldCandidate": [
+            -11.631104574074778,
+            5.868721258457379,
+            9.143999099731445
+          ],
+          "residualPixels": [
+            7.15097438698524,
+            -0.15770839096069267
+          ]
+        },
+        {
+          "name": "back-small-br",
+          "seedPixel": [
+            534,
+            375
+          ],
+          "referencePixel": [
+            434,
+            408
+          ],
+          "meshHit": {
+            "position": [
+              -11.621623245433367,
+              5.1017749865719475,
+              9.214476585388182
+            ],
+            "distance": 9.92696900415055,
+            "part": "maps/dust2/mobile/chunks/p02605.d2m.gz",
+            "partSha256": "144d928dd876ba33a339470ab5046c268e1f37f3dd1436e38946c53ee77cbd4d",
+            "materialId": 55,
+            "materialSource": "materials/models/props/de_dust/hr_dust/dust_windows/dust_window_frame_wood_01.vmat_c",
+            "triangleInPart": 39,
+            "vertices": [
+              [
+                -11.603510856628418,
+                5.166229724884033,
+                9.214476585388184
+              ],
+              [
+                -11.794085502624512,
+                5.064629554748535,
+                9.214476585388184
+              ],
+              [
+                -11.603510856628418,
+                5.064629554748535,
+                9.214476585388184
+              ]
+            ],
+            "vertexIndices": [
+              59,
+              58,
+              61
+            ],
+            "uv": [
+              0.8256841674553363,
+              0.6981110548639476
+            ],
+            "limitations": "Opaque/mask geometry intersection; alpha texels and original shader semantics not evaluated"
+          },
+          "worldCandidate": [
+            -11.621623245433367,
+            5.1017749865719475,
+            9.214476585388182
+          ],
+          "residualPixels": [
+            1.6313673649185034,
+            1.7724539710897602
+          ]
+        },
+        {
+          "name": "back-small-bl",
+          "seedPixel": [
+            481,
+            376
+          ],
+          "referencePixel": [
+            378,
+            413
+          ],
+          "meshHit": {
+            "position": [
+              -12.432500425354556,
+              5.086467782474337,
+              9.214476585388182
+            ],
+            "distance": 10.091805374272628,
+            "part": "maps/dust2/mobile/chunks/p02605.d2m.gz",
+            "partSha256": "144d928dd876ba33a339470ab5046c268e1f37f3dd1436e38946c53ee77cbd4d",
+            "materialId": 55,
+            "materialSource": "materials/models/props/de_dust/hr_dust/dust_windows/dust_window_frame_wood_01.vmat_c",
+            "triangleInPart": 87,
+            "vertices": [
+              [
+                -12.250670433044434,
+                5.064629554748535,
+                9.214476585388184
+              ],
+              [
+                -12.441246032714844,
+                5.166229724884033,
+                9.214476585388184
+              ],
+              [
+                -12.441246032714844,
+                5.064629554748535,
+                9.214476585388184
+              ]
+            ],
+            "vertexIndices": [
+              128,
+              130,
+              131
+            ],
+            "uv": [
+              0.8188426185790292,
+              0.4435998400865838
+            ],
+            "limitations": "Opaque/mask geometry intersection; alpha texels and original shader semantics not evaluated"
+          },
+          "worldCandidate": [
+            -12.432500425354556,
+            5.086467782474337,
+            9.214476585388182
+          ],
+          "residualPixels": [
+            -7.803697901399971,
+            -1.8513681686701489
+          ]
+        }
+      ],
+      "rmsePixelsPerCoordinate": 2.9205124897867014
+    },
+    "crouching": {
+      "camera": {
+        "name": "D2-001-crouch-seam-fit",
+        "eye": [
+          -8.706360613139768,
+          3.47127220727002,
+          17.337658293798334
+        ],
+        "target": [
+          -8.707808913440692,
+          2.9190008556751352,
+          16.503995138420937
+        ],
+        "verticalFovDegrees": 67.85847637962364,
+        "horizontalStretch": 1.2799267637167655
+      },
+      "landmarks": [
+        {
+          "name": "lower-window-0",
+          "seedPixel": [
+            920,
+            237
+          ],
+          "referencePixel": [
+            879,
+            61
+          ],
+          "meshHit": {
+            "position": [
+              -6.898441504003978,
+              3.0014371350151334,
+              11.386963836678103
+            ],
+            "distance": 6.223012462167293,
+            "part": "maps/dust2/mobile/chunks/p02536.d2m.gz",
+            "partSha256": "8ea2864499c31e18e66e4c9f24b345f1fc01148cc7ca6a64ce49a08582975e45",
+            "materialId": 231,
+            "materialSource": "materials/models/props/de_dust/hr_dust/dust_windows/dust_window_frame_stone_01.vmat_c",
+            "triangleInPart": 124,
+            "vertices": [
+              [
+                -6.8963823318481445,
+                2.715298891067505,
+                11.420082092285156
+              ],
+              [
+                -6.898924350738525,
+                3.108672618865967,
+                11.37919807434082
+              ],
+              [
+                -6.898924350738525,
+                2.7149710655212402,
+                11.37919807434082
+              ]
+            ],
+            "vertexIndices": [
+              89,
+              91,
+              92
+            ],
+            "uv": [
+              0.4224868595519167,
+              0.03937567168227359
+            ],
+            "limitations": "Opaque/mask geometry intersection; alpha texels and original shader semantics not evaluated"
+          },
+          "worldCandidate": [
+            -6.898441504003978,
+            3.0014371350151334,
+            11.386963836678103
+          ],
+          "residualPixels": [
+            -0.3120240647792798,
+            2.2878860193621335
+          ]
+        },
+        {
+          "name": "lower-window-1",
+          "seedPixel": [
+            1058,
+            237
+          ],
+          "referencePixel": [
+            1027,
+            63
+          ],
+          "meshHit": {
+            "position": [
+              -5.884902000427246,
+              3.0100676856622584,
+              11.53312737216925
+            ],
+            "distance": 6.457252233243124,
+            "part": "maps/dust2/mobile/chunks/p03352.d2m.gz",
+            "partSha256": "bfa5090480c4de38fbe440bfb0805eb9592fb96440babdf6efe1aef2ce44f375",
+            "materialId": 268,
+            "materialSource": "materials/models/props/de_dust/hr_dust/dust_windows/dust_window_bars_metal_01.vmat_c",
+            "triangleInPart": 67,
+            "vertices": [
+              [
+                -5.884902000427246,
+                3.110578775405884,
+                11.517732620239258
+              ],
+              [
+                -5.884902000427246,
+                2.3113980293273926,
+                11.55229663848877
+              ],
+              [
+                -5.884902000427246,
+                3.110578775405884,
+                11.55229663848877
+              ]
+            ],
+            "vertexIndices": [
+              64,
+              60,
+              65
+            ],
+            "uv": [
+              0.9217112780806956,
+              0.8974722198278036
+            ],
+            "limitations": "Opaque/mask geometry intersection; alpha texels and original shader semantics not evaluated"
+          },
+          "worldCandidate": [
+            -5.884902000427246,
+            3.0100676856622584,
+            11.53312737216925
+          ],
+          "residualPixels": [
+            -5.940751063219977,
+            0.6540220334911169
+          ]
+        },
+        {
+          "name": "lower-window-2",
+          "seedPixel": [
+            1037,
+            384
+          ],
+          "referencePixel": [
+            972,
+            226
+          ],
+          "meshHit": {
+            "position": [
+              -5.790427102233519,
+              1.4368297162756138,
+              11.47578037914018
+            ],
+            "distance": 6.784832612924347,
+            "part": "maps/dust2/mobile/chunks/p02536.d2m.gz",
+            "partSha256": "8ea2864499c31e18e66e4c9f24b345f1fc01148cc7ca6a64ce49a08582975e45",
+            "materialId": 231,
+            "materialSource": "materials/models/props/de_dust/hr_dust/dust_windows/dust_window_frame_stone_01.vmat_c",
+            "triangleInPart": 231,
+            "vertices": [
+              [
+                -5.7653069496154785,
+                1.4018491506576538,
+                11.473976135253906
+              ],
+              [
+                -5.76905632019043,
+                1.4892027378082275,
+                11.473843574523926
+              ],
+              [
+                -5.8808817863464355,
+                1.3893847465515137,
+                11.483125686645508
+              ]
+            ],
+            "vertexIndices": [
+              165,
+              161,
+              148
+            ],
+            "uv": [
+              0.7896650897310468,
+              0.41536869063319143
+            ],
+            "limitations": "Opaque/mask geometry intersection; alpha texels and original shader semantics not evaluated"
+          },
+          "worldCandidate": [
+            -5.790427102233519,
+            1.4368297162756138,
+            11.47578037914018
+          ],
+          "residualPixels": [
+            1.6959818320108297,
+            -3.079643498505817
+          ]
+        },
+        {
+          "name": "lower-window-3",
+          "seedPixel": [
+            904,
+            383
+          ],
+          "referencePixel": [
+            842,
+            226
+          ],
+          "meshHit": {
+            "position": [
+              -6.8875328891396626,
+              1.4095986252235626,
+              11.44571003198509
+            ],
+            "distance": 6.425773490608572,
+            "part": "maps/dust2/mobile/chunks/p02536.d2m.gz",
+            "partSha256": "8ea2864499c31e18e66e4c9f24b345f1fc01148cc7ca6a64ce49a08582975e45",
+            "materialId": 231,
+            "materialSource": "materials/models/props/de_dust/hr_dust/dust_windows/dust_window_frame_stone_01.vmat_c",
+            "triangleInPart": 191,
+            "vertices": [
+              [
+                -6.88468074798584,
+                1.4128639698028564,
+                11.462362289428711
+              ],
+              [
+                -6.898924827575684,
+                1.5003656148910522,
+                11.37919807434082
+              ],
+              [
+                -6.898924827575684,
+                1.3883135318756104,
+                11.37919807434082
+              ]
+            ],
+            "vertexIndices": [
+              137,
+              138,
+              139
+            ],
+            "uv": [
+              0.7982087439068601,
+              0.7102372908437096
+            ],
+            "limitations": "Opaque/mask geometry intersection; alpha texels and original shader semantics not evaluated"
+          },
+          "worldCandidate": [
+            -6.8875328891396626,
+            1.4095986252235626,
+            11.44571003198509
+          ],
+          "residualPixels": [
+            5.149319004921381,
+            -1.6884184567865645
+          ]
+        }
+      ],
+      "rmsePixelsPerCoordinate": 3.216730697115031,
+      "constraint": "same horizontal position and projection as standing; eye height independently fitted"
+    },
+    "conditionalSensitivity": {
+      "method": "64 deterministic Gaussian reference-pixel perturbations; sigma=3px; fixed world picks",
+      "seed": 15,
+      "eyeDisplayPercentile5": [
+        -8.929873328241083,
+        3.381849731540938,
+        16.05941205781499
+      ],
+      "eyeDisplayPercentile95": [
+        -8.394998542590988,
+        4.346819024709734,
+        19.496827386189164
+      ],
+      "verticalFovPercentiles5_95": [
+        54.165481171206,
+        77.83595331845383
+      ],
+      "horizontalStretchPercentiles5_95": [
+        1.2170985766114473,
+        1.3249301886022704
+      ],
+      "limitation": "Conditional fitting sensitivity only; model/game version, seed corner selection and video scaling errors excluded."
+    }
+  },
+  "support": {
+    "displayGeometryHit": {
+      "position": [
+        -8.706360613139768,
+        2.1671871688729065,
+        17.337658293798334
+      ],
+      "distance": 1.713414956829192,
+      "part": "maps/dust2/mobile/chunks/p00550.d2m.gz",
+      "partSha256": "8221f399ee061ad4a1c446ebf9db5fc9066b38d57323fd8ed12599056634e663",
+      "materialId": 62,
+      "materialSource": "materials/de_dust/hr_dust/hr_dust_blend_floortile_01.vmat_c",
+      "triangleInPart": 51,
+      "vertices": [
+        [
+          -9.753597259521484,
+          2.411409854888916,
+          17.654584884643555
+        ],
+        [
+          -6.502398490905762,
+          1.621628761291504,
+          17.286283493041992
+        ],
+        [
+          -9.75439167022705,
+          2.43045973777771,
+          17.287076950073242
+        ]
+      ],
+      "vertexIndices": [
+        42,
+        35,
+        43
+      ],
+      "uv": [
+        -2.6356730442917238,
+        0.32535907301652117
+      ],
+      "limitations": "Opaque/mask geometry intersection; alpha texels and original shader semantics not evaluated"
+    },
+    "worldPhysicsHit": {
+      "triangle": 254344,
+      "shape": 10093,
+      "layer": 0,
+      "surfaceIndex": 0,
+      "surfaceHash": 436732118,
+      "fraction": 0.1427694368172429,
+      "distanceDisplayUnits": 1.713233241806915,
+      "positionDisplay": [
+        -8.706360613139768,
+        2.1673688838951835,
+        17.337658293798334
+      ],
+      "normalAgainstSegment": [
+        0.2412547457758019,
+        0.9691506437495083,
+        0.050429925248474256
+      ]
+    },
+    "queryLayers": [
+      0
+    ],
+    "collisionArchiveSha256": "df177de2712da928f07013313cdce35fcd9fc07f4fba6cac259643af880bbe25",
+    "displayCollisionHeightDifference": 0.00018171502227692926,
+    "eyeHeightAboveSupport": 1.7132332418069152,
+    "crouchEyeHeightAboveSupport": 1.3039033233748367,
+    "nearbyProbes": [
+      {
+        "offsetDisplayXZ": [
+          0,
+          0
+        ],
+        "hit": {
+          "triangle": 254344,
+          "shape": 10093,
+          "layer": 0,
+          "surfaceIndex": 0,
+          "surfaceHash": 436732118,
+          "fraction": 0.1427694368172429,
+          "distanceDisplayUnits": 1.713233241806915,
+          "positionDisplay": [
+            -8.706360613139768,
+            2.1673688838951835,
+            17.337658293798334
+          ],
+          "normalAgainstSegment": [
+            0.2412547457758019,
+            0.9691506437495083,
+            0.050429925248474256
+          ]
+        }
+      },
+      {
+        "offsetDisplayXZ": [
+          0.1,
+          0
+        ],
+        "hit": {
+          "triangle": 254344,
+          "shape": 10093,
+          "layer": 0,
+          "surfaceIndex": 0,
+          "surfaceHash": 436732118,
+          "fraction": 0.1448438885320147,
+          "distanceDisplayUnits": 1.7381266623841762,
+          "positionDisplay": [
+            -8.606360613139769,
+            2.1424754633179224,
+            17.337658293798334
+          ],
+          "normalAgainstSegment": [
+            0.2412547457758019,
+            0.9691506437495083,
+            0.050429925248474256
+          ]
+        }
+      },
+      {
+        "offsetDisplayXZ": [
+          -0.1,
+          0
+        ],
+        "hit": {
+          "triangle": 254344,
+          "shape": 10093,
+          "layer": 0,
+          "surfaceIndex": 0,
+          "surfaceHash": 436732118,
+          "fraction": 0.14069498510247114,
+          "distanceDisplayUnits": 1.6883398212296536,
+          "positionDisplay": [
+            -8.806360613139768,
+            2.192262304472445,
+            17.337658293798334
+          ],
+          "normalAgainstSegment": [
+            0.2412547457758019,
+            0.9691506437495083,
+            0.050429925248474256
+          ]
+        }
+      },
+      {
+        "offsetDisplayXZ": [
+          0,
+          0.1
+        ],
+        "hit": {
+          "triangle": 254344,
+          "shape": 10093,
+          "layer": 0,
+          "surfaceIndex": 0,
+          "surfaceHash": 436732118,
+          "fraction": 0.14320306329191018,
+          "distanceDisplayUnits": 1.7184367595029222,
+          "positionDisplay": [
+            -8.706360613139768,
+            2.1621653661991767,
+            17.437658293798336
+          ],
+          "normalAgainstSegment": [
+            0.2412547457758019,
+            0.9691506437495083,
+            0.050429925248474256
+          ]
+        }
+      },
+      {
+        "offsetDisplayXZ": [
+          0,
+          -0.1
+        ],
+        "hit": {
+          "triangle": 254349,
+          "shape": 10093,
+          "layer": 0,
+          "surfaceIndex": 0,
+          "surfaceHash": 436732118,
+          "fraction": 0.14313224901954358,
+          "distanceDisplayUnits": 1.717586988234523,
+          "positionDisplay": [
+            -8.706360613139768,
+            2.1630151374675757,
+            17.237658293798333
+          ],
+          "normalAgainstSegment": [
+            0.2392722386021869,
+            0.9613790511297577,
+            -0.1360114549703247
+          ]
+        }
+      }
+    ],
+    "standingSemanticsVerified": false,
+    "limitation": "Ground support consistency does not certify player hull fit, corner alignment or original CS2 stance."
+  },
+  "aimSurface": {
+    "position": [
+      -9.092647773666378,
+      5.666567067239684,
+      10.031329028793515
+    ],
+    "distance": 7.531356841330446,
+    "part": "maps/dust2/mobile/chunks/p00817.d2m.gz",
+    "partSha256": "0115c83871a0e1dec2037b3fcad718daf2d492d47e73ec138ee4f81aea694ef9",
+    "materialId": 38,
+    "materialSource": "materials/de_dust/hr_dust/hr_dust_blend_plaster_white_01c.vmat_c",
+    "triangleInPart": 580,
+    "vertices": [
+      [
+        -9.16939640045166,
+        5.079997539520264,
+        9.956798553466797
+      ],
+      [
+        -8.620121955871582,
+        5.079997539520264,
+        10.490198135375977
+      ],
+      [
+        -9.16939640045166,
+        6.095997333526611,
+        9.956798553466797
+      ]
+    ],
+    "vertexIndices": [
+      391,
+      388,
+      392
+    ],
+    "uv": [
+      -0.5032664322220933,
+      0.5070272419302587
+    ],
+    "limitations": "Opaque/mask geometry intersection; alpha texels and original shader semantics not evaluated"
+  },
+  "localMaterialAudit": {
+    "material": {
+      "id": 38,
+      "source": "materials/de_dust/hr_dust/hr_dust_blend_plaster_white_01c.vmat_c",
+      "shader": "csgo_lightmappedgeneric.vfx",
+      "base": "maps/dust2/mobile/textures/t044.png",
+      "layer": "maps/dust2/mobile/textures/t040.png",
+      "blend": "maps/dust2/mobile/textures/t045.png",
+      "alphaMode": "opaque",
+      "cutoff": 0.5,
+      "opacity": 1,
+      "doubleSided": false,
+      "overlay": false,
+      "tint": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uvScale": [
+        1,
+        1
+      ],
+      "uvOffset": [
+        0,
+        0
+      ],
+      "uvRotation": 0,
+      "layerScale": [
+        1.0,
+        1.0
+      ],
+      "layerOffset": [
+        0.0,
+        0.0
+      ],
+      "blendScale": [
+        1.0,
+        1.0
+      ],
+      "blendMode": 2,
+      "softness": 0.013,
+      "paint": false,
+      "allSourceParameters": {
+        "source": "materials/de_dust/hr_dust/hr_dust_blend_plaster_white_01c.vmat_c",
+        "material_name": "materials/de_dust/hr_dust/hr_dust_blend_plaster_white_01c.vmat",
+        "shader": "csgo_lightmappedgeneric.vfx",
+        "int_params": {
+          "F_FANCY_BLENDING": 2,
+          "F_LAYERS": 1,
+          "F_TEXTURETRANSFORMS": 1,
+          "g_bFogEnabled": 1,
+          "g_nTextureAddressModeU": 0,
+          "g_nTextureAddressModeV": 0
+        },
+        "float_params": {
+          "g_flBevelBlendSharpness": 2.0,
+          "g_flBevelBlendStrength": 0.0,
+          "g_flBevelBlendWidth": 4.0,
+          "g_flBlendModulateTexCoordRotation": 0.0,
+          "g_flBlendSoftness": 0.013,
+          "g_flLayer1NormalTexCoordRotation": 0.0,
+          "g_flLayer1TexCoordRotation": 0.0,
+          "g_flLayer2NormalTexCoordRotation": 0.0,
+          "g_flLayer2TexCoordRotation": 0.0,
+          "g_flLayerBorderOffset": -0.5,
+          "g_flLayerBorderSoftness": 1.0,
+          "g_flLayerBorderStrength": 1.0,
+          "g_flMetalness": 0.0,
+          "g_flModelTintAmount": 1.0,
+          "g_flVertexColorOpacityScale": 1.0
+        },
+        "texture_params": [
+          {
+            "parameter": "g_tBlendModulation",
+            "path": "materials/de_dust/hr_dust/hr_dust_plaster_06_blendmod_blend_psd_2caff036.vtex"
+          },
+          {
+            "parameter": "g_tColor",
+            "path": "materials/de_dust/hr_dust/hr_dust_plaster_05c_color_psd_77224eec.vtex"
+          },
+          {
+            "parameter": "g_tLayer1AmbientOcclusion",
+            "path": "materials/default/default_ao_tga_559f1ac6.vtex"
+          },
+          {
+            "parameter": "g_tLayer1NormalRoughness",
+            "path": "materials/de_dust/hr_dust/hr_dust_plaster_05_normal_psd_32964e28.vtex"
+          },
+          {
+            "parameter": "g_tLayer2AmbientOcclusion",
+            "path": "materials/default/default_ao_tga_559f1ac6.vtex"
+          },
+          {
+            "parameter": "g_tLayer2Color",
+            "path": "materials/de_dust/hr_dust/hr_dust_plaster_04_color_psd_8a2507ab.vtex"
+          },
+          {
+            "parameter": "g_tLayer2NormalRoughness",
+            "path": "materials/default/default_normal_tga_7be39f77.vtex"
+          }
+        ],
+        "alpha_test": false,
+        "translucent": false,
+        "render_backfaces": false,
+        "overlay": false,
+        "layer_flags": {
+          "F_LAYERS": 1
+        },
+        "vector_params": {
+          "g_vBlendModulateTexCoordCenter": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "g_vBlendModulateTexCoordOffset": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "g_vBlendModulateTexCoordScale": [
+            1.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "g_vColorTint": [
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "g_vLayer1NormalTexCoordCenter": [
+            0.5,
+            0.5,
+            0.0,
+            0.0
+          ],
+          "g_vLayer1NormalTexCoordOffset": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "g_vLayer1NormalTexCoordScale": [
+            1.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "g_vLayer1RoughnessBrightnessContrast": [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "g_vLayer1TexCoordCenter": [
+            0.5,
+            0.5,
+            0.0,
+            0.0
+          ],
+          "g_vLayer1TexCoordOffset": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "g_vLayer1TexCoordScale": [
+            1.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "g_vLayer1Tint": [
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "g_vLayer2NormalTexCoordCenter": [
+            0.5,
+            0.5,
+            0.0,
+            0.0
+          ],
+          "g_vLayer2NormalTexCoordOffset": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "g_vLayer2NormalTexCoordScale": [
+            1.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "g_vLayer2RoughnessBrightnessContrast": [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "g_vLayer2TexCoordCenter": [
+            0.5,
+            0.5,
+            0.0,
+            0.0
+          ],
+          "g_vLayer2TexCoordOffset": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "g_vLayer2TexCoordScale": [
+            1.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "g_vLayer2Tint": [
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "g_vLayerBorderTint": [
+            0.815686,
+            0.752941,
+            0.686275,
+            0.0
+          ]
+        }
+      },
+      "previewEnabled": true
+    },
+    "textures": [
+      {
+        "source": "materials/de_dust/hr_dust/hr_dust_plaster_04_color_psd_8a2507ab.vtex_c",
+        "sourcePNG": {
+          "path": "materials/de_dust/hr_dust/hr_dust_plaster_04_color_psd_8a2507ab.png",
+          "bytes": 7996701,
+          "sha256": "92043f760a504a6626cb326e6b8e31605a62d77011d30a13a1826d618841fe4e",
+          "width": 2048,
+          "height": 2048,
+          "mode": "RGBA"
+        },
+        "asset": "maps/dust2/mobile/textures/t040.png",
+        "width": 512,
+        "height": 512,
+        "sha256": "503de212eabd6049f17cf6303ab7afd02690ff31c59c472fcd131aae2bb18901",
+        "bytes": 460761
+      },
+      {
+        "source": "materials/de_dust/hr_dust/hr_dust_plaster_05c_color_psd_77224eec.vtex_c",
+        "sourcePNG": {
+          "path": "materials/de_dust/hr_dust/hr_dust_plaster_05c_color_psd_77224eec.png",
+          "bytes": 5406196,
+          "sha256": "5c2079b664dd950e2d032ffe90340bb9e604ac06eb241849dc102a2af563ad46",
+          "width": 2048,
+          "height": 2048,
+          "mode": "RGBA"
+        },
+        "asset": "maps/dust2/mobile/textures/t044.png",
+        "width": 256,
+        "height": 256,
+        "sha256": "134b249b5249e3fe14dce0a5182bfb5fee0ad57e8710b56f45123e35ac64cc93",
+        "bytes": 98084
+      },
+      {
+        "source": "materials/de_dust/hr_dust/hr_dust_plaster_06_blendmod_blend_psd_2caff036.vtex_c",
+        "sourcePNG": {
+          "path": "materials/de_dust/hr_dust/hr_dust_plaster_06_blendmod_blend_psd_2caff036.png",
+          "bytes": 1529378,
+          "sha256": "38ec8a15aecb893f0240147cdeb475e7d5ee6f660627480967ec7227d4573372",
+          "width": 1024,
+          "height": 1024,
+          "mode": "RGBA"
+        },
+        "asset": "maps/dust2/mobile/textures/t045.png",
+        "width": 512,
+        "height": 512,
+        "sha256": "1a0fedd3714a3488bff965739a18ce35b1bc18ddc1c37e142ee5a766c70aa9b7",
+        "bytes": 367039
+      }
+    ],
+    "changes": [],
+    "referenceConsistent": null,
+    "phoneReadableWithoutHint": null,
+    "issue": "Window/roof silhouette approximately matches; crosshair wall stain and crouch wall edge remain visually inconsistent. Material 38 blend and source game/map version need comparison."
+  },
+  "videoProjection": {
+    "horizontalStretchCandidate": 1.2799267637167655,
+    "recordingModeConfirmed": false,
+    "runtimeNote": "Horizontal stretch is evidence-only. Existing runtime schema remains unchanged; use normal aspect to inspect candidate world camera."
+  },
+  "runtimeDraft": "docs/calibration/C014/app-pending/D2-001.json",
+  "throwFlags": {
+    "crouchToAlign": true,
+    "standBeforeRelease": true,
+    "jump": true,
+    "leftClick": true
+  },
+  "trajectory": null,
+  "landing": null,
+  "releaseRelativeEffectTimes": null,
+  "missing": [
+    "semantic wall seam/contact and stain verification",
+    "CS2 map/build and native video projection",
+    "APP capture at candidate stance and aim without hints",
+    "release/path/bounces/landing and complete smoke lifecycle",
+    "follow/landing cameras and phone acceptance"
+  ],
+  "acceptance": {
+    "calibrated": false,
+    "phoneVerified": false,
+    "gameMeasured": false
+  }
+}

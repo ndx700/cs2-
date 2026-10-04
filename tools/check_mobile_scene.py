@@ -6,9 +6,27 @@ import ctypes as C, ctypes.util, gzip, hashlib, json, math, struct, sys
 from pathlib import Path
 import numpy as np
 from PIL import Image
+import argparse
+parser=argparse.ArgumentParser()
+parser.add_argument('--debug-material',action='store_true')
+parser.add_argument('--capture-camera',type=Path,help='C015 capture JSON or a camera object; never implies calibrated course')
+parser.add_argument('--capture-output',type=Path)
+args=parser.parse_args()
 ROOT=Path(__file__).resolve().parents[1];ASSETS=ROOT/'app/src/main/assets';OUT=ROOT/'docs/preview';OUT.mkdir(parents=True,exist_ok=True)
+if args.capture_output:OUT=args.capture_output;OUT.mkdir(parents=True,exist_ok=True)
 scene=json.loads((ASSETS/'maps/dust2/mobile/manifest.json').read_text())
 DEBUG='--debug-material' in sys.argv
+capture=None
+capture_width,capture_height=1200,800
+capture_extent=json.loads((ASSETS/'maps/dust2/scene.json').read_text())['extent']
+if args.capture_camera:
+    assert args.capture_camera.stat().st_size<=65536
+    capture=json.loads(args.capture_camera.read_text())
+    camera=capture.get('camera',capture)
+    from c015_display_capture import camera_frame,ray_at,query
+    capture_width,capture_height=capture.get('viewportWidth',1200),capture.get('viewportHeight',800)
+    assert isinstance(capture_width,int) and isinstance(capture_height,int) and 0<capture_width*capture_height<=4_000_000
+    capture_eye,capture_fov,capture_vp=camera_frame(camera,capture_width,capture_height,capture_extent)
 egl=C.CDLL(ctypes.util.find_library('EGL'))
 def efn(name,restype,args):
     f=getattr(egl,name);f.restype=restype;f.argtypes=args;return f
@@ -21,7 +39,7 @@ assert efn('eglBindAPI',C.c_uint,[C.c_uint])(0x30a0)
 choose=efn('eglChooseConfig',C.c_uint,[C.c_void_p,C.POINTER(C.c_int),C.POINTER(C.c_void_p),C.c_int,C.POINTER(C.c_int)])
 attrs=(C.c_int*17)(0x3033,1,0x3040,4,0x3024,8,0x3023,8,0x3022,8,0x3021,8,0x3025,24,0x3038,0,0)
 config=C.c_void_p();count=C.c_int();assert choose(display,attrs,C.byref(config),1,C.byref(count)) and count.value
-w,h=1200,800
+w,h=capture_width,capture_height
 surface=efn('eglCreatePbufferSurface',C.c_void_p,[C.c_void_p,C.c_void_p,C.POINTER(C.c_int)])(display,config,(C.c_int*5)(0x3057,w,0x3056,h,0x3038))
 context=efn('eglCreateContext',C.c_void_p,[C.c_void_p,C.c_void_p,C.c_void_p,C.POINTER(C.c_int)])(display,config,None,(C.c_int*3)(0x3098,2,0x3038))
 assert context and surface
@@ -87,9 +105,12 @@ views=[('overview',overview,center),('courtyard',np.array([25.,20.,-15.]),np.arr
 views += [('free_b_site',np.array([-39.5128646,1.7807047,-67.2448919]),np.array([-40.,1.7807047,-40.])),('free_t_spawn',np.array([-20.8880754,5.4780086,20.2093091]),np.array([-30.,5.4780086,-10.]))]
 views += [('free_b_default',np.array([-39.5128646,1.7807047,-67.2448919]),np.array([-39.5128646,1.7807047,-67.2448919])+np.array([-math.sin(math.radians(38)),0,-math.cos(math.radians(38))])),('free_t_default',np.array([-20.8880754,5.4780086,20.2093091]),np.array([-20.8880754,5.4780086,20.2093091])+np.array([-math.sin(math.radians(38)),0,-math.cos(math.radians(38))]))]
 if DEBUG:views=[v for v in views if v[0]=='courtyard']
+if capture is not None:views=[('capture',capture_eye,capture_eye+np.array([-math.sin(math.radians(camera['yaw']))*math.cos(math.radians(camera['pitch'])),-math.sin(math.radians(camera['pitch'])),-math.cos(math.radians(camera['yaw']))*math.cos(math.radians(camera['pitch']))]))]
 for name,eye,target in views:
     clearcolor(.071,.095,.13,1);depthmask(1);clear(0x4000|0x100)
     vp=projection(w/h,name.startswith("free_"))@lookat(eye,target);mat=vp.T.astype('f4').copy();um(loc('uVP'),1,0,mat.ctypes.data)
+    if capture is not None:
+        vp=capture_vp;mat=vp.T.astype('f4').copy();um(loc('uVP'),1,0,mat.ctypes.data)
     def distance(row):return np.linalg.norm(np.array(row[2]['center'])-eye)
     eligible=[d for d in draws if scene['materials'][d[2]['material']].get('previewEnabled',True)]
     opaque=sorted([d for d in eligible if scene['materials'][d[2]['material']]['alphaMode']!='blend'],key=lambda d:d[2]['material'])
@@ -113,5 +134,10 @@ for name,eye,target in views:
     pixels=np.empty((h,w,4),dtype='u1');read(0,0,w,h,0x1908,0x1401,pixels.ctypes.data);assert geterr()==0
     bg=np.array([18,24,33]);coverage=(np.abs(pixels[:,:,:3].astype('i4')-bg).max(2)>8).mean();assert coverage>.02,(name,coverage)
     Image.fromarray(pixels[::-1]).convert('RGB').save(OUT/(name+('_material_ids' if DEBUG else '')+'.png'));print('rendered',name,'coverage',float(coverage),flush=True)
+    if capture is not None:
+        x,y=capture.get('pixel',[w/2,h/2]);origin,direction=ray_at(eye,vp,w,h,x,y)
+        hit,stats=query(ASSETS,scene,origin,direction,capture_extent*10)
+        record={'schema':'c015-display-capture-v1','status':'DEVELOPMENT','importable':False,'coordinateSpace':'display-m-y-up-v1','mapVersion':hashlib.sha256((ASSETS/'maps/dust2/mobile/manifest.json').read_bytes()).hexdigest(),'field':capture.get('field','aim'),'camera':camera,'cameraPositionMeaning':'eye' if camera['free'] else 'orbit-target','actualCameraEye':eye.tolist(),'verticalFov':capture_fov,'viewportWidth':w,'viewportHeight':h,'ray':{'origin':origin.tolist(),'direction':direction.tolist(),'maxDistance':capture_extent*10},'surface':hit,'value':hit['position'] if hit else None,'screenshot':'capture.png','screenshotSha256':hashlib.sha256((OUT/'capture.png').read_bytes()).hexdigest(),'environment':getstr(0x1f01).decode(),'scope':'Full restored enabled display map rendered offline with repository shaders. Unverified map probe, not selected-video stance/aim or Android/phone evidence.','queryStats':stats}
+        (OUT/'capture.json').write_text(json.dumps(record,indent=2)+'\n')
 report={'environment':getstr(0x1f01).decode(),'glVersion':getstr(0x1f02).decode(),'checks':'all chunk SHA/length/index/finiteness/bounds; all PNG SHA/size; exact GLES shader compile/link; enabled scene draws without GL errors','triangles':triangles,'parts':len(draws),'textures':len(textures),'views':[v[0] for v in views],'deferredAmbientEffects':{'materials':sum(not m.get('previewEnabled',True) for m in scene['materials']),'parts':sum(not scene['materials'][p['material']].get('previewEnabled',True) for p in scene['parts']),'triangles':sum(p['indexCount']//3 for p in scene['parts'] if not scene['materials'][p['material']].get('previewEnabled',True))},'androidRuntime':'not tested; EGL desktop software rendering is not Android evidence'}
-(ROOT/'docs'/('egl-debug-materials.json' if DEBUG else 'egl-verification.json')).write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(report,indent=2))
+(OUT/'egl-report.json' if capture is not None else ROOT/'docs'/('egl-debug-materials.json' if DEBUG else 'egl-verification.json')).write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(report,indent=2))

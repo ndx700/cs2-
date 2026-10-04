@@ -1,0 +1,126 @@
+{
+  "schema": "c013-course-fx-v1",
+  "mapId": "dust2",
+  "lessonId": "D2-009",
+  "title": "B包点 Fence / Close Left 火",
+  "relatedIds": [],
+  "status": "PENDING_CALIBRATION",
+  "importable": false,
+  "mapVersion": "fc60c032290dffcb233e3de9da3c59694293362ec72643cc1ebde9c1b13a17d0",
+  "coordinateSpace": "display-m-y-up-v1",
+  "timeOrigin": "throw-release-seconds",
+  "evidence": {
+    "url": "https://getreplay.gg/en/utility/dust2/molotov/dust2-b-site-close-fence-molotov",
+    "gameBuild": null,
+    "releaseVideoSeconds": null
+  },
+  "teachingSource": "https://getreplay.gg/en/utility/dust2/molotov/dust2-b-site-close-fence-molotov",
+  "effectSource": "https://www.youtube.com/watch?v=6aEaQjRaV1U",
+  "referenceSegment": "Nart 7:58–8:30",
+  "foot": null,
+  "eye": null,
+  "aim": null,
+  "bodyYaw": null,
+  "aimFov": null,
+  "cameras": null,
+  "throwHint": null,
+  "begin": null,
+  "aimAt": null,
+  "throwAt": null,
+  "duration": null,
+  "path": null,
+  "smoke": null,
+  "fire": null,
+  "he": null,
+  "resourceObservations": {
+    "sourceRecord": "docs/calibration/C013/calibration-records.json#D2-009",
+    "positionSemantics": "UNCONFIRMED_PLAYER_OR_EYE_POSITION_NOT_FEET",
+    "sourceConsolePosition": [
+      -1837.968018,
+      990.979187,
+      103.416237
+    ],
+    "displayConsolePosition": [
+      -46.6843876572,
+      2.6267724198,
+      -25.1708713498
+    ],
+    "sourceAnglesPitchYawRoll": [
+      -6.208987,
+      103.978676,
+      0.0
+    ],
+    "sourceDeclaredThrowFlags": {
+      "jump": false,
+      "forward": false,
+      "standing": true,
+      "left_click": true,
+      "status": "SOURCE_DECLARED_NOT_GAME_VALIDATED"
+    },
+    "screenshotIds": [
+      "D2-009-image-01",
+      "D2-009-image-02",
+      "D2-009-image-03"
+    ],
+    "coordinateAlias": "dust2_display_y_up_v1 -> display-m-y-up-v1; preserve numeric values; no second transform; physical-unit certification pending",
+    "effectStages": [
+      {
+        "event": "throw_release",
+        "ageSeconds": null,
+        "sourceClipTimeSeconds": null,
+        "measurementEvidence": null,
+        "status": "PENDING_CALIBRATION"
+      },
+      {
+        "event": "impact",
+        "ageSeconds": null,
+        "sourceClipTimeSeconds": null,
+        "measurementEvidence": null,
+        "status": "PENDING_CALIBRATION"
+      },
+      {
+        "event": "first_ignition",
+        "ageSeconds": null,
+        "sourceClipTimeSeconds": null,
+        "measurementEvidence": null,
+        "status": "PENDING_CALIBRATION"
+      },
+      {
+        "event": "late_region_ignition",
+        "ageSeconds": null,
+        "sourceClipTimeSeconds": null,
+        "measurementEvidence": null,
+        "status": "PENDING_CALIBRATION"
+      },
+      {
+        "event": "final_coverage",
+        "ageSeconds": null,
+        "sourceClipTimeSeconds": null,
+        "measurementEvidence": null,
+        "status": "PENDING_CALIBRATION"
+      },
+      {
+        "event": "extinguish_begin",
+        "ageSeconds": null,
+        "sourceClipTimeSeconds": null,
+        "measurementEvidence": null,
+        "status": "PENDING_CALIBRATION"
+      },
+      {
+        "event": "extinguish_end",
+        "ageSeconds": null,
+        "sourceClipTimeSeconds": null,
+        "measurementEvidence": null,
+        "status": "PENDING_CALIBRATION"
+      }
+    ]
+  },
+  "aimTextureAcceptance": "docs/calibration/C013/aim-texture-checks.json#D2-009",
+  "missing": [
+    "validated feet/eye/aim and camera FOV",
+    "verified throw/path/landing",
+    "continuous release-relative smoke/fire/HE measurements",
+    "CS2 game/map version and equivalent view reference",
+    "APP phone screenshots with hints visible and hidden"
+  ]
+}

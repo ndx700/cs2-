@@ -1,0 +1,22 @@
+{
+  "schema": "c013-aim-acceptance-v1",
+  "status": "PENDING",
+  "lessonId": "D2-001",
+  "aimAcceptance": {
+    "mapVersion": null,
+    "appBuild": null,
+    "referenceDescription": null,
+    "cs2Frame": null,
+    "appHintVisibleFrame": null,
+    "appHintHiddenFrame": null,
+    "localAssetAudit": null,
+    "phoneDevice": null,
+    "viewportWidth": null,
+    "viewportHeight": null,
+    "verticalFov": null,
+    "stanceContactReadable": null,
+    "referenceConsistent": null,
+    "phoneReadableWithoutHint": null
+  },
+  "note": "待补草稿，不可作为 CALIBRATED 课程导入。验收后将 aimAcceptance 对象嵌入对应课程；不得把 null 改成推测值。"
+}

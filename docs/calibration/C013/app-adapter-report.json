@@ -1,0 +1,18 @@
+{
+  "schema": "c013-resource-app-adapter-v1",
+  "status": "PENDING_CALIBRATION",
+  "appContract": {
+    "path": "docs/contracts/C013-course-fx-v1.md",
+    "headSha": "516f2ce41ccd55a7aac441a2ee52d80d550e71a1",
+    "blobSha": "f168be008e7c60334665b1a600dd13f5c9c84dd4"
+  },
+  "mapVersion": "fc60c032290dffcb233e3de9da3c59694293362ec72643cc1ebde9c1b13a17d0",
+  "drafts": [
+    "app-pending/D2-001.json",
+    "app-pending/D2-014.json",
+    "app-pending/D2-009.json",
+    "app-pending/D2-010.json"
+  ],
+  "runtimeImportAllowed": false,
+  "reason": "Contract-aligned pending documents; APP parser rejects importable=false before runtime fields. This is not a playable or calibrated course."
+}

@@ -1,0 +1,78 @@
+{
+  "schema": "c013-course-fx-v1",
+  "mapId": "dust2",
+  "lessonId": "D2-010",
+  "title": "蓝车满烧火",
+  "relatedIds": [],
+  "status": "PENDING_CALIBRATION",
+  "importable": false,
+  "mapVersion": "fc60c032290dffcb233e3de9da3c59694293362ec72643cc1ebde9c1b13a17d0",
+  "coordinateSpace": "display-m-y-up-v1",
+  "timeOrigin": "throw-release-seconds",
+  "evidence": {
+    "url": "https://b23.tv/NwO4dLO",
+    "gameBuild": null,
+    "releaseVideoSeconds": null
+  },
+  "teachingSource": "https://b23.tv/NwO4dLO",
+  "effectSource": "https://b23.tv/NwO4dLO",
+  "referenceSegment": "user-selected video; encoded segment timestamps in user-video-evidence.json",
+  "foot": null,
+  "eye": null,
+  "aim": null,
+  "bodyYaw": null,
+  "aimFov": null,
+  "cameras": {
+    "stance": null,
+    "aim": null,
+    "overview": null,
+    "follow": null,
+    "landing": null
+  },
+  "throwHint": null,
+  "begin": null,
+  "aimAt": null,
+  "throwAt": null,
+  "duration": null,
+  "path": null,
+  "smoke": null,
+  "fire": null,
+  "he": null,
+  "resourceObservations": {
+    "sourceVideoEvidence": "docs/calibration/C014/user-video-evidence.json#D2-010",
+    "positionSemantics": "VIDEO_ONLY_NO_CERTIFIED_XYZ",
+    "sourceConsolePosition": null,
+    "displayConsolePosition": null,
+    "sourceAnglesPitchYawRoll": null,
+    "videoObservedThrowFlags": {
+      "jump": true,
+      "forward": true,
+      "crouchAtRelease": false,
+      "left_click": null,
+      "status": "VIDEO_OBSERVED_NOT_GAME_REPRODUCED"
+    },
+    "screenshotIds": [
+      "D2-010-user-011.0",
+      "D2-010-user-013.0",
+      "D2-010-user-018.0",
+      "D2-010-user-021.9",
+      "D2-010-user-022.1",
+      "D2-010-user-024.0",
+      "D2-010-user-025.0",
+      "D2-010-user-026.0",
+      "D2-010-user-029.0"
+    ],
+    "historicalC013ReferenceSuperseded": true
+  },
+  "aimTextureAcceptance": "docs/calibration/C014/aim-texture-checks.json#D2-010",
+  "missing": [
+    "validated feet/eye/aim and camera FOV",
+    "verified throw/path/landing",
+    "continuous release-relative smoke/fire/HE measurements",
+    "CS2 game/map version and equivalent view reference",
+    "APP phone screenshots with hints visible and hidden",
+    "measured follow/landing orbit target, yaw/pitch/distance and obstruction check"
+  ],
+  "observationContract": "docs/calibration/C014/app-observation-receipt.json",
+  "referenceRevision": "user-selected-20261004-v2"
+}

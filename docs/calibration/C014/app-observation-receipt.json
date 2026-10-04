@@ -1,0 +1,56 @@
+{
+  "schema": "c014-resource-app-observation-receipt-v1",
+  "status": "INTERFACE_ACKNOWLEDGED_CALIBRATION_PENDING",
+  "owner": "C014-RES",
+  "checkedAt": "2026-10-04T22:05:00+08:00",
+  "appPr": 10,
+  "appHead": "346c20fc5d36654b9ce7ca6bbfe956000780d428",
+  "files": [
+    {
+      "path": "docs/contracts/C014-observation-v1.md",
+      "blobSha": "b1f5e4c73404d1ce25f14025494a1738aafb710a"
+    },
+    {
+      "path": "app/src/main/java/com/ali/cs2utility/tutorial/CourseJson.kt",
+      "blobSha": "2deaa6181503a142f4b0997911bac737711bbe75"
+    },
+    {
+      "path": "app/src/main/java/com/ali/cs2utility/tutorial/Course.kt",
+      "blobSha": "366dc73e521bb45cf396ab3a100bbbec447d8c9d"
+    }
+  ],
+  "coordinateSpace": "display-m-y-up-v1",
+  "timeOrigin": "throw-release-seconds",
+  "requiredCameras": [
+    "stance",
+    "aim",
+    "overview",
+    "follow",
+    "landing"
+  ],
+  "orbitCameraFields": [
+    "position",
+    "yaw",
+    "pitch",
+    "distance"
+  ],
+  "orbitCameraBounds": {
+    "distanceMin": 1,
+    "pitchMin": 20,
+    "pitchMax": 85
+  },
+  "followPositionPolicy": "APP overrides position with eye before release, grenade during flight and final path point after landing.",
+  "landingPositionPolicy": "Fixed target; its position is not the orbit camera eye. Main and inset share a single course clock.",
+  "heTimePolicy": "All times are relative to HE release zero; begin <= smoke.start < smoke.formed <= 0. Measured smoke age/offset remains null.",
+  "calibratedImportAllowed": false,
+  "phoneVerified": false,
+  "scope": "Receipt confirms field/coordinate/clock conventions read in the pinned APP contract and parser/validation source. It does not certify camera geometry, courses, smoke/fire fidelity or phone behaviour.",
+  "runtimeDraftFolder": "docs/calibration/C014/app-pending",
+  "remainingEvidence": [
+    "continuous game footage with release zero and game/map version",
+    "feet/eye/aim/trajectory/landing coordinates",
+    "follow and landing orbit targets/orientation/distance with obstruction check",
+    "smoke/fire/HE stage measurements and same-smoke linkage",
+    "phone aiming comparison and complete three-lesson recordings"
+  ]
+}

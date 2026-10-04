@@ -1,0 +1,765 @@
+{
+  "schema": "c013-aim-texture-checks-v1",
+  "requirement": "docs/requirements/C013-aim-texture-acceptance.md",
+  "allCoursesCalibrated": false,
+  "records": [
+    {
+      "id": "D2-001",
+      "status": "PENDING_REFERENCE_AND_PHONE_VALIDATION",
+      "mapVersion": "fc60c032290dffcb233e3de9da3c59694293362ec72643cc1ebde9c1b13a17d0",
+      "assetPackVersion": "v0.6.0-test2",
+      "assetPackManifestSha256": "e41718a3acde7df2f2f9cf9a98b5e5b967e406353d30b6983f9e18f5a37a2fa3",
+      "appBuild": null,
+      "cs2GameBuild": null,
+      "cs2MapBuild": null,
+      "teachingSource": "https://getreplay.gg/en/utility/dust2/smoke/d2-mid-door-smoke",
+      "sourceTimeSeconds": null,
+      "stance": {
+        "feetDisplay": null,
+        "eyeDisplay": null,
+        "yaw": null,
+        "pitch": null,
+        "fov": null
+      },
+      "referenceImages": [
+        {
+          "id": "D2-001-image-02",
+          "path": "docs/calibration/C013/screenshots/D2-001-02-stand_reference.jpg",
+          "sha256": "feac8163ace1e5ea150d2721d1aebfde50b5e3980e3704c7c95df5775453c785",
+          "role": "stand_reference",
+          "size": [
+            1280,
+            720
+          ]
+        },
+        {
+          "id": "D2-001-image-03",
+          "path": "docs/calibration/C013/screenshots/D2-001-03-aim_reference.jpg",
+          "sha256": "40c2372ed4c8c418377930ab3bc9a8992158c5edcd22be3897af4a1ec1a75862",
+          "role": "aim_reference",
+          "size": [
+            1280,
+            720
+          ]
+        }
+      ],
+      "sourceImageObservations": {
+        "stand": "第三人称参考显示人物在道路边低墙旁，脚部呈空中姿态；该帧不能证明脚底已落地。附近有路沿、低墙顶面与墙角。",
+        "aim": "准星位于前方连接墙的窗右上方墙面，周围有污斑、小方盒、管线和窗框；具体瞄点像素仍需原分辨率和实机复核。"
+      },
+      "observationScope": "visual description of linked reference only; no certified exact anchor or APP comparison",
+      "appImages": {
+        "sameView": null,
+        "hintVisible": null,
+        "hintHidden": null
+      },
+      "phone": {
+        "device": null,
+        "resolution": null,
+        "qualitySetting": null,
+        "fov": null
+      },
+      "acceptance": {
+        "feetContactReadable": null,
+        "realAimReferenceReadable": null,
+        "sameSceneTextureGeometryConsistent": null,
+        "phoneHintHiddenReadable": null,
+        "versionsAndOriginalCalibrationComplete": null
+      },
+      "localResourceChanges": [],
+      "uvMaterialChanges": [],
+      "responsible": "C013-RES reference/texture; C013-APP same-view phone captures; PM acceptance",
+      "missing": [
+        "current CS2 version and equivalent-view reference",
+        "verified feet/eye/aim/FOV",
+        "APP phone captures with hints shown and hidden"
+      ]
+    },
+    {
+      "id": "D2-002",
+      "status": "PENDING_REFERENCE_AND_PHONE_VALIDATION",
+      "mapVersion": "fc60c032290dffcb233e3de9da3c59694293362ec72643cc1ebde9c1b13a17d0",
+      "assetPackVersion": "v0.6.0-test2",
+      "assetPackManifestSha256": "e41718a3acde7df2f2f9cf9a98b5e5b967e406353d30b6983f9e18f5a37a2fa3",
+      "appBuild": null,
+      "cs2GameBuild": null,
+      "cs2MapBuild": null,
+      "teachingSource": null,
+      "sourceTimeSeconds": null,
+      "stance": {
+        "feetDisplay": null,
+        "eyeDisplay": null,
+        "yaw": null,
+        "pitch": null,
+        "fov": null
+      },
+      "referenceImages": [],
+      "sourceImageObservations": {
+        "stand": null,
+        "aim": null
+      },
+      "observationScope": "visual description of linked reference only; no certified exact anchor or APP comparison",
+      "appImages": {
+        "sameView": null,
+        "hintVisible": null,
+        "hintHidden": null
+      },
+      "phone": {
+        "device": null,
+        "resolution": null,
+        "qualitySetting": null,
+        "fov": null
+      },
+      "acceptance": {
+        "feetContactReadable": null,
+        "realAimReferenceReadable": null,
+        "sameSceneTextureGeometryConsistent": null,
+        "phoneHintHiddenReadable": null,
+        "versionsAndOriginalCalibrationComplete": null
+      },
+      "localResourceChanges": [],
+      "uvMaterialChanges": [],
+      "responsible": "C013-RES reference/texture; C013-APP same-view phone captures; PM acceptance",
+      "missing": [
+        "course-specific CS2 reference/coordinates",
+        "APP same-view phone captures and original course calibration"
+      ]
+    },
+    {
+      "id": "D2-003",
+      "status": "PENDING_REFERENCE_AND_PHONE_VALIDATION",
+      "mapVersion": "fc60c032290dffcb233e3de9da3c59694293362ec72643cc1ebde9c1b13a17d0",
+      "assetPackVersion": "v0.6.0-test2",
+      "assetPackManifestSha256": "e41718a3acde7df2f2f9cf9a98b5e5b967e406353d30b6983f9e18f5a37a2fa3",
+      "appBuild": null,
+      "cs2GameBuild": null,
+      "cs2MapBuild": null,
+      "teachingSource": null,
+      "sourceTimeSeconds": null,
+      "stance": {
+        "feetDisplay": null,
+        "eyeDisplay": null,
+        "yaw": null,
+        "pitch": null,
+        "fov": null
+      },
+      "referenceImages": [],
+      "sourceImageObservations": {
+        "stand": null,
+        "aim": null
+      },
+      "observationScope": "visual description of linked reference only; no certified exact anchor or APP comparison",
+      "appImages": {
+        "sameView": null,
+        "hintVisible": null,
+        "hintHidden": null
+      },
+      "phone": {
+        "device": null,
+        "resolution": null,
+        "qualitySetting": null,
+        "fov": null
+      },
+      "acceptance": {
+        "feetContactReadable": null,
+        "realAimReferenceReadable": null,
+        "sameSceneTextureGeometryConsistent": null,
+        "phoneHintHiddenReadable": null,
+        "versionsAndOriginalCalibrationComplete": null
+      },
+      "localResourceChanges": [],
+      "uvMaterialChanges": [],
+      "responsible": "C013-RES reference/texture; C013-APP same-view phone captures; PM acceptance",
+      "missing": [
+        "course-specific CS2 reference/coordinates",
+        "APP same-view phone captures and original course calibration"
+      ]
+    },
+    {
+      "id": "D2-004",
+      "status": "PENDING_REFERENCE_AND_PHONE_VALIDATION",
+      "mapVersion": "fc60c032290dffcb233e3de9da3c59694293362ec72643cc1ebde9c1b13a17d0",
+      "assetPackVersion": "v0.6.0-test2",
+      "assetPackManifestSha256": "e41718a3acde7df2f2f9cf9a98b5e5b967e406353d30b6983f9e18f5a37a2fa3",
+      "appBuild": null,
+      "cs2GameBuild": null,
+      "cs2MapBuild": null,
+      "teachingSource": null,
+      "sourceTimeSeconds": null,
+      "stance": {
+        "feetDisplay": null,
+        "eyeDisplay": null,
+        "yaw": null,
+        "pitch": null,
+        "fov": null
+      },
+      "referenceImages": [],
+      "sourceImageObservations": {
+        "stand": null,
+        "aim": null
+      },
+      "observationScope": "visual description of linked reference only; no certified exact anchor or APP comparison",
+      "appImages": {
+        "sameView": null,
+        "hintVisible": null,
+        "hintHidden": null
+      },
+      "phone": {
+        "device": null,
+        "resolution": null,
+        "qualitySetting": null,
+        "fov": null
+      },
+      "acceptance": {
+        "feetContactReadable": null,
+        "realAimReferenceReadable": null,
+        "sameSceneTextureGeometryConsistent": null,
+        "phoneHintHiddenReadable": null,
+        "versionsAndOriginalCalibrationComplete": null
+      },
+      "localResourceChanges": [],
+      "uvMaterialChanges": [],
+      "responsible": "C013-RES reference/texture; C013-APP same-view phone captures; PM acceptance",
+      "missing": [
+        "course-specific CS2 reference/coordinates",
+        "APP same-view phone captures and original course calibration"
+      ]
+    },
+    {
+      "id": "D2-005",
+      "status": "PENDING_REFERENCE_AND_PHONE_VALIDATION",
+      "mapVersion": "fc60c032290dffcb233e3de9da3c59694293362ec72643cc1ebde9c1b13a17d0",
+      "assetPackVersion": "v0.6.0-test2",
+      "assetPackManifestSha256": "e41718a3acde7df2f2f9cf9a98b5e5b967e406353d30b6983f9e18f5a37a2fa3",
+      "appBuild": null,
+      "cs2GameBuild": null,
+      "cs2MapBuild": null,
+      "teachingSource": null,
+      "sourceTimeSeconds": null,
+      "stance": {
+        "feetDisplay": null,
+        "eyeDisplay": null,
+        "yaw": null,
+        "pitch": null,
+        "fov": null
+      },
+      "referenceImages": [],
+      "sourceImageObservations": {
+        "stand": null,
+        "aim": null
+      },
+      "observationScope": "visual description of linked reference only; no certified exact anchor or APP comparison",
+      "appImages": {
+        "sameView": null,
+        "hintVisible": null,
+        "hintHidden": null
+      },
+      "phone": {
+        "device": null,
+        "resolution": null,
+        "qualitySetting": null,
+        "fov": null
+      },
+      "acceptance": {
+        "feetContactReadable": null,
+        "realAimReferenceReadable": null,
+        "sameSceneTextureGeometryConsistent": null,
+        "phoneHintHiddenReadable": null,
+        "versionsAndOriginalCalibrationComplete": null
+      },
+      "localResourceChanges": [],
+      "uvMaterialChanges": [],
+      "responsible": "C013-RES reference/texture; C013-APP same-view phone captures; PM acceptance",
+      "missing": [
+        "course-specific CS2 reference/coordinates",
+        "APP same-view phone captures and original course calibration"
+      ]
+    },
+    {
+      "id": "D2-006",
+      "status": "PENDING_REFERENCE_AND_PHONE_VALIDATION",
+      "mapVersion": "fc60c032290dffcb233e3de9da3c59694293362ec72643cc1ebde9c1b13a17d0",
+      "assetPackVersion": "v0.6.0-test2",
+      "assetPackManifestSha256": "e41718a3acde7df2f2f9cf9a98b5e5b967e406353d30b6983f9e18f5a37a2fa3",
+      "appBuild": null,
+      "cs2GameBuild": null,
+      "cs2MapBuild": null,
+      "teachingSource": null,
+      "sourceTimeSeconds": null,
+      "stance": {
+        "feetDisplay": null,
+        "eyeDisplay": null,
+        "yaw": null,
+        "pitch": null,
+        "fov": null
+      },
+      "referenceImages": [],
+      "sourceImageObservations": {
+        "stand": null,
+        "aim": null
+      },
+      "observationScope": "visual description of linked reference only; no certified exact anchor or APP comparison",
+      "appImages": {
+        "sameView": null,
+        "hintVisible": null,
+        "hintHidden": null
+      },
+      "phone": {
+        "device": null,
+        "resolution": null,
+        "qualitySetting": null,
+        "fov": null
+      },
+      "acceptance": {
+        "feetContactReadable": null,
+        "realAimReferenceReadable": null,
+        "sameSceneTextureGeometryConsistent": null,
+        "phoneHintHiddenReadable": null,
+        "versionsAndOriginalCalibrationComplete": null
+      },
+      "localResourceChanges": [],
+      "uvMaterialChanges": [],
+      "responsible": "C013-RES reference/texture; C013-APP same-view phone captures; PM acceptance",
+      "missing": [
+        "course-specific CS2 reference/coordinates",
+        "APP same-view phone captures and original course calibration"
+      ]
+    },
+    {
+      "id": "D2-007",
+      "status": "PENDING_REFERENCE_AND_PHONE_VALIDATION",
+      "mapVersion": "fc60c032290dffcb233e3de9da3c59694293362ec72643cc1ebde9c1b13a17d0",
+      "assetPackVersion": "v0.6.0-test2",
+      "assetPackManifestSha256": "e41718a3acde7df2f2f9cf9a98b5e5b967e406353d30b6983f9e18f5a37a2fa3",
+      "appBuild": null,
+      "cs2GameBuild": null,
+      "cs2MapBuild": null,
+      "teachingSource": null,
+      "sourceTimeSeconds": null,
+      "stance": {
+        "feetDisplay": null,
+        "eyeDisplay": null,
+        "yaw": null,
+        "pitch": null,
+        "fov": null
+      },
+      "referenceImages": [],
+      "sourceImageObservations": {
+        "stand": null,
+        "aim": null
+      },
+      "observationScope": "visual description of linked reference only; no certified exact anchor or APP comparison",
+      "appImages": {
+        "sameView": null,
+        "hintVisible": null,
+        "hintHidden": null
+      },
+      "phone": {
+        "device": null,
+        "resolution": null,
+        "qualitySetting": null,
+        "fov": null
+      },
+      "acceptance": {
+        "feetContactReadable": null,
+        "realAimReferenceReadable": null,
+        "sameSceneTextureGeometryConsistent": null,
+        "phoneHintHiddenReadable": null,
+        "versionsAndOriginalCalibrationComplete": null
+      },
+      "localResourceChanges": [],
+      "uvMaterialChanges": [],
+      "responsible": "C013-RES reference/texture; C013-APP same-view phone captures; PM acceptance",
+      "missing": [
+        "course-specific CS2 reference/coordinates",
+        "APP same-view phone captures and original course calibration"
+      ]
+    },
+    {
+      "id": "D2-008",
+      "status": "PENDING_REFERENCE_AND_PHONE_VALIDATION",
+      "mapVersion": "fc60c032290dffcb233e3de9da3c59694293362ec72643cc1ebde9c1b13a17d0",
+      "assetPackVersion": "v0.6.0-test2",
+      "assetPackManifestSha256": "e41718a3acde7df2f2f9cf9a98b5e5b967e406353d30b6983f9e18f5a37a2fa3",
+      "appBuild": null,
+      "cs2GameBuild": null,
+      "cs2MapBuild": null,
+      "teachingSource": null,
+      "sourceTimeSeconds": null,
+      "stance": {
+        "feetDisplay": null,
+        "eyeDisplay": null,
+        "yaw": null,
+        "pitch": null,
+        "fov": null
+      },
+      "referenceImages": [],
+      "sourceImageObservations": {
+        "stand": null,
+        "aim": null
+      },
+      "observationScope": "visual description of linked reference only; no certified exact anchor or APP comparison",
+      "appImages": {
+        "sameView": null,
+        "hintVisible": null,
+        "hintHidden": null
+      },
+      "phone": {
+        "device": null,
+        "resolution": null,
+        "qualitySetting": null,
+        "fov": null
+      },
+      "acceptance": {
+        "feetContactReadable": null,
+        "realAimReferenceReadable": null,
+        "sameSceneTextureGeometryConsistent": null,
+        "phoneHintHiddenReadable": null,
+        "versionsAndOriginalCalibrationComplete": null
+      },
+      "localResourceChanges": [],
+      "uvMaterialChanges": [],
+      "responsible": "C013-RES reference/texture; C013-APP same-view phone captures; PM acceptance",
+      "missing": [
+        "course-specific CS2 reference/coordinates",
+        "APP same-view phone captures and original course calibration"
+      ]
+    },
+    {
+      "id": "D2-009",
+      "status": "PENDING_REFERENCE_AND_PHONE_VALIDATION",
+      "mapVersion": "fc60c032290dffcb233e3de9da3c59694293362ec72643cc1ebde9c1b13a17d0",
+      "assetPackVersion": "v0.6.0-test2",
+      "assetPackManifestSha256": "e41718a3acde7df2f2f9cf9a98b5e5b967e406353d30b6983f9e18f5a37a2fa3",
+      "appBuild": null,
+      "cs2GameBuild": null,
+      "cs2MapBuild": null,
+      "teachingSource": "https://getreplay.gg/en/utility/dust2/molotov/dust2-b-site-close-fence-molotov",
+      "sourceTimeSeconds": null,
+      "stance": {
+        "feetDisplay": null,
+        "eyeDisplay": null,
+        "yaw": null,
+        "pitch": null,
+        "fov": null
+      },
+      "referenceImages": [
+        {
+          "id": "D2-009-image-01",
+          "path": "docs/calibration/C013/screenshots/D2-009-01-aim_reference.jpg",
+          "sha256": "122f14cd99b8b43df6f10b07aca6e516b55f0f2272071404b116e0e2cc65af96",
+          "role": "aim_reference",
+          "size": [
+            1280,
+            720
+          ]
+        }
+      ],
+      "sourceImageObservations": {
+        "stand": null,
+        "aim": "准星接近隧道拱门内部边缘，周围有门洞边缘、墙面污迹、地砖缝及右侧箱角；缺少第三人称脚部接触图。"
+      },
+      "observationScope": "visual description of linked reference only; no certified exact anchor or APP comparison",
+      "appImages": {
+        "sameView": null,
+        "hintVisible": null,
+        "hintHidden": null
+      },
+      "phone": {
+        "device": null,
+        "resolution": null,
+        "qualitySetting": null,
+        "fov": null
+      },
+      "acceptance": {
+        "feetContactReadable": null,
+        "realAimReferenceReadable": null,
+        "sameSceneTextureGeometryConsistent": null,
+        "phoneHintHiddenReadable": null,
+        "versionsAndOriginalCalibrationComplete": null
+      },
+      "localResourceChanges": [],
+      "uvMaterialChanges": [],
+      "responsible": "C013-RES reference/texture; C013-APP same-view phone captures; PM acceptance",
+      "missing": [
+        "current CS2 version and equivalent-view reference",
+        "verified feet/eye/aim/FOV",
+        "APP phone captures with hints shown and hidden"
+      ]
+    },
+    {
+      "id": "D2-010",
+      "status": "PENDING_REFERENCE_AND_PHONE_VALIDATION",
+      "mapVersion": "fc60c032290dffcb233e3de9da3c59694293362ec72643cc1ebde9c1b13a17d0",
+      "assetPackVersion": "v0.6.0-test2",
+      "assetPackManifestSha256": "e41718a3acde7df2f2f9cf9a98b5e5b967e406353d30b6983f9e18f5a37a2fa3",
+      "appBuild": null,
+      "cs2GameBuild": null,
+      "cs2MapBuild": null,
+      "teachingSource": "https://getreplay.gg/en/utility/dust2/molotov/d2-car-molotov",
+      "sourceTimeSeconds": null,
+      "stance": {
+        "feetDisplay": null,
+        "eyeDisplay": null,
+        "yaw": null,
+        "pitch": null,
+        "fov": null
+      },
+      "referenceImages": [
+        {
+          "id": "D2-010-image-01",
+          "path": "docs/calibration/C013/screenshots/D2-010-01-aim_reference.jpg",
+          "sha256": "e44a96add576e920bcaa54e5d119ee6d94c77805ddf3c430b71d80aabca888c9",
+          "role": "aim_reference",
+          "size": [
+            1280,
+            720
+          ]
+        }
+      ],
+      "sourceImageObservations": {
+        "stand": null,
+        "aim": "准星位于理发店卷帘门右侧的小门附近；小门框、墙上小盒、招牌和屋檐构成参照；页面无数值站位。"
+      },
+      "observationScope": "visual description of linked reference only; no certified exact anchor or APP comparison",
+      "appImages": {
+        "sameView": null,
+        "hintVisible": null,
+        "hintHidden": null
+      },
+      "phone": {
+        "device": null,
+        "resolution": null,
+        "qualitySetting": null,
+        "fov": null
+      },
+      "acceptance": {
+        "feetContactReadable": null,
+        "realAimReferenceReadable": null,
+        "sameSceneTextureGeometryConsistent": null,
+        "phoneHintHiddenReadable": null,
+        "versionsAndOriginalCalibrationComplete": null
+      },
+      "localResourceChanges": [],
+      "uvMaterialChanges": [],
+      "responsible": "C013-RES reference/texture; C013-APP same-view phone captures; PM acceptance",
+      "missing": [
+        "current CS2 version and equivalent-view reference",
+        "verified feet/eye/aim/FOV",
+        "APP phone captures with hints shown and hidden"
+      ]
+    },
+    {
+      "id": "D2-011",
+      "status": "PENDING_REFERENCE_AND_PHONE_VALIDATION",
+      "mapVersion": "fc60c032290dffcb233e3de9da3c59694293362ec72643cc1ebde9c1b13a17d0",
+      "assetPackVersion": "v0.6.0-test2",
+      "assetPackManifestSha256": "e41718a3acde7df2f2f9cf9a98b5e5b967e406353d30b6983f9e18f5a37a2fa3",
+      "appBuild": null,
+      "cs2GameBuild": null,
+      "cs2MapBuild": null,
+      "teachingSource": null,
+      "sourceTimeSeconds": null,
+      "stance": {
+        "feetDisplay": null,
+        "eyeDisplay": null,
+        "yaw": null,
+        "pitch": null,
+        "fov": null
+      },
+      "referenceImages": [],
+      "sourceImageObservations": {
+        "stand": null,
+        "aim": null
+      },
+      "observationScope": "visual description of linked reference only; no certified exact anchor or APP comparison",
+      "appImages": {
+        "sameView": null,
+        "hintVisible": null,
+        "hintHidden": null
+      },
+      "phone": {
+        "device": null,
+        "resolution": null,
+        "qualitySetting": null,
+        "fov": null
+      },
+      "acceptance": {
+        "feetContactReadable": null,
+        "realAimReferenceReadable": null,
+        "sameSceneTextureGeometryConsistent": null,
+        "phoneHintHiddenReadable": null,
+        "versionsAndOriginalCalibrationComplete": null
+      },
+      "localResourceChanges": [],
+      "uvMaterialChanges": [],
+      "responsible": "C013-RES reference/texture; C013-APP same-view phone captures; PM acceptance",
+      "missing": [
+        "course-specific CS2 reference/coordinates",
+        "APP same-view phone captures and original course calibration"
+      ]
+    },
+    {
+      "id": "D2-012",
+      "status": "PENDING_REFERENCE_AND_PHONE_VALIDATION",
+      "mapVersion": "fc60c032290dffcb233e3de9da3c59694293362ec72643cc1ebde9c1b13a17d0",
+      "assetPackVersion": "v0.6.0-test2",
+      "assetPackManifestSha256": "e41718a3acde7df2f2f9cf9a98b5e5b967e406353d30b6983f9e18f5a37a2fa3",
+      "appBuild": null,
+      "cs2GameBuild": null,
+      "cs2MapBuild": null,
+      "teachingSource": null,
+      "sourceTimeSeconds": null,
+      "stance": {
+        "feetDisplay": null,
+        "eyeDisplay": null,
+        "yaw": null,
+        "pitch": null,
+        "fov": null
+      },
+      "referenceImages": [],
+      "sourceImageObservations": {
+        "stand": null,
+        "aim": null
+      },
+      "observationScope": "visual description of linked reference only; no certified exact anchor or APP comparison",
+      "appImages": {
+        "sameView": null,
+        "hintVisible": null,
+        "hintHidden": null
+      },
+      "phone": {
+        "device": null,
+        "resolution": null,
+        "qualitySetting": null,
+        "fov": null
+      },
+      "acceptance": {
+        "feetContactReadable": null,
+        "realAimReferenceReadable": null,
+        "sameSceneTextureGeometryConsistent": null,
+        "phoneHintHiddenReadable": null,
+        "versionsAndOriginalCalibrationComplete": null
+      },
+      "localResourceChanges": [],
+      "uvMaterialChanges": [],
+      "responsible": "C013-RES reference/texture; C013-APP same-view phone captures; PM acceptance",
+      "missing": [
+        "course-specific CS2 reference/coordinates",
+        "APP same-view phone captures and original course calibration"
+      ]
+    },
+    {
+      "id": "D2-013",
+      "status": "PENDING_REFERENCE_AND_PHONE_VALIDATION",
+      "mapVersion": "fc60c032290dffcb233e3de9da3c59694293362ec72643cc1ebde9c1b13a17d0",
+      "assetPackVersion": "v0.6.0-test2",
+      "assetPackManifestSha256": "e41718a3acde7df2f2f9cf9a98b5e5b967e406353d30b6983f9e18f5a37a2fa3",
+      "appBuild": null,
+      "cs2GameBuild": null,
+      "cs2MapBuild": null,
+      "teachingSource": null,
+      "sourceTimeSeconds": null,
+      "stance": {
+        "feetDisplay": null,
+        "eyeDisplay": null,
+        "yaw": null,
+        "pitch": null,
+        "fov": null
+      },
+      "referenceImages": [],
+      "sourceImageObservations": {
+        "stand": null,
+        "aim": null
+      },
+      "observationScope": "visual description of linked reference only; no certified exact anchor or APP comparison",
+      "appImages": {
+        "sameView": null,
+        "hintVisible": null,
+        "hintHidden": null
+      },
+      "phone": {
+        "device": null,
+        "resolution": null,
+        "qualitySetting": null,
+        "fov": null
+      },
+      "acceptance": {
+        "feetContactReadable": null,
+        "realAimReferenceReadable": null,
+        "sameSceneTextureGeometryConsistent": null,
+        "phoneHintHiddenReadable": null,
+        "versionsAndOriginalCalibrationComplete": null
+      },
+      "localResourceChanges": [],
+      "uvMaterialChanges": [],
+      "responsible": "C013-RES reference/texture; C013-APP same-view phone captures; PM acceptance",
+      "missing": [
+        "course-specific CS2 reference/coordinates",
+        "APP same-view phone captures and original course calibration"
+      ]
+    },
+    {
+      "id": "D2-014",
+      "status": "PENDING_REFERENCE_AND_PHONE_VALIDATION",
+      "mapVersion": "fc60c032290dffcb233e3de9da3c59694293362ec72643cc1ebde9c1b13a17d0",
+      "assetPackVersion": "v0.6.0-test2",
+      "assetPackManifestSha256": "e41718a3acde7df2f2f9cf9a98b5e5b967e406353d30b6983f9e18f5a37a2fa3",
+      "appBuild": null,
+      "cs2GameBuild": null,
+      "cs2MapBuild": null,
+      "teachingSource": "https://getreplay.gg/en/utility/dust2/reveal/d2-mid-door-reveal",
+      "sourceTimeSeconds": null,
+      "stance": {
+        "feetDisplay": null,
+        "eyeDisplay": null,
+        "yaw": null,
+        "pitch": null,
+        "fov": null
+      },
+      "referenceImages": [
+        {
+          "id": "D2-014-image-01",
+          "path": "docs/calibration/C013/screenshots/D2-014-01-aim_reference.jpg",
+          "sha256": "54709bae3b9b97b4687d311f87cb4dfe5530da441187cda4717297c88bb9b1d4",
+          "role": "aim_reference",
+          "size": [
+            1280,
+            720
+          ]
+        }
+      ],
+      "sourceImageObservations": {
+        "stand": null,
+        "aim": "准星位于中门上方横梁附近；门扇、横梁与右侧B箭头墙面标记可作周围参照；没有站位脚部截图。"
+      },
+      "observationScope": "visual description of linked reference only; no certified exact anchor or APP comparison",
+      "appImages": {
+        "sameView": null,
+        "hintVisible": null,
+        "hintHidden": null
+      },
+      "phone": {
+        "device": null,
+        "resolution": null,
+        "qualitySetting": null,
+        "fov": null
+      },
+      "acceptance": {
+        "feetContactReadable": null,
+        "realAimReferenceReadable": null,
+        "sameSceneTextureGeometryConsistent": null,
+        "phoneHintHiddenReadable": null,
+        "versionsAndOriginalCalibrationComplete": null
+      },
+      "localResourceChanges": [],
+      "uvMaterialChanges": [],
+      "responsible": "C013-RES reference/texture; C013-APP same-view phone captures; PM acceptance",
+      "missing": [
+        "current CS2 version and equivalent-view reference",
+        "verified feet/eye/aim/FOV",
+        "APP phone captures with hints shown and hidden"
+      ]
+    }
+  ]
+}
