@@ -6,8 +6,8 @@ android {
         applicationId = "com.ali.cs2utility"
         minSdk = 24
         targetSdk = 34
-        versionCode = 7
-        versionName = "0.6.1-test2-mapfix"
+        versionCode = 10
+        versionName = "0.6.4-c015-integration"
         testInstrumentationRunner = "android.test.InstrumentationTestRunner"
     }
     signingConfigs {
@@ -29,4 +29,4 @@ android {
     }
     kotlinOptions { jvmTarget = "17" }
 }
-dependencies { testImplementation("junit:junit:4.13.2") }
+dependencies { testImplementation("junit:junit:4.13.2"); testImplementation("org.json:json:20240303") }

@@ -1,0 +1,259 @@
+{
+  "schema": "c014-aim-texture-checks-v1",
+  "referenceRevision": "user-selected-20261004-v2",
+  "allCoursesCalibrated": false,
+  "records": [
+    {
+      "id": "D2-001",
+      "status": "PENDING_REFERENCE_AND_PHONE_VALIDATION",
+      "mapVersion": "fc60c032290dffcb233e3de9da3c59694293362ec72643cc1ebde9c1b13a17d0",
+      "assetPackVersion": "v0.6.0-test2",
+      "assetPackManifestSha256": "e41718a3acde7df2f2f9cf9a98b5e5b967e406353d30b6983f9e18f5a37a2fa3",
+      "appBuild": null,
+      "cs2GameBuild": null,
+      "cs2MapBuild": null,
+      "teachingSource": "https://b23.tv/efWPjTd",
+      "sourceTimeSeconds": null,
+      "stance": {
+        "feetDisplay": null,
+        "eyeDisplay": null,
+        "yaw": null,
+        "pitch": null,
+        "fov": null
+      },
+      "referenceImages": [
+        {
+          "id": "D2-001-user-012.0",
+          "courseId": "D2-001",
+          "path": "docs/calibration/C014/user-video-frames/D2-001-012.0-stance-seam.jpg",
+          "role": "stance-seam",
+          "sourceVideoSeconds": 12,
+          "sha256": "d68078171fb9c34667cea40c39155a82f74ae5a98471ff49062370d1c02c95f6",
+          "size": [
+            1280,
+            720
+          ]
+        },
+        {
+          "id": "D2-001-user-018.0",
+          "courseId": "D2-001",
+          "path": "docs/calibration/C014/user-video-frames/D2-001-018.0-stance-wall-edge.jpg",
+          "role": "stance-wall-edge",
+          "sourceVideoSeconds": 18,
+          "sha256": "ad095c6dcc5c5d962efccd0b059aa8aec1979863b9f2bacee3ab3d2df54614e8",
+          "size": [
+            1280,
+            720
+          ]
+        },
+        {
+          "id": "D2-001-user-021.0",
+          "courseId": "D2-001",
+          "path": "docs/calibration/C014/user-video-frames/D2-001-021.0-aim-mark.jpg",
+          "role": "aim-mark",
+          "sourceVideoSeconds": 21,
+          "sha256": "e1c57dae15fcaf9e8d0f38c460697085b8c5972e36bef20fbf76555492f7ad5d",
+          "size": [
+            1280,
+            720
+          ]
+        }
+      ],
+      "sourceImageObservations": {
+        "stand": "视频墙缝与矮墙边缘对齐；蹲下定位后站起。未认证脚底XYZ或脚部接触。",
+        "aim": "墙面小污点及双窗、屋檐和墙边参照；采用前段站位，排除满封变体。"
+      },
+      "observationScope": "Uploaded video visual landmarks only; no certified XYZ/feet contact/FOV or phone comparison",
+      "appImages": {
+        "sameView": null,
+        "hintVisible": null,
+        "hintHidden": null
+      },
+      "phone": {
+        "device": null,
+        "resolution": null,
+        "qualitySetting": null,
+        "fov": null
+      },
+      "acceptance": {
+        "feetContactReadable": null,
+        "realAimReferenceReadable": null,
+        "sameSceneTextureGeometryConsistent": null,
+        "phoneHintHiddenReadable": null,
+        "versionsAndOriginalCalibrationComplete": null
+      },
+      "localResourceChanges": [],
+      "uvMaterialChanges": [],
+      "responsible": "C013-RES reference/texture; C013-APP same-view phone captures; PM acceptance",
+      "missing": [
+        "新投法的当前地图/游戏版本及三维脚底/眼位/准星/FOV",
+        "APP同视角与提示隐藏手机检查"
+      ],
+      "referenceRevision": "user-selected-20261004-v2"
+    },
+    {
+      "id": "D2-010",
+      "status": "PENDING_REFERENCE_AND_PHONE_VALIDATION",
+      "mapVersion": "fc60c032290dffcb233e3de9da3c59694293362ec72643cc1ebde9c1b13a17d0",
+      "assetPackVersion": "v0.6.0-test2",
+      "assetPackManifestSha256": "e41718a3acde7df2f2f9cf9a98b5e5b967e406353d30b6983f9e18f5a37a2fa3",
+      "appBuild": null,
+      "cs2GameBuild": null,
+      "cs2MapBuild": null,
+      "teachingSource": "https://b23.tv/NwO4dLO",
+      "sourceTimeSeconds": null,
+      "stance": {
+        "feetDisplay": null,
+        "eyeDisplay": null,
+        "yaw": null,
+        "pitch": null,
+        "fov": null
+      },
+      "referenceImages": [
+        {
+          "id": "D2-010-user-011.0",
+          "courseId": "D2-010",
+          "path": "docs/calibration/C014/user-video-frames/D2-010-011.0-stance-barrel.jpg",
+          "role": "stance-barrel",
+          "sourceVideoSeconds": 11,
+          "sha256": "86b4496c9e9a1d10fc4dcec8ba6ad3f3a30270a0e03acf19f347c1e568938aed",
+          "size": [
+            1280,
+            720
+          ]
+        },
+        {
+          "id": "D2-010-user-013.0",
+          "courseId": "D2-010",
+          "path": "docs/calibration/C014/user-video-frames/D2-010-013.0-stance-wall.jpg",
+          "role": "stance-wall",
+          "sourceVideoSeconds": 13,
+          "sha256": "744c65c7af12bd65f338d0357ce19077e86d8960b0a42eb42ea7f6f50f9e5f16",
+          "size": [
+            1280,
+            720
+          ]
+        },
+        {
+          "id": "D2-010-user-018.0",
+          "courseId": "D2-010",
+          "path": "docs/calibration/C014/user-video-frames/D2-010-018.0-aim-door-lock.jpg",
+          "role": "aim-door-lock",
+          "sourceVideoSeconds": 18,
+          "sha256": "d7fb94975c688b5170ceeaed6da34a9f3a0979539d5e63b14d9515f39efff327",
+          "size": [
+            1280,
+            720
+          ]
+        }
+      ],
+      "sourceImageObservations": {
+        "stand": "蓝油桶上抵住墙；画面可识别桶/墙关系，无脚底三维值。",
+        "aim": "瞄门锁最上沿；门框、锁与旁边理发店招牌可定位。"
+      },
+      "observationScope": "Uploaded video visual landmarks only; no certified XYZ/feet contact/FOV or phone comparison",
+      "appImages": {
+        "sameView": null,
+        "hintVisible": null,
+        "hintHidden": null
+      },
+      "phone": {
+        "device": null,
+        "resolution": null,
+        "qualitySetting": null,
+        "fov": null
+      },
+      "acceptance": {
+        "feetContactReadable": null,
+        "realAimReferenceReadable": null,
+        "sameSceneTextureGeometryConsistent": null,
+        "phoneHintHiddenReadable": null,
+        "versionsAndOriginalCalibrationComplete": null
+      },
+      "localResourceChanges": [],
+      "uvMaterialChanges": [],
+      "responsible": "C013-RES reference/texture; C013-APP same-view phone captures; PM acceptance",
+      "missing": [
+        "新投法的当前地图/游戏版本及三维脚底/眼位/准星/FOV",
+        "APP同视角与提示隐藏手机检查"
+      ],
+      "referenceRevision": "user-selected-20261004-v2"
+    },
+    {
+      "id": "D2-014",
+      "status": "PENDING_REFERENCE_AND_PHONE_VALIDATION",
+      "mapVersion": "fc60c032290dffcb233e3de9da3c59694293362ec72643cc1ebde9c1b13a17d0",
+      "assetPackVersion": "v0.6.0-test2",
+      "assetPackManifestSha256": "e41718a3acde7df2f2f9cf9a98b5e5b967e406353d30b6983f9e18f5a37a2fa3",
+      "appBuild": null,
+      "cs2GameBuild": null,
+      "cs2MapBuild": null,
+      "teachingSource": "https://b23.tv/IwqgfkC",
+      "sourceTimeSeconds": null,
+      "stance": {
+        "feetDisplay": null,
+        "eyeDisplay": null,
+        "yaw": null,
+        "pitch": null,
+        "fov": null
+      },
+      "referenceImages": [
+        {
+          "id": "D2-014-user-005.0",
+          "courseId": "D2-014",
+          "path": "docs/calibration/C014/user-video-frames/D2-014-005.0-stance-sand-truck-corner.jpg",
+          "role": "stance-sand-truck-corner",
+          "sourceVideoSeconds": 5,
+          "sha256": "6690b4868b2268e1756776a4904da937ca6a65f78d47e22315845660bfead6b7",
+          "size": [
+            1280,
+            720
+          ]
+        },
+        {
+          "id": "D2-014-user-009.0",
+          "courseId": "D2-014",
+          "path": "docs/calibration/C014/user-video-frames/D2-014-009.0-aim-left-door-bottom-right.jpg",
+          "role": "aim-left-door-bottom-right",
+          "sourceVideoSeconds": 9,
+          "sha256": "c9c7ede3076f5741459405078b1b0fb2d702df3a272adbf881a9003929f118e1",
+          "size": [
+            1280,
+            720
+          ]
+        }
+      ],
+      "sourceImageObservations": {
+        "stand": "蓝卡车车头与沙堆角落蹲姿，头顶障碍参与跳投；未测三维位置。",
+        "aim": "左门扇右下角；保持蹲姿，站起再跳属于失败示范。"
+      },
+      "observationScope": "Uploaded video visual landmarks only; no certified XYZ/feet contact/FOV or phone comparison",
+      "appImages": {
+        "sameView": null,
+        "hintVisible": null,
+        "hintHidden": null
+      },
+      "phone": {
+        "device": null,
+        "resolution": null,
+        "qualitySetting": null,
+        "fov": null
+      },
+      "acceptance": {
+        "feetContactReadable": null,
+        "realAimReferenceReadable": null,
+        "sameSceneTextureGeometryConsistent": null,
+        "phoneHintHiddenReadable": null,
+        "versionsAndOriginalCalibrationComplete": null
+      },
+      "localResourceChanges": [],
+      "uvMaterialChanges": [],
+      "responsible": "C013-RES reference/texture; C013-APP same-view phone captures; PM acceptance",
+      "missing": [
+        "新投法的当前地图/游戏版本及三维脚底/眼位/准星/FOV",
+        "APP同视角与提示隐藏手机检查"
+      ],
+      "referenceRevision": "user-selected-20261004-v2"
+    }
+  ]
+}

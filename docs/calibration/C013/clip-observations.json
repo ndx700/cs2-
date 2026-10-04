@@ -1,0 +1,125 @@
+{
+  "schema": "c013-clip-observations-v1",
+  "clips": [
+    {
+      "id": "D2-001-demo",
+      "courseId": "D2-001",
+      "sourceUrl": "https://storage.getreplay.gg/2026/04/15/b6786b3d546fa2ca95cf36bc81e76e3b397d2fc9.mp4",
+      "sourceSha256": "c660b080f140ecc6aa963dce2443d50f0df7935dc588241d334a3e2d732e3dc9",
+      "bytes": 5591183,
+      "encodedDurationSeconds": 14.4,
+      "video": {
+        "codec_type": "video",
+        "width": 1920,
+        "height": 1080,
+        "r_frame_rate": "30/1"
+      },
+      "clock": "ENCODED_CLIP_SECONDS_NOT_CERTIFIED_GAME_TIME",
+      "fullLifecycleObserved": false,
+      "videoNotBundledInAPK": true,
+      "sampleTimesSeconds": [
+        3.5,
+        4.0,
+        8.0,
+        12.5,
+        14.0
+      ],
+      "observation": "Clip contains throw and multiple camera cuts; full smoke lifespan is not shown. No release-to-effect age is measured across a cut.",
+      "observationStrip": "docs/calibration/C013/screenshots/D2-001-observations.jpg",
+      "observationStripSha256": "a0a282b804a0f4b634abcef9ff3858b65d644360f2e33ced353c3e8fd648c1e8",
+      "mapBuild": null,
+      "gameBuild": null,
+      "matchToC012NartVariant": "UNCONFIRMED"
+    },
+    {
+      "id": "D2-014-demo",
+      "courseId": "D2-014",
+      "sourceUrl": "https://storage.getreplay.gg/2026/05/20/e44ca1d93078be6637ebeecbeae9a7fccc86e60b.mp4",
+      "sourceSha256": "f2c9ed11e6827a5f544baa35cc881f03b152c56055de20f20f611ae20fc63abe",
+      "bytes": 2383240,
+      "encodedDurationSeconds": 9.166667,
+      "video": {
+        "codec_type": "video",
+        "width": 1280,
+        "height": 720,
+        "r_frame_rate": "30/1"
+      },
+      "clock": "ENCODED_CLIP_SECONDS_NOT_CERTIFIED_GAME_TIME",
+      "fullLifecycleObserved": false,
+      "videoNotBundledInAPK": true,
+      "sampleTimesSeconds": [
+        2.0,
+        5.5,
+        6.0,
+        7.0,
+        8.5
+      ],
+      "observation": "Clip shows HE throw and a camera cut. Continuous already-formed-smoke, hole-opening and refill evidence is insufficient.",
+      "observationStrip": "docs/calibration/C013/screenshots/D2-014-observations.jpg",
+      "observationStripSha256": "4382395efdc441923cd93725eec8fc3bf1562dcdf9e91acc64f864fbe9640e14",
+      "mapBuild": null,
+      "gameBuild": null,
+      "matchToC012NartVariant": "UNCONFIRMED"
+    },
+    {
+      "id": "D2-009-demo",
+      "courseId": "D2-009",
+      "sourceUrl": "https://storage.getreplay.gg/2026/05/20/6c8155ca4ec79a0d813936d8de087353d2277c68.mp4",
+      "sourceSha256": "316760187b8e9695fc281486e1a1f62cbb4a6fe3d0b51d3052f5a6d6f07dede7",
+      "bytes": 1724237,
+      "encodedDurationSeconds": 9.3,
+      "video": {
+        "codec_type": "video",
+        "width": 1280,
+        "height": 720,
+        "r_frame_rate": "30/1"
+      },
+      "clock": "ENCODED_CLIP_SECONDS_NOT_CERTIFIED_GAME_TIME",
+      "fullLifecycleObserved": false,
+      "videoNotBundledInAPK": true,
+      "sampleTimesSeconds": [
+        5.0,
+        5.5,
+        6.5,
+        7.5,
+        9.0
+      ],
+      "observation": "Overview samples at clip 5.5 and 7.5 seconds show a larger later fire footprint; extinction is not shown. World-space regions and game-clock delay remain unmeasured.",
+      "observationStrip": "docs/calibration/C013/screenshots/D2-009-observations.jpg",
+      "observationStripSha256": "5c048f663eaa0805761a1b6daf78ca74e1325250f1e1392170a265b268176eb6",
+      "mapBuild": null,
+      "gameBuild": null,
+      "matchToC012NartVariant": "UNCONFIRMED"
+    },
+    {
+      "id": "D2-010-demo",
+      "courseId": "D2-010",
+      "sourceUrl": "https://storage.getreplay.gg/2026/05/20/b42d8ddae55b7eab90e9a3519d5ee477e11e3861.mp4",
+      "sourceSha256": "6c0c626b4979ef3525b195343b595199adf8aed99952b97b1f66844731deed78",
+      "bytes": 2618132,
+      "encodedDurationSeconds": 8.966667,
+      "video": {
+        "codec_type": "video",
+        "width": 1280,
+        "height": 720,
+        "r_frame_rate": "30/1"
+      },
+      "clock": "ENCODED_CLIP_SECONDS_NOT_CERTIFIED_GAME_TIME",
+      "fullLifecycleObserved": false,
+      "videoNotBundledInAPK": true,
+      "sampleTimesSeconds": [
+        5.0,
+        5.5,
+        6.5,
+        7.5,
+        8.5
+      ],
+      "observation": "Overview samples at clip 5.5 and 7.5 seconds show a larger later fire footprint around car; extinction is not shown. World-space regions and game-clock delay remain unmeasured.",
+      "observationStrip": "docs/calibration/C013/screenshots/D2-010-observations.jpg",
+      "observationStripSha256": "d4b2e552468a58b2be8aeb0eff3d4995819ef9abf8e1f996c14429d9e5e10fa3",
+      "mapBuild": null,
+      "gameBuild": null,
+      "matchToC012NartVariant": "UNCONFIRMED"
+    }
+  ]
+}

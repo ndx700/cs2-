@@ -1,0 +1,36 @@
+{
+  "schema": "c015-hang-smoke-preview-v1",
+  "lessonId": "D2-001",
+  "status": "PENDING_CALIBRATION",
+  "importable": false,
+  "mapVersion": "fc60c032290dffcb233e3de9da3c59694293362ec72643cc1ebde9c1b13a17d0",
+  "sourceCommit": "c336f1d98c4a6a61ed19161a28813507edacd734",
+  "sourcePath": "docs/calibration/C015/D2-001-spatial-candidate.json",
+  "sourceSha256": "fc877e9fee391f942b5ab1ae8c4a750dcd4b7a5da26b97d0a14044bebd51f764",
+  "referenceRevision": "user-selected-20261004-v2",
+  "fittedFov": 67.85847637962364,
+  "actualPreviewFov": 70,
+  "standing": {
+    "position": [
+      -8.706360613139768,
+      3.8806021257020986,
+      17.337658293798334
+    ],
+    "yaw": 3.0264220998710356,
+    "pitch": -13.71763749083024,
+    "distance": 1,
+    "free": true
+  },
+  "crouching": {
+    "position": [
+      -8.706360613139768,
+      3.47127220727002,
+      17.337658293798334
+    ],
+    "yaw": 0.09953829756386737,
+    "pitch": 33.52297715073638,
+    "distance": 1,
+    "free": true
+  },
+  "limitations": "Spatial fit only; stain/seam and game version unverified. No throw path, landing or lifecycle. Normal aspect, no video stretch."
+}

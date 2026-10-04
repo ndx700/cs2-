@@ -1,0 +1,214 @@
+{
+  "schema": "c013-world-collision-audit-v1",
+  "resourceVersion": "R002",
+  "scope": "world_physics_only",
+  "map": "de_dust2",
+  "checks": {
+    "rawManifestSha256": "740154b364ead27b528c0ddc3231529a35fb65cc01a891bb94e25e4420ffbb50",
+    "mixedSurfaceShapes": [
+      10093,
+      10094
+    ]
+  },
+  "rawFiles": {
+    "vertices.f32": {
+      "bytes": 2004216,
+      "sha256": "900fb9e589d67d41fd6a2bcf34b5b46549d611365d475d27d4bdd64d985490bd"
+    },
+    "triangles.u32": {
+      "bytes": 3378840,
+      "sha256": "4e7e58d6d11b9d557670a9493b3b079403f7c8d1e0e02cdfae7a46f07861b3a2"
+    },
+    "triangle_layers.u8": {
+      "bytes": 281570,
+      "sha256": "d3de0e5aeb12f9012510c83e60e2d596b2e85a5497070592c24762371ffa85e7"
+    },
+    "triangle_surfaces.u8": {
+      "bytes": 281570,
+      "sha256": "ac2a6b314abd0019a885b4b67565b39677b059542547387d3e8d1509f08532c7"
+    },
+    "triangle_shapes.u32": {
+      "bytes": 1126280,
+      "sha256": "59df29ae4ecc33ab3f52c7f80787617a57e728846ffb31dbce7397efa0b330ca"
+    }
+  },
+  "vertexCount": 167018,
+  "triangleCount": 281570,
+  "shapeCount": 10096,
+  "shapeKinds": {
+    "Hull": 10091,
+    "Mesh": 5
+  },
+  "collisionAttributes": [
+    {
+      "index": 0,
+      "group": "Default",
+      "InteractAs": [],
+      "InteractWith": [],
+      "InteractExclude": [],
+      "triangles": 266963
+    },
+    {
+      "index": 1,
+      "group": "ConditionallySolid",
+      "InteractAs": [
+        "passbullets"
+      ],
+      "InteractWith": [],
+      "InteractExclude": [],
+      "triangles": 334
+    },
+    {
+      "index": 2,
+      "group": "Default",
+      "InteractAs": [],
+      "InteractWith": [],
+      "InteractExclude": [
+        "player"
+      ],
+      "triangles": 792
+    },
+    {
+      "index": 3,
+      "group": "conditionallysolid",
+      "InteractAs": [
+        "npcclip",
+        "playerclip"
+      ],
+      "InteractWith": [],
+      "InteractExclude": [],
+      "triangles": 12125
+    },
+    {
+      "index": 4,
+      "group": "ConditionallySolid",
+      "InteractAs": [
+        "csgo_grenadeclip"
+      ],
+      "InteractWith": [],
+      "InteractExclude": [],
+      "triangles": 1128
+    },
+    {
+      "index": 5,
+      "group": "conditionallysolid",
+      "InteractAs": [
+        "sky"
+      ],
+      "InteractWith": [],
+      "InteractExclude": [],
+      "triangles": 228
+    }
+  ],
+  "surfacePropertyHashes": [
+    436732118,
+    3076510970,
+    3580549874,
+    511759467,
+    47258652,
+    1432157305,
+    417707814,
+    3062725297,
+    1843462088,
+    1977497166,
+    3060091858,
+    2843522288,
+    516339764,
+    3275606040,
+    665398398,
+    940350824,
+    2387733995,
+    2734964014,
+    492190625,
+    1244416554,
+    3376500746,
+    509367305,
+    317045859,
+    3606421700,
+    3902191787,
+    3907616666,
+    475182043,
+    1690327349,
+    1569131525,
+    104558468,
+    3076510970
+  ],
+  "surfaceNamesResolved": false,
+  "surfaceTriangleCounts": {
+    "0": 139024,
+    "1": 12360,
+    "2": 820,
+    "3": 6992,
+    "4": 1080,
+    "5": 2480,
+    "6": 17008,
+    "7": 18260,
+    "8": 15826,
+    "9": 17194,
+    "10": 1140,
+    "11": 5484,
+    "12": 736,
+    "13": 12,
+    "14": 1684,
+    "15": 8098,
+    "16": 36,
+    "17": 892,
+    "18": 1008,
+    "19": 2876,
+    "20": 24,
+    "21": 708,
+    "22": 5280,
+    "23": 378,
+    "24": 484,
+    "25": 740,
+    "26": 228,
+    "27": 10819,
+    "28": 6798,
+    "30": 10,
+    "29": 3091
+  },
+  "boundsSource": [
+    [
+      -4736.0,
+      -2496.0,
+      -320.0
+    ],
+    [
+      3584.0,
+      4608.0,
+      1174.0
+    ]
+  ],
+  "boundsDisplay": [
+    [
+      -120.2944,
+      -8.128,
+      -117.0432
+    ],
+    [
+      91.03359999999999,
+      29.819599999999998,
+      63.398399999999995
+    ]
+  ],
+  "sourceToDisplay": "[0.0254*x, 0.0254*z, -0.0254*y]; no recentering; apply once",
+  "exactZeroAreaTriangles": 0,
+  "displayAdapterExcludedTriangles": 13481,
+  "queryLayers": "Caller-specified; smoke/fire policies not certified",
+  "entityCoverage": {
+    "included": false,
+    "reason": "R002 is world_physics only; entity physics and runtime state need separate review"
+  },
+  "limitations": [
+    "No swept sphere, hull or dynamic entity queries",
+    "No official smoke/fire layer policy or coefficients",
+    "No surface-name/friction/restitution resolution",
+    "Offline O(N) reference; Android acceleration and performance unmeasured"
+  ],
+  "supplementalArchive": {
+    "name": "world-collision-raw-v1.zip",
+    "bytes": 3283934,
+    "sha256": "df177de2712da928f07013313cdce35fcd9fc07f4fba6cac259643af880bbe25",
+    "role": "offline_query_input_not_imported_into_APK"
+  }
+}

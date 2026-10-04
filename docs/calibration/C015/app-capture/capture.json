@@ -1,0 +1,77 @@
+{
+  "schema": "c015-display-capture-v1",
+  "status": "DEVELOPMENT",
+  "importable": false,
+  "coordinateSpace": "display-m-y-up-v1",
+  "mapVersion": "fc60c032290dffcb233e3de9da3c59694293362ec72643cc1ebde9c1b13a17d0",
+  "field": "aim",
+  "camera": {
+    "position": [
+      -8.706360613139768,
+      3.8806021257020986,
+      17.337658293798334
+    ],
+    "yaw": 3.026422099871036,
+    "pitch": -13.71763749083024,
+    "distance": 1,
+    "free": true
+  },
+  "cameraPositionMeaning": "eye",
+  "actualCameraEye": [
+    -8.706360613139768,
+    3.8806021257020986,
+    17.337658293798334
+  ],
+  "verticalFov": 70,
+  "viewportWidth": 1280,
+  "viewportHeight": 720,
+  "ray": {
+    "origin": [
+      -8.706360816955566,
+      3.8806021213531494,
+      17.337657928466797
+    ],
+    "direction": [
+      -0.05129051208496094,
+      0.23713721334934235,
+      -0.9701212644577026
+    ],
+    "maxDistance": 1915.5360026215442
+  },
+  "surface": {
+    "position": [
+      -9.092647552490234,
+      5.666566848754883,
+      10.031329154968262
+    ],
+    "normalAgainstRay": [
+      -0.6966638565063477,
+      0.0,
+      0.7173977494239807
+    ],
+    "distance": 7.531356334686279,
+    "triangle": 580,
+    "part": "maps/dust2/mobile/chunks/p00817.d2m.gz",
+    "materialIndex": 38,
+    "barycentric": [
+      0.28294092416763306,
+      0.13972702622413635,
+      0.577332079410553
+    ],
+    "supportCandidate": false
+  },
+  "value": [
+    -9.092647552490234,
+    5.666566848754883,
+    10.031329154968262
+  ],
+  "screenshot": "capture.png",
+  "screenshotSha256": "cf00dd2474831f1141d95e0f184340ae71589932a36ed761d7eb99a3a07ad9e1",
+  "environment": "llvmpipe (LLVM 20.1.2, 256 bits)",
+  "scope": "Full restored enabled display map rendered offline with repository shaders. Unverified map probe, not selected-video stance/aim or Android/phone evidence.",
+  "queryStats": {
+    "candidateParts": 63,
+    "readParts": 28,
+    "testedTriangles": 34416
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "camera": {
+    "position": [
+      -20.8880753942,
+      5.4780086,
+      20.209309086
+    ],
+    "yaw": 38,
+    "pitch": 0,
+    "distance": 1,
+    "free": true
+  },
+  "field": "aim",
+  "pixel": [
+    600,
+    400
+  ],
+  "scope": "Generic T-spawn map-label probe only; NOT D2-001 user-video stance or aim."
+}

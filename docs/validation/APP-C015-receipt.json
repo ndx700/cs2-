@@ -1,0 +1,111 @@
+{
+  "schema": "c015-app-resource-and-ray-receipt-v1",
+  "resourceCommit": "3d1a74fed7a96597313ed1073d5684927f7bfe19",
+  "courseParserReceipts": [
+    {
+      "inputSha256": "698ee2686d6265e0d4d716e5a26cd05d93bae1a3e58551156ac90bf835646414",
+      "result": "REJECTED_AS_EXPECTED_PENDING_DRAFT",
+      "unmeasuredFields": [
+        "foot",
+        "eye",
+        "aim",
+        "bodyYaw",
+        "aimFov",
+        "throwHint",
+        "begin",
+        "aimAt",
+        "throwAt",
+        "duration",
+        "path",
+        "smoke",
+        "fire",
+        "he",
+        "cameras.stance",
+        "cameras.aim",
+        "cameras.overview",
+        "cameras.follow",
+        "cameras.landing"
+      ],
+      "inputPath": "docs/calibration/C014/app-pending/D2-001.json",
+      "lessonId": "D2-001",
+      "parserReason": "待校准草稿不可导入播放",
+      "nextArtifact": "Resource static foot/eye/aim candidates with support/texture evidence; do not fill from DEV"
+    },
+    {
+      "inputSha256": "02e7b74590dfc5b48bf9e673c3dff2a30009805db50d0de7e30aff2dec59e22b",
+      "result": "REJECTED_AS_EXPECTED_PENDING_DRAFT",
+      "unmeasuredFields": [
+        "foot",
+        "eye",
+        "aim",
+        "bodyYaw",
+        "aimFov",
+        "throwHint",
+        "begin",
+        "aimAt",
+        "throwAt",
+        "duration",
+        "path",
+        "smoke",
+        "fire",
+        "he",
+        "cameras.stance",
+        "cameras.aim",
+        "cameras.overview",
+        "cameras.follow",
+        "cameras.landing"
+      ],
+      "inputPath": "docs/calibration/C014/app-pending/D2-010.json",
+      "lessonId": "D2-010",
+      "parserReason": "待校准草稿不可导入播放",
+      "nextArtifact": "Resource static foot/eye/aim candidates with support/texture evidence; do not fill from DEV"
+    },
+    {
+      "inputSha256": "0153a5a436f4747aaf67f403a9c33ee4d53158aeec699e880efcdd8a34700ab8",
+      "result": "REJECTED_AS_EXPECTED_PENDING_DRAFT",
+      "unmeasuredFields": [
+        "foot",
+        "eye",
+        "aim",
+        "bodyYaw",
+        "aimFov",
+        "throwHint",
+        "begin",
+        "aimAt",
+        "throwAt",
+        "duration",
+        "path",
+        "smoke",
+        "fire",
+        "he",
+        "cameras.stance",
+        "cameras.aim",
+        "cameras.overview",
+        "cameras.follow",
+        "cameras.landing"
+      ],
+      "inputPath": "docs/calibration/C014/app-pending/D2-014.json",
+      "lessonId": "D2-014",
+      "parserReason": "待校准草稿不可导入播放",
+      "nextArtifact": "Resource static foot/eye/aim candidates with support/texture evidence; do not fill from DEV"
+    }
+  ],
+  "actualKotlinVsOfflineQuery": [
+    {
+      "result": "PASS",
+      "file": "capture.json",
+      "distance": 2.9971657,
+      "part": "maps/dust2/mobile/chunks/p01579.d2m.gz",
+      "triangle": 1093
+    },
+    {
+      "result": "PASS",
+      "file": "ground.json",
+      "distance": 7.1523,
+      "part": "maps/dust2/mobile/chunks/p00538.d2m.gz",
+      "triangle": 166
+    }
+  ],
+  "calibratedCourses": 0,
+  "phoneVerification": null
+}

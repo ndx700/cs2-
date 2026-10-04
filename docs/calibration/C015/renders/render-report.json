@@ -1,0 +1,114 @@
+{
+  "environment": "llvmpipe (LLVM 20.1.2, 256 bits)",
+  "glVersion": "OpenGL ES 3.2 Mesa 25.2.8-0ubuntu0.24.04.2",
+  "checks": "all chunk SHA/length/index/finiteness/bounds; all PNG SHA/size; exact GLES shader compile/link; enabled scene draws without GL errors",
+  "triangles": 4610873,
+  "parts": 3661,
+  "textures": 291,
+  "views": [
+    "D2-001-aim-fit-video-aspect",
+    "D2-001-aim-normal-aspect",
+    "D2-001-crouch-seam-fit",
+    "D2-001-stance-overview"
+  ],
+  "deferredAmbientEffects": {
+    "materials": 4,
+    "parts": 47,
+    "triangles": 852
+  },
+  "androidRuntime": "not tested; EGL desktop software rendering is not Android evidence",
+  "schema": "c015-offscreen-alignment-v1",
+  "mapVersion": "fc60c032290dffcb233e3de9da3c59694293362ec72643cc1ebde9c1b13a17d0",
+  "inputSha256": "cf436f9c99598547da8a2c254c76fd25183fa4818ab8bd03de0b64832b235aed",
+  "renders": [
+    {
+      "name": "D2-001-aim-fit-video-aspect",
+      "eye": [
+        -8.706360613139768,
+        3.8806021257020986,
+        17.337658293798334
+      ],
+      "target": [
+        -8.757651126743738,
+        4.117739334728844,
+        16.367537050185327
+      ],
+      "verticalFovDegrees": 67.85847637962364,
+      "horizontalStretch": 1.2799267637167655,
+      "viewport": [
+        1280,
+        720
+      ],
+      "coverage": 0.8282552083333333,
+      "image": "D2-001-aim-fit-video-aspect.png",
+      "sha256": "34edfd3bc281bf04279b5961caceba227a8691a585509c40bd394a1c0e767961"
+    },
+    {
+      "name": "D2-001-aim-normal-aspect",
+      "eye": [
+        -8.706360613139768,
+        3.8806021257020986,
+        17.337658293798334
+      ],
+      "target": [
+        -8.757651126743738,
+        4.117739334728844,
+        16.367537050185327
+      ],
+      "verticalFovDegrees": 67.85847637962364,
+      "horizontalStretch": 1,
+      "viewport": [
+        1280,
+        720
+      ],
+      "coverage": 0.8393120659722222,
+      "image": "D2-001-aim-normal-aspect.png",
+      "sha256": "428692dd342698ac399d2d14dffd1cb1e498bb75e493c49f1986dc888af5b7e6"
+    },
+    {
+      "name": "D2-001-crouch-seam-fit",
+      "eye": [
+        -8.706360613139768,
+        3.47127220727002,
+        17.337658293798334
+      ],
+      "target": [
+        -8.707808913440692,
+        2.9190008556751352,
+        16.503995138420937
+      ],
+      "verticalFovDegrees": 67.85847637962364,
+      "horizontalStretch": 1.2799267637167655,
+      "viewport": [
+        1280,
+        720
+      ],
+      "coverage": 1.0,
+      "image": "D2-001-crouch-seam-fit.png",
+      "sha256": "bef59be30244b9729dc1338af11839e88738a251d426c1a9577a94615eab6510"
+    },
+    {
+      "name": "D2-001-stance-overview",
+      "eye": [
+        -5.706360613139768,
+        7.1673688838951835,
+        20.337658293798334
+      ],
+      "target": [
+        -8.706360613139768,
+        2.1673688838951835,
+        17.337658293798334
+      ],
+      "verticalFovDegrees": 55,
+      "horizontalStretch": 1,
+      "viewport": [
+        1280,
+        720
+      ],
+      "coverage": 1.0,
+      "image": "D2-001-stance-overview.png",
+      "sha256": "5f2181d872ff982b5f76b1b0169b17ba3c5f6aad88fbda7f02237384b84c1440"
+    }
+  ],
+  "acceptance": "DEVELOPMENT_ONLY_NOT_CALIBRATED"
+}
