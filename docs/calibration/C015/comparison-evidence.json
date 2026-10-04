@@ -1,0 +1,24 @@
+{
+  "schema": "c015-comparison-panel-v1",
+  "image": "docs/calibration/C015/D2-001-comparison.jpg",
+  "sha256": "917c463f55975011a4811ca5418c9dd3065ae13f1d0033a477decd42a04d4e70",
+  "inputs": [
+    {
+      "path": "docs/calibration/C014/user-video-frames/D2-001-021.0-aim-mark.jpg",
+      "sha256": "e1c57dae15fcaf9e8d0f38c460697085b8c5972e36bef20fbf76555492f7ad5d"
+    },
+    {
+      "path": "docs/calibration/C015/renders/D2-001-aim-fit-video-aspect.png",
+      "sha256": "34edfd3bc281bf04279b5961caceba227a8691a585509c40bd394a1c0e767961"
+    },
+    {
+      "path": "docs/calibration/C014/user-video-frames/D2-001-018.0-stance-wall-edge.jpg",
+      "sha256": "ad095c6dcc5c5d962efccd0b059aa8aec1979863b9f2bacee3ab3d2df54614e8"
+    },
+    {
+      "path": "docs/calibration/C015/renders/D2-001-crouch-seam-fit.png",
+      "sha256": "bef59be30244b9729dc1338af11839e88738a251d426c1a9577a94615eab6510"
+    }
+  ],
+  "annotations": "Green fitted window correspondences; yellow image center. Labels identify desktop evidence only."
+}

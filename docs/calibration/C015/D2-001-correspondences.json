@@ -1,0 +1,233 @@
+{
+  "schema": "c015-manual-image-correspondences-v1",
+  "lessonId": "D2-001",
+  "sourceRevision": "user-selected-20261004-v2",
+  "mapVersion": "fc60c032290dffcb233e3de9da3c59694293362ec72643cc1ebde9c1b13a17d0",
+  "viewport": [
+    1280,
+    720
+  ],
+  "pointUncertaintyPixels": 3,
+  "standing": {
+    "referenceFrame": "docs/calibration/C014/user-video-frames/D2-001-021.0-aim-mark.jpg",
+    "referenceSha256": "e1c57dae15fcaf9e8d0f38c460697085b8c5972e36bef20fbf76555492f7ad5d",
+    "seedView": {
+      "name": "scout-2",
+      "eye": [
+        -10,
+        5.5,
+        19
+      ],
+      "target": [
+        -10,
+        5,
+        -10
+      ],
+      "verticalFovDegrees": 58.7155
+    },
+    "landmarks": [
+      {
+        "name": "left-cross-tl",
+        "seedPixel": [
+          905,
+          239
+        ],
+        "referencePixel": [
+          871,
+          238
+        ]
+      },
+      {
+        "name": "left-cross-tr",
+        "seedPixel": [
+          960,
+          236
+        ],
+        "referencePixel": [
+          943,
+          233
+        ]
+      },
+      {
+        "name": "left-cross-br",
+        "seedPixel": [
+          962,
+          297
+        ],
+        "referencePixel": [
+          953,
+          288
+        ]
+      },
+      {
+        "name": "left-cross-bl",
+        "seedPixel": [
+          904,
+          303
+        ],
+        "referencePixel": [
+          880,
+          297
+        ]
+      },
+      {
+        "name": "right-cross-tl",
+        "seedPixel": [
+          990,
+          240
+        ],
+        "referencePixel": [
+          987,
+          237
+        ]
+      },
+      {
+        "name": "right-cross-tr",
+        "seedPixel": [
+          1044,
+          239
+        ],
+        "referencePixel": [
+          1056,
+          236
+        ]
+      },
+      {
+        "name": "right-cross-br",
+        "seedPixel": [
+          1045,
+          295
+        ],
+        "referencePixel": [
+          1063,
+          287
+        ]
+      },
+      {
+        "name": "right-cross-bl",
+        "seedPixel": [
+          990,
+          297
+        ],
+        "referencePixel": [
+          995,
+          295
+        ]
+      },
+      {
+        "name": "back-small-tl",
+        "seedPixel": [
+          481,
+          326
+        ],
+        "referencePixel": [
+          378,
+          365
+        ]
+      },
+      {
+        "name": "back-small-tr",
+        "seedPixel": [
+          534,
+          325
+        ],
+        "referencePixel": [
+          434,
+          363
+        ]
+      },
+      {
+        "name": "back-small-br",
+        "seedPixel": [
+          534,
+          375
+        ],
+        "referencePixel": [
+          434,
+          408
+        ]
+      },
+      {
+        "name": "back-small-bl",
+        "seedPixel": [
+          481,
+          376
+        ],
+        "referencePixel": [
+          378,
+          413
+        ]
+      }
+    ]
+  },
+  "crouching": {
+    "referenceFrame": "docs/calibration/C014/user-video-frames/D2-001-018.0-stance-wall-edge.jpg",
+    "referenceSha256": "ad095c6dcc5c5d962efccd0b059aa8aec1979863b9f2bacee3ab3d2df54614e8",
+    "seedView": {
+      "name": "D2-001-crouch-seam-scout",
+      "eye": [
+        -8.706360613139768,
+        3.217187168872907,
+        17.337658293798334
+      ],
+      "target": [
+        -9.4,
+        1.0,
+        9.14
+      ],
+      "verticalFovDegrees": 67.85847637962364,
+      "horizontalStretch": 1.2799267637167655
+    },
+    "landmarks": [
+      {
+        "name": "lower-window-0",
+        "seedPixel": [
+          920,
+          237
+        ],
+        "referencePixel": [
+          879,
+          61
+        ]
+      },
+      {
+        "name": "lower-window-1",
+        "seedPixel": [
+          1058,
+          237
+        ],
+        "referencePixel": [
+          1027,
+          63
+        ]
+      },
+      {
+        "name": "lower-window-2",
+        "seedPixel": [
+          1037,
+          384
+        ],
+        "referencePixel": [
+          972,
+          226
+        ]
+      },
+      {
+        "name": "lower-window-3",
+        "seedPixel": [
+          904,
+          383
+        ],
+        "referencePixel": [
+          842,
+          226
+        ]
+      }
+    ]
+  },
+  "limitations": [
+    "Manually chosen visible frame corners; not semantic corner annotations in the source game.",
+    "Seed views are search cameras only, not course parameters.",
+    "Independent horizontal video scale is fitted; native recording aspect/FOV remains unconfirmed."
+  ]
+}

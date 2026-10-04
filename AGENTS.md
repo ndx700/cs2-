@@ -8,6 +8,8 @@
 
 ## 开工前
 
+最新续工入口：[C015 下一版施工流程](docs/dispatch/C015-next-version-workflow.md)（2026-10-05 北京时间）。用户要求项目经理明确下一步分工；APP 先交三维采集与真实地图对照，资源先交挂门烟空间定位小包，再接 HE 和蓝车火。C015 接续 C014，更新已过期的截止时间和测试包验收顺序；保留已撤销的 Codex 安排。当前三课来源是用户上传视频，不沿用旧网页变体。
+
 用户 2026-10-04 晚最新指令：第二版先完成一个烟、一个火、一个 HE 雷的完整教学，加入道具跟随视角与右侧实时落点窗口。今晚优先执行 [C014 施工与验收](docs/requirements/C014-second-test-complete-lessons.md)，收口 D2-001、D2-010、D2-014，沿用 C010 动态效果与 C013 瞄点校准要求。其余课程后续接续；Codex 撤销安排继续生效。文档发布不等于其他会话已接单或功能通过。
 
 - 阅读 `docs/STATUS.md`、`docs/COLLABORATION.md`、`docs/requirements/C010.md`、最新 `docs/materials/C012-materials.md` 与开工安排 `docs/dispatch/C013-parallel-kickoff.md`。
