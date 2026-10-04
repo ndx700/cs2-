@@ -7,19 +7,28 @@ import android.view.*
 import android.widget.FrameLayout
 import com.ali.cs2utility.domain.*
 import kotlin.math.hypot
+import com.ali.cs2utility.tutorial.*
 
 class MapSceneView(context: Context, private val onSelect: (String) -> Unit) : FrameLayout(context) {
     private val density=resources.displayMetrics.density
     private val overlay=MarkerOverlay(context)
     private val gl=GLSurfaceView(context)
     private val controls=RunControls(context)
+    var lessonActive=false
+        private set
+    private var lessonView=LessonView.STANCE
+    private var lessonId: String?=null
+    var aimHintEnabled=true
+        private set
     var freeMode=false
         private set
     var onModeChanged: (Boolean) -> Unit = {}
     private val roles=HashMap<Int,String>()
     private val pointerPositions=HashMap<Int,Pair<Float,Float>>()
     var onStatus: (String,Boolean) -> Unit = { _,_ -> }
-    private val renderer=MapRenderer(context,{ gl.requestRender() },{ markers -> post { overlay.markers=markers; overlay.invalidate() } },{ message,error -> post { onStatus(message,error) } })
+    private val renderer=MapRenderer(context,{ gl.requestRender() },{ markers -> post { overlay.markers=markers; overlay.invalidate() } },{ message,error -> post { onStatus(message,error) } },{ hint -> post {
+        overlay.aimHint=hint?.takeIf {lessonActive && lessonView==LessonView.AIM && aimHintEnabled && it.lessonId==lessonId};overlay.invalidate()
+    } })
     private var selectedId: String? = null
     private var moved=false; private var multitouch=false; private var lastX=0f; private var lastY=0f
     private var downX=0f; private var downY=0f
@@ -39,8 +48,21 @@ class MapSceneView(context: Context, private val onSelect: (String) -> Unit) : F
         controls.visibility=View.GONE
         contentDescription="沙二 3D 地图。单指旋转，双指缩放和拖动，点击全图复位。"
     }
+    fun startCourse(c: Course,saved: PlaybackSnapshot?=null) {
+        cancelInput();updateMode(false);lessonActive=true;lessonView=saved?.view ?: LessonView.STANCE
+        lessonId=c.lessonId;aimHintEnabled=saved?.aimHintEnabled ?: true;overlay.aimHint=null
+        overlay.crosshair=lessonView==LessonView.AIM;overlay.invalidate()
+        gl.queueEvent {renderer.startCourse(c,saved)};gl.requestRender()
+    }
+    fun lessonCamera(value: LessonView) {if(!lessonActive)return;cancelInput();lessonView=value;overlay.crosshair=value==LessonView.AIM;overlay.invalidate();gl.queueEvent {renderer.setLessonView(value)};gl.requestRender()}
+    fun lessonPlay() {gl.queueEvent {renderer.coursePlay()};gl.requestRender()}
+    fun lessonPause() {gl.queueEvent {renderer.coursePause()};gl.requestRender()}
+    fun lessonReplay() {gl.queueEvent {renderer.courseReplay()};gl.requestRender()}
+    fun lessonAimHint(value: Boolean) {if(!lessonActive)return;aimHintEnabled=value;overlay.aimHint=null;overlay.invalidate();gl.queueEvent {renderer.courseAimHint(value)};gl.requestRender()}
+    fun lessonSnapshot()=renderer.playback
+    fun endCourse() {if(!lessonActive)return;lessonActive=false;lessonId=null;overlay.aimHint=null;updateMode(renderer.savedBrowseCamera?.free ?: false);overlay.crosshair=false;overlay.invalidate();gl.queueEvent {renderer.endCourse()};gl.requestRender()}
     fun load(scene: SceneDefinition, mesh: FloatArray, detailed: TexturedMesh? = null,mobile: MobileScene?=null) {
-        cancelInput();updateMode(false)
+        endCourse();cancelInput();updateMode(false)
         gl.queueEvent { renderer.setScene(scene,mesh);renderer.setDetailed(detailed);renderer.setMobile(mobile) }; gl.requestRender()
     }
     fun show(items: List<Lineup>, selected: Lineup?) {
@@ -49,19 +71,20 @@ class MapSceneView(context: Context, private val onSelect: (String) -> Unit) : F
     }
     fun focus(point: Vec3) { gl.queueEvent { renderer.focus(point) }; gl.requestRender() }
     fun targets(items: List<TargetMarker>) { gl.queueEvent { renderer.setTargets(items) };gl.requestRender() }
-    fun flyTo(c: CameraState) { cancelInput();gl.queueEvent { renderer.flyTo(c) };gl.requestRender() }
-    fun resetCamera() { cancelInput();updateMode(false);gl.queueEvent { renderer.reset() }; gl.requestRender() }
-    fun cameraState()=renderer.camera
+    fun flyTo(c: CameraState) { endCourse();cancelInput();gl.queueEvent { renderer.flyTo(c) };gl.requestRender() }
+    fun resetCamera() { endCourse();cancelInput();updateMode(false);gl.queueEvent { renderer.reset() }; gl.requestRender() }
+    fun cameraState()=renderer.savedBrowseCamera ?: renderer.camera
     fun restoreCamera(c: CameraState) { cancelInput();controls.speed=c.speed;updateMode(c.free);gl.queueEvent { renderer.restore(c) }; gl.requestRender() }
     private fun updateMode(value: Boolean) {freeMode=value;controls.visibility=if(value)View.VISIBLE else View.GONE;onModeChanged(value)}
-    fun toggleFreeMode() {cancelInput();updateMode(!freeMode);val value=freeMode;gl.queueEvent {renderer.setFreeMode(value)};gl.requestRender()}
+    fun toggleFreeMode() {endCourse();cancelInput();updateMode(!freeMode);val value=freeMode;gl.queueEvent {renderer.setFreeMode(value)};gl.requestRender()}
     private fun cancelInput() {roles.clear();pointerPositions.clear();controls.clear();gl.queueEvent {renderer.stopMovement()};gl.requestRender()}
     fun resume() {gl.onResume();gl.queueEvent {renderer.resumeMovement()};gl.requestRender()}
-    fun pause() {renderer.pauseMovement();cancelInput();gl.onPause()}
+    fun pause() {renderer.pauseMovement();cancelInput();gl.queueEvent {renderer.suspendCourse()};gl.onPause()}
     override fun onWindowFocusChanged(hasWindowFocus: Boolean) {super.onWindowFocusChanged(hasWindowFocus);if(!hasWindowFocus)cancelInput()}
     fun dispose() {renderer.shutdownWorkers();gl.queueEvent {renderer.dispose()};gl.requestRender()}
     override fun onInterceptTouchEvent(event: MotionEvent)=true
     override fun onTouchEvent(event: MotionEvent): Boolean {
+        if(lessonActive && lessonView==LessonView.AIM)return true
         if(freeMode)return runTouch(event)
         scale.onTouchEvent(event)
         when (event.actionMasked) {
@@ -144,10 +167,25 @@ class MapSceneView(context: Context, private val onSelect: (String) -> Unit) : F
     }
     override fun performClick(): Boolean { super.performClick(); return true }
     private class MarkerOverlay(context: Context) : View(context) {
+        var crosshair=false
+        var aimHint: ProjectedAimHint?=null
         var markers=emptyList<ScreenMarker>(); var selectedId: String?=null
         private val d=resources.displayMetrics.density
         private val paint=Paint(Paint.ANTI_ALIAS_FLAG)
         override fun onDraw(c: Canvas) {
+            if(crosshair) {
+                aimHint?.let {h->
+                    paint.style=Paint.Style.STROKE;paint.strokeWidth=2*d
+                    paint.color=Color.argb((h.alpha*255).toInt(),255,204,102)
+                    c.drawCircle(h.x,h.y,17*d,paint)
+                    paint.style=Paint.Style.FILL
+                }
+                paint.color=Color.WHITE;paint.strokeWidth=2*d
+                val x=width/2f;val y=height/2f
+                c.drawLine(x-10*d,y,x-3*d,y,paint);c.drawLine(x+3*d,y,x+10*d,y,paint)
+                c.drawLine(x,y-10*d,x,y-3*d,paint);c.drawLine(x,y+3*d,x,y+10*d,paint)
+                return
+            }
             markers.sortedBy { if(it.id==selectedId) 1 else 0 }.forEach { m ->
                 if(m.target) {
                     paint.style=Paint.Style.FILL;paint.color=0xff142a42.toInt()

@@ -25,7 +25,7 @@ data class MobileMaterial(val base: String,val layer: String,val blend: String,v
     val texturePaths=listOf(base,layer,blend).filter {it.isNotEmpty()}.distinct()
 }
 data class MobilePart(val asset: String,val material: Int,val vertices: Int,val indices: Int,val bytes: Int,val center: FloatArray,val radius: Float)
-data class MobileScene(val parts: List<MobilePart>,val materials: List<MobileMaterial>)
+data class MobileScene(val parts: List<MobilePart>,val materials: List<MobileMaterial>,val manifestSha256: String="")
 
 object MobileSceneLoader {
     private fun path(s: String): String {
@@ -37,7 +37,9 @@ object MobileSceneLoader {
         return FloatArray(n) { a.getDouble(it).toFloat().also { f -> require(f.isFinite()) } }
     }
     fun load(context: Context,asset: String): MobileScene {
-        val j=context.assets.open(asset).bufferedReader().use { JSONObject(it.readText()) }
+        val manifestBytes=context.assets.open(asset).use {it.readBytes()}
+        val hash=java.security.MessageDigest.getInstance("SHA-256").digest(manifestBytes).joinToString("") {"%02x".format(it.toInt() and 255)}
+        val j=JSONObject(manifestBytes.toString(Charsets.UTF_8))
         require(j.getString("schema")=="dust2-mobile-d2m1-v1" && j.getInt("stride")==36)
         val ma=j.getJSONArray("materials");require(ma.length() in 1..1024)
         val materials=(0 until ma.length()).map { i ->
@@ -58,7 +60,7 @@ object MobileSceneLoader {
             MobilePart(path(p.getString("asset")),mi,nv,ni,bytes,floats(p,"center",3),r)
         }
         require(parts.sumOf { it.bytes.toLong() }<=192L*1024*1024) { "Scene exceeds mobile geometry budget" }
-        return MobileScene(parts,materials)
+        return MobileScene(parts,materials,hash)
     }
 }
 

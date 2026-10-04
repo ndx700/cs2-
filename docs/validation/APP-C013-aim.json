@@ -1,0 +1,14 @@
+{
+  "task": "C013-APP-aim-guidance",
+  "mainBaseline": "b28be1c09a6e4debe38c88a6b9c31f1f0fabdd04",
+  "inheritedAppHead": "516f2ce41ccd55a7aac441a2ee52d80d550e71a1",
+  "priorCi": {"run": 37168412786, "result": "success", "scope": "PR5 only; not this round or Android phone"},
+  "localCompilation": {"result": "PASS", "tools": ["JDK17", "Kotlin1.9.24", "android-34", "aapt2 34.0.0"], "scope": "All main/test Kotlin; temporary raw ID placeholder only; no full resource or APK check"},
+  "localJunit": {"result": "PASS", "total": 55, "existing": 41, "new": 14, "jsonRuntime": "org.json 20240303 before Android stub jar"},
+  "gradle": {"result": "BLOCKED_ENVIRONMENT", "command": "./gradlew testDebugUnitTest assembleDebug lintDebug --no-daemon", "reason": "Gradle wrapper Java download: java.net.SocketException Network is unreachable", "newPrCi": "pending"},
+  "localFullAssetValidation": "NOT_RUN_THIS_ROUND; new PR CI must restore/validate full packs",
+  "phone": "NOT_RUN; no connected device",
+  "calibratedCourses": "None delivered",
+  "apk": "None delivered",
+  "acceptanceGate": "Structural checks only; human review of actual referenced evidence is required"
+}

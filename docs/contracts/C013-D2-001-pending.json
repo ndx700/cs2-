@@ -1,0 +1,32 @@
+{
+  "schema": "c013-course-fx-v1",
+  "mapId": "dust2",
+  "lessonId": "D2-001",
+  "relatedIds": [
+    "D2-014"
+  ],
+  "status": "PENDING_CALIBRATION",
+  "importable": false,
+  "mapVersion": "fc60c032290dffcb233e3de9da3c59694293362ec72643cc1ebde9c1b13a17d0",
+  "coordinateSpace": "display-m-y-up-v1",
+  "timeOrigin": "throw-release-seconds",
+  "teachingSource": "https://getreplay.gg/en/utility/dust2/smoke/d2-mid-door-smoke",
+  "effectSource": "https://www.youtube.com/watch?v=6aEaQjRaV1U",
+  "referenceSegment": "Nart 0:43–1:33",
+  "foot": null,
+  "eye": null,
+  "aim": null,
+  "throwHint": null,
+  "path": null,
+  "smoke": null,
+  "he": null,
+  "measurements": null,
+  "missing": [
+    "真实站位/眼位/瞄点",
+    "投法与轨迹/反弹节点",
+    "效果时间零点/分阶段测量",
+    "烟覆盖/HE局部缺口和回填",
+    "游戏版本/核验记录"
+  ],
+  "aimAcceptance": null
+}
