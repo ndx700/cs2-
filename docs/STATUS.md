@@ -4,7 +4,7 @@
 
 实现基线：v0.6.0-test2 / versionCode 6；源码来源 `CS2Utility-v0.6.0-test2-source.zip`，117432135 字节，SHA-256 `d9eed64e1591fe8407c4062f3e57177141fa797c5724a5cacbc50e7e1b4192a1`。
 
-首版范围：`docs/requirements/C010.md`。C008/C009 与 C007 交付保留为历史。
+首版动态范围：`docs/requirements/C010.md`。用户最新去重素材计划：`docs/materials/C012-materials.md`，14 条（8 烟、5 火、1 HE），同目标／同用途优先简单投法，接续并更新 C010 的逐条用户筛选安排。C008/C009 与 C007 交付保留为历史。
 
 | 项目 | 状态／证据 |
 | --- | --- |
@@ -21,3 +21,7 @@
 本次导入已有代码、全部移动资源和需求／协作约定，加入资源恢复流程，并修正旧资源校验脚本将移动分块 JSON 当成 C2M2 二进制读取的问题：新增 D2M1 格式、资源哈希、长度、索引、有限坐标及边界检查。不宣称新增烟火或 HE 功能。既有 Kotlin、Android 配置和教学数据内容保持源包基线。历史 19 项 JUnit、桌面 EGL 和 APK 验证记录在 docs 中保留，不能作为本次新运行或手机验证结果。
 
 本次迁移验证：来源 ZIP 哈希和 CRC、分卷哈希、空目录恢复及逐文件字节一致性、既有资源校验。CI 新运行结果以 GitHub Actions 实际状态为准；本次没有连接 Android 手机。
+
+工作流按用户提供的 `AI Project Sync & Android Build` 更新：main push、PR、每 15 分钟 schedule、手动触发，并发取消。补充本工程 SDK、资源还原／校验、单元测试与 Lint。它执行代码检查和构建；不是三个 AI 的自动同步或 Codex 自动审查服务。GitHub schedule 可能延迟，不能承诺准点启动。
+
+素材原文副本 SHA-256 `bf85c866b51361d87263f19ff57247ebfa5f1dd246c3ceff3d778b52fc65b491`；五页已读取核对。14 条链接和原文片段时间已录入 JSON，页面、视频内容与逐颗参数未独立标定，没有将条目添加到正式 APP 课程数据。
