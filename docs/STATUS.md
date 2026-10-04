@@ -25,3 +25,7 @@
 工作流按用户提供的 `AI Project Sync & Android Build` 更新：main push、PR、每 15 分钟 schedule、手动触发，并发取消。补充本工程 SDK、资源还原／校验、单元测试与 Lint。它执行代码检查和构建；不是三个 AI 的自动同步或 Codex 自动审查服务。GitHub schedule 可能延迟，不能承诺准点启动。
 
 素材原文副本 SHA-256 `bf85c866b51361d87263f19ff57247ebfa5f1dd246c3ceff3d778b52fc65b491`；五页已读取核对。14 条链接和原文片段时间已录入 JSON，页面、视频内容与逐颗参数未独立标定，没有将条目添加到正式 APP 课程数据。
+
+## C013 并行开工
+
+用户已授权 APP 与资源工程师并行开发，不等待自动构建结束。开工安排见 [C013](dispatch/C013-parallel-kickoff.md)，首批按 C012 联调中门烟＋HE 炸烟，瀑布烟高目标验证保留。各侧连接与接单尚未在本轮确认；分别提交 `docs/progress/APP-C013.md`、`docs/progress/RES-C013.md` 记录实际状态。本次只发布任务，不宣称功能或新 APK 完成。
