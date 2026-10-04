@@ -31,3 +31,11 @@ CI 运行 37166521336 已实际通过协作快照、SDK 安装、地图恢复／
 ## C013 并行开工
 
 用户已授权 APP 与资源工程师并行开发，不等待自动构建结束。开工安排见 [C013](dispatch/C013-parallel-kickoff.md)，首批按 C012 联调中门烟＋HE 炸烟，瀑布烟高目标验证保留。各侧连接与接单尚未在本轮确认；分别提交 `docs/progress/APP-C013.md`、`docs/progress/RES-C013.md` 记录实际状态。本次只发布任务，不宣称功能或新 APK 完成。
+
+## C013 瞄点补充与 Codex 审查安排 2026-10-04
+
+- 用户两份原文保存在 docs/sources/，执行解释见 [瞄点精度验收](requirements/C013-aim-texture-acceptance.md) 和 [Ultra 后续规划](roadmap/ULTRA.md)。原始字节和 SHA-256 可核对。
+- 瞄点纹理一致性、手机可辨认性以及可隐藏辅助提示已加入 C013 正式课程验收；优先 D2-001、D2-014、D2-009、D2-010。新增要求尚待工程师实现／校准与手机验收。
+- 本次已观察到 [APP PR #5](https://github.com/ndx700/cs2-/pull/5) 和 [资源 PR #4](https://github.com/ndx700/cs2-/pull/4)。它们是候选交付，当前未因本次文档核对而标记 INTEGRATED 或 VERIFIED；详细功能与 CI 需针对最新 head 审查。
+- [Codex 具体任务](dispatch/C013-codex-review.md) 已定义：独立审查这两份 PR、核对构建和需求、反馈具体问题并交审查记录。根 AGENTS.md 保留并补充 Code Review Rules。
+- 本次仅发布文档和职责，未开启 Codex 自动审查，未代其他会话确认已接单，未合并工程师功能 PR，未构建或交付新 APK。Ultra 继续为未来方向。

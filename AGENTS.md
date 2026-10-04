@@ -9,6 +9,8 @@
 - 不把需求说明、素材、截图或 CI 构建成功当成功能验收完成。
 - 用户最新明确指令优先；C010 处理与 C008/C009 冲突的首版范围，C012 记录最新去重素材计划及待校准项，原文保留作历史。
 
+- C013 正式课程同时执行 `docs/requirements/C013-aim-texture-acceptance.md`；Codex 接单入口为 `docs/dispatch/C013-codex-review.md`。`docs/roadmap/ULTRA.md` 仅是后续方向，不进入当前教学 APK 验收。
+
 ## 分支与交付
 
 - APP 侧使用 `app/*`，资源侧使用 `assets/*`，项目经理整合使用 `pm/*`，Codex 审查／修复使用 `codex/*`。
@@ -43,3 +45,5 @@
 ## Code Review Rules
 
 Review lifecycle, GL-thread confinement, bounded loading memory, simultaneous touch controls, preset timeline pause/replay, map/asset version consistency, and evidence for smoke/fire/HE behavior. Do not accept static effect images as completion. Identify unmeasured performance claims and fabricated CS2 timings. Explain concrete triggers and effects; cite relevant files and functions.
+
+Review formal CALIBRATED courses for clear real-scene aiming references, consistent local textures/geometry, recorded asset versions, and actual phone evidence. An overlay alone is not calibration; first-person hints must be hideable or fade. Missing reference/phone evidence remains pending, not passed.
