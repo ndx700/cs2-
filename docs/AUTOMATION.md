@@ -5,7 +5,7 @@
 | 触发 | 协作快照 | Android 测试、Lint、APK |
 | --- | --- | --- |
 | main 提交 | 执行 | 执行 |
-| app/**、assets/**、pm/**、codex/** 提交 | 执行 | 建 PR 后执行 |
+| app/**、assets/**、pm/** 提交 | 执行 | 建 PR 后执行 |
 | 目标为 main 的 PR | 执行 | 执行 |
 | Actions 手动运行 | 执行 | 执行 |
 | 每小时 07、22、37、52 分钟 | 执行 | 跳过 |
@@ -14,7 +14,7 @@
 
 在 Actions 的 `Project sync and Android checks` 运行摘要中查看结果；下载 `project-sync-*` artifact 可读取 `project-sync.json` 和 Markdown。快照保留三天，APK 保留十四天，Android 报告保留七天。自动 APK artifact 是构建产物，正式发布仍由项目经理核验后决定。
 
-每个 AI 下次开工先读 AGENTS、STATUS、最新需求、自己的任务 PR 和最近快照。GitHub Actions 不会自动唤醒三个独立 ChatGPT 会话，不会使它们互相通话，也不会执行 Codex 智能审查。Codex PR 审查须单独按 `docs/CODEX_SETUP.md` 连接和启用。
+每个 AI 下次开工先读 AGENTS、STATUS、最新需求、自己的任务 PR 和最近快照。GitHub Actions 不会自动唤醒三个独立 ChatGPT 会话，不会使它们互相通话，也不会执行 Codex 智能审查。Codex 已退出项目，旧接入和启用说明作废；不再派发 Codex 审查任务。
 
 四次/小时是计划时间，GitHub 高负载时可能延迟或丢弃。schedule 只在默认分支执行；配置须先合入 main 才能生效。定时检查的并发组独立，不会取消正在执行的 PR 或 main 构建。
 
@@ -25,4 +25,3 @@ Android 检查保留 JDK 17、SDK 34、地图分卷还原与校验、单元测�
 官方参考：
 - https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule
 - https://github.com/actions/github-script
-- https://learn.chatgpt.com/docs/third-party/github

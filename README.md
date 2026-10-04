@@ -2,7 +2,7 @@
 
 现有实现基线 **v0.6.0-test2**：完整沙二地图、自由观察跑图、可见区域加载优化。正式教学课程、人物站位展示、动态烟火及 HE 炸烟仍待实现，详见 [进度](docs/STATUS.md) 和 [首版要求 C010](docs/requirements/C010.md)。
 
-本仓库用于 APP、资源和项目经理三边协作，并供 Codex 进一步审查。开工先读 [AGENTS.md](AGENTS.md) 和 [协作约定](docs/COLLABORATION.md)。
+本仓库用于 APP、资源和项目经理三边协作。开工先读 [AGENTS.md](AGENTS.md) 和 [协作约定](docs/COLLABORATION.md)。
 
 ## 克隆后构建
 
@@ -26,8 +26,7 @@ chmod +x gradlew
 | APP／功能 | app/* |
 | 资源 | assets/* |
 | 项目经理整合 | pm/* |
-| Codex 审查修复 | codex/* |
 
-使用独立任务分支和 PR 汇合到 main。其他两个会话须分别验证私有仓库访问；本次并未自动把会话搬到 Codex。
+使用独立任务分支和 PR 汇合到 main。其他两个会话须分别验证私有仓库访问。
 
-[基线原始说明](docs/BASELINE-v0.6.0-test2.md)包含已完成行为、既有测试、手机操作及已知限制。[Codex 接入说明](docs/CODEX_SETUP.md)提供云环境与 PR 审查步骤。
+[基线原始说明](docs/BASELINE-v0.6.0-test2.md)包含已完成行为、既有测试、手机操作及已知限制。项目经理负责人工审查；[Codex 停止通知](docs/dispatch/C013-codex-review.md)已撤销旧接入与任务安排。

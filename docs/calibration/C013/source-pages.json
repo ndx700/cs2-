@@ -1,0 +1,403 @@
+{
+  "schema": "c013-source-evidence-v1",
+  "records": [
+    {
+      "id": "D2-001",
+      "teaching_source_url": "https://getreplay.gg/en/utility/dust2/smoke/d2-mid-door-smoke",
+      "effect_source_url_in_C012": "https://www.youtube.com/watch?v=6aEaQjRaV1U",
+      "reference_segment_in_C012": "Nart 0:43–1:33",
+      "retrieved_at": "2026-10-04T01:13:48.082608+00:00",
+      "map_build": null,
+      "game_build": null,
+      "calibration_status": "PENDING_CALIBRATION",
+      "status": "PAGE_FETCHED",
+      "final_url": "https://getreplay.gg/en/utility/dust2/smoke/d2-mid-door-smoke",
+      "content_type": "text/html; charset=utf-8",
+      "page_last_modified": null,
+      "html_bytes": 198839,
+      "html_sha256": "38413b6cfc8632ed8732db13a85e95758df4d328be625e2256a11aedb7a9b979",
+      "title": "Dust2 Mid Door Smoke from T Spawn — Standard Lineup",
+      "source_commands": [
+        {
+          "position_source_xyz": [
+            -452.229492,
+            -660.061768,
+            174.616058
+          ],
+          "angles_source_pitch_yaw_roll_degrees": [
+            -9.96819,
+            88.599434,
+            0.0
+          ],
+          "command": "setpos -452.229492 -660.061768 174.616058;setang -9.968190 88.599434 0.000000",
+          "status": "SOURCE_DECLARED_NOT_GAME_VALIDATED"
+        }
+      ],
+      "media": [
+        {
+          "url": "https://storage.getreplay.gg/nade-generated/4d13c7abb526b8530ddaade9c3987502e1567bb5.mp4",
+          "kind": "video",
+          "section": "section-2d",
+          "label": null,
+          "provenance": "WEBPAGE_MEDIA_NOT_RUNTIME_LOGIC",
+          "download_status": "FETCHED",
+          "inspection_file": "D2-001/00.mp4",
+          "bytes": 527809,
+          "sha256": "da22682074cc0d39b07c70142b70fd8335b37769476492551118ec198674be47",
+          "content_type": "video/mp4",
+          "last_modified": "Wed, 15 Apr 2026 12:19:43 GMT"
+        },
+        {
+          "url": "https://storage.getreplay.gg/2026/04/15/b6786b3d546fa2ca95cf36bc81e76e3b397d2fc9.mp4",
+          "kind": "video",
+          "section": "section-demo",
+          "label": null,
+          "provenance": "WEBPAGE_MEDIA_NOT_RUNTIME_LOGIC",
+          "download_status": "FETCHED",
+          "inspection_file": "D2-001/01.mp4",
+          "bytes": 5591183,
+          "sha256": "c660b080f140ecc6aa963dce2443d50f0df7935dc588241d334a3e2d732e3dc9",
+          "content_type": "video/mp4",
+          "last_modified": "Wed, 15 Apr 2026 11:55:24 GMT"
+        },
+        {
+          "url": "https://storage.getreplay.gg/2026/04/15/c5e86f434aff29e8a40db7d34cbda26b61fe58be.jpg",
+          "kind": "img",
+          "section": "section-guide",
+          "label": "cs2_Yc0sqAouLc.jpg",
+          "provenance": "WEBPAGE_MEDIA_NOT_RUNTIME_LOGIC",
+          "download_status": "FETCHED",
+          "inspection_file": "D2-001/02.jpg",
+          "bytes": 363560,
+          "sha256": "48f2631ee3d37e8313e31a2683eb4b4c3a1054af94b109740268ee2f21183db1",
+          "content_type": "image/jpeg",
+          "last_modified": "Wed, 15 Apr 2026 11:55:46 GMT"
+        },
+        {
+          "url": "https://storage.getreplay.gg/2026/04/15/f750e289813e827a37c0f2dc31215593bafe3bb7.jpg",
+          "kind": "img",
+          "section": "section-guide",
+          "label": "cs2_f5gkJfqo6n.jpg",
+          "provenance": "WEBPAGE_MEDIA_NOT_RUNTIME_LOGIC",
+          "download_status": "FETCHED",
+          "inspection_file": "D2-001/03.jpg",
+          "bytes": 309356,
+          "sha256": "b21019a5a930003e8312ffcd63a1505a95923c39600d9cddd434d2e3fc554a3e",
+          "content_type": "image/jpeg",
+          "last_modified": "Wed, 15 Apr 2026 11:55:37 GMT"
+        },
+        {
+          "url": "https://storage.getreplay.gg/2026/04/15/799c21f5809895b3e84b78c9dd0fed4d29f47033.jpg",
+          "kind": "img",
+          "section": "section-land",
+          "label": "cs2_ZXHVChKqfd.jpg",
+          "provenance": "WEBPAGE_MEDIA_NOT_RUNTIME_LOGIC",
+          "download_status": "FETCHED",
+          "inspection_file": "D2-001/04.jpg",
+          "bytes": 466987,
+          "sha256": "a45e860b21eaad853464a754a8680864cff30a2109039213c3bb2735895a0948",
+          "content_type": "image/jpeg",
+          "last_modified": "Wed, 15 Apr 2026 11:57:15 GMT"
+        },
+        {
+          "url": "https://storage.getreplay.gg/2026/04/15/55f92bb29802c4e286069227ea7964b5a37d9e2f.jpg",
+          "kind": "img",
+          "section": "section-land",
+          "label": "cs2_LoGdjaY0Lq.jpg",
+          "provenance": "WEBPAGE_MEDIA_NOT_RUNTIME_LOGIC",
+          "download_status": "FETCHED",
+          "inspection_file": "D2-001/05.jpg",
+          "bytes": 413345,
+          "sha256": "9943335d8b209138e2a9230940012962791cb342011275fa4d4fab78344eeb79",
+          "content_type": "image/jpeg",
+          "last_modified": "Wed, 15 Apr 2026 11:57:21 GMT"
+        },
+        {
+          "url": "https://storage.getreplay.gg/2026/04/15/4b58a2d0a5a70f243ec67beb92c6c57247324d61.jpg",
+          "kind": "img",
+          "section": "section-affected",
+          "label": "cs2_7M8uatu5OI.jpg",
+          "provenance": "WEBPAGE_MEDIA_NOT_RUNTIME_LOGIC",
+          "download_status": "FETCHED",
+          "inspection_file": "D2-001/06.jpg",
+          "bytes": 386267,
+          "sha256": "8334e3f728b5060001378460a499d38b97acc2d41ec251b163be8b43a0eaab8c",
+          "content_type": "image/jpeg",
+          "last_modified": "Wed, 15 Apr 2026 11:57:32 GMT"
+        },
+        {
+          "url": "https://storage.getreplay.gg/2026/04/15/51c23d3e782d3b2d2036fa8d987e42185fe641d3.jpg",
+          "kind": "img",
+          "section": "section-affected",
+          "label": "cs2_JYcrmpWE8v.jpg",
+          "provenance": "WEBPAGE_MEDIA_NOT_RUNTIME_LOGIC",
+          "download_status": "FETCHED",
+          "inspection_file": "D2-001/07.jpg",
+          "bytes": 384270,
+          "sha256": "212b4e8502ac9dc839ddfcee186baed6e26667d7f83fa2c3c9ec4b5c1b537d71",
+          "content_type": "image/jpeg",
+          "last_modified": "Wed, 15 Apr 2026 11:57:42 GMT"
+        },
+        {
+          "url": "https://storage.getreplay.gg/2026/04/15/7e52220361415897a741d584295e7b68c77472ff.jpg",
+          "kind": "img",
+          "section": "section-affected",
+          "label": "cs2_XE6tMcxCPO.jpg",
+          "provenance": "WEBPAGE_MEDIA_NOT_RUNTIME_LOGIC",
+          "download_status": "FETCHED",
+          "inspection_file": "D2-001/08.jpg",
+          "bytes": 320024,
+          "sha256": "e3bd1d62008e430f58cee838384c117051e4e3817902aa8f1d9cb0a8f3ab8330",
+          "content_type": "image/jpeg",
+          "last_modified": "Wed, 15 Apr 2026 11:58:16 GMT"
+        },
+        {
+          "url": "https://storage.getreplay.gg/2026/04/15/56010ff539e99435db671721573289df9e620c20.jpg",
+          "kind": "img",
+          "section": "section-affected",
+          "label": "cs2_qKnv0jOGTU.jpg",
+          "provenance": "WEBPAGE_MEDIA_NOT_RUNTIME_LOGIC",
+          "download_status": "FETCHED",
+          "inspection_file": "D2-001/09.jpg",
+          "bytes": 360436,
+          "sha256": "42091b4dd4c140d08ed6d031cdce0078fc77d15c031891708c235b4017496240",
+          "content_type": "image/jpeg",
+          "last_modified": "Wed, 15 Apr 2026 11:58:08 GMT"
+        }
+      ],
+      "throw_flags_from_page_hint": {
+        "jump": true,
+        "forward": false,
+        "standing": false,
+        "left_click": true,
+        "status": "SOURCE_DECLARED_NOT_GAME_VALIDATED"
+      }
+    },
+    {
+      "id": "D2-014",
+      "teaching_source_url": "https://getreplay.gg/en/utility/dust2/reveal/d2-mid-door-reveal",
+      "effect_source_url_in_C012": "https://www.youtube.com/watch?v=6aEaQjRaV1U",
+      "reference_segment_in_C012": "Nart 15:43–16:07",
+      "retrieved_at": "2026-10-04T01:15:41.954922+00:00",
+      "map_build": null,
+      "game_build": null,
+      "calibration_status": "PENDING_CALIBRATION",
+      "status": "PAGE_FETCHED",
+      "final_url": "https://getreplay.gg/en/utility/dust2/reveal/d2-mid-door-reveal",
+      "content_type": "text/html; charset=utf-8",
+      "page_last_modified": null,
+      "html_bytes": 180045,
+      "html_sha256": "e91eb3bf22486138ec61cf1f2fea6f7bb4b8202951495b96c7c46b54b037f14c",
+      "title": "CS2 Dust2 CT reveal HE — break the mid doors smoke",
+      "source_commands": [],
+      "media": [
+        {
+          "url": "https://storage.getreplay.gg/2026/05/20/e44ca1d93078be6637ebeecbeae9a7fccc86e60b.mp4",
+          "kind": "video",
+          "section": "section-demo",
+          "label": null,
+          "provenance": "WEBPAGE_MEDIA_NOT_RUNTIME_LOGIC",
+          "download_status": "FETCHED",
+          "inspection_file": "D2-014/00.mp4",
+          "bytes": 2383240,
+          "sha256": "f2c9ed11e6827a5f544baa35cc881f03b152c56055de20f20f611ae20fc63abe",
+          "content_type": "video/mp4",
+          "last_modified": "Wed, 20 May 2026 15:36:19 GMT"
+        },
+        {
+          "url": "https://storage.getreplay.gg/2026/05/20/ad1c2639f6c20cddb16e2bcb3097a02b43ece0a8.webp",
+          "kind": "img",
+          "section": "section-guide",
+          "label": "Discord_DGS3a9bn9b.webp",
+          "provenance": "WEBPAGE_MEDIA_NOT_RUNTIME_LOGIC",
+          "download_status": "FETCHED",
+          "inspection_file": "D2-014/01.webp",
+          "bytes": 170676,
+          "sha256": "0883d3229d2a476ddaa2aa802279bd149eabeff08b51834d2e490fc3b1f71d03",
+          "content_type": "image/webp",
+          "last_modified": "Wed, 20 May 2026 15:36:19 GMT"
+        },
+        {
+          "url": "https://storage.getreplay.gg/2026/05/20/519810e1f8e56579d1e1e8ab9c26205d04672dd9.webp",
+          "kind": "img",
+          "section": "section-affected",
+          "label": "Discord_DNPuUBv3qR.webp",
+          "provenance": "WEBPAGE_MEDIA_NOT_RUNTIME_LOGIC",
+          "download_status": "FETCHED",
+          "inspection_file": "D2-014/02.webp",
+          "bytes": 182140,
+          "sha256": "79316e47b4c312a33375fb84a0d50e49daa8a8d5853924119c4d8976707d23f9",
+          "content_type": "image/webp",
+          "last_modified": "Wed, 20 May 2026 15:36:19 GMT"
+        }
+      ],
+      "throw_flags_from_page_hint": {
+        "jump": false,
+        "forward": false,
+        "standing": true,
+        "left_click": true,
+        "status": "SOURCE_DECLARED_NOT_GAME_VALIDATED"
+      }
+    },
+    {
+      "id": "D2-009",
+      "teaching_source_url": "https://getreplay.gg/en/utility/dust2/molotov/dust2-b-site-close-fence-molotov",
+      "effect_source_url_in_C012": "https://www.youtube.com/watch?v=6aEaQjRaV1U",
+      "reference_segment_in_C012": "Nart 7:58–8:30",
+      "retrieved_at": "2026-10-04T01:16:24.396907+00:00",
+      "map_build": null,
+      "game_build": null,
+      "calibration_status": "PENDING_CALIBRATION",
+      "status": "PAGE_FETCHED",
+      "final_url": "https://getreplay.gg/en/utility/dust2/molotov/dust2-b-site-close-fence-molotov",
+      "content_type": "text/html; charset=utf-8",
+      "page_last_modified": null,
+      "html_bytes": 181944,
+      "html_sha256": "f0df606fee1057dbcffef20d33745de5709010cf33dd2d5f6c0379ec59e1724b",
+      "title": "CS2 Dust2 T-side molotov onto B fence and close left",
+      "source_commands": [
+        {
+          "position_source_xyz": [
+            -1837.968018,
+            990.979187,
+            103.416237
+          ],
+          "angles_source_pitch_yaw_roll_degrees": [
+            -6.208987,
+            103.978676,
+            0.0
+          ],
+          "command": "setpos -1837.968018 990.979187 103.416237;setang -6.208987 103.978676 0.000000",
+          "status": "SOURCE_DECLARED_NOT_GAME_VALIDATED"
+        }
+      ],
+      "media": [
+        {
+          "url": "https://storage.getreplay.gg/2026/05/20/6c8155ca4ec79a0d813936d8de087353d2277c68.mp4",
+          "kind": "video",
+          "section": "section-demo",
+          "label": null,
+          "provenance": "WEBPAGE_MEDIA_NOT_RUNTIME_LOGIC",
+          "download_status": "FETCHED",
+          "inspection_file": "D2-009/00.mp4",
+          "bytes": 1724237,
+          "sha256": "316760187b8e9695fc281486e1a1f62cbb4a6fe3d0b51d3052f5a6d6f07dede7",
+          "content_type": "video/mp4",
+          "last_modified": "Wed, 20 May 2026 11:08:50 GMT"
+        },
+        {
+          "url": "https://storage.getreplay.gg/2026/05/20/f79058c2685fb4446bd22d9eb349b98bf58e926d.webp",
+          "kind": "img",
+          "section": "section-guide",
+          "label": "Discord_T4PColKipv.webp",
+          "provenance": "WEBPAGE_MEDIA_NOT_RUNTIME_LOGIC",
+          "download_status": "FETCHED",
+          "inspection_file": "D2-009/01.webp",
+          "bytes": 85154,
+          "sha256": "8349c06466925cea788ee139b29d2d21e66f7bd21ce6cc2b8c951fb1cf7d39f3",
+          "content_type": "image/webp",
+          "last_modified": "Wed, 20 May 2026 11:08:51 GMT"
+        },
+        {
+          "url": "https://storage.getreplay.gg/2026/05/20/81da42ec69f97dda4e69ac686d829bbeabe0b485.webp",
+          "kind": "img",
+          "section": "section-affected",
+          "label": "Discord_Uhd6EUBT8b.webp",
+          "provenance": "WEBPAGE_MEDIA_NOT_RUNTIME_LOGIC",
+          "download_status": "FETCHED",
+          "inspection_file": "D2-009/02.webp",
+          "bytes": 166364,
+          "sha256": "db4415b4f01fdcdbfe243dc608edfa67c535017e425a814aeab14c442ce6505a",
+          "content_type": "image/webp",
+          "last_modified": "Wed, 20 May 2026 10:48:48 GMT"
+        },
+        {
+          "url": "https://storage.getreplay.gg/2026/05/20/1c89da2c60d53841096321750ca236cbd91e7962.webp",
+          "kind": "img",
+          "section": "section-affected",
+          "label": "Discord_ttKjdfhiYt.webp",
+          "provenance": "WEBPAGE_MEDIA_NOT_RUNTIME_LOGIC",
+          "download_status": "FETCHED",
+          "inspection_file": "D2-009/03.webp",
+          "bytes": 151402,
+          "sha256": "aa23043a89950db4a8a2eb9167bf2cc50baabddd9ff27811b69dd13d425ba045",
+          "content_type": "image/webp",
+          "last_modified": "Wed, 20 May 2026 10:48:48 GMT"
+        }
+      ],
+      "throw_flags_from_page_hint": {
+        "jump": false,
+        "forward": false,
+        "standing": true,
+        "left_click": true,
+        "status": "SOURCE_DECLARED_NOT_GAME_VALIDATED"
+      }
+    },
+    {
+      "id": "D2-010",
+      "teaching_source_url": "https://getreplay.gg/en/utility/dust2/molotov/d2-car-molotov",
+      "effect_source_url_in_C012": "https://www.youtube.com/watch?v=6aEaQjRaV1U",
+      "reference_segment_in_C012": "Nart 14:23–14:52",
+      "retrieved_at": "2026-10-04T01:17:12.687309+00:00",
+      "map_build": null,
+      "game_build": null,
+      "calibration_status": "PENDING_CALIBRATION",
+      "status": "PAGE_FETCHED",
+      "final_url": "https://getreplay.gg/en/utility/dust2/molotov/d2-car-molotov",
+      "content_type": "text/html; charset=utf-8",
+      "page_last_modified": null,
+      "html_bytes": 186223,
+      "html_sha256": "acb4aca6a0bde0874beefc00ebf959a95da2a461efcbdaea9134f07791aa1873",
+      "title": "Dust2 Long Car Molotov — Clear the Car Position as T",
+      "source_commands": [],
+      "media": [
+        {
+          "url": "https://storage.getreplay.gg/2026/05/20/b42d8ddae55b7eab90e9a3519d5ee477e11e3861.mp4",
+          "kind": "video",
+          "section": "section-demo",
+          "label": null,
+          "provenance": "WEBPAGE_MEDIA_NOT_RUNTIME_LOGIC",
+          "download_status": "FETCHED",
+          "inspection_file": "D2-010/00.mp4",
+          "bytes": 2618132,
+          "sha256": "6c0c626b4979ef3525b195343b595199adf8aed99952b97b1f66844731deed78",
+          "content_type": "video/mp4",
+          "last_modified": "Wed, 20 May 2026 11:30:29 GMT"
+        },
+        {
+          "url": "https://storage.getreplay.gg/2026/05/20/ce1cd83d9dedd46f521f1358f6a042eae838e6c9.webp",
+          "kind": "img",
+          "section": "section-guide",
+          "label": "Discord_L9UQUyYaPZ.webp",
+          "provenance": "WEBPAGE_MEDIA_NOT_RUNTIME_LOGIC",
+          "download_status": "FETCHED",
+          "inspection_file": "D2-010/01.webp",
+          "bytes": 182594,
+          "sha256": "040bb5f2b77d5cb06ea8928ac5a1feb0e964b4a930bacaac7e4fe8f67b2bd948",
+          "content_type": "image/webp",
+          "last_modified": "Wed, 20 May 2026 11:30:29 GMT"
+        },
+        {
+          "url": "https://storage.getreplay.gg/2026/05/20/83295cfe13f700085c38a607fc75991372fa4900.webp",
+          "kind": "img",
+          "section": "section-affected",
+          "label": "Discord_WNKXNIjAzv.webp",
+          "provenance": "WEBPAGE_MEDIA_NOT_RUNTIME_LOGIC",
+          "download_status": "FETCHED",
+          "inspection_file": "D2-010/02.webp",
+          "bytes": 152644,
+          "sha256": "8b0dcecf9b13688d1f4bd0439e6fdbe1e94f4a55efce440da29a7a8d92911220",
+          "content_type": "image/webp",
+          "last_modified": "Wed, 20 May 2026 11:30:29 GMT"
+        }
+      ],
+      "throw_flags_from_page_hint": {
+        "jump": true,
+        "forward": true,
+        "standing": false,
+        "left_click": true,
+        "status": "SOURCE_DECLARED_NOT_GAME_VALIDATED"
+      }
+    }
+  ]
+}

@@ -1,0 +1,641 @@
+{
+  "schema": "c014-resource-handoff-v1",
+  "owner": "C014-RES",
+  "batch": "M1",
+  "mainBaseline": "aec0b1936f4de5053ba35100a30367e25915f505",
+  "status": "READY_FOR_INTEGRATION",
+  "formalLessonsCalibrated": false,
+  "runtimeImportAllowed": false,
+  "mapVersion": "fc60c032290dffcb233e3de9da3c59694293362ec72643cc1ebde9c1b13a17d0",
+  "appContract": {
+    "path": "docs/contracts/C013-course-fx-v1.md",
+    "headSha": "516f2ce41ccd55a7aac441a2ee52d80d550e71a1",
+    "blobSha": "f168be008e7c60334665b1a600dd13f5c9c84dd4"
+  },
+  "coordinateSpace": "dust2_display_y_up_v1",
+  "lengthUnit": "display_unit",
+  "sourceToDisplay": "[x*0.0254,z*0.0254,-y*0.0254]; once only",
+  "appCoordinateAlias": "display-m-y-up-v1; identical values, no second conversion",
+  "pageRecheckedAt": "2026-10-04",
+  "lessons": [
+    {
+      "id": "D2-001",
+      "type": "SMOKE",
+      "title": "T出生中门烟",
+      "status": "PENDING_CALIBRATION",
+      "importable": false,
+      "appDraft": {
+        "path": "docs/calibration/C013/app-pending/D2-001.json",
+        "sha256": "d1dd61025c826da336d07e5e2b62c8c8f1bf3cf46721c17832488d419a9f6e8f"
+      },
+      "mapVersion": "fc60c032290dffcb233e3de9da3c59694293362ec72643cc1ebde9c1b13a17d0",
+      "versions": {
+        "appBaseline": "v0.6.0-test2",
+        "mobileSchema": "dust2-mobile-d2m1-v1",
+        "mobileManifestSha256": "fc60c032290dffcb233e3de9da3c59694293362ec72643cc1ebde9c1b13a17d0",
+        "assetPackVersion": "v0.6.0-test2",
+        "assetPackManifestSha256": "e41718a3acde7df2f2f9cf9a98b5e5b967e406353d30b6983f9e18f5a37a2fa3",
+        "worldCollisionResource": "R002",
+        "sourceGameBuild": null,
+        "sourceMapBuild": null
+      },
+      "sourceDeclaredTeaching": {
+        "url": "https://getreplay.gg/en/utility/dust2/smoke/d2-mid-door-smoke",
+        "hintZh": "匪家参考点，左键跳投。",
+        "targetZh": "中门视线封锁",
+        "throwFlags": {
+          "jump": true,
+          "forward": false,
+          "standing": false,
+          "left_click": true,
+          "status": "SOURCE_DECLARED_NOT_GAME_VALIDATED"
+        },
+        "status": "SOURCE_DECLARED_NOT_GAME_VALIDATED",
+        "matchToNartVariant": "UNCONFIRMED"
+      },
+      "screenshots": [
+        {
+          "id": "D2-001-image-02",
+          "courseId": "D2-001",
+          "role": "stand_reference",
+          "sourceUrl": "https://storage.getreplay.gg/2026/04/15/c5e86f434aff29e8a40db7d34cbda26b61fe58be.jpg",
+          "sourceSha256": "48f2631ee3d37e8313e31a2683eb4b4c3a1054af94b109740268ee2f21183db1",
+          "path": "docs/calibration/C013/screenshots/D2-001-02-stand_reference.jpg",
+          "sha256": "feac8163ace1e5ea150d2721d1aebfde50b5e3980e3704c7c95df5775453c785",
+          "width": 1280,
+          "height": 720,
+          "mapBuild": null,
+          "gameBuild": null,
+          "source": "GetReplay linked screenshot; not a calibrated world-space point"
+        },
+        {
+          "id": "D2-001-image-03",
+          "courseId": "D2-001",
+          "role": "aim_reference",
+          "sourceUrl": "https://storage.getreplay.gg/2026/04/15/f750e289813e827a37c0f2dc31215593bafe3bb7.jpg",
+          "sourceSha256": "b21019a5a930003e8312ffcd63a1505a95923c39600d9cddd434d2e3fc554a3e",
+          "path": "docs/calibration/C013/screenshots/D2-001-03-aim_reference.jpg",
+          "sha256": "40c2372ed4c8c418377930ab3bc9a8992158c5edcd22be3897af4a1ec1a75862",
+          "width": 1280,
+          "height": 720,
+          "mapBuild": null,
+          "gameBuild": null,
+          "source": "GetReplay linked screenshot; not a calibrated world-space point"
+        },
+        {
+          "id": "D2-001-image-04",
+          "courseId": "D2-001",
+          "role": "landing_reference",
+          "sourceUrl": "https://storage.getreplay.gg/2026/04/15/799c21f5809895b3e84b78c9dd0fed4d29f47033.jpg",
+          "sourceSha256": "a45e860b21eaad853464a754a8680864cff30a2109039213c3bb2735895a0948",
+          "path": "docs/calibration/C013/screenshots/D2-001-04-landing_reference.jpg",
+          "sha256": "cded342687e2751f4649a68fbcdc9780fe1534172790f576765ea194a6bfe390",
+          "width": 1280,
+          "height": 720,
+          "mapBuild": null,
+          "gameBuild": null,
+          "source": "GetReplay linked screenshot; not a calibrated world-space point"
+        },
+        {
+          "id": "D2-001-image-05",
+          "courseId": "D2-001",
+          "role": "landing_reference",
+          "sourceUrl": "https://storage.getreplay.gg/2026/04/15/55f92bb29802c4e286069227ea7964b5a37d9e2f.jpg",
+          "sourceSha256": "9943335d8b209138e2a9230940012962791cb342011275fa4d4fab78344eeb79",
+          "path": "docs/calibration/C013/screenshots/D2-001-05-landing_reference.jpg",
+          "sha256": "25f20f306e0ce40da5d3d6f3f37bd8dd7ee8aaaf70a32d5d4e1dd28f1e767811",
+          "width": 1280,
+          "height": 720,
+          "mapBuild": null,
+          "gameBuild": null,
+          "source": "GetReplay linked screenshot; not a calibrated world-space point"
+        },
+        {
+          "id": "D2-001-image-06",
+          "courseId": "D2-001",
+          "role": "coverage_reference",
+          "sourceUrl": "https://storage.getreplay.gg/2026/04/15/4b58a2d0a5a70f243ec67beb92c6c57247324d61.jpg",
+          "sourceSha256": "8334e3f728b5060001378460a499d38b97acc2d41ec251b163be8b43a0eaab8c",
+          "path": "docs/calibration/C013/screenshots/D2-001-06-coverage_reference.jpg",
+          "sha256": "ad97c69d083d74500e51913a2f673be4a20cfbf6758733c5b5174e5ca6e3c6e6",
+          "width": 1280,
+          "height": 720,
+          "mapBuild": null,
+          "gameBuild": null,
+          "source": "GetReplay linked screenshot; not a calibrated world-space point"
+        },
+        {
+          "id": "D2-001-image-07",
+          "courseId": "D2-001",
+          "role": "coverage_reference",
+          "sourceUrl": "https://storage.getreplay.gg/2026/04/15/51c23d3e782d3b2d2036fa8d987e42185fe641d3.jpg",
+          "sourceSha256": "212b4e8502ac9dc839ddfcee186baed6e26667d7f83fa2c3c9ec4b5c1b537d71",
+          "path": "docs/calibration/C013/screenshots/D2-001-07-coverage_reference.jpg",
+          "sha256": "921f2c9b5c6f08cfbcbba2f8d5bf3b8930d5796edafd6b14b8eae0fb8cf47e11",
+          "width": 1280,
+          "height": 720,
+          "mapBuild": null,
+          "gameBuild": null,
+          "source": "GetReplay linked screenshot; not a calibrated world-space point"
+        },
+        {
+          "id": "D2-001-image-08",
+          "courseId": "D2-001",
+          "role": "coverage_reference",
+          "sourceUrl": "https://storage.getreplay.gg/2026/04/15/7e52220361415897a741d584295e7b68c77472ff.jpg",
+          "sourceSha256": "e3bd1d62008e430f58cee838384c117051e4e3817902aa8f1d9cb0a8f3ab8330",
+          "path": "docs/calibration/C013/screenshots/D2-001-08-coverage_reference.jpg",
+          "sha256": "16751c1f1b3a09929451e36a4654a5c35a9e9a9ac9a5fae59f190b9647613638",
+          "width": 1280,
+          "height": 720,
+          "mapBuild": null,
+          "gameBuild": null,
+          "source": "GetReplay linked screenshot; not a calibrated world-space point"
+        },
+        {
+          "id": "D2-001-image-09",
+          "courseId": "D2-001",
+          "role": "coverage_reference",
+          "sourceUrl": "https://storage.getreplay.gg/2026/04/15/56010ff539e99435db671721573289df9e620c20.jpg",
+          "sourceSha256": "42091b4dd4c140d08ed6d031cdce0078fc77d15c031891708c235b4017496240",
+          "path": "docs/calibration/C013/screenshots/D2-001-09-coverage_reference.jpg",
+          "sha256": "1a2a287218b0acece1eae5b5165f2bbdcfb9a1c38ebd46ccbaa388406fca364e",
+          "width": 1280,
+          "height": 720,
+          "mapBuild": null,
+          "gameBuild": null,
+          "source": "GetReplay linked screenshot; not a calibrated world-space point"
+        }
+      ],
+      "clipEvidence": {
+        "id": "D2-001-demo",
+        "courseId": "D2-001",
+        "sourceUrl": "https://storage.getreplay.gg/2026/04/15/b6786b3d546fa2ca95cf36bc81e76e3b397d2fc9.mp4",
+        "sourceSha256": "c660b080f140ecc6aa963dce2443d50f0df7935dc588241d334a3e2d732e3dc9",
+        "bytes": 5591183,
+        "encodedDurationSeconds": 14.4,
+        "video": {
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080,
+          "r_frame_rate": "30/1"
+        },
+        "clock": "ENCODED_CLIP_SECONDS_NOT_CERTIFIED_GAME_TIME",
+        "fullLifecycleObserved": false,
+        "videoNotBundledInAPK": true,
+        "sampleTimesSeconds": [
+          3.5,
+          4.0,
+          8.0,
+          12.5,
+          14.0
+        ],
+        "observation": "Clip contains throw and multiple camera cuts; full smoke lifespan is not shown. No release-to-effect age is measured across a cut.",
+        "observationStrip": "docs/calibration/C013/screenshots/D2-001-observations.jpg",
+        "observationStripSha256": "a0a282b804a0f4b634abcef9ff3858b65d644360f2e33ced353c3e8fd648c1e8",
+        "mapBuild": null,
+        "gameBuild": null,
+        "matchToC012NartVariant": "UNCONFIRMED"
+      },
+      "unconfirmedConsolePosition": {
+        "sourceXYZ": [
+          -452.229492,
+          -660.061768,
+          174.616058
+        ],
+        "displayXYZ": [
+          -11.4866290968,
+          4.4352478732,
+          16.7655689072
+        ],
+        "semantics": "UNCONFIRMED_PLAYER_OR_EYE_POSITION_NOT_FEET",
+        "worldQuery": {
+          "id": "D2-001",
+          "commandPositionDisplay": [
+            -11.4866290968,
+            4.4352478732,
+            16.7655689072
+          ],
+          "queryStartDisplay": [
+            -11.4866290968,
+            4.5352478731999994,
+            16.7655689072
+          ],
+          "queryLayers": [
+            0,
+            1,
+            2
+          ],
+          "maxDropDisplayUnits": 5,
+          "hit": {
+            "triangle": 253771,
+            "shape": 10093,
+            "layer": 0,
+            "surfaceIndex": 27,
+            "surfaceHash": 1690327349,
+            "fraction": 0.3472923390508805,
+            "distanceDisplayUnits": 1.7364616952544027,
+            "positionDisplay": [
+              -11.4866290968,
+              2.7987861779455967,
+              16.7655689072
+            ],
+            "normalAgainstSegment": [
+              0.18166405714472345,
+              0.964075222103999,
+              0.19379663688218085
+            ]
+          },
+          "status": "OFFLINE_WORLD_QUERY_NOT_STAND_OR_LINEUP_VALIDATION"
+        },
+        "usableAsFeetOrEye": false
+      },
+      "measuredRuntime": {
+        "feet": null,
+        "eye": null,
+        "aim": null,
+        "orientation": null,
+        "throwRelease": null,
+        "trajectory": null,
+        "landingOrExplosion": null,
+        "coverage": null,
+        "followCamera": null,
+        "landingCamera": null
+      },
+      "timeOrigin": "own-grenade-release-seconds",
+      "effectStages": [
+        {
+          "event": "landing",
+          "labelZh": "落地",
+          "releaseRelativeSeconds": null,
+          "measurementEvidence": null
+        },
+        {
+          "event": "first_smoke",
+          "labelZh": "起烟",
+          "releaseRelativeSeconds": null,
+          "measurementEvidence": null
+        },
+        {
+          "event": "fully_formed",
+          "labelZh": "扩散成型",
+          "releaseRelativeSeconds": null,
+          "measurementEvidence": null
+        },
+        {
+          "event": "dissipation_begin",
+          "labelZh": "开始消散",
+          "releaseRelativeSeconds": null,
+          "measurementEvidence": null
+        },
+        {
+          "event": "dissipation_end",
+          "labelZh": "完全消散",
+          "releaseRelativeSeconds": null,
+          "measurementEvidence": null
+        }
+      ],
+      "viewRequirements": {
+        "main": "道具跟随，落地后观察效果",
+        "rightWindow": "落点实时演示",
+        "clock": "same-course-clock",
+        "positionsCalibrated": false
+      },
+      "missing": [
+        "实机确认脚底/眼位/瞄点、朝向和FOV",
+        "带时间的轨迹、反弹点和落点/爆点",
+        "连续实机阶段时间、效果范围和结束过程",
+        "跟随及落点镜头位置、墙体遮挡检查",
+        "当前CS2地图/游戏版本、手机显示提示及隐藏提示对照",
+        "参考站位图脚部在空中，尚不能证明落地站位"
+      ]
+    },
+    {
+      "id": "D2-010",
+      "type": "MOLOTOV",
+      "title": "A大Car火",
+      "status": "PENDING_CALIBRATION",
+      "importable": false,
+      "appDraft": {
+        "path": "docs/calibration/C013/app-pending/D2-010.json",
+        "sha256": "5011e5e4e6662920f38a603b642bf451b3f2668f2517735dcd00efc9ccf2ea11"
+      },
+      "mapVersion": "fc60c032290dffcb233e3de9da3c59694293362ec72643cc1ebde9c1b13a17d0",
+      "versions": {
+        "appBaseline": "v0.6.0-test2",
+        "mobileSchema": "dust2-mobile-d2m1-v1",
+        "mobileManifestSha256": "fc60c032290dffcb233e3de9da3c59694293362ec72643cc1ebde9c1b13a17d0",
+        "assetPackVersion": "v0.6.0-test2",
+        "assetPackManifestSha256": "e41718a3acde7df2f2f9cf9a98b5e5b967e406353d30b6983f9e18f5a37a2fa3",
+        "worldCollisionResource": "R002",
+        "sourceGameBuild": null,
+        "sourceMapBuild": null
+      },
+      "sourceDeclaredTeaching": {
+        "url": "https://getreplay.gg/en/utility/dust2/molotov/d2-car-molotov",
+        "hintZh": "A大坑口桶上，按住W向前并左键跳投。",
+        "targetZh": "车位及车后火区",
+        "throwFlags": {
+          "jump": true,
+          "forward": true,
+          "standing": false,
+          "left_click": true,
+          "status": "SOURCE_DECLARED_NOT_GAME_VALIDATED"
+        },
+        "status": "SOURCE_DECLARED_NOT_GAME_VALIDATED",
+        "matchToNartVariant": "UNCONFIRMED"
+      },
+      "screenshots": [
+        {
+          "id": "D2-010-image-01",
+          "courseId": "D2-010",
+          "role": "aim_reference",
+          "sourceUrl": "https://storage.getreplay.gg/2026/05/20/ce1cd83d9dedd46f521f1358f6a042eae838e6c9.webp",
+          "sourceSha256": "040bb5f2b77d5cb06ea8928ac5a1feb0e964b4a930bacaac7e4fe8f67b2bd948",
+          "path": "docs/calibration/C013/screenshots/D2-010-01-aim_reference.jpg",
+          "sha256": "e44a96add576e920bcaa54e5d119ee6d94c77805ddf3c430b71d80aabca888c9",
+          "width": 1280,
+          "height": 720,
+          "mapBuild": null,
+          "gameBuild": null,
+          "source": "GetReplay linked screenshot; not a calibrated world-space point"
+        },
+        {
+          "id": "D2-010-image-02",
+          "courseId": "D2-010",
+          "role": "coverage_reference",
+          "sourceUrl": "https://storage.getreplay.gg/2026/05/20/83295cfe13f700085c38a607fc75991372fa4900.webp",
+          "sourceSha256": "8b0dcecf9b13688d1f4bd0439e6fdbe1e94f4a55efce440da29a7a8d92911220",
+          "path": "docs/calibration/C013/screenshots/D2-010-02-coverage_reference.jpg",
+          "sha256": "5fe2273ffa45249fcd2b88dffd30d55a8052ac0f7e38abd5ef83d66f54eb4f1f",
+          "width": 1280,
+          "height": 720,
+          "mapBuild": null,
+          "gameBuild": null,
+          "source": "GetReplay linked screenshot; not a calibrated world-space point"
+        }
+      ],
+      "clipEvidence": {
+        "id": "D2-010-demo",
+        "courseId": "D2-010",
+        "sourceUrl": "https://storage.getreplay.gg/2026/05/20/b42d8ddae55b7eab90e9a3519d5ee477e11e3861.mp4",
+        "sourceSha256": "6c0c626b4979ef3525b195343b595199adf8aed99952b97b1f66844731deed78",
+        "bytes": 2618132,
+        "encodedDurationSeconds": 8.966667,
+        "video": {
+          "codec_type": "video",
+          "width": 1280,
+          "height": 720,
+          "r_frame_rate": "30/1"
+        },
+        "clock": "ENCODED_CLIP_SECONDS_NOT_CERTIFIED_GAME_TIME",
+        "fullLifecycleObserved": false,
+        "videoNotBundledInAPK": true,
+        "sampleTimesSeconds": [
+          5.0,
+          5.5,
+          6.5,
+          7.5,
+          8.5
+        ],
+        "observation": "Overview samples at clip 5.5 and 7.5 seconds show a larger later fire footprint around car; extinction is not shown. World-space regions and game-clock delay remain unmeasured.",
+        "observationStrip": "docs/calibration/C013/screenshots/D2-010-observations.jpg",
+        "observationStripSha256": "d4b2e552468a58b2be8aeb0eff3d4995819ef9abf8e1f996c14429d9e5e10fa3",
+        "mapBuild": null,
+        "gameBuild": null,
+        "matchToC012NartVariant": "UNCONFIRMED"
+      },
+      "unconfirmedConsolePosition": {
+        "sourceXYZ": null,
+        "displayXYZ": null,
+        "semantics": "UNCONFIRMED_PLAYER_OR_EYE_POSITION_NOT_FEET",
+        "worldQuery": null,
+        "usableAsFeetOrEye": false
+      },
+      "measuredRuntime": {
+        "feet": null,
+        "eye": null,
+        "aim": null,
+        "orientation": null,
+        "throwRelease": null,
+        "trajectory": null,
+        "landingOrExplosion": null,
+        "coverage": null,
+        "followCamera": null,
+        "landingCamera": null
+      },
+      "timeOrigin": "own-grenade-release-seconds",
+      "effectStages": [
+        {
+          "event": "impact",
+          "labelZh": "落地破裂",
+          "releaseRelativeSeconds": null,
+          "measurementEvidence": null
+        },
+        {
+          "event": "first_ignition",
+          "labelZh": "初始着火",
+          "releaseRelativeSeconds": null,
+          "measurementEvidence": null
+        },
+        {
+          "event": "late_region_ignition",
+          "labelZh": "向车后蔓延",
+          "releaseRelativeSeconds": null,
+          "measurementEvidence": null
+        },
+        {
+          "event": "final_coverage",
+          "labelZh": "持续燃烧",
+          "releaseRelativeSeconds": null,
+          "measurementEvidence": null
+        },
+        {
+          "event": "extinguish_end",
+          "labelZh": "熄灭",
+          "releaseRelativeSeconds": null,
+          "measurementEvidence": null
+        }
+      ],
+      "viewRequirements": {
+        "main": "道具跟随，落地后观察效果",
+        "rightWindow": "落点实时演示",
+        "clock": "same-course-clock",
+        "positionsCalibrated": false
+      },
+      "missing": [
+        "实机确认脚底/眼位/瞄点、朝向和FOV",
+        "带时间的轨迹、反弹点和落点/爆点",
+        "连续实机阶段时间、效果范围和结束过程",
+        "跟随及落点镜头位置、墙体遮挡检查",
+        "当前CS2地图/游戏版本、手机显示提示及隐藏提示对照",
+        "缺独立脚底接触图与数值站位；短片没有熄灭过程"
+      ]
+    },
+    {
+      "id": "D2-014",
+      "type": "HE",
+      "title": "CT中门炸烟HE",
+      "status": "PENDING_CALIBRATION",
+      "importable": false,
+      "appDraft": {
+        "path": "docs/calibration/C013/app-pending/D2-014.json",
+        "sha256": "acf14a725a2c458472bcb50caaf472ca1666eb317e6c477ea4816c9498659156"
+      },
+      "mapVersion": "fc60c032290dffcb233e3de9da3c59694293362ec72643cc1ebde9c1b13a17d0",
+      "versions": {
+        "appBaseline": "v0.6.0-test2",
+        "mobileSchema": "dust2-mobile-d2m1-v1",
+        "mobileManifestSha256": "fc60c032290dffcb233e3de9da3c59694293362ec72643cc1ebde9c1b13a17d0",
+        "assetPackVersion": "v0.6.0-test2",
+        "assetPackManifestSha256": "e41718a3acde7df2f2f9cf9a98b5e5b967e406353d30b6983f9e18f5a37a2fa3",
+        "worldCollisionResource": "R002",
+        "sourceGameBuild": null,
+        "sourceMapBuild": null
+      },
+      "sourceDeclaredTeaching": {
+        "url": "https://getreplay.gg/en/utility/dust2/reveal/d2-mid-door-reveal",
+        "hintZh": "CT中路参考角落，瞄门框上方，左键普通投掷。",
+        "targetZh": "中门烟内局部缺口",
+        "throwFlags": {
+          "jump": false,
+          "forward": false,
+          "standing": true,
+          "left_click": true,
+          "status": "SOURCE_DECLARED_NOT_GAME_VALIDATED"
+        },
+        "status": "SOURCE_DECLARED_NOT_GAME_VALIDATED",
+        "matchToNartVariant": "UNCONFIRMED"
+      },
+      "screenshots": [
+        {
+          "id": "D2-014-image-01",
+          "courseId": "D2-014",
+          "role": "aim_reference",
+          "sourceUrl": "https://storage.getreplay.gg/2026/05/20/ad1c2639f6c20cddb16e2bcb3097a02b43ece0a8.webp",
+          "sourceSha256": "0883d3229d2a476ddaa2aa802279bd149eabeff08b51834d2e490fc3b1f71d03",
+          "path": "docs/calibration/C013/screenshots/D2-014-01-aim_reference.jpg",
+          "sha256": "54709bae3b9b97b4687d311f87cb4dfe5530da441187cda4717297c88bb9b1d4",
+          "width": 1280,
+          "height": 720,
+          "mapBuild": null,
+          "gameBuild": null,
+          "source": "GetReplay linked screenshot; not a calibrated world-space point"
+        },
+        {
+          "id": "D2-014-image-02",
+          "courseId": "D2-014",
+          "role": "coverage_reference",
+          "sourceUrl": "https://storage.getreplay.gg/2026/05/20/519810e1f8e56579d1e1e8ab9c26205d04672dd9.webp",
+          "sourceSha256": "79316e47b4c312a33375fb84a0d50e49daa8a8d5853924119c4d8976707d23f9",
+          "path": "docs/calibration/C013/screenshots/D2-014-02-coverage_reference.jpg",
+          "sha256": "bb1ba6a810c2acf60d67467265b0fd2bda6751c90084854ca7e244aef9078f3e",
+          "width": 1280,
+          "height": 720,
+          "mapBuild": null,
+          "gameBuild": null,
+          "source": "GetReplay linked screenshot; not a calibrated world-space point"
+        }
+      ],
+      "clipEvidence": {
+        "id": "D2-014-demo",
+        "courseId": "D2-014",
+        "sourceUrl": "https://storage.getreplay.gg/2026/05/20/e44ca1d93078be6637ebeecbeae9a7fccc86e60b.mp4",
+        "sourceSha256": "f2c9ed11e6827a5f544baa35cc881f03b152c56055de20f20f611ae20fc63abe",
+        "bytes": 2383240,
+        "encodedDurationSeconds": 9.166667,
+        "video": {
+          "codec_type": "video",
+          "width": 1280,
+          "height": 720,
+          "r_frame_rate": "30/1"
+        },
+        "clock": "ENCODED_CLIP_SECONDS_NOT_CERTIFIED_GAME_TIME",
+        "fullLifecycleObserved": false,
+        "videoNotBundledInAPK": true,
+        "sampleTimesSeconds": [
+          2.0,
+          5.5,
+          6.0,
+          7.0,
+          8.5
+        ],
+        "observation": "Clip shows HE throw and a camera cut. Continuous already-formed-smoke, hole-opening and refill evidence is insufficient.",
+        "observationStrip": "docs/calibration/C013/screenshots/D2-014-observations.jpg",
+        "observationStripSha256": "4382395efdc441923cd93725eec8fc3bf1562dcdf9e91acc64f864fbe9640e14",
+        "mapBuild": null,
+        "gameBuild": null,
+        "matchToC012NartVariant": "UNCONFIRMED"
+      },
+      "unconfirmedConsolePosition": {
+        "sourceXYZ": null,
+        "displayXYZ": null,
+        "semantics": "UNCONFIRMED_PLAYER_OR_EYE_POSITION_NOT_FEET",
+        "worldQuery": null,
+        "usableAsFeetOrEye": false
+      },
+      "measuredRuntime": {
+        "feet": null,
+        "eye": null,
+        "aim": null,
+        "orientation": null,
+        "throwRelease": null,
+        "trajectory": null,
+        "landingOrExplosion": null,
+        "coverage": null,
+        "followCamera": null,
+        "landingCamera": null
+      },
+      "timeOrigin": "own-grenade-release-seconds",
+      "effectStages": [
+        {
+          "event": "explosion",
+          "labelZh": "雷爆炸",
+          "releaseRelativeSeconds": null,
+          "measurementEvidence": null
+        },
+        {
+          "event": "hole_open",
+          "labelZh": "局部冲烟缺口",
+          "releaseRelativeSeconds": null,
+          "measurementEvidence": null
+        },
+        {
+          "event": "refill_begin",
+          "labelZh": "开始回填",
+          "releaseRelativeSeconds": null,
+          "measurementEvidence": null
+        },
+        {
+          "event": "refill_end",
+          "labelZh": "完成回填",
+          "releaseRelativeSeconds": null,
+          "measurementEvidence": null
+        }
+      ],
+      "viewRequirements": {
+        "main": "道具跟随，落地后观察效果",
+        "rightWindow": "落点实时演示",
+        "clock": "same-course-clock",
+        "positionsCalibrated": false
+      },
+      "missing": [
+        "实机确认脚底/眼位/瞄点、朝向和FOV",
+        "带时间的轨迹、反弹点和落点/爆点",
+        "连续实机阶段时间、效果范围和结束过程",
+        "跟随及落点镜头位置、墙体遮挡检查",
+        "当前CS2地图/游戏版本、手机显示提示及隐藏提示对照",
+        "缺独立站位图和连续成型烟→缺口→回填录像"
+      ],
+      "smokeDependency": {
+        "lessonId": "D2-001",
+        "sceneId": "dust2-mid-doors-smoke",
+        "requiredStateBeforeHERelease": "fully-formed",
+        "smokeReleaseRelativeToHEReleaseSeconds": null,
+        "smokeAgeAtHEReleaseSeconds": null,
+        "clockNote": "HE释放为本课零点；预先成型的烟需已存在，不能随HE释放才从零龄起烟。未测偏移不填数值。",
+        "parametersMustMatchSmokeLesson": true
+      }
+    }
+  ]
+}
