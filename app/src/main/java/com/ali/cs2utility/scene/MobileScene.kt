@@ -14,6 +14,7 @@ import java.util.concurrent.ConcurrentLinkedQueue
 import java.util.concurrent.Executors
 import java.util.concurrent.RejectedExecutionException
 import java.util.concurrent.atomic.AtomicInteger
+import java.util.concurrent.atomic.AtomicBoolean
 import kotlin.math.*
 
 data class MobileMaterial(val base: String,val layer: String,val blend: String,val alpha: String,val cutoff: Float,
@@ -23,7 +24,7 @@ data class MobileMaterial(val base: String,val layer: String,val blend: String,v
     val texturePaths=listOf(base,layer,blend).filter {it.isNotEmpty()}.distinct()
 }
 data class MobilePart(val asset: String,val material: Int,val vertices: Int,val indices: Int,val bytes: Int,val center: FloatArray,val radius: Float)
-data class MobileScene(val parts: List<MobilePart>,val materials: List<MobileMaterial>)
+data class MobileScene(val parts: List<MobilePart>,val materials: List<MobileMaterial>,val manifestSha256: String="")
 
 object MobileSceneLoader {
     private fun path(s: String): String {
@@ -35,7 +36,9 @@ object MobileSceneLoader {
         return FloatArray(n) { a.getDouble(it).toFloat().also { f -> require(f.isFinite()) } }
     }
     fun load(context: Context,asset: String): MobileScene {
-        val j=context.assets.open(asset).bufferedReader().use { JSONObject(it.readText()) }
+        val manifestBytes=context.assets.open(asset).use {it.readBytes()}
+        val hash=java.security.MessageDigest.getInstance("SHA-256").digest(manifestBytes).joinToString("") {"%02x".format(it.toInt() and 255)}
+        val j=JSONObject(manifestBytes.toString(Charsets.UTF_8))
         require(j.getString("schema")=="dust2-mobile-d2m1-v1" && j.getInt("stride")==36)
         val ma=j.getJSONArray("materials");require(ma.length() in 1..1024)
         val materials=(0 until ma.length()).map { i ->
@@ -56,7 +59,7 @@ object MobileSceneLoader {
             MobilePart(path(p.getString("asset")),mi,nv,ni,bytes,floats(p,"center",3),r)
         }
         require(parts.sumOf { it.bytes.toLong() }<=192L*1024*1024) { "Scene exceeds mobile geometry budget" }
-        return MobileScene(parts,materials)
+        return MobileScene(parts,materials,hash)
     }
 }
 
@@ -74,6 +77,7 @@ class MobileSceneRenderer(private val context: Context,private val requestFrame:
     private val vertexOffsets=intArrayOf(0,4,8,20,24)
     private var firstVisibleReady=0L;private var waitingSince=0L
     private val generation=AtomicInteger()
+    private val picking=AtomicBoolean()
     private val uploads=ConcurrentLinkedQueue<Upload>()
     private val geometry=LinkedHashMap<Int,Geometry>(128,.75f,true)
     private val textures=LinkedHashMap<String,Texture>(128,.75f,true)
@@ -81,6 +85,7 @@ class MobileSceneRenderer(private val context: Context,private val requestFrame:
     private var scene: MobileScene?=null
     private var program=0;private var failed=false;private var lastStatus="";private var lastStatusAt=0L
     private var geometryBytes=0L;private var textureBytes=0L
+    var visibleReady=false;private set
     private var position=0;private var normal=0;private var uv=0;private var color=0;private var blend=0
     private val uniforms=HashMap<String,Int>()
     private fun location(s: String)=uniforms.getOrPut(s) { GL.glGetUniformLocation(program,s) }
@@ -91,6 +96,7 @@ class MobileSceneRenderer(private val context: Context,private val requestFrame:
         }
     }
     fun setScene(value: MobileScene?) {
+        visibleReady=false
         generation.incrementAndGet();clearGl();scene=value;failed=false;lastStatus="";lastStatusAt=0L;firstVisibleReady=0L;waitingSince=0L
         if(value!=null) msg("沙二 · 正在读取全图与贴图…")
     }
@@ -107,6 +113,7 @@ class MobileSceneRenderer(private val context: Context,private val requestFrame:
         drainUploads()
     }
     fun contextCreated() {
+        visibleReady=false
         // Old names belonged to the lost context; never delete them in the new one.
         generation.incrementAndGet();geometry.clear();textures.clear();pendingGeometry.clear();pendingTextures.clear()
         geometryBytes=0;textureBytes=0;drainUploads()
@@ -137,7 +144,7 @@ class MobileSceneRenderer(private val context: Context,private val requestFrame:
             var result: Upload
             try {
                 require(ByteOrder.nativeOrder()==ByteOrder.LITTLE_ENDIAN)
-                val (v,i)=SceneChunkInput.open(p.asset) { context.assets.open(it) }.use { f ->
+                val (v,i)=SceneChunkInput.open(p.asset) {context.assets.open(it)}.use { f ->
                     require(f.readInt()==0x44324d31 && f.readInt()==p.vertices && f.readInt()==p.indices && f.readInt()==36)
                     val v=ByteArray(p.vertices*36);val i=ByteArray(p.indices*2);f.readFully(v);f.readFully(i);require(f.read()==-1)
                     val checked=ByteBuffer.wrap(v).order(ByteOrder.LITTLE_ENDIAN)
@@ -165,6 +172,38 @@ class MobileSceneRenderer(private val context: Context,private val requestFrame:
             } catch(e: Exception) { Upload(token,path=path,error="$path: ${e.message}",cost=cost) }
             publish(result)
         })pendingTextures.remove(path)
+    }
+    /** Development-only one-shot query on the same bounded workers/budget, one chunk at a time. */
+    fun pick(ray: SceneRay,done: (SurfacePick?,String?) -> Unit) {
+        val s=scene ?: run {done(null,"移动地图尚未就绪");return}
+        if(closed || failed) {done(null,"地图已关闭或读取失败");return}
+        val candidates=s.parts.indices.filter {s.materials[s.parts[it].material].enabled}
+            .mapNotNull {id->SceneRayQuery.sphereEntry(ray,s.parts[id].center,s.parts[id].radius)?.let {Pair(id,it)}}.sortedBy {it.second}
+        if(candidates.isEmpty()) {done(null,"射线没有经过显示分块");return}
+        val cost=candidates.maxOf {s.parts[it.first].bytes.toLong()*2}
+        if(!picking.compareAndSet(false,true)) {done(null,"已有采集查询，请稍候");return}
+        if(!budget.acquire(cost)) {picking.set(false);done(null,"地图解码队列忙，请就绪后重试采集");return}
+        val token=generation.get()
+        if(!submit(cost) {
+            var hit: SurfacePick?=null;var error: String?=null
+            try {
+                for((id,entry) in candidates) {
+                    check(!closed && token==generation.get()) {"地图已切换，采集作废"}
+                    if(hit!=null && entry>hit.distance)break
+                    val part=s.parts[id]
+                    val next=SceneChunkInput.open(part.asset) {context.assets.open(it)}.use {f->
+                        require(f.readInt()==0x44324d31 && f.readInt()==part.vertices && f.readInt()==part.indices && f.readInt()==36)
+                        val v=ByteArray(part.vertices*36);val i=ByteArray(part.indices*2);f.readFully(v);f.readFully(i);require(f.read()==-1)
+                        SceneRayQuery.chunk(ray,v,i,part)
+                    }
+                    if(next!=null && (hit==null || next.distance<hit.distance))hit=next
+                }
+                check(!closed && token==generation.get()) {"地图已切换，采集作废"}
+                if(hit==null)error="未命中显示三角形"
+            } catch(e: Exception) {hit=null;error=e.message ?: "查询失败"}
+            finally {picking.set(false);budget.release(cost)}
+            done(hit,error)
+        }) {picking.set(false);done(null,"地图查询已停止")}
     }
     private fun takeUploads(moving: Boolean) {
         val deadline=SystemClock.uptimeMillis()+(if(moving)4 else 10);var n=0
@@ -200,9 +239,9 @@ class MobileSceneRenderer(private val context: Context,private val requestFrame:
     private fun bindTexture(unit: Int,path: String) {
         GL.glActiveTexture(GL.GL_TEXTURE0+unit);GL.glBindTexture(GL.GL_TEXTURE_2D,textures[path]?.id ?: 0)
     }
-    fun draw(vp: FloatArray,frustum: Array<FloatArray>,eye: FloatArray,moving: Boolean=false) {
-        val s=scene ?: return;if(failed || program==0)return
-        takeUploads(moving);if(failed)return
+    fun draw(vp: FloatArray,frustum: Array<FloatArray>,eye: FloatArray,moving: Boolean=false,upload: Boolean=true) {
+        val s=scene ?: return;if(failed || program==0) {visibleReady=false;return}
+        if(upload)takeUploads(moving);if(failed) {visibleReady=false;return}
         val visible=s.parts.indices.filter { i -> val p=s.parts[i];s.materials[p.material].enabled && frustum.none { f -> f[0]*p.center[0]+f[1]*p.center[1]+f[2]*p.center[2]+f[3]<-p.radius } }
         fun dist(i: Int): Float {val p=s.parts[i];val x=p.center[0]-eye[0];val y=p.center[1]-eye[1];val z=p.center[2]-eye[2];return x*x+y*y+z*z}
         val priority=visible.sortedBy {SceneLoadPolicy.priority(dist(it),s.parts[it].radius)}
@@ -255,6 +294,7 @@ class MobileSceneRenderer(private val context: Context,private val requestFrame:
             GL.glDrawElements(GL.GL_TRIANGLES,p.indices,GL.GL_UNSIGNED_SHORT,0);drawn++
         }
         for(a in intArrayOf(position,normal,uv,color,blend)) GL.glDisableVertexAttribArray(a)
+        if(upload)visibleReady=waiting==0 && drawn>0
         GL.glBindBuffer(GL.GL_ARRAY_BUFFER,0);GL.glBindBuffer(GL.GL_ELEMENT_ARRAY_BUFFER,0);GL.glActiveTexture(GL.GL_TEXTURE0)
         GL.glDisable(GL.GL_CULL_FACE);GL.glDisable(GL.GL_BLEND);GL.glDisable(GL.GL_POLYGON_OFFSET_FILL);GL.glDepthMask(true)
         if(waiting>0) {if(waitingSince==0L)waitingSince=SystemClock.uptimeMillis();msg("沙二 · 可见区域 $drawn/${visible.size} · ${workerCount} 线程")}

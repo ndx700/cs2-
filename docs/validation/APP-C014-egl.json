@@ -1,0 +1,32 @@
+{
+  "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)",
+  "result": "PASS",
+  "scope": "Exact Kotlin CourseFxGeometry meshes and CourseFxRenderer shaders; main and scissored inset pixels; no GL errors",
+  "frames": [
+    {
+      "kind": "SMOKE",
+      "seconds": 6.0,
+      "vertices": 336,
+      "changedPixels": 205561
+    },
+    {
+      "kind": "FIRE",
+      "seconds": 3.0,
+      "vertices": 108,
+      "changedPixels": 50929
+    },
+    {
+      "kind": "FIRE",
+      "seconds": 6.5,
+      "vertices": 324,
+      "changedPixels": 151722
+    },
+    {
+      "kind": "HE",
+      "seconds": 2.4,
+      "vertices": 528,
+      "changedPixels": 200071
+    }
+  ],
+  "limitations": "Empty desktop scene; not actual map, Android, phone performance or calibrated lessons"
+}

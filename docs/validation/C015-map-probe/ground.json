@@ -1,0 +1,81 @@
+{
+  "schema": "c015-display-capture-v1",
+  "status": "DEVELOPMENT",
+  "importable": false,
+  "coordinateSpace": "display-m-y-up-v1",
+  "mapVersion": "fc60c032290dffcb233e3de9da3c59694293362ec72643cc1ebde9c1b13a17d0",
+  "field": "foot",
+  "camera": {
+    "position": [
+      -20.8880753942,
+      5.4780086,
+      20.209309086
+    ],
+    "yaw": 38,
+    "pitch": 0,
+    "distance": 1,
+    "free": true
+  },
+  "cameraPositionMeaning": "eye",
+  "actualCameraEye": [
+    -20.8880753942,
+    5.4780086,
+    20.209309086
+  ],
+  "verticalFov": 70,
+  "viewportWidth": 1200,
+  "viewportHeight": 800,
+  "ray": {
+    "origin": [
+      -20.88807487487793,
+      5.47800874710083,
+      20.209308624267578
+    ],
+    "direction": [
+      -0.9002088904380798,
+      -0.3374568819999695,
+      -0.27522146701812744
+    ],
+    "maxDistance": 1915.536
+  },
+  "surface": {
+    "position": [
+      -27.32663917541504,
+      3.06441593170166,
+      18.240842819213867
+    ],
+    "normalAgainstRay": [
+      0.0,
+      0.9996876120567322,
+      0.024992378428578377
+    ],
+    "distance": 7.152299880981445,
+    "triangle": 166,
+    "part": "maps/dust2/mobile/chunks/p00538.d2m.gz",
+    "materialIndex": 61,
+    "barycentric": [
+      0.28479745984077454,
+      0.6464141011238098,
+      0.06878844648599625
+    ],
+    "supportCandidate": true
+  },
+  "value": [
+    -27.32663917541504,
+    3.06441593170166,
+    18.240842819213867
+  ],
+  "screenshot": "capture.png",
+  "screenshotSha256": "3bbce72b9b279bcdeb25c091fdc7a3e2ec5d145460a04a919a71c200fd446b34",
+  "environment": "llvmpipe (LLVM 20.1.2, 256 bits)",
+  "scope": "Generic map-label probe of upward-facing display ground; NOT certified D2-001 feet, collision hull clearance or game coordinates.",
+  "queryStats": {
+    "candidateParts": 37,
+    "readParts": 22,
+    "testedTriangles": 21853
+  },
+  "pixel": [
+    200,
+    650
+  ]
+}
