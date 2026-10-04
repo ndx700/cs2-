@@ -1,91 +1,124 @@
-name: AI Project Sync & Android Build
+name: Project sync and Android checks
 
 on:
+  workflow_dispatch:
   push:
-    branches: [main]
+    branches: [main, 'app/**', 'assets/**', 'pm/**', 'codex/**']
   pull_request:
     branches: [main]
   schedule:
-    - cron: "*/15 * * * *"
-  workflow_dispatch:
-
-concurrency:
-  group: ai-project-sync-${{ github.ref }}
-  cancel-in-progress: true
+    # 四次/小时，避开整点；GitHub 可能延迟执行。
+    - cron: '7,22,37,52 * * * *'
 
 permissions:
   contents: read
+concurrency:
+  group: project-sync-${{ github.event_name }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
-  android-check:
-    name: Check & Build Android Project
+  snapshot:
+    name: Read collaboration state
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+      actions: read
+      pull-requests: read
+    steps:
+      - name: Record branches, open PRs and recent CI
+        uses: actions/github-script@v8
+        with:
+          script: |
+            const fs = require('fs');
+            const repo = context.repo;
+            const {data: metadata} = await github.rest.repos.get(repo);
+            const branches = await github.paginate(github.rest.repos.listBranches,
+              {...repo, per_page: 100});
+            const prs = await github.paginate(github.rest.pulls.list,
+              {...repo, state: 'open', base: metadata.default_branch, per_page: 100});
+            const {data: runs} = await github.rest.actions.listWorkflowRunsForRepo(
+              {...repo, per_page: 30});
+            const relevant = name => name === metadata.default_branch ||
+              ['app/', 'assets/', 'pm/', 'codex/'].some(prefix => name.startsWith(prefix));
+            const snapshot = {
+              schemaVersion: 1,
+              generatedAt: new Date().toISOString(),
+              repository: metadata.full_name,
+              defaultBranch: metadata.default_branch,
+              event: context.eventName,
+              eventSha: context.sha,
+              runId: context.runId,
+              branches: branches.filter(b => relevant(b.name)).map(b =>
+                ({name: b.name, sha: b.commit.sha, protected: b.protected})),
+              openPullRequests: prs.map(p => ({number: p.number, title: p.title,
+                head: p.head.ref, headSha: p.head.sha, base: p.base.ref,
+                draft: p.draft, url: p.html_url})),
+              recentRuns: runs.workflow_runs.filter(r => r.id !== context.runId).slice(0, 10)
+                .map(r => ({id: r.id, name: r.name, branch: r.head_branch,
+                  sha: r.head_sha, event: r.event, status: r.status,
+                  conclusion: r.conclusion, url: r.html_url}))
+            };
+            fs.mkdirSync('sync-report', {recursive: true});
+            fs.writeFileSync('sync-report/project-sync.json', JSON.stringify(snapshot, null, 2));
+            const cell = value => String(value ?? '').replace(/[\r\n|]/g, ' ')
+              .replace(/</g, '&lt;').replace(/>/g, '&gt;');
+            const lines = ['## Collaboration snapshot', '',
+              `Generated: ${snapshot.generatedAt}`, '',
+              '| Branch | Head commit |', '| --- | --- |',
+              ...snapshot.branches.map(b => `| ${cell(b.name)} | ${b.sha} |`), '',
+              '| Open PR | Head | Draft |', '| --- | --- | --- |',
+              ...snapshot.openPullRequests.map(p =>
+                `| #${p.number}: ${cell(p.title)} | ${cell(p.head)} | ${p.draft} |`), '',
+              '| Recent workflow | Branch | State |', '| --- | --- | --- |',
+              ...snapshot.recentRuns.map(r =>
+                `| ${cell(r.name)} | ${cell(r.branch)} | ${cell(r.conclusion || r.status)} |`), '',
+              'This reads repository state. It does not wake ChatGPT sessions, merge code',
+              'or prove phone testing. Recent CI is a limited list, not all branch history.',
+              'Full Android checks run for main pushes, PRs and manual runs.'];
+            fs.writeFileSync('sync-report/project-sync.md', lines.join('\n') + '\n');
+            await core.summary.addRaw(lines.join('\n')).write();
+      - uses: actions/upload-artifact@v4
+        with:
+          name: project-sync-${{ github.run_id }}-${{ github.run_attempt }}
+          path: sync-report/
+          if-no-files-found: error
+          retention-days: 3
+
+  build:
+    name: Test, lint and build Android
+    if: github.event_name != 'schedule' && (github.event_name != 'push' || github.ref == 'refs/heads/main')
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
-      - name: Checkout latest repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Set up JDK 17
-        uses: actions/setup-java@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
         with:
           distribution: temurin
-          java-version: "17"
-          cache: gradle
-
-      - name: Set up Android SDK
-        uses: android-actions/setup-android@v3
+          java-version: '17'
+      - uses: android-actions/setup-android@v3
         with:
-          packages: platform-tools
-          log-accepted-android-sdk-licenses: false
-
-      - name: Install Android project SDK
+          packages: 'platform-tools'
+      - uses: gradle/actions/setup-gradle@v4
+      - name: Install project SDK
         run: sdkmanager "platforms;android-34" "build-tools;34.0.0"
-
-      - name: Check Gradle Wrapper and print build identity
-        shell: bash
-        run: |
-          test -f ./gradlew || { echo "ERROR: gradlew not found."; exit 1; }
-          chmod +x ./gradlew
-          echo "Repository : $GITHUB_REPOSITORY"
-          echo "Branch     : $GITHUB_REF_NAME"
-          echo "Commit     : $GITHUB_SHA"
-          echo "Actor      : $GITHUB_ACTOR"
-          echo "Event      : $GITHUB_EVENT_NAME"
-
-      - name: Show recent changes
-        shell: bash
-        run: |
-          git log -10 --pretty=format:"%h | %an | %ad | %s" --date=short
-          git diff-tree --root --no-commit-id --name-status -r HEAD
-
+      - run: chmod +x gradlew
       - name: Restore complete map assets
         run: python3 tools/restore_assets.py
-
-      - name: Verify assets and course references
+      - name: Validate assets and course references
         run: python3 tools/validate_assets.py
-
-      - name: Gradle information
-        run: ./gradlew --version
-
-      - name: Unit tests, Android lint and Debug APK
-        run: ./gradlew testDebugUnitTest lintDebug assembleDebug --stacktrace --no-daemon
-
-      - name: Upload Debug APK
-        if: success()
-        uses: actions/upload-artifact@v4
+      - name: Unit tests, lint and APK
+        run: ./gradlew testDebugUnitTest assembleDebug lintDebug --stacktrace --no-daemon
+      - uses: actions/upload-artifact@v4
         with:
-          name: debug-apk-${{ github.run_number }}
-          path: app/build/outputs/apk/debug/*.apk
+          name: CS2Utility-debug-${{ github.run_id }}-${{ github.run_attempt }}
+          path: app/build/outputs/apk/debug/app-debug.apk
           if-no-files-found: error
           retention-days: 14
-
-      - name: Upload build reports
+      - uses: actions/upload-artifact@v4
         if: always()
-        uses: actions/upload-artifact@v4
         with:
-          name: build-reports-${{ github.run_number }}
-          path: app/build/reports/**
+          name: android-reports-${{ github.run_id }}-${{ github.run_attempt }}
+          path: app/build/reports/
           if-no-files-found: ignore
           retention-days: 7
