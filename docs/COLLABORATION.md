@@ -9,10 +9,12 @@
 | 项目经理 | `pm/` | 范围、整合、验收与测试包 | 整合 PR、进度与交付说明 |
 | Codex | `codex/` | 进一步代码审查、针对问题的修复 | PR review 或独立修复 PR |
 
-本次已验证项目经理会话能访问并写入仓库。其他两个独立会话的连接状态未验证；把仓库链接和“开工先读 AGENTS.md、docs/STATUS.md、docs/requirements/C010.md”的指令发送到对应会话，各侧先查询仓库验证权限，再从最新 main 建任务分支。仓库是私有的，不通过改为公开来代替授权。
+本次已验证项目经理会话能访问并写入仓库。其他两个独立会话的连接状态未验证；把仓库链接和“开工先读 AGENTS.md、docs/STATUS.md、docs/requirements/C010.md 和 docs/materials/C012-materials.md”的指令发送到对应会话，各侧先查询仓库验证权限，再从最新 main 建任务分支。仓库是私有的，不通过改为公开来代替授权。
 
 每项交付在 PR 描述中记录任务编号、基线 SHA、改动、实际验证、风险／未完成项以及资源版本。进度集中写在任务自己的文件，例如 `docs/progress/APP-A006.md`、`docs/progress/RES-R008.md`；不得多个分支同时改同一个进度文件。项目经理在整合时更新 STATUS，保证最终状态可追溯。
 
 状态：`RECEIVED` → `IN_PROGRESS` → `READY_FOR_INTEGRATION` → `INTEGRATED` → `VERIFIED`。未完成依赖写 `BLOCKED` 并注明具体缺项。CI 通过只证明本次相应检查通过，手机效果与操作仍需上机验收。
 
 共享文件夹保留既有历史 APK、大体积原始素材与用户上传文档；可审查代码、资源版本、需求文本及当前进度逐步以本仓库为主。本仓库包含完整当前移动资源，不需要从共享文件夹下载地图才能重建基线。
+
+自动协作快照和定时检查见 [AUTOMATION.md](AUTOMATION.md)。各侧下次开工读取最近快照与自己的任务 PR；定时检查不代表独立 AI 会话已被唤醒。
