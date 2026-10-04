@@ -1,0 +1,48 @@
+{
+  "sourceTriangles": 4610873,
+  "outputTriangles": 4610873,
+  "parts": 3661,
+  "vertices": 4391374,
+  "geometryBytes": 185754702,
+  "materials": 273,
+  "vectorParameters": 2184,
+  "sourceAttributes": {
+    "POSITION": 3661,
+    "TEXCOORD_0": 3661,
+    "NORMAL": 3661,
+    "TANGENT": 3661,
+    "TEXCOORD_1": 2647,
+    "COLOR_0": 182,
+    "_TEXCOORD_4": 1028,
+    "TEXCOORD_2": 191
+  },
+  "textures": 291,
+  "textureBaseRGBABytes": 74842124,
+  "textureRGBAWithMipEstimate": 99789498.66666667,
+  "bounds": [
+    [
+      -113.52481923831515,
+      -5.4918300194587815,
+      -114.19836503530486
+    ],
+    [
+      78.02878102383927,
+      35.794145343806306,
+      63.39839936382019
+    ]
+  ],
+  "unreachableMeshesExcluded": 14,
+  "knownIssues": [
+    "Preview lighting; no original baked lightmaps/reflections",
+    "Normal/roughness/tangent maps retained in source metadata, deferred in preview shader",
+    "Secondary UVs retained in original GLB, deferred for lightmaps/detail sampling",
+    "Layer border tint, complex decals and original shader equivalence are not certified",
+    "Soccer placement not certified; excluded from first preview rather than guessed",
+    "Ambient smoke/steam/lightshaft effect polygons are retained but hidden until mask/fade/depth-feather shader support; map buildings/roads remain enabled"
+  ],
+  "deferredEffects": {
+    "materials": 4,
+    "parts": 47,
+    "triangles": 852
+  }
+}

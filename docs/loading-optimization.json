@@ -1,0 +1,27 @@
+{
+  "baseline": "v0.5.0-test1",
+  "version": "v0.6.0-test2",
+  "workers": "clamp(availableProcessors - 2, 2, 6)",
+  "maxInFlight": "workers * 2",
+  "decodedReservationBytes": 25165824,
+  "gpuGeometryBudgetBytes": 201326592,
+  "gpuTextureBudgetBytes": 100663296,
+  "uploadTimeBudgetMs": {
+    "stationary": 10,
+    "moving": 4
+  },
+  "maxUploadsPerFrame": 24,
+  "priority": "squared center distance / (radius squared + .25), visible first",
+  "nearbyPrefetchMeters": 18,
+  "gzipReadBufferBytes": 65536,
+  "apkGzipAndPngCompression": "stored, no double compression",
+  "otherChanges": [
+    "reuse vertex validation offsets",
+    "cache material texture paths",
+    "wake on worker completion instead of spinning while reads are outstanding",
+    "throttle progress text to 200 ms",
+    "reserve decoded capacity until GL consumption; discard stale generation uploads"
+  ],
+  "androidPerformance": "PENDING_USER_TEST; no speed ratio or FPS claim",
+  "memoryCaveat": "reservations estimate decoded data; not measured Java/native/GPU process peak; individual GL calls may exceed frame budget"
+}

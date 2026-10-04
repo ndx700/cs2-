@@ -1,0 +1,53 @@
+app/src/main/java/com/ali/cs2utility/ui/MainActivity.kt:247:26: warning: name shadowed: group
+        groups.forEach { group ->
+                         ^
+app/src/main/java/com/ali/cs2utility/ui/MainActivity.kt:352:22: warning: 'onBackPressed(): Unit' is deprecated. Deprecated in Java
+        } else super.onBackPressed()
+                     ^
+app/src/main/java/com/ali/cs2utility/ui/TutorialImageView.kt:51:53: warning: unnecessary safe call on a non-null receiver of type BitmapRegionDecoder
+                        try { requireNotNull(decoder?.decodeRegion(Rect(crop.x,crop.y,crop.x+crop.width,crop.y+crop.height),BitmapFactory.Options())) }
+                                                    ^
+app/src/main/java/com/ali/cs2utility/ui/TutorialImageView.kt:52:42: warning: unnecessary safe call on a non-null receiver of type BitmapRegionDecoder
+                        finally { decoder?.recycle() }
+                                         ^
+JUnit version 4.13.2
+...................
+Time: 0.079
+
+OK (19 tests)
+
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): true
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+Signer #1 certificate DN: CN=Android Debug, O=CS2Utility, C=CN
+Signer #1 certificate SHA-256 digest: c50bc89ee4cd661083508a64ca9cf9fea02503332005eb9238106e7c66bfb817
+Signer #1 certificate SHA-1 digest: 7310f480897d6cc67f8f2030336d0daee580c396
+Signer #1 certificate MD5 digest: 52eb8fc8edfdadf7c73a9a32440c230d
+Signer #1 key algorithm: RSA
+Signer #1 key size (bits): 2048
+Signer #1 public key SHA-256 digest: 4aece7cbe719a0b7349bb0937164690d41a21f4ad57e40cc5ff9f4e8589801f0
+Signer #1 public key SHA-1 digest: 2494d4f30f216e5d5396783084c025070427a5cf
+Signer #1 public key MD5 digest: c5e1e1324bd178ecdb93473e4938bdc3
+package: name='com.ali.cs2utility.dust2' versionCode='6' versionName='0.6.0-test2' platformBuildVersionName='14' platformBuildVersionCode='34' compileSdkVersion='34' compileSdkVersionCodename='14'
+sdkVersion:'24'
+targetSdkVersion:'34'
+uses-permission: name='android.permission.INTERNET'
+application-label:'CS2 沙二测试'
+application-icon-160:'res/drawable/ic_launcher.xml'
+application: label='CS2 沙二测试' icon='res/drawable/ic_launcher.xml'
+launchable-activity: name='com.ali.cs2utility.ui.MainActivity'  label='' icon=''
+feature-group: label=''
+  uses-gl-es: '0x20000'
+  uses-feature: name='android.hardware.faketouch'
+  uses-implied-feature: name='android.hardware.faketouch' reason='default feature for all apps'
+main
+other-activities
+supports-screens: 'small' 'normal' 'large' 'xlarge'
+supports-any-density: 'true'
+locales: '--_--'
+densities: '160'

@@ -1,0 +1,24 @@
+{
+  "environment": "llvmpipe (LLVM 20.1.2, 256 bits)",
+  "glVersion": "OpenGL ES 3.2 Mesa 25.2.8-0ubuntu0.24.04.2",
+  "checks": "all chunk SHA/length/index/finiteness/bounds; all PNG SHA/size; exact GLES shader compile/link; enabled scene draws without GL errors",
+  "triangles": 4610873,
+  "parts": 3661,
+  "textures": 291,
+  "views": [
+    "overview",
+    "courtyard",
+    "ct_spawn",
+    "t_spawn",
+    "free_b_site",
+    "free_t_spawn",
+    "free_b_default",
+    "free_t_default"
+  ],
+  "deferredAmbientEffects": {
+    "materials": 4,
+    "parts": 47,
+    "triangles": 852
+  },
+  "androidRuntime": "not tested; EGL desktop software rendering is not Android evidence"
+}

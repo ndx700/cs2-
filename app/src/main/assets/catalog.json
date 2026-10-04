@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "maps": [
+    {
+      "id": "dust2",
+      "name": "沙二 / Dust II",
+      "description": "沙二全图与主要贴图测试版，预览光照；教学待接入",
+      "sceneAsset": "maps/dust2/scene.json",
+      "lineupsAsset": "maps/dust2/lineups.json"
+    }
+  ]
+}

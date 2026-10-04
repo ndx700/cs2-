@@ -1,0 +1,55 @@
+{
+  "sourceFormat": "cs2-collision-raw",
+  "sourceVersion": 1,
+  "rawManifestSha256": "740154b364ead27b528c0ddc3231529a35fb65cc01a891bb94e25e4420ffbb50",
+  "rawFiles": {
+    "vertices.f32": {
+      "bytes": 2004216,
+      "sha256": "900fb9e589d67d41fd6a2bcf34b5b46549d611365d475d27d4bdd64d985490bd"
+    },
+    "triangles.u32": {
+      "bytes": 3378840,
+      "sha256": "4e7e58d6d11b9d557670a9493b3b079403f7c8d1e0e02cdfae7a46f07861b3a2"
+    },
+    "triangle_layers.u8": {
+      "bytes": 281570,
+      "sha256": "d3de0e5aeb12f9012510c83e60e2d596b2e85a5497070592c24762371ffa85e7"
+    },
+    "triangle_surfaces.u8": {
+      "bytes": 281570,
+      "sha256": "ac2a6b314abd0019a885b4b67565b39677b059542547387d3e8d1509f08532c7"
+    },
+    "triangle_shapes.u32": {
+      "bytes": 1126280,
+      "sha256": "59df29ae4ecc33ab3f52c7f80787617a57e728846ffb31dbce7397efa0b330ca"
+    }
+  },
+  "sourceTriangles": 281570,
+  "displayTriangles": 268088,
+  "excludedClipAndSkyTriangles": 13481,
+  "removedDegenerateTriangles": 1,
+  "parts": 895,
+  "meshBytes": 27364674,
+  "meshSha256": "97af1932a616caec04d567676b8dc81772c7c1c4e363924d816af71d6f2307f8",
+  "sourceToDisplay": "[x*0.0254, z*0.0254, -y*0.0254]; no recentering",
+  "boundsMin": [
+    -120.29439544677734,
+    -8.128000259399414,
+    -117.04319763183594
+  ],
+  "boundsMax": [
+    91.03359985351562,
+    24.485599517822266,
+    63.398399353027344
+  ],
+  "visibleCollisionAttributeIndices": [
+    0,
+    1,
+    2
+  ],
+  "limitations": [
+    "Collision geometry only; not the textured render model",
+    "Display filtering is not a grenade collision policy",
+    "No game-tested Dust II lineups or grenade simulation"
+  ]
+}

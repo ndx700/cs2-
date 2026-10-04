@@ -1,0 +1,49 @@
+{
+  "method": "entity and bombsite-decal positions; vertical intersections in independently supplied C2M2 collision preview; not safe character teleport certification",
+  "landmarks": [
+    {
+      "name": "警家",
+      "position": [
+        9.7062269172,
+        -2.7685999999999997,
+        -53.40190010479999
+      ],
+      "source": "R003 entity 7",
+      "collisionHeight": -3.1862852573394775,
+      "verticalDifference": 0.4176852573394778
+    },
+    {
+      "name": "匪家",
+      "position": [
+        -20.8880753942,
+        3.8280086,
+        20.209309086
+      ],
+      "source": "R003 entity 22",
+      "collisionHeight": 2.96750807762146,
+      "verticalDifference": 0.86050052237854
+    },
+    {
+      "name": "B 点",
+      "position": [
+        -39.51286460310494,
+        0.13070465957675087,
+        -67.24489190036493
+      ],
+      "source": "R003 bombsite spray mesh 65",
+      "collisionHeight": 0.11208594590425491,
+      "verticalDifference": 0.018618713672495957
+    },
+    {
+      "name": "A 点",
+      "position": [
+        28.806768596300806,
+        2.417557809734574,
+        -63.38727761460973
+      ],
+      "source": "R003 bombsite spray mesh 68",
+      "collisionHeight": 2.3934552669525146,
+      "verticalDifference": 0.024102542782059366
+    }
+  ]
+}

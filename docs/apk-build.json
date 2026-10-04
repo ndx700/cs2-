@@ -1,0 +1,30 @@
+{
+  "apk": "CS2_Dust2_v0.6.0-test2.apk",
+  "bytes": 110505457,
+  "sha256": "8d55ea2779f6bf568784733e0c0835f9af9ada0e22ee1422becf39efe377f4ff",
+  "build": "official Kotlin 1.9.24 + Build Tools 34.0.0",
+  "tests": "19 JUnit tests (10 baseline + 9 camera/loading); complete APK asset byte comparison; signature; alignment; CRC",
+  "androidRuntime": "not run; no attached device or emulator",
+  "gradleLint": "not run; offline official compiler path used",
+  "uncompressedGzipAndPngAssets": 3952,
+  "sourceSha256": {
+    "app/src/main/java/com/ali/cs2utility/data/AssetRepository.kt": "7ee42a0783d8ca3b783fdac0264d8515d9c459f377609c2483c9af639d294a31",
+    "app/src/main/java/com/ali/cs2utility/data/PreferenceStore.kt": "132b9e6d993caab2e536465c46879c24798710ce0dee0bb1c76ca73aba38c163",
+    "app/src/main/java/com/ali/cs2utility/domain/Models.kt": "2b9af508de345fcb3342eb23a163a11e5022ff1413d05cdca4ea04f65f693f90",
+    "app/src/main/java/com/ali/cs2utility/presentation/ExplorerState.kt": "d041506874c975bd820ca49319a3130041de7383f324482d9752abf88ecc1331",
+    "app/src/main/java/com/ali/cs2utility/scene/CameraFlight.kt": "9bc81a182fcffc4c216e8eebdfc5f878693b406e86ef8473a320acaf3d640581",
+    "app/src/main/java/com/ali/cs2utility/scene/FreeCamera.kt": "b28fa69ca772ba5d761ec580d45b5c9d836d669428744aa7cc2459e101bf7fbb",
+    "app/src/main/java/com/ali/cs2utility/scene/Geometry.kt": "a11ea1f03037e985380919617f9846a32869bd2c3c37e4de29025ba8b3faf30e",
+    "app/src/main/java/com/ali/cs2utility/scene/MapRenderer.kt": "30ee70b92a42cda0a98f8eb983c3d4cb1cb5d98c307b8fb3072e0a399421f1e0",
+    "app/src/main/java/com/ali/cs2utility/scene/MapSceneView.kt": "4a30fcf20651c8436d42b9da82642e84ee4791655cd220103cb6bb9d1a3f4b58",
+    "app/src/main/java/com/ali/cs2utility/scene/MobileScene.kt": "fcb172e4892df2de1e40aff6850c91fa39761b45b1a46a818c14fad975152bcd",
+    "app/src/main/java/com/ali/cs2utility/scene/RunControls.kt": "51a81da2a1f516cb80b28135df0ce0cc8421c8e913dbdd7b9b4249e21d429ccb",
+    "app/src/main/java/com/ali/cs2utility/scene/TexturedMesh.kt": "0ee6dc978938d6aedbce3ffd2f1a047203db442313a8d4d193fe92af82d32d53",
+    "app/src/main/java/com/ali/cs2utility/ui/BiliLessonView.kt": "988cecb31fdc46c40f8e95bbc7d21cbaa53a8a42a3347a2079b2305c563d3b65",
+    "app/src/main/java/com/ali/cs2utility/ui/FineMapActivity.kt": "e5e52496d810b045f238ecda757e7045f1ffdcf58e617199af86214a2eb48b78",
+    "app/src/main/java/com/ali/cs2utility/ui/MainActivity.kt": "e1f980a0f6405a30ab68cc580f8b2c37a25b5b9ae13bc3533b8f3e88493dd6a2",
+    "app/src/main/java/com/ali/cs2utility/ui/TutorialImageView.kt": "ab5e7ac8e6e80f69f479663ddb1ecc281c9c742cde212e14f5e0a0179b781600",
+    "app/src/main/java/com/ali/cs2utility/ui/UiKit.kt": "a9074859901f8718b4184d86b03e1d426929a26844ee8a1681c3b52e333a2d88",
+    "app/src/main/java/com/ali/cs2utility/ui/VideoActivity.kt": "c6829e8a53efecbf4cadfb05d94fb2a351e180aa9f51fa7bf8b92a02ba115a4f"
+  }
+}
