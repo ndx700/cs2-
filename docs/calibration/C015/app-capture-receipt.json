@@ -1,0 +1,66 @@
+{
+  "schema": "c015-res-app-capture-receipt-v1",
+  "lessonId": "D2-001",
+  "status": "DEVELOPMENT",
+  "importable": false,
+  "appCommit": "e611e788cc9fc1f63f7948715886a1a73e715f7f",
+  "resourceInputCommit": "81dfcb1cc236475c193442860647109b47c9edd5",
+  "mapVersion": "fc60c032290dffcb233e3de9da3c59694293362ec72643cc1ebde9c1b13a17d0",
+  "evidenceSchemaAccepted": true,
+  "contract": "docs/contracts/C015-development-capture.md",
+  "contractBlob": "da076f4a3b72e9386398c7a29351791ed05c1494",
+  "sourceBlobs": {
+    "CalibrationCapture.kt": "52af7d20a7d98729650766002c6ade8723c7a562",
+    "tools/check_mobile_scene.py": "88042ac91230bbf34faaa07fde8154d789338739",
+    "tools/c015_display_capture.py": "0451b7a413c165f712b478110150eca1e02f68f9"
+  },
+  "checkedFields": [
+    "schema/status/importable",
+    "coordinateSpace/mapVersion",
+    "field/value/surface",
+    "cameraPositionMeaning/actualCameraEye",
+    "verticalFov/viewport",
+    "screenshot/hash",
+    "ray/part/material/triangle"
+  ],
+  "bindings": [
+    {
+      "path": "docs/calibration/C015/app-capture/capture.json",
+      "sha256": "afdc9052cbb55670b653a3ff70354895029139f7152be766048102d48f04769b"
+    },
+    {
+      "path": "docs/calibration/C015/app-capture/capture.png",
+      "sha256": "cf00dd2474831f1141d95e0f184340ae71589932a36ed761d7eb99a3a07ad9e1"
+    },
+    {
+      "path": "docs/calibration/C015/app-capture/egl-report.json",
+      "sha256": "38b57be48d8c6e76063383c8a3efe8935eb6660518d553807d33a9a782c30fd8"
+    },
+    {
+      "path": "docs/calibration/C015/app-capture/input.json",
+      "sha256": "73f34853a743679b776c7a125253e6f253bc1529b6bc506e9ec15df4839fca1a"
+    }
+  ],
+  "centerRayAgreement": {
+    "part": "maps/dust2/mobile/chunks/p00817.d2m.gz",
+    "triangle": 580,
+    "positionDifferenceDisplay": 3.3552132829464685e-07,
+    "environment": "APP offline Python helper vs RES independent display ray, both against same D2M1; not a new actual Kotlin/phone run"
+  },
+  "projection": {
+    "appActualVerticalFov": 70,
+    "resourceImageFitFov": 67.85847637962364,
+    "appActualHorizontalStretch": 1,
+    "resourceVideoFitHorizontalStretch": 1.2799267637167655,
+    "sameProjectionConfirmed": false,
+    "note": "70-degree normal-aspect APP image is an integration check, not identical video FOV acceptance."
+  },
+  "limitations": [
+    "No Android device or phone capture UI tested.",
+    "Display picking includes transparency geometry in APP; RES helper excludes blend surfaces. Current aim hit is the same opaque wall, not a general alpha-policy confirmation.",
+    "Ground/world_physics/hull clearance remain separate from display pick.",
+    "Offline helper uses surface.position for value even when field=eye; Kotlin CalibrationCapture uses actualCameraEye for field=eye. This receipt tests aim only; do not treat offline eye-field output as eye evidence.",
+    "Native CS2 video aspect/FOV, wall seam/stain, selected lesson path/effect and phone acceptance remain pending."
+  ],
+  "nextArtifact": "APP consume resource candidate from 81dfcb1, return actual stance/aim captures and minimal FOV policy clarification; resource continues HE/blue-car spatial work."
+}

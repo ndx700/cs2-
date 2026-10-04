@@ -48,3 +48,9 @@ python3 -m unittest discover -s tools/tests -v
 拟合需numpy/scipy，离屏渲染需Pillow与系统Mesa EGL；输入帧、几何、地图、碰撞ZIP和输出图均绑定散列。实际渲染检查3661分块、4610873三角形、291贴图及原GLES shader，四个视角无GL错误；环境llvmpipe / OpenGL ES3.2 Mesa，不是Android手机证据。
 
 本轮34项资源测试通过：28既有+6投影/角度/合成拟合/坏几何/未测值隔离回归。Android构建和手机未在本轮重跑，未交新APK。挂门烟空间候选可审阅，三课仍未CALIBRATED；先内部对照再由PM出手机验收测试包，按C015不要求先有手机录屏才能出验收包。
+
+## 新APP采集文档与接续结果
+
+已核对APP C015 head `e611e788cc9fc1f63f7948715886a1a73e715f7f` 的采集契约，资源回执见 `app-capture-receipt.json`。该head原工具已读取81dfcb1的本课候选，生成 `app-capture/capture.png`、输入、实际70度视野与中心拾取记录。中心命中同一p00817/triangle580，独立查询位置差<0.0001。它是第一次候选参数与APP离屏链路接续；不是手机运行或正式同视野校准。
+
+自由70度/轨道45度是当前APP固定行为；拟合FOV与视频拉伸并非该APP渲染视野，尚需明确采集FOV策略。另核对到离线helper的eye字段会写表面命中，而Kotlin的eye字段写实际眼位；本回执只验aim，不把离线eye当真实眼位。该问题留APP侧处理，没有在资源分支私自修改源码/契约。

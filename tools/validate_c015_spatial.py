@@ -53,6 +53,20 @@ def validate(root):
     material = candidate['localMaterialAudit']['material']
     if hashlib.sha256((root/'app/src/main/assets'/aim['part']).read_bytes()).hexdigest() != aim['partSha256'] or aim['materialId'] != material['id']:
         raise ValueError('aim mesh/material binding mismatch')
+    receipt_path = folder/'app-capture-receipt.json'
+    if receipt_path.exists():
+        receipt = json.loads(receipt_path.read_text())
+        if receipt['lessonId'] != 'D2-001' or receipt['mapVersion'] != actual_map or receipt['importable'] is not False or receipt['projection']['sameProjectionConfirmed'] is not False:
+            raise ValueError('capture identity or projection promoted')
+        for binding in receipt['bindings']:
+            path = (root/binding['path']).resolve()
+            if not path.is_relative_to(root.resolve()) or hashlib.sha256(path.read_bytes()).hexdigest() != binding['sha256']:
+                raise ValueError('APP capture binding mismatch')
+        capture = json.loads((folder/'app-capture/capture.json').read_text())
+        if capture['field'] != 'aim' or capture['verticalFov'] != 70 or capture['surface']['part'] != aim['part'] or capture['surface']['triangle'] != aim['triangleInPart']:
+            raise ValueError('actual APP probe does not agree with reported wall')
+        if np.linalg.norm(np.asarray(capture['value'])-aim['position']) > .0001:
+            raise ValueError('independent aim query mismatch')
     print('C015 candidate/source/map/coordinate/render/support isolation checks passed; no calibration or phone acceptance')
     return candidate
 
