@@ -10,6 +10,8 @@ import json
 from pathlib import Path
 
 IDS = ("D2-001", "D2-010", "D2-014")
+CAMERAS = ("stance", "aim", "overview", "follow", "landing")
+APP_HEAD = "346c20fc5d36654b9ce7ca6bbfe956000780d428"
 NOTES = {
     "D2-001": ("T出生中门烟", "匪家参考点，左键跳投。", "中门视线封锁"),
     "D2-010": ("A大Car火", "A大坑口桶上，按住W向前并左键跳投。", "车位及车后火区"),
@@ -35,6 +37,32 @@ def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def observation_draft(draft):
+    """Expose the five APP camera slots without inventing orbit parameters."""
+    draft = dict(draft)
+    if draft["importable"] is not False or draft["status"] != "PENDING_CALIBRATION":
+        raise ValueError("observation adapter requires a pending draft")
+    draft["cameras"] = {name: None for name in CAMERAS}
+    draft["observationContract"] = "docs/calibration/C014/app-observation-receipt.json"
+    draft["missing"] = [*draft["missing"], "measured follow/landing orbit target, yaw/pitch/distance and obstruction check"]
+    return draft
+
+
+def validate_observation_draft(draft):
+    if draft.get("coordinateSpace") != "display-m-y-up-v1" or draft.get("timeOrigin") != "throw-release-seconds":
+        raise ValueError("APP coordinate/time convention mismatch")
+    if draft.get("status") != "PENDING_CALIBRATION" or draft.get("importable") is not False:
+        raise ValueError("observation draft cannot enable import")
+    cameras = draft.get("cameras")
+    if not isinstance(cameras, dict) or set(cameras) != set(CAMERAS):
+        raise ValueError("C014 draft requires all five camera slots")
+    if any(value is not None for value in cameras.values()):
+        raise ValueError("unmeasured camera cannot use overview defaults")
+    for key in ("foot", "eye", "aim", "bodyYaw", "aimFov", "throwHint", "begin", "aimAt", "throwAt", "duration", "path", "smoke", "fire", "he"):
+        if draft.get(key) is not None or key not in draft:
+            raise ValueError("unmeasured C014 runtime field: " + key)
+
+
 def build(root):
     folder = root / "docs/calibration/C013"
     output = root / "docs/calibration/C014"
@@ -44,12 +72,21 @@ def build(root):
     clips = {r["courseId"]: r for r in load(folder / "clip-observations.json")["clips"]}
     queries = {r["id"]: r for r in load(folder / "coordinate-query-samples.json")["samples"]}
     adapter = load(folder / "app-adapter-report.json")
+    receipt_path = output / "app-observation-receipt.json"
+    receipt = load(receipt_path)
+    if receipt["appHead"] != APP_HEAD or receipt["calibratedImportAllowed"] is not False or receipt["phoneVerified"] is not False:
+        raise ValueError("observation receipt version/status mismatch")
+    pending_output = output / "app-pending"
+    pending_output.mkdir(exist_ok=True)
     version = digest(root / "app/src/main/assets/maps/dust2/mobile/manifest.json")
     lessons = []
     for course_id in IDS:
         r = records[course_id]
         title, hint, target = NOTES[course_id]
-        draft_path = folder / "app-pending" / (course_id + ".json")
+        draft_path = pending_output / (course_id + ".json")
+        draft = observation_draft(load(folder / "app-pending" / (course_id + ".json")))
+        validate_observation_draft(draft)
+        draft_path.write_text(json.dumps(draft, ensure_ascii=False, indent=2) + "\n")
         lesson = {
             "id": course_id, "type": r["type"], "title": title,
             "status": "PENDING_CALIBRATION", "importable": False,
@@ -79,7 +116,11 @@ def build(root):
                              for event, label in STAGES[course_id]],
             "viewRequirements": {"main": "道具跟随，落地后观察效果",
                                  "rightWindow": "落点实时演示", "clock": "same-course-clock",
-                                 "positionsCalibrated": False},
+                                 "positionsCalibrated": False,
+                                 "requiredCameras": list(CAMERAS),
+                                 "orbitPositionMeans": "target, not camera eye",
+                                 "followTarget": "eye before release; grenade in flight; final path point after landing",
+                                 "landingTarget": "fixed independently measured effect target"},
             "missing": ["实机确认脚底/眼位/瞄点、朝向和FOV",
                         "带时间的轨迹、反弹点和落点/爆点",
                         "连续实机阶段时间、效果范围和结束过程",
@@ -107,6 +148,8 @@ def build(root):
         "status": "READY_FOR_INTEGRATION", "formalLessonsCalibrated": False,
         "runtimeImportAllowed": False, "mapVersion": version,
         "appContract": adapter["appContract"],
+        "appObservationReceipt": {"path": str(receipt_path.relative_to(root)),
+                                  "sha256": digest(receipt_path), "appHead": APP_HEAD},
         "coordinateSpace": "dust2_display_y_up_v1",
         "lengthUnit": "display_unit", "sourceToDisplay": "[x*0.0254,z*0.0254,-y*0.0254]; once only",
         "appCoordinateAlias": "display-m-y-up-v1; identical values, no second conversion",
@@ -124,6 +167,13 @@ def validate_bundle(bundle, root):
     if [r["id"] for r in lessons] != list(IDS):
         raise ValueError("C014 stable identities/order changed")
     actual_map = digest(root / "app/src/main/assets/maps/dust2/mobile/manifest.json")
+    receipt_info = bundle["appObservationReceipt"]
+    receipt_path = (root / receipt_info["path"]).resolve()
+    if not receipt_path.is_relative_to(root.resolve()) or digest(receipt_path) != receipt_info["sha256"]:
+        raise ValueError("observation receipt path/hash mismatch")
+    receipt = load(receipt_path)
+    if receipt_info["appHead"] != APP_HEAD or receipt["appHead"] != APP_HEAD or receipt["calibratedImportAllowed"] is not False or receipt["phoneVerified"] is not False:
+        raise ValueError("observation receipt version/status mismatch")
     if bundle["mapVersion"] != actual_map:
         raise ValueError("map version mismatch")
     for lesson in lessons:
@@ -143,6 +193,7 @@ def validate_bundle(bundle, root):
             if not p.is_relative_to(root.resolve()) or digest(p) != item["sha256"]:
                 raise ValueError("evidence path/hash mismatch")
         draft = load(root / lesson["appDraft"]["path"])
+        validate_observation_draft(draft)
         if draft["lessonId"] != lesson["id"] or draft["mapVersion"] != actual_map or draft["importable"] is not False:
             raise ValueError("APP draft identity/version/import mismatch")
         if any(image["courseId"] != lesson["id"] for image in lesson["screenshots"]) or lesson["clipEvidence"]["courseId"] != lesson["id"]:

@@ -6,7 +6,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from build_c014_resources import validate_bundle
+from build_c014_resources import validate_bundle, validate_observation_draft
 
 
 class HandoffTests(unittest.TestCase):
@@ -48,6 +48,38 @@ class HandoffTests(unittest.TestCase):
     def test_wrong_map_bundle_is_rejected(self):
         self.data["mapVersion"] = "0" * 64
         with self.assertRaisesRegex(ValueError, "map version"):
+            validate_bundle(self.data, self.root)
+
+    def draft(self):
+        return json.loads((self.root / self.bundle["lessons"][0]["appDraft"]["path"]).read_text())
+
+    def test_formal_camera_slots_cannot_be_omitted(self):
+        draft = self.draft()
+        del draft["cameras"]["landing"]
+        with self.assertRaisesRegex(ValueError, "five camera slots"):
+            validate_observation_draft(draft)
+
+    def test_overview_cannot_be_promoted_to_measured_follow_camera(self):
+        draft = self.draft()
+        draft["cameras"]["follow"] = {"position": [0, 0, 0], "yaw": 0, "pitch": 30, "distance": 7}
+        with self.assertRaisesRegex(ValueError, "overview defaults"):
+            validate_observation_draft(draft)
+
+    def test_video_progress_cannot_replace_release_clock(self):
+        draft = self.draft()
+        draft["timeOrigin"] = "video-progress-seconds"
+        with self.assertRaisesRegex(ValueError, "coordinate/time"):
+            validate_observation_draft(draft)
+
+    def test_missing_measurement_cannot_be_filled_from_dev_course(self):
+        draft = self.draft()
+        draft["path"] = [{"seconds": 0, "position": [0, 0, 0]}]
+        with self.assertRaisesRegex(ValueError, "runtime field"):
+            validate_observation_draft(draft)
+
+    def test_receipt_for_different_app_revision_is_rejected(self):
+        self.data["appObservationReceipt"]["appHead"] = "0" * 40
+        with self.assertRaisesRegex(ValueError, "receipt version"):
             validate_bundle(self.data, self.root)
 
 

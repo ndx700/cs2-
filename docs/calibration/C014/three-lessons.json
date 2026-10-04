@@ -12,6 +12,11 @@
     "headSha": "516f2ce41ccd55a7aac441a2ee52d80d550e71a1",
     "blobSha": "f168be008e7c60334665b1a600dd13f5c9c84dd4"
   },
+  "appObservationReceipt": {
+    "path": "docs/calibration/C014/app-observation-receipt.json",
+    "sha256": "bc412309fc7b4d5e5e5399babe3c7688ec2be865c72c16d660ca45f9bffca18f",
+    "appHead": "346c20fc5d36654b9ce7ca6bbfe956000780d428"
+  },
   "coordinateSpace": "dust2_display_y_up_v1",
   "lengthUnit": "display_unit",
   "sourceToDisplay": "[x*0.0254,z*0.0254,-y*0.0254]; once only",
@@ -25,8 +30,8 @@
       "status": "PENDING_CALIBRATION",
       "importable": false,
       "appDraft": {
-        "path": "docs/calibration/C013/app-pending/D2-001.json",
-        "sha256": "d1dd61025c826da336d07e5e2b62c8c8f1bf3cf46721c17832488d419a9f6e8f"
+        "path": "docs/calibration/C014/app-pending/D2-001.json",
+        "sha256": "815f32e18999d3874e71a7d403efe29a3e0561052e50f79289723d4b0532dac1"
       },
       "mapVersion": "fc60c032290dffcb233e3de9da3c59694293362ec72643cc1ebde9c1b13a17d0",
       "versions": {
@@ -299,7 +304,17 @@
         "main": "道具跟随，落地后观察效果",
         "rightWindow": "落点实时演示",
         "clock": "same-course-clock",
-        "positionsCalibrated": false
+        "positionsCalibrated": false,
+        "requiredCameras": [
+          "stance",
+          "aim",
+          "overview",
+          "follow",
+          "landing"
+        ],
+        "orbitPositionMeans": "target, not camera eye",
+        "followTarget": "eye before release; grenade in flight; final path point after landing",
+        "landingTarget": "fixed independently measured effect target"
       },
       "missing": [
         "实机确认脚底/眼位/瞄点、朝向和FOV",
@@ -317,8 +332,8 @@
       "status": "PENDING_CALIBRATION",
       "importable": false,
       "appDraft": {
-        "path": "docs/calibration/C013/app-pending/D2-010.json",
-        "sha256": "5011e5e4e6662920f38a603b642bf451b3f2668f2517735dcd00efc9ccf2ea11"
+        "path": "docs/calibration/C014/app-pending/D2-010.json",
+        "sha256": "647a7b675f2b5614cd6d6f32127bb366227c7c9c7154596329aba6a53e4e3fa5"
       },
       "mapVersion": "fc60c032290dffcb233e3de9da3c59694293362ec72643cc1ebde9c1b13a17d0",
       "versions": {
@@ -461,7 +476,17 @@
         "main": "道具跟随，落地后观察效果",
         "rightWindow": "落点实时演示",
         "clock": "same-course-clock",
-        "positionsCalibrated": false
+        "positionsCalibrated": false,
+        "requiredCameras": [
+          "stance",
+          "aim",
+          "overview",
+          "follow",
+          "landing"
+        ],
+        "orbitPositionMeans": "target, not camera eye",
+        "followTarget": "eye before release; grenade in flight; final path point after landing",
+        "landingTarget": "fixed independently measured effect target"
       },
       "missing": [
         "实机确认脚底/眼位/瞄点、朝向和FOV",
@@ -479,8 +504,8 @@
       "status": "PENDING_CALIBRATION",
       "importable": false,
       "appDraft": {
-        "path": "docs/calibration/C013/app-pending/D2-014.json",
-        "sha256": "acf14a725a2c458472bcb50caaf472ca1666eb317e6c477ea4816c9498659156"
+        "path": "docs/calibration/C014/app-pending/D2-014.json",
+        "sha256": "106b8c7f6a858621c8cb7790c11e203639fe084b555a8ee2791f1515a31d44c9"
       },
       "mapVersion": "fc60c032290dffcb233e3de9da3c59694293362ec72643cc1ebde9c1b13a17d0",
       "versions": {
@@ -617,7 +642,17 @@
         "main": "道具跟随，落地后观察效果",
         "rightWindow": "落点实时演示",
         "clock": "same-course-clock",
-        "positionsCalibrated": false
+        "positionsCalibrated": false,
+        "requiredCameras": [
+          "stance",
+          "aim",
+          "overview",
+          "follow",
+          "landing"
+        ],
+        "orbitPositionMeans": "target, not camera eye",
+        "followTarget": "eye before release; grenade in flight; final path point after landing",
+        "landingTarget": "fixed independently measured effect target"
       },
       "missing": [
         "实机确认脚底/眼位/瞄点、朝向和FOV",
