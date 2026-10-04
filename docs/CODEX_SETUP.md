@@ -28,3 +28,9 @@ PR 审查针对改动差异。首次全面检查已有 main 代码，请单独�
 - [GitHub PR review](https://learn.chatgpt.com/docs/third-party/github)
 
 本次仅提供连接步骤与工程准备文件，尚未替用户创建或发布 Codex 环境，也未开启自动 review。
+
+## C013 已安排的具体职责
+
+接入后执行 [C013 Codex 审查任务](dispatch/C013-codex-review.md)：先复查最新 APP PR #5 与资源 PR #4，核对 C013 瞄点精度补充要求，把具体问题反馈到各自 PR；使用独立 codex/* 分支提交审查记录／获分配的修复。Ultra 不在本轮实现范围。
+
+角色与审查规则已写入仓库。连接／发布环境、GitHub 授权和自动审查设置仍需各自实际验证；本次文档提交不表示这些设置已经完成。
